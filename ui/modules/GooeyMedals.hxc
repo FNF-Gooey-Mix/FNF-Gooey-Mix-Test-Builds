@@ -39,7 +39,7 @@ class GooeyMedals extends Module
         new FlxTimer().start(0.6, _ ->
         {
           if (script.eventCanceled) return;
-          giveMedal(10, 'A Failed Experiment', Paths.image("gooeyMix/medals/gooeyWeek"));
+          giveMedal(10, 'A Failed Experiment', Paths.image("ui/medals/gooey/gooeyWeek"));
         });
       }
       else if (PlayState.instance.currentSong.id == 'stress'
@@ -48,14 +48,14 @@ class GooeyMedals extends Module
       {
         new FlxTimer().start(0.6, _ ->
         {
-          giveMedal(10, 'Cock Joke', Paths.image('gooeyMix/medals/stressGooey'));
+          giveMedal(10, 'Cock Joke', Paths.image('ui/medals/gooey/stressGooey'));
         });
       }
       else if (PlayState.instance.currentSong.id == 'saloonatic' && !Save.instance.hasBeatenSong('saloonatic', ['extra']))
       {
         new FlxTimer().start(0.6, _ ->
         {
-          giveMedal(10, 'Fistfull of Stupid', Paths.image('gooeyMix/medals/saloonatic'));
+          giveMedal(10, 'Fistfull of Stupid', Paths.image('ui/medals/gooey/saloonatic'));
         });
       }
       else if (PlayState.instance.currentSong.id == 'starcraft'
@@ -64,7 +64,7 @@ class GooeyMedals extends Module
       {
         new FlxTimer().start(0.6, _ ->
         {
-          giveMedal(10, 'Getting Gooey with Gooey', Paths.image('gooeyMix/medals/starcraftGooey'));
+          giveMedal(10, 'Getting Gooey with Gooey', Paths.image('ui/medals/gooey/starcraftGooey'));
         });
       }
     }

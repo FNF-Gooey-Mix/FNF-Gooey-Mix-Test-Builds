@@ -41,7 +41,7 @@ class GooeyMenuOption extends Module
       if (!FlxG.onMobile)
       {
         WindowUtil.setWindowTitle('Friday Night Funkin\'');
-        CustomIcon.setIcon(Paths.image('boyfriendGameIcon'));
+        CustomIcon.setIcon(Paths.image('ui/window-icons/window-bf'));
         curIcon = newIcon;
       }
     }
@@ -55,7 +55,7 @@ class GooeyMenuOption extends Module
       if (!FlxG.onMobile)
       {
         WindowUtil.setWindowTitle('Friday Night Funkin\': Gooey Mix');
-        CustomIcon.setIcon(Paths.image('gooeyGameIcon'));
+        CustomIcon.setIcon(Paths.image('ui/window-icons/window-gooey'));
         curIcon = newIcon;
       }
     }
