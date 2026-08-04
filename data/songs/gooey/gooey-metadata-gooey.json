@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Gooey (Gooey Mix)",
+  "artist": "LeGooey",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 150, "n": 3, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey",
+      "girlfriend": "flora",
+      "opponent": "gooey-opponent",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["gooey-opponent"],
+      "altInstrumentals": [""]
+    },
+    "stage": "natCrystal",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 2, "normal": 3, "hard": 4 },
+    "album": "gooeyex2",
+    "stickerPack": "bonus-tutorialGooey",
+    "previewStart": 0.280351648351648,
+    "previewEnd": 0.560371184371184
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

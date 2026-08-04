@@ -1,0 +1,39 @@
+import funkin.play.character.SparrowCharacter;
+import funkin.play.PauseSubState;
+import funkin.audio.FunkinSound;
+import funkin.play.GameOverSubState;
+
+class GooeyPixelPlayableCharacter extends SparrowCharacter
+{
+  function new()
+  {
+    super('gooey-pixel');
+  }
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+    GameOverSubState.musicSuffix = '-pixel-gooey';
+    GameOverSubState.blueBallSuffix = '-gooey-pixel';
+    PauseSubState.musicSuffix = '-pixel';
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+    GameOverSubState.musicSuffix = '-pixel-gooey';
+    GameOverSubState.blueBallSuffix = '-gooey-pixel';
+    PauseSubState.musicSuffix = '-pixel';
+  }
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+    if (name == "deathConfirm")
+    {
+      gooeyRetry = FunkinSound.load(Paths.music('gameplay/gameover/gameOverEnd-pixel-gooeyReal'), true);
+      gooeyRetry.volume = 1;
+      gooeyRetry.play(false);
+    }
+  }
+}

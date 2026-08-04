@@ -1,0 +1,15 @@
+import funkin.play.cutscene.dialogue.Conversation;
+
+class ThornsGooeyConversation extends Conversation
+{
+  function new()
+  {
+    super('thorns-gooey');
+  }
+
+  function onTypingComplete():Void
+  {
+    super.onTypingComplete();
+    if (currentDialogueEntry == 27) advanceConversation();
+  }
+}

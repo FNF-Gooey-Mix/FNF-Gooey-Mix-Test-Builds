@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "bgAsset": "freeplay/freeplayBGdadGooey",
+  "selectorAsset": "freeplay/freeplaySelector/freeplaySelector_gooey",
+  "numbersAsset": "digital_numbers_gooey",
+  "capsuleAsset": "freeplay/freeplayCapsule/capsule/freeplayCapsule_gooey",
+  "capsuleTextColors": ["#9f21ff", "#9f21ff"],
+  "startDelay": 1.16
+}

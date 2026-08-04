@@ -1,0 +1,317 @@
+import funkin.modding.module.Module;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.save.Save;
+import funkin.audio.FunkinSound;
+import funkin.util.SortUtil;
+
+using StringTools;
+using Lambda;
+
+class GooeyFreeplay extends Module
+{
+  public function new()
+  {
+    super('GooeyFreeplay');
+  }
+
+  var curState(get, null):MusicBeatSubState;
+
+  function get_curState():MusicBeatSubState
+  {
+    return FlxG.state.subState;
+  }
+
+  var newSongs:Map<String, Array<String>> = [
+    'gooey' => ['erect', 'pico', 'gooey', 'eevee'],
+    'slimeball' => ['erect', 'gooey', 'eevee'],
+    'starcraft' => ['gooey'],
+    'darnell' => ['gooey'],
+    'lit-up' => ['gooey'],
+    '2hot' => ['gooey'],
+    'blazin' => ['gooey']
+  ];
+
+  var hiddenSongs:Map<String, GooeyHiddenSong> = [
+    'drippypop-gooey-mix' => {saveDiffs: ['extra'], songText: '???', icon: '', playMusic: false},
+    'mixd-up' => {saveDiffs: ['extra'], songText: '???', icon: '', playMusic: false},
+    'comedian-rad-mix' => {saveDiffs: ['extra'], songText: '???', icon: '', playMusic: false},
+    'saloonatic' => {saveDiffs: ['extra'], songText: '???', icon: '', playMusic: false},
+    'gooey' => {variation: 'eevee', saveVariation: 'eevee', saveDiffs: ['extra'], songText: '???', icon: '', playMusic: false},
+    'slimeball' => {variation: 'eevee', saveVariation: 'eevee', saveDiffs: ['extra'], songText: '???', icon: '', playMusic: false}
+  ];
+
+  var canPlayStatic:Bool = false;
+
+  var staticSound:FunkinSound;
+
+  final STATIC_VOLUME:Float = 0.6;
+
+  override function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+    if (!(curState is FreeplayState)) return;
+    
+    if (curState.instSelectMenu != null)
+    {
+      if (curState.instSelectMenu.currentInstrumental.text.startsWith("Truegooey")) curState.instSelectMenu.currentInstrumental.text = "Gooey";
+    }
+
+    if (isHiddenSong(curState.currentCapsule))
+    {
+      var data:GooeyHiddenSong = hiddenSongs.get(getCapsuleSongId(curState.currentCapsule));
+      if (!(data.playMusic ?? true) && (FlxG.sound.music?.isPlaying ?? false)) 
+      {
+        FlxG.sound.music.stop();
+        curState.clearPreviews();
+      }
+    }
+  }
+
+  // This is needed for some dumb reason
+  public function onCapsuleSelected(event:CapsuleScriptEvent):Void
+  {
+    super.onCapsuleSelected(event);
+    // NEW TEXT CODE
+    var songId:String = event.capsule.freeplayData?.data?.id;
+    if (newSongs.exists(songId) && newSongs.get(songId).contains(event.capsule.freeplayData.curVariation))
+    {
+      var difficultyArray:Array<String> = switch (event.capsule.freeplayData.curVariation)
+      {
+        case 'erect': ['erect', 'nightmare'];
+        case 'eevee': ['extra'];
+        default: null;
+      }
+      var noSuffix:Array<String> = ['', 'default', 'erect'];
+      var variation:Null<String> = (noSuffix.contains(event.capsule.freeplayData.curVariation) ? null : event.capsule.freeplayData.curVariation);
+      event.capsule.newText.visible = !Save.instance.hasBeatenSong(songId, difficultyArray, variation);      
+    }
+    // HIDING CODE
+    if (isHiddenSong(event.capsule)) setHiddenCapsule(event.capsule, true);
+    else if (staticSound.isPlaying) staticSound.stop();
+  }
+  
+  public function onSongSelected(event:CapsuleScriptEvent):Void
+  {
+    super.onSongSelected(event);
+    FlxG.signals.postUpdate.addOnce(() -> {
+      if (isHiddenSong(event.capsule)) setHiddenCapsule(event.capsule, true);
+      else if (staticSound.isPlaying) staticSound.stop();  
+    });
+  }
+
+  public function onDifficultySwitch(event:CapsuleScriptEvent):Void
+  {
+    super.onDifficultySwitch(event);
+    // NEW TEXT CODE
+    var newCapsuleArray:Array<SongMenuItem> = curState.grpCapsules.members.filter((cap:SongMenuItem) -> {
+      var songId:String = cap.freeplayData?.data?.id;
+      return cap.alive && cap.freeplayData != null && newSongs.exists(songId) && newSongs.get(songId).contains(cap.freeplayData.curVariation);
+    });
+    for (cap in newCapsuleArray)
+    {
+      var difficultyArray:Array<String> = switch (cap.freeplayData.curVariation)
+      {
+        case 'erect': ['erect', 'nightmare'];
+        case 'eevee': ['extra'];
+        default: null;
+      }
+      var noSuffix:Array<String> = ['', 'default', 'erect'];
+      var variation:Null<String> = (noSuffix.contains(cap.freeplayData.curVariation) ? null : cap.freeplayData.curVariation);
+      cap.newText.visible = !Save.instance.hasBeatenSong(cap.freeplayData.data.id, difficultyArray, variation);      
+    }
+    // HIDING CODE
+    for (cap in getHiddenSongCapsules())
+    {
+      setHiddenCapsule(cap, event.capsule == cap);
+    }
+  }
+  
+  override function onSubStateCloseBegin(event)
+  {
+    super.onSubStateCloseBegin(event);
+    if (!Std.isOfType(event.targetState, FreeplayState)) return;
+    canPlayStatic = false;
+    staticSound.stop();
+    staticSound.destroy();
+    staticSound = null;
+  }
+  
+  override function onSubStateOpenBegin(event)
+  {
+    super.onSubStateOpenBegin(event);
+    if (!Std.isOfType(event.targetState, FreeplayState)) return;
+    canPlayStatic = false;
+    staticSound = FunkinSound.load(Paths.sound('static loop'), STATIC_VOLUME, true);
+  }
+  
+  override function onSubStateOpenEnd(event)
+  {
+    super.onSubStateOpenEnd(event);
+    if (!Std.isOfType(event.targetState, FreeplayState)) return;
+    insertWeek('weekend1', ['week60037', 'extraGooeySongs']);
+    for (dot in event.targetState.difficultyDots.members)
+    {
+      // switch normalColors to nightColors if difficulty is an erect variation
+      // deselected, selected, deselected pulse, selected pulse
+      if (dot.difficultyId == 'extra') dot.normalColors = [0xFF1A525E, 0xFF6EFCC1, 0xFF375252, 0xFF143E47];
+    }
+  }
+
+  public function onFreeplayIntroDone(event:FreeplayScriptEvent):Void
+  {
+    super.onFreeplayIntroDone(event);
+    FlxG.signals.postUpdate.addOnce(() -> {
+      canPlayStatic = true;
+      if (isHiddenSong(curState.currentCapsule))
+      {
+        var data:GooeyHiddenSong = hiddenSongs.get(getCapsuleSongId(curState.currentCapsule));
+        if (data.album != 'default' && curState.albumRoll.albumId != data.album) curState.albumRoll.albumId = data.album;
+      }
+    });
+  }
+  
+  // UTILITIES
+  function isHiddenSong(capsule:SongMenuItem):Bool
+  {
+    var songId:String = capsule.freeplayData?.data?.id;
+    if (capsule.alive && hiddenSongs.exists(songId) && (hiddenSongs.get(songId).variation ?? 'default') == capsule.freeplayData?.curVariation)
+    {
+      var data:GooeyHiddenSong = hiddenSongs.get(songId);
+      if (Save.instance.hasBeatenSong(songId, data.saveDiffs ?? null, data.saveVariation)) return false;
+      return true;
+    }
+    return false;
+  }
+
+  function getHiddenSongCapsules():Array<SongMenuItem>
+  {
+    return curState.grpCapsules.members.filter((cap:SongMenuItem) -> {
+      var songId:String = cap.freeplayData?.data?.id;
+      return cap.alive && hiddenSongs.exists(songId) && (hiddenSongs.get(songId).variation ?? 'default') == cap.freeplayData?.curVariation;
+    });
+  }
+  
+  function getCapsuleSongId(capsule:SongMenuItem):String
+  {
+    return capsule.freeplayData?.data?.id ?? 'RANDOM';
+  }
+
+  function setHiddenCapsule(capsule:SongMenuItem, selected:Bool = false):Void
+  {
+    var data:GooeyHiddenSong = hiddenSongs.get(getCapsuleSongId(capsule));
+    if (Save.instance.hasBeatenSong(getCapsuleSongId(capsule), data.saveDiffs ?? null, data.saveVariation)) return;
+    if (capsule.pixelIcon?.char != data.icon)
+    {
+      if (data.icon == null || data.icon == '') capsule.pixelIcon.visible = false;
+      else capsule.pixelIcon.setCharacter(data.icon);
+    }
+    if (data.songText != null && capsule.songText.text != data.songText)
+    {
+      capsule.songText.text = data.songText;
+      capsule.songText.resetText();
+    }
+    if (selected)
+    {
+      if (data.album != 'default' && curState.albumRoll.albumId != data.album) curState.albumRoll.albumId = data.album;
+      if (!canPlayStatic) return;
+      if (!(data.playMusic ?? true))
+      {
+        if (staticSound != null && !staticSound.isPlaying)
+        {
+          staticSound.volume = 0;
+          staticSound.play();
+          staticSound.fadeIn(2, 0, STATIC_VOLUME);
+        }
+      }
+      if (staticSound != null && (data.playMusic ?? true)) staticSound.stop();
+    }
+  }
+  
+  function insertWeek(weekName:String, songs:Array<String>, ?beforeWeek = false)
+  {
+    var previousWeekIds:Array<String> = [];
+    var checkForSong:Dynamic = function(mainArray:Array<Dynamic>, levelIds:Array<String>, isCap:Bool = false)
+    {
+      var removedData:Array<Dynamic> = [];
+      var arrayFiltered:Array<Dynamic> = [];
+      var hasSeenWeek:Bool = false;
+      var curWeekId:String;
+      for (data in mainArray)
+      {
+        var songData:FreeplaySongData = isCap ? data.freeplayData : data;
+        if (songData != null && songs.contains(songData?.levelId)) removedData.push(data);
+        else if (levelIds.contains(songData?.levelId))
+        {
+          if (curWeekId != songData?.levelId) 
+          {
+            arrayFiltered = [];
+            curWeekId = songData?.levelId;
+          }
+          arrayFiltered.push(data);
+          hasSeenWeek = true;
+        }
+
+        if (!isCap && !previousWeekIds.contains(songData?.levelId) && !hasSeenWeek) previousWeekIds.push(songData?.levelId);
+      }
+      if (removedData.length == 0 || arrayFiltered.length == 0) return false;
+      removedData.sort((a, b) -> 
+      {
+        var aFixed = isCap ? a.freeplayData : a;
+        var bFixed = isCap ? b.freeplayData : b;
+        return SortUtil.defaultsThenAlphabetically(songs, aFixed, bFixed);
+      });
+      for (data in removedData) mainArray.remove(data);
+      var dataIndex:Int = switch (curWeekId != weekName ? false : beforeWeek)
+      {
+        case true: mainArray.indexOf(arrayFiltered[0]);
+        case false: mainArray.lastIndexOf(arrayFiltered[arrayFiltered.length - 1]) + 1;
+      }  
+      for (index => item in removedData) mainArray.insert(dataIndex + index, item);
+      return true;
+    }
+    if (!checkForSong(curState.songs, [weekName]))
+    {
+      trace('Unable to reorder songs. Using default order.');
+      return;
+    }
+    previousWeekIds.push(weekName);
+    if (!checkForSong(curState.grpCapsules.members, previousWeekIds, true))
+    {
+      trace('No capsules found to reorder.');
+      return;
+    }
+    curState.grpCapsules.forEachAlive((funnyMenu:SongMenuItem) ->
+    {
+      var curIndex = curState.grpCapsules.members.indexOf(funnyMenu);
+      funnyMenu.initPosition(FlxG.width, 0);
+      funnyMenu.targetPos.x = funnyMenu.x;
+      funnyMenu.ID = curIndex;
+      funnyMenu.index = curIndex + 1;
+      if (curState.forceSkipIntro || curState.fromCharSelect) funnyMenu.forcePosition();
+      else
+        funnyMenu.initJumpIn(0, true);
+    });
+    if (FreeplayState.rememberedSongId != null)
+    {
+      curState.curSelected = curState.grpCapsules.findIndex((capsule:SongMenuItem) ->
+      {
+        if (capsule == null) return false;
+        return capsule.freeplayData?.data?.id == FreeplayState.rememberedSongId;
+      });
+    }
+    if (curState.curSelected == -1) curState.curSelected = 0;
+    curState.changeSelection();
+  }
+}
+
+typedef GooeyHiddenSong =
+{
+  var variation:String;
+  var saveVariation:String;
+  var saveDiffs:Array<String>;
+  var album:String;
+  var songText:String;
+  var icon:String;
+  var playMusic:Bool;
+}

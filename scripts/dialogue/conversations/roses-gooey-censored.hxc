@@ -1,0 +1,15 @@
+import funkin.play.cutscene.dialogue.Conversation;
+
+class RosesGooeyCensoredConversation extends Conversation
+{
+  function new()
+  {
+    super('roses-gooey-censored');
+  }
+
+  function onTypingComplete():Void
+  {
+    super.onTypingComplete();
+    if (currentDialogueEntry == 13) advanceConversation();
+  }
+}

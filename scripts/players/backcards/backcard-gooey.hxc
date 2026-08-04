@@ -1,0 +1,321 @@
+import funkin.ui.freeplay.backcards.BackingCard;
+import flixel.math.FlxMath;
+import flixel.FlxSprite;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.BitmapUtil;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.FullScreenScaleMode;
+import funkin.Conductor;
+import funkin.ui.freeplay.BGScrollingText;
+import funkin.data.freeplay.player.PlayerRegistry;
+
+class GooeyCard extends BackingCard
+{
+  final X_POSITION:Float = (FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) - 175;
+
+  public function new()
+  {
+    super("gooey");
+  }
+
+  var backgrad:FlxSprite;
+  var crystal3:FlxSprite;
+  var crystal4:FlxSprite;
+
+  public override function enterCharSel():Void
+  {
+    FlxTween.tween(backgrad.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+    FlxTween.tween(crystal3.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+    FlxTween.tween(crystal4.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+  }
+
+  public override function onCreate(event:ScriptEvent):Void
+  {
+    add(backgrad = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/backGradient')));
+
+    add(backcrystals = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/ourpleBack')));
+    backcrystals.alpha = 0.3;
+
+    add(natCrystal = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystal')));
+    natCrystal.alpha = 0;
+
+    add(natCrystalGlow = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystalGlow')));
+    natCrystalGlow.blend = 0;
+    natCrystalGlow.alpha = 0;
+
+    add(natCrystalGlow2 = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystalGlow')));
+    natCrystalGlow2.blend = 0;
+    natCrystalGlow2.alpha = 0;
+
+    add(selectShade = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/selectShade')));
+    selectShade.blend = 9;
+    selectShade.alpha = 0;
+
+    add(crystal1 = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/crystalBackBigBlur')));
+    crystal1.blend = 16;
+    crystal1.alpha = 0.1;
+    crystal1.flipY = true;
+    crystal1.scale.set(1.3, 1.3);
+
+    add(crystal2 = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/crystalBackSmallBlur')));
+    crystal2.blend = 0;
+    crystal2.alpha = 0.2;
+    crystal2.flipX = true;
+    crystal2.scale.set(1.15, 1.15);
+
+    add(crystal3 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/crystalBack'), 0x01, 0));
+    crystal3.velocity.x = -10;
+    crystal3.blend = 0;
+    crystal3.alpha = 0.2;
+
+    add(crystal4 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/crystalBack'), 0x01, 0));
+    crystal4.velocity.x = 10;
+    crystal4.blend = 0;
+    crystal4.alpha = 0.25;
+    crystal4.flipY = true;
+    // crystal4.flipX = true;
+
+    add(gooLines = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+    gooLines.setPosition(0, 90);
+    gooLines.velocity.x = 100;
+    gooLines.alpha = 0.9;
+    gooLines.blend = 8;
+
+    add(gooLines2 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+    gooLines2.setPosition(0, 370);
+    gooLines2.flipY = true;
+    gooLines2.velocity.x = -100;
+    gooLines2.alpha = 0.9;
+    gooLines2.blend = 8;
+
+    add(gooLines3 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+    gooLines3.setPosition(0, 650);
+    gooLines3.velocity.x = 100;
+    gooLines3.alpha = 0.9;
+    gooLines3.blend = 8;
+
+    funnyScroll1 = new BGScrollingText(0, 175, 'GOOBER ALERT!', FlxG.width / 2, false, 65);
+    funnyScroll1.funnyColor = 0xFFFFFFF;
+    funnyScroll1.speed = 3.34;
+    funnyScroll1.alpha = 0.3;
+    funnyScroll1.blend = 0;
+    funnyScroll1.bold = true;
+    add(funnyScroll1);
+
+    funnyScroll2 = new BGScrollingText(0, 235, 'ALERT! GOOBER', FlxG.width / 2, false, 65);
+    funnyScroll2.funnyColor = 0xFFFFFFF;
+    funnyScroll2.speed = 3.34;
+    funnyScroll2.alpha = 0.3;
+    funnyScroll2.blend = 0;
+    funnyScroll2.bold = true;
+    add(funnyScroll2);
+
+    funnyScroll3 = new BGScrollingText(0, 355, 'THE GOOBER HAS BEEN ALERTED...', FlxG.width / 2, false, 45);
+    funnyScroll3.funnyColor = 0xFFFFFFF;
+    funnyScroll3.speed = 4.2;
+    funnyScroll3.alpha = 0.45;
+    funnyScroll3.blend = 0;
+    funnyScroll3.bold = true;
+    add(funnyScroll3);
+
+    funnyScroll4 = new BGScrollingText(0, 455, 'ALERT! GOOBER', FlxG.width, false, 65);
+    funnyScroll4.funnyColor = 0xFFFFFFF;
+    funnyScroll4.speed = -3.34;
+    funnyScroll4.alpha = 0.3;
+    funnyScroll4.blend = 0;
+    funnyScroll4.bold = true;
+    add(funnyScroll4);
+
+    funnyScroll5 = new BGScrollingText(0, 515, 'GOOBER ALERT!', FlxG.width, false, 65);
+    funnyScroll5.funnyColor = 0xFFFFFFF;
+    funnyScroll5.speed = -3.34;
+    funnyScroll5.alpha = 0.3;
+    funnyScroll5.blend = 0;
+    funnyScroll5.bold = true;
+    add(funnyScroll5);
+
+    funnyScroll6 = new BGScrollingText(0, 635, 'BEEN ALERTED... THE GOOBER HAS', FlxG.width, false, 45);
+    funnyScroll6.funnyColor = 0xFFFFFFF;
+    funnyScroll6.speed = -4.2;
+    funnyScroll6.alpha = 0.45;
+    funnyScroll6.blend = 0;
+    funnyScroll6.bold = true;
+    add(funnyScroll6);
+
+    add(glow = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/gooGrad')));
+    glow.blend = 0;
+    glow.alpha = 0.3;
+
+    add(natFlash = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/natFlash')));
+    natFlash.blend = 0;
+    natFlash.alpha = 0;
+
+    FlxTween.tween(pinkBack, {x: 0}, 0.6, {ease: FlxEase.quartOut});
+    add(pinkBack);
+
+    cardGlow.blend = 0;
+    cardGlow.visible = false;
+    cardGlow.scale.x = cardGlow.scale.x * 1.5;
+    add(cardGlow);
+
+    backgrad.visible = false;
+    backcrystals.visible = false;
+    crystal3.visible = false;
+    crystal4.visible = false;
+    funnyScroll1.visible = false;
+    funnyScroll2.visible = false;
+    funnyScroll3.visible = false;
+    funnyScroll4.visible = false;
+    funnyScroll5.visible = false;
+    funnyScroll6.visible = false;
+    gooLines.visible = false;
+    gooLines2.visible = false;
+    gooLines3.visible = false;
+    glow.visible = false;
+  }
+
+  public function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    crystal1.angle += 1 * event.elapsed;
+    crystal2.angle -= 2 * event.elapsed;
+    crystal3.angle += 4 * event.elapsed;
+    crystal4.angle -= 5 * event.elapsed;
+  }
+
+  override public function confirm():Void
+  {
+    crystal4.velocity.x = 0;
+    crystal3.velocity.x = 0;
+
+    FlxTween.tween(crystal1, {alpha: 0}, 2.3, {ease: FlxEase.expoOut});
+    FlxTween.tween(crystal2, {alpha: 0}, 2.3, {ease: FlxEase.expoOut});
+    FlxTween.tween(crystal3, {alpha: 0}, 2.3, {ease: FlxEase.expoOut});
+    FlxTween.tween(crystal4, {alpha: 0}, 2.3, {ease: FlxEase.expoOut});
+    FlxTween.tween(natCrystal, {alpha: 1}, 2);
+    FlxTween.tween(natCrystalGlow, {alpha: 1}, 2);
+    FlxTween.tween(natCrystalGlow2, {alpha: 1}, 2);
+    FlxTween.tween(selectShade, {alpha: 1}, 2);
+    FlxTween.tween(natFlash, {alpha: 1}, 0.05);
+
+    FlxTween.tween(crystal3, {angle: 180}, 2, {ease: FlxEase.expoOut});
+    FlxTween.tween(crystal4, {angle: -180}, 2, {ease: FlxEase.expoOut});
+
+    FlxTween.tween(crystal3.scale, {x: 1.5, y: 1.5}, 1, {ease: FlxEase.expoOut});
+    FlxTween.tween(crystal4.scale, {x: 2, y: 2}, 1, {ease: FlxEase.expoOut});
+
+    FlxTween.tween(natCrystal.scale, {x: 1.015, y: 1.015}, 5, {ease: FlxEase.expoOut});
+
+    FlxTween.color(backgrad, 0.05, 0x240435, 0x240435, {ease: FlxEase.quadOut});
+
+    FlxTimer.wait(0.25, () ->
+    {
+      FlxTween.tween(natFlash, {alpha: 0}, 1);
+      funnyScroll1.visible = false;
+      funnyScroll2.visible = false;
+      funnyScroll3.visible = false;
+      funnyScroll4.visible = false;
+      funnyScroll5.visible = false;
+      funnyScroll6.visible = false;
+      gooLines.visible = false;
+      gooLines2.visible = false;
+      gooLines3.visible = false;
+      glow.visible = false;
+    });
+  }
+
+  public override function introDone():Void
+  {
+    pinkBack.visible = false;
+    backcrystals.visible = true;
+    backgrad.visible = true;
+    crystal1.visible = true;
+    crystal2.visible = true;
+    crystal3.visible = true;
+    crystal4.visible = true;
+    funnyScroll1.visible = true;
+    funnyScroll2.visible = true;
+    funnyScroll3.visible = true;
+    funnyScroll4.visible = true;
+    funnyScroll5.visible = true;
+    funnyScroll6.visible = true;
+    gooLines.visible = true;
+    gooLines2.visible = true;
+    gooLines3.visible = true;
+    glow.visible = true;
+
+    cardGlow.visible = true;
+    FlxTween.tween(cardGlow, {alpha: 0}, 0.45, {ease: FlxEase.sineOut});
+    FlxTween.tween(cardGlow.scale, {x: 1.2, y: 1.2}, 0.45, {ease: FlxEase.sineOut});
+  }
+
+  public override function disappear():Void
+  {
+    FlxTween.color(pinkBack, 0.25, 0xFF6620AD, 0xFFFFD0D5, {ease: FlxEase.quadOut});
+
+    pinkBack.visible = true;
+
+    backcrystals.visible = false;
+    backgrad.visible = false;
+    crystal1.visible = false;
+    crystal2.visible = false;
+    crystal3.visible = false;
+    crystal4.visible = false;
+    funnyScroll1.visible = false;
+    funnyScroll2.visible = false;
+    funnyScroll3.visible = false;
+    funnyScroll4.visible = false;
+    funnyScroll5.visible = false;
+    funnyScroll6.visible = false;
+    gooLines.visible = false;
+    gooLines2.visible = false;
+    gooLines3.visible = false;
+    glow.visible = false;
+
+    cardGlow.visible = true;
+    cardGlow.alpha = 1;
+    cardGlow.scale.set(1, 1);
+    FlxTween.tween(cardGlow, {alpha: 0}, 0.25, {ease: FlxEase.sineOut});
+    FlxTween.tween(cardGlow.scale, {x: 1.2, y: 1.2}, 0.25, {ease: FlxEase.sineOut});
+  }
+
+  var prevLevelId:String = '';
+
+  /**
+   * Called when a capsule is selected.
+   */
+  public function onCapsuleSelected(event:CapsuleScriptEvent):Void
+  {
+    super.onCapsuleSelected(event);
+
+    var curLevelId:String = event.difficultyId;
+
+    if (curLevelId == 'extra' && curLevelId != prevLevelId)
+    {
+      funnyScroll1.updateText('EXTRA EXTRA');
+      funnyScroll2.updateText('EXTRA EXTRA');
+      funnyScroll3.updateText('EXTRA EXTRA');
+      funnyScroll4.updateText('EXTRA EXTRA');
+      funnyScroll5.updateText('EXTRA EXTRA');
+      funnyScroll6.updateText('EXTRA EXTRA');
+    }
+    else if (prevLevelId == 'extra' && curLevelId != prevLevelId)
+    {
+      var player = PlayerRegistry.instance.fetchEntry(this.currentCharacter);
+
+      funnyScroll1.updateText('GOOBER ALERT!');
+      funnyScroll2.updateText('ALERT! GOOBER');
+      funnyScroll3.updateText('THE GOOBER HAS BEEN ALERTED...');
+      funnyScroll4.updateText('ALERT! GOOBER');
+      funnyScroll5.updateText('GOOBER ALERT!');
+      funnyScroll6.updateText('BEEN ALERTED... THE GOOBER HAS');
+    }
+
+    prevLevelId = curLevelId;
+  }
+}

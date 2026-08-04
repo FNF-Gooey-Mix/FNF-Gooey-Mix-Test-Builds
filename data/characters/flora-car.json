@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "name": "Flora (Car)",
+  "assetPath": "shared:characters/flora/Flora",
+  "startingAnimation": "danceRight",
+  "renderType": "multianimateatlas",
+  "healthIcon": {
+    "id": "flora"
+  },
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "FloraCarIdleLeft",
+      "offsets": [-74, 235]
+    },
+    {
+      "name": "danceLeft-hold",
+      "prefix": "FloraCarIdleLeft",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [11, 12, 13, 14]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "FloraCarIdleRight",
+      "offsets": [-74, 235]
+    },
+    {
+      "name": "danceRight-hold",
+      "prefix": "FloraCarIdleRight",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [11, 12, 13, 14]
+    },
+    {
+      "name": "combo50",
+      "prefix": "FloraCar50Combo",
+      "offsets": [-74, 235]
+    },
+    {
+      "name": "combo50-hold",
+      "prefix": "FloraCar50Combo",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [4, 5, 6, 7]
+    },
+    {
+      "name": "combo200",
+      "prefix": "FloraCar200Combo",
+      "offsets": [-74, 235]
+    },
+    {
+      "name": "danceLeft-alt",
+      "prefix": "FloraCarAltIdleLeft",
+      "offsets": [-74, 235]
+    },
+    {
+      "name": "danceLeft-alt-hold",
+      "prefix": "FloraCarAltIdleLeft",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [9, 10, 11, 12]
+    },
+    {
+      "name": "danceRight-alt",
+      "prefix": "FloraCarAltIdleRight",
+      "offsets": [-74, 235]
+    },
+    {
+      "name": "danceRight-alt-hold",
+      "prefix": "FloraCarAltIdleRight",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [9, 10, 11, 12]
+    },
+    {
+      "name": "danceLeft-trans",
+      "prefix": "FloraCarAltIdleLeft",
+      "offsets": [-74, 235],
+      "frameIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+      "name": "danceRight-trans",
+      "prefix": "FloraCarAltIdleRight",
+      "offsets": [-74, 235],
+      "frameIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+      "name": "danceRight-trans-hold",
+      "prefix": "FloraCarAltIdleRight",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [9, 10, 11, 12]
+    },
+    {
+      "name": "danceLeft-trans-hold",
+      "prefix": "FloraCarAltIdleLeft",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [9, 10, 11, 12]
+    },
+    {
+      "name": "drop70",
+      "prefix": "FloraCarBreakCombo",
+      "offsets": [-74, 235]
+    },
+    {
+      "name": "cheer",
+      "prefix": "FloraCar50Combo",
+      "offsets": [-74, 235]
+    },
+    {
+      "name": "drop70-hold",
+      "prefix": "FloraCarBreakCombo",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [4, 5, 6, 7]
+    },
+    {
+      "name": "cheer-hold",
+      "prefix": "FloraCar50Combo",
+      "offsets": [-74, 235],
+      "looped": true,
+      "frameIndices": [4, 5, 6, 7]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="candleFlame.png">
+<SubTexture name="flame0000" x="0" y="0" width="110" height="88" frameX="-3" frameY="-3" frameWidth="150" frameHeight="150" />
+<SubTexture name="flame0001" x="0" y="88" width="110" height="87" frameX="-3" frameY="-4" frameWidth="150" frameHeight="150" />
+<SubTexture name="flame0002" x="0" y="175" width="110" height="87" frameX="-3" frameY="-4" frameWidth="150" frameHeight="150" />
+</TextureAtlas>

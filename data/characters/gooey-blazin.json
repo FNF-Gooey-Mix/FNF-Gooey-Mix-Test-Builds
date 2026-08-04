@@ -1,0 +1,106 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey (Blazin')",
+  "assetPath": "shared:characters/gooey/GooeyBlazin",
+  "healthIcon": {
+    "id": "gooey"
+  },
+  "flipX": true,
+  "renderType": "multianimateatlas",
+  "singTime": 999.0,
+  "death": {
+    "preTransitionDelay": 0.125,
+    "cameraOffsets": [1500, 950],
+    "cameraZoom": 0.8
+  },
+  "offsets": [730, 490],
+  "atlasSettings": {
+    "cacheOnLoad": true
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "GooeyBlazinIdle",
+      "looped": true
+    },
+    {
+      "name": "block",
+      "prefix": "GooeyBlazinBlock"
+    },
+    {
+      "name": "dodge",
+      "prefix": "GooeyBlazinDodge"
+    },
+    {
+      "name": "fakeout",
+      "prefix": "GooeyBlazinFakeout"
+    },
+    {
+      "name": "taunt",
+      "prefix": "GooeyBlazinTaunt"
+    },
+    {
+      "name": "punchHigh1",
+      "prefix": "GooeyBlazinUpperBack"
+    },
+    {
+      "name": "punchHigh2",
+      "prefix": "GooeyBlazinUpperFront"
+    },
+    {
+      "name": "punchLow1",
+      "prefix": "GooeyBlazinLowerBack"
+    },
+    {
+      "name": "punchLow2",
+      "prefix": "GooeyBlazinLowerFront"
+    },
+    {
+      "name": "hitHigh",
+      "prefix": "GooeyBlazinUpperHit"
+    },
+    {
+      "name": "hitLow",
+      "prefix": "GooeyBlazinLowerHit"
+    },
+    {
+      "name": "hitSpin",
+      "prefix": "GooeyBlazinSpin"
+    },
+    {
+      "name": "hitSpin-hold",
+      "prefix": "GooeyBlazinLoopSpin",
+      "looped": true
+    },
+    {
+      "name": "uppercutPrep",
+      "prefix": "GooeyBlazinPreUppercut"
+    },
+    {
+      "name": "uppercut",
+      "prefix": "GooeyBlazinUppercut"
+    },
+    {
+      "name": "uppercut-hold",
+      "prefix": "GooeyBlazinLoopUppercut",
+      "looped": true
+    },
+    {
+      "name": "uppercutHit",
+      "prefix": "GooeyBlazinHitUppercut"
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "GooeyBlazinDies"
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "GooeyBlazinDead",
+      "looped": true
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "GooeyBlazinRevive"
+    }
+  ]
+}

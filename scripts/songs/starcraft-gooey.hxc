@@ -1,0 +1,25 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+
+class StarcraftGooeyMixSong extends Song
+{
+  function new()
+  {
+    super('starcraft', {
+      variation: 'gooey'
+    });
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'gooey') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    return false;
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+    if (event.step == 1352) PlayState.instance.camGame.flash(0x90B66DFF, 1);
+  }
+}

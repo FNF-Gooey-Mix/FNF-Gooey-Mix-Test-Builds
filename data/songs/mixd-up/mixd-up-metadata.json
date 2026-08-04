@@ -1,0 +1,31 @@
+{
+  "version": "2.2.4",
+  "songName": "Mix'd Up",
+  "artist": "LeGooey",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 180, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["extra"],
+    "characters": {
+      "player": "bf-gooey",
+      "girlfriend": "gf",
+      "opponent": "mix",
+      "instrumental": "",
+      "opponentVocals": ["both"],
+      "altInstrumentals": []
+    },
+    "stage": "phillyCity",
+    "noteStyle": "funkin",
+    "ratings": { "extra": 6 },
+    "album": "mixdUp",
+    "stickerPack": null,
+    "previewStart": 0.69679806787848,
+    "previewEnd": 0.850424558281429
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

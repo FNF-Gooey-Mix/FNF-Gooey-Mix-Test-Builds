@@ -1,0 +1,349 @@
+import funkin.modding.module.Module;
+import funkin.ui.credits.CreditsState;
+import funkin.ui.credits.CreditsDataHandler;
+import funkin.modding.ModStore;
+
+class GooeyCredits extends Module
+{
+  public function new()
+  {
+    super('GooeyCredits', 1, {
+      state: CreditsState
+    });
+
+    active = false;
+    if (ModStore.get('GooeyAddedCreditsData') ?? false) return;
+    ModStore.stores.set('GooeyAddedCreditsData', true);
+
+    CreditsDataHandler.CREDITS_DATA.entries.unshift( // for example this one is on the bottom
+      {
+        header: "---------------------------------------",
+        body: [
+          {
+            line: "",
+          }
+        ]
+      });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Special Thanks",
+      body: [
+        {
+          line: "Abnormal",
+        },
+        {
+          line: "Evening Raine",
+        },
+        {
+          line: "Ferzy",
+        },
+        {
+          line: "FUNKCON2",
+        },
+        {
+          line: "Hundrec",
+        },
+        {
+          line: "Hunterman9924YT",
+        },
+        {
+          line: "ImVeryBad",
+        },
+        {
+          line: "JimJam",
+        },
+        {
+          line: "JoaDash",
+        },
+        {
+          line: "KagiMusic",
+        },
+        {
+          line: "Keoiki",
+        },
+        {
+          line: "KoloInDaCrib",
+        },
+        {
+          line: "LancExists",
+        },
+        {
+          line: "Matt Does",
+        },
+        {
+          line: "MindOfThomas",
+        },
+        {
+          line: "Mr. Random",
+        },
+        {
+          line: "OvalFrankieVA",
+        },
+        {
+          line: "Parmesanmch",
+        },
+        {
+          line: "PurSnake",
+        },
+        {
+          line: "Ratthew Von Cheese",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Drippypop (Gooey Mix)",
+      body: [
+        {
+          line: "EthanTheDoodler (Original Drippypop)",
+        },
+        {
+          line: "Impostorm (Original Drippypop)",
+        },
+        {
+          line: "NeatoNG (Original Drippypop)",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Remix Credits",
+      body: [
+        {
+          line: ""
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "QT: Rewired",
+      body: [
+        {
+          line: "Biddle3 (Original Blissful)",
+        },
+        {
+          line: "JoaDash (Director of QT: Rewired)",
+        },
+        {
+          line: "All QT: Rewired assets belong to the QT: Rewired Crew",
+        },
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Eevee Mix",
+      body: [
+        {
+          line: "aUseriGuess (Gooey/Slimeball (Eevee Mix))",
+        },{
+          line: "SkyManta (Slimeball (Eevee Mix))",
+        },
+        {
+          line: "All Eevee Mix assets belong to aUseriGuess",
+        },
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Collab Credits",
+      body: [
+        {
+          line: ""
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Charting",
+      body: [
+        {
+          line: "LeGooey",
+        },
+        {
+          line: "Rbz_Fzo",
+        },
+        {
+          line: "swagsalt",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Programming",
+      body: [
+        {
+          line: "7oltan",
+        },
+        {
+          line: "ADA_Funni",
+        },
+        {
+          line: "Comedy Lost",
+        },
+        {
+          line: "Denoohay",
+        },
+        {
+          line: "LeGooey",
+        },
+        {
+          line: "MightyTheArmiddilo",
+        },
+        {
+          line: "requazar",
+        },
+        {
+          line: "Srt",
+        },
+        {
+          line: "Strife4Life",
+        },
+        {
+          line: "TechnikTil",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Voice Acting",
+      body: [
+        {
+          line: "ContentLeaf (Voice of Pico)",
+        },
+        {
+          line: "MindOfThomas (Monster Backing Vocals)",
+        },
+        {
+          line: "LeGooey (Voice of Gooey, Flora, and Mix)",
+        },
+        {
+          line: "RubyyyButCool (Voice of Monster)",
+        },
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Music Production",
+      body: [
+        {
+          line: "ADA_Funni",
+        },
+        {
+          line: "ChessBrabo",
+        },
+        {
+          line: "DigitLuck",
+        },
+        {
+          line: "DoubleM",
+        },
+        {
+          line: "FuryGRTX",
+        },
+        {
+          line: "HEV",
+        },
+        {
+          line: "krimzonred",
+        },
+        {
+          line: "LeGooey",
+        },
+        {
+          line: "requazar",
+        },
+        {
+          line: "RixFX",
+        },
+        {
+          line: "SakiProd",
+        },
+        {
+          line: "Strife4Life",
+        },
+        {
+          line: "swagsalt",
+        },
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Guest Artists (Album Art)",
+      body: [
+        {
+          line: "Chipallino",
+        },
+        {
+          line: "Coffee Kat",
+        },
+        {
+          line: "z_zmag8",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Artists",
+      body: [
+        {
+          line: "Bluemelt",
+        },
+        {
+          line: "LeGooey",
+        },
+        {
+          line: "Mythical Sam",
+        },
+        {
+          line: "Official_NO",
+        },
+        {
+          line: "SakiProd",
+        },
+        {
+          line: "Strife4Life",
+        },
+        {
+          line: "swagsalt",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Featuring",
+      body: [
+        {
+          line: "BlueWolf",
+        },
+        {
+          line: "Bowl0fCereal",
+        },
+        {
+          line: "Chiwawa Sandwich",
+        },
+        {
+          line: "Coffee Kat",
+        },
+        {
+          line: "Noodle",
+        },
+        {
+          line: "Kam'ron",
+        },
+        {
+          line: "Mythical Sam",
+        },
+        {
+          line: "Not Matt",
+        },
+        {
+          line: "Radiation",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Director",
+      body: [
+        {
+          line: "LeGooey",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift( // and this is on da top
+      {
+        header: "Friday Night Funkin': Gooey Mix",
+        body: [
+          {
+            line: ""
+          }
+        ]
+      });
+  }
+}

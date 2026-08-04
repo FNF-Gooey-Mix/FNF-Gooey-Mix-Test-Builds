@@ -1,0 +1,134 @@
+import funkin.modding.ModStore;
+import flixel.util.FlxSave;
+
+class GooeyMixOptions
+{
+  public static var gooeyMixMenu(get, set):String;
+  public static var morphoMode(get, set):String;
+  public static var gooeyShaders(get, set):Bool;
+  public static var floraVisualizer(get, set):Bool;
+  public static var nightcoreMode(get, set):Bool;
+  public static var defaultStartupCharacter(get, set):String;
+  public static var rememberedStartupCharacter(get, set):String;
+
+  static function set_gooeyMixMenu(value:String):String
+  {
+    save.data.GooeyMixMenu = value;
+    flush();
+    return save.data.GooeyMixMenu;
+  }
+
+  static function get_gooeyMixMenu():String
+  {
+    return save.data.GooeyMixMenu;
+  }
+
+  static function set_morphoMode(value:String):String
+  {
+    save.data.morphoMode = value;
+    flush();
+    return save.data.morphoMode;
+  }
+
+  static function get_morphoMode():String
+  {
+    return save.data.morphoMode;
+  }
+
+  static function set_gooeyShaders(value:Bool):Bool
+  {
+    save.data.gooeyShaders = value;
+    flush();
+    return save.data.gooeyShaders;
+  }
+
+  static function get_gooeyShaders():Bool
+  {
+    return save.data.gooeyShaders;
+  }
+
+  static function set_floraVisualizer(value:Bool):Bool
+  {
+    save.data.floraVisualizer = value;
+    flush();
+    return save.data.floraVisualizer;
+  }
+
+  static function get_floraVisualizer():Bool
+  {
+    return save.data.floraVisualizer;
+  }
+
+  static function set_nightcoreMode(value:Bool):Bool
+  {
+    save.data.nightcoreMode = value;
+    flush();
+    return save.data.nightcoreMode;
+  }
+
+  static function get_nightcoreMode():Bool
+  {
+    return save.data.nightcoreMode;
+  }
+
+  static function set_defaultStartupCharacter(value:String):String
+  {
+    save.data.defaultStartupCharacter = value;
+    flush();
+    return save.data.defaultStartupCharacter;
+  }
+
+  static function get_defaultStartupCharacter():String
+  {
+    return save.data.defaultStartupCharacter;
+  }
+
+  static function set_rememberedStartupCharacter(value:String):String
+  {
+    save.data.rememberedStartupCharacter = value;
+    flush();
+    return save.data.rememberedStartupCharacter;
+  }
+
+  static function get_rememberedStartupCharacter():String
+  {
+    return save.data.rememberedStartupCharacter;
+  }
+
+  public static var save(get, never):FlxSave;
+
+  static function get_save():FlxSave
+  {
+    var save:FlxSave = ModStore.get('GooeyMixOptions');
+
+    if (save == null)
+    {
+      save = new FlxSave();
+      save.bind("GooeyMixOptions", "FunkinCrew");
+      save.mergeData(getDefaultSave(), false);
+      ModStore.register('GooeyMixOptions', save);
+    }
+
+    return save;
+  }
+
+  public static function flush():Void
+  {
+    save.flush();
+    trace('[GOOEY] Updated "GooeyMixOptions.sol" on local disk.');
+  }
+
+  static function getDefaultSave():Dynamic
+  {
+    return {
+      GooeyMixMenu: 'Always On',
+      morphoMode: 'Off',
+      gooeyShaders: true,
+      floraVisualizer: true,
+      nightcoreMode: false,
+
+      defaultStartupCharacter: null,
+      rememberedStartupCharacter: 'bf'
+    };
+  }
+}

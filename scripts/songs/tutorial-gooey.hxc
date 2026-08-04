@@ -1,0 +1,33 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import flixel.util.FlxSave;
+
+class TutorialGooeyMixSong extends Song
+{
+  function new()
+  {
+    super('tutorial', {
+      variation: 'gooey'
+    });
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+    PlayState.instance.comboPopUps.offsets = [-450, 350];
+    if (PlayState.instance?.currentStage != null) synchronizeShader();
+  }
+
+  function synchronizeShader():Void
+  {
+    if (PlayState.instance.currentStage.getDad().shader.brightness == null) return;
+    if (PlayState.instance.currentStage.getDad().shader.brightness == -30) return;
+    if (!GooeyMixOptions.gooeyShaders) return;
+
+    PlayState.instance.currentStage.getDad().shader.brightness = -30;
+    PlayState.instance.currentStage.getDad().shader.hue = -9;
+    PlayState.instance.currentStage.getDad().shader.contrast = -4;
+    trace();
+  }
+}

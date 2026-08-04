@@ -1,0 +1,30 @@
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.modding.module.Module;
+import funkin.modding.PolymodHandler;
+import thx.semver.Version;
+
+class GooeyMainMenu extends Module
+{
+  public function new()
+  {
+    super('GooeyMainMenu', 2, {
+      state: MainMenuState
+    });
+  }
+
+  override public function onStateChangeEnd(event:StateChangeScriptEvent)
+  {
+    super.onStateChangeEnd(event);
+    if (!Std.isOfType(event.targetState, MainMenuState)) return;
+
+    var originalText:String = FlxG.state.rightWatermarkText.text;
+
+    var metadata:ModMetadata = PolymodHandler.modFileSystem.getMetadataById("GooeyMix");
+    var version:String = Version.toString(metadata.modVersion);
+
+    FlxG.state.rightWatermarkText.text = "FNF: Gooey Mix v" + version;
+
+    if (originalText.length > 0) FlxG.state.rightWatermarkText.text += '\n${originalText}';
+    FlxG.state.rightWatermarkText.y = FlxG.height - FlxG.state.rightWatermarkText.height;
+  }
+}

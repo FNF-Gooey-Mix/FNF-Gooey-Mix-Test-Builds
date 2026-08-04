@@ -1,0 +1,33 @@
+import funkin.play.character.MultiSparrowCharacter;
+
+class KamUpdogCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('kam-updog');
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.eventCanceled)
+    {
+      // onNoteHit event was cancelled by the gameplay module.
+      return;
+    }
+
+    // Override the hit note animation.
+    switch (event.note.kind)
+    {
+      case "noanim":
+        holdTimer = 0;
+        this.playSingAnimation(event.note.noteData.getDirection(), false);
+        return;
+      case "duet":
+        holdTimer = 0;
+        this.playSingAnimation(event.note.noteData.getDirection(), false);
+        return;
+      default:
+        super.onNoteHit(event);
+    }
+  }
+}

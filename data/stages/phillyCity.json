@@ -1,0 +1,165 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [-1000, -570],
+      "animType": "sparrow",
+      "name": "Sky",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/Sky",
+      "scroll": [0.2, 0.2],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-700, -300],
+      "animType": "FarCity",
+      "name": "City",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/farCity",
+      "scroll": [0.4, 0.6],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 30,
+      "position": [-400, -100],
+      "animType": "sparrow",
+      "name": "City",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/City",
+      "scroll": [0.6, 0.9],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 40,
+      "position": [-100, 0],
+      "animType": "sparrow",
+      "name": "911",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/911",
+      "scroll": [0.85, 1],
+      "animations": []
+    },
+    {
+      "zIndex": 42,
+      "danceEvery": 0,
+      "position": [1000, 680],
+      "name": "picoWalk",
+      "animType": "sparrow",
+      "isPixel": false,
+      "startingAnimation": "walk",
+      "scroll": [0.85, 1],
+      "assetPath": "gooeyMix/extra/phillyCity/picowalk",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "picoWalk",
+          "name": "walk",
+          "looped": false,
+          "flipX": false
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 45,
+      "position": [100, 710],
+      "scale": [0.45, 0.45],
+      "name": "backCar",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/MixCar",
+      "scroll": [0.85, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 50,
+      "position": [-500, 0],
+      "name": "MainCity",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/MainBG",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 85,
+      "position": [-3000, 1400],
+      "scale": [1.5, 1.5],
+      "name": "frontCar",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/MixCar",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 90,
+      "position": [500, 300],
+      "name": "plant",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/plant",
+      "scroll": [1.5, 1.5],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 100,
+      "position": [3500, 1800],
+      "scale": [0.5, 0.5],
+      "name": "sotp",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/sotp sign",
+      "scroll": [1.5, 1.5],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 110,
+      "position": [0, 0],
+      "name": "lighting",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/MixLighting",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 150,
+      "position": [-500, 0],
+      "scale": [1, 1],
+      "name": "MainCity",
+      "isPixel": false,
+      "assetPath": "gooeyMix/extra/phillyCity/lazyFix",
+      "scroll": [1, 1],
+      "animations": []
+    }
+  ],
+  "cameraZoom": 0.65,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 80,
+      "position": [2650, 1650],
+      "cameraOffsets": [-100, -200]
+    },
+    "dad": {
+      "zIndex": 70,
+      "position": [1250, 1650],
+      "cameraOffsets": [150, -200]
+    },
+    "gf": {
+      "zIndex": 60,
+      "cameraOffsets": [0, -200],
+      "position": [1915, 1550]
+    }
+  },
+  "name": "Philly City",
+  "directory": ""
+}

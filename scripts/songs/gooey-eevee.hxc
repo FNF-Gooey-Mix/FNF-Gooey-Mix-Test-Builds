@@ -1,0 +1,21 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+
+class GooeyEeveeMixSong extends Song
+{
+  function new()
+  {
+    super('gooey', {
+      variation: 'eevee'
+    });
+  }
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    var targetDifficulty:Null<SongDifficulty> = getDifficulty(difficultyId, variationId);
+    if (Save.instance.hasBeatenSong(this.id, ['extra'], 'eevee')) return targetDifficulty?.characters?.altInstrumentals ?? [];
+    else
+      return [];
+  }
+}

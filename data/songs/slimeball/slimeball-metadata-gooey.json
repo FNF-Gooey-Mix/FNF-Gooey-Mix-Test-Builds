@@ -1,0 +1,31 @@
+{
+  "version": "2.2.4",
+  "songName": "Slimeball (Gooey Mix)",
+  "artist": "LeGooey (ft. Strife4Life)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 160, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey",
+      "girlfriend": "flora",
+      "opponent": "gooey-opponent",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["gooey-opponent"],
+      "altInstrumentals": ["", "eevee"]
+    },
+    "stage": "natCrystal",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 6, "normal": 7, "hard": 8 },
+    "album": "gooeyex2",
+    "stickerPack": "bonus-tutorialGooey",
+    "previewStart": 0.228291609007422,
+    "previewEnd": 0.377418543212983
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

@@ -1,0 +1,9 @@
+import gooeymix.characters.GooeyBaseCharacter;
+
+class GooeyCarPlayableCharacter extends GooeyBaseCharacter
+{
+  public function new()
+  {
+    super('gooey-car');
+  }
+}

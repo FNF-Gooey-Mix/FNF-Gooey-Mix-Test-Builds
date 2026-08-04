@@ -1,0 +1,15 @@
+import funkin.play.cutscene.dialogue.Conversation;
+
+class ThornsGooeyCensoredConversation extends Conversation
+{
+  function new()
+  {
+    super('thorns-gooey-censored');
+  }
+
+  function onTypingComplete():Void
+  {
+    super.onTypingComplete();
+    if (currentDialogueEntry == 27) advanceConversation();
+  }
+}

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="week1CrowdGasp.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gasp0000" x="8" y="8" width="1322" height="385" frameX="-2" frameY="-13" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0001" x="1338" y="8" width="1324" height="398"/>
+	<SubTexture name="gasp0002" x="2670" y="8" width="1324" height="398"/>
+	<SubTexture name="gasp0003" x="8" y="414" width="1324" height="392" frameX="0" frameY="-6" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0004" x="1340" y="414" width="1324" height="392" frameX="0" frameY="-6" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0005" x="2672" y="414" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0006" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0007" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0008" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0009" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0010" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0011" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0012" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0013" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0014" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0015" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0016" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0017" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+	<SubTexture name="gasp0018" x="8" y="814" width="1324" height="390" frameX="0" frameY="-8" frameWidth="1324" frameHeight="398"/>
+</TextureAtlas>

@@ -1,0 +1,7 @@
+[
+  [
+    { "op": "test", "path": "/playData/songVariations", "inverse": true },
+    { "op": "add", "path": "/playData/songVariations", "value": [] }
+  ],
+  [{ "op": "add", "path": "/playData/songVariations/-", "value": "gooey" }]
+]

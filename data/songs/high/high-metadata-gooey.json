@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "High (Gooey Mix)",
+  "artist": "LeGooey",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 125, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-car",
+      "girlfriend": "flora-car",
+      "opponent": "mom-car",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["mom"],
+      "altInstrumentals": ["erect", ""]
+    },
+    "stage": "limoRideErectGooey",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 5, "normal": 7, "hard": 8 },
+    "album": "gooeyex1",
+    "stickerPack": null,
+    "previewStart": 0.618396025550035,
+    "previewEnd": 0.909164892358647
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

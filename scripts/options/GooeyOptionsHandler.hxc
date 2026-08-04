@@ -1,0 +1,103 @@
+import funkin.modding.module.Module;
+import funkin.ui.options.OptionsState;
+import funkin.save.Save;
+import funkin.ui.options.PreferencesMenu;
+import flixel.util.FlxSave;
+import funkin.data.freeplay.player.PlayerRegistry;
+import funkin.ui.freeplay.FreeplayState;
+
+// A main module that handles adding every option instead of having them all in separate scripts
+class GooeyPreferences extends Module
+{
+  function new()
+  {
+    super("GooeyPreferences");
+  }
+
+  function onStateChangeEnd(callback)
+  {
+    super.onStateChangeEnd(callback);
+
+    if (!(callback.targetState is OptionsState)) return;
+    var preferencePage:PreferencesMenu = callback.targetState.optionsCodex.addPage('gooey', new PreferencesMenu());
+    preferencePage.onExit.add(function()
+    {
+      FlxG.state.optionsCodex.switchPage('options');
+    });
+
+    preferencePage.preferenceDesc = [];
+    preferencePage.items.clear();
+    preferencePage.preferenceItems.clear();
+    var optionspage = callback.targetState.optionsCodex.pages.get('options');
+    var exit = optionspage.items.getItem("LAG ADJUSTMENT") ?? null;
+    var option = optionspage.createItem("Gooey Mix Options", function() FlxG.state.optionsCodex.switchPage('gooey'));
+    if (exit != null)
+    {
+      optionspage.items.members.remove(option);
+      optionspage.items.members.insert(optionspage.items.members.indexOf(exit), option);
+    }
+    for (i in 0...optionspage.items.members.length)
+    {
+      var item = optionspage.items.members[i];
+      item.y = 100 + i * 100;
+    }
+
+    var prefs = callback.targetState.optionsCodex.pages.get("gooey");
+    if (prefs != null)
+    {
+      prefs.createPrefItemEnum('Gooey Menu', "Switch between using Gooey Mix's or FNF's menu themes.", [
+        'Always On' => 'Always On',
+        'Off' => 'Off',
+        'Gooey Selected' => 'Gooey Selected'
+      ], function(value:String, oValue:String):Void
+      {
+        GooeyMixOptions.gooeyMixMenu = value;
+      }, GooeyMixOptions.gooeyMixMenu);
+      prefs.createPrefItemCheckbox('Gooey Shaders', "Enables shaders for some stages and characters\n(DISABLING WILL LOOK LIKE SHIT)",
+        function(value:Bool):Void
+        {
+          GooeyMixOptions.gooeyShaders = value;
+        }, GooeyMixOptions.gooeyShaders);
+      prefs.createPrefItemCheckbox('Flora Visualizer',
+        "Toggles the visualizer on Flora's speaker. Having it off may improve FPS (But its cool as fuck so why would you turn it off)",
+        function(value:Bool):Void
+        {
+          GooeyMixOptions.floraVisualizer = value;
+        }, GooeyMixOptions.floraVisualizer);
+      prefs.createPrefItemEnum('Default Player', "Choose the Playable Character that will be selected by default when first opening Freeplay.",
+        makeOptionsList(), function(key:String, value:String):Void
+      {
+        GooeyMixOptions.defaultStartupCharacter = value;
+      }, getDefaultPlayerKey());
+      prefs.createPrefItemEnum('Morpho Mode', "HEY GORDAN!", ['Off' => 'Off', 'On' => 'On', 'No Stickers' => 'No Stickers'],
+        function(value:String, oValue:String):Void
+        {
+          GooeyMixOptions.morphoMode = value;
+        }, GooeyMixOptions.morphoMode);
+      prefs.createPrefItemCheckbox('Nightcore Mode', "It's like that one twitter post!", function(value:Bool):Void
+      {
+        GooeyMixOptions.nightcoreMode = value;
+      }, GooeyMixOptions.nightcoreMode);
+      prefs.itemDesc.text = prefs.preferenceDesc[prefs.items.selectedIndex];
+    }
+  }
+
+  function makeOptionsList()
+  {
+    var playableCharacters:Map<String, String> = ["Remember Previous" => null];
+
+    for (character in PlayerRegistry.instance.listEntryIds())
+    {
+      playableCharacters.set(PlayerRegistry.instance.fetchEntry(character).getName(), character);
+    }
+
+    return playableCharacters;
+  }
+
+  function getDefaultPlayerKey():String
+  {
+    if (GooeyMixOptions.defaultStartupCharacter == null) return "Remember Previous";
+
+    return PlayerRegistry.instance.fetchEntry(GooeyMixOptions.defaultStartupCharacter)?.getName();
+  }
+}

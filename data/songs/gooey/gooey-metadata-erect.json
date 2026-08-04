@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Gooey Erect",
+  "artist": "SakiProd",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 112, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": ["gooey"],
+    "difficulties": ["erect", "nightmare"],
+    "characters": {
+      "player": "bf",
+      "girlfriend": "gf",
+      "opponent": "gooey-opponent",
+      "instrumental": "erect",
+      "playerVocals": ["bf"],
+      "opponentVocals": ["gooey"],
+      "altInstrumentals": []
+    },
+    "stage": "natCrystal",
+    "noteStyle": "funkin",
+    "ratings": { "erect": 8, "nightmare": 9 },
+    "album": "gooeyex2",
+    "stickerPack": "bonus-gooeyWeekBf",
+    "previewStart": 0.495495238095238,
+    "previewEnd": 0.824257142857143
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

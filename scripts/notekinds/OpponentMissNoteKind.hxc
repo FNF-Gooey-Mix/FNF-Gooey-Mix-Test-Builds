@@ -1,0 +1,19 @@
+import funkin.play.notes.notekind.NoteKind;
+import funkin.play.PlayState;
+
+class OpponentMissNoteKind extends NoteKind
+{
+  public function new()
+  {
+    super('opponentMiss', 'Opponent Miss');
+  }
+
+  override public function onNoteHit(event:HitNoteScriptEvent):Void
+  {
+    super.onNoteHit(event);
+    if (event.eventCanceled || event.note.noteData.getMustHitNote()) return;
+    event.note.hasBeenHit = true;
+    event.note.handledMiss = true;
+    event.cancel();
+  }
+}

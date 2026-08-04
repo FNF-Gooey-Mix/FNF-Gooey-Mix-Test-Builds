@@ -1,0 +1,428 @@
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.util.ReflectUtil;
+import funkin.save.Save;
+import funkin.ui.options.OptionsState;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.util.FlxTweenUtil;
+import flixel.util.FlxTimer;
+import funkin.graphics.shaders.DropShadowShader;
+import flixel.util.FlxSave;
+
+class MorphoModeOption extends Module
+{
+  public function new()
+  {
+    super('MorphoModeOption');
+  }
+
+  var morphoDanceNumber:Int = 1;
+  var morphoModeDancer:FunkinSprite;
+  var colorShader:AdjustColorShader;
+
+  function morphoOffset(morphoX, morphoY, morphoZ, morphoScale, morphoScroll1, morphoScroll2)
+  {
+    morphoModeDancer.x = morphoX;
+    morphoModeDancer.y = morphoY;
+    morphoModeDancer.zIndex = morphoZ;
+    morphoModeDancer.scale.set(morphoScale, morphoScale);
+    morphoModeDancer.scrollFactor.set(morphoScroll1, morphoScroll2);
+  }
+
+  function morphoShader(isRimLight, brightness, hue, contrast, saturation, rimColor, rimAngle, rimThreshold, rimDistance)
+  {
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      if (isRimLight)
+      {
+        var rim = new DropShadowShader();
+        rim.setAdjustColor(brightness, hue, contrast, saturation);
+        rim.color = rimColor;
+        rim.angle = rimAngle;
+        rim.threshold = rimThreshold;
+        rim.distance = rimDistance;
+        rim.attachedSprite = morphoModeDancer;
+        morphoModeDancer.shader = rim;
+        morphoModeDancer.animation.onFrameChange.add(function()
+        {
+          if (morphoModeDancer != null)
+          {
+            rim.updateFrameInfo(morphoModeDancer.frame);
+          }
+        });
+      }
+      else
+      {
+        morphoColorShade = new AdjustColorShader();
+        morphoColorShade.brightness = brightness;
+        morphoColorShade.hue = hue;
+        morphoColorShade.contrast = contrast;
+        morphoColorShade.saturation = saturation;
+        morphoModeDancer.shader = morphoColorShade;
+      }
+    }
+  }
+
+  function onSongLoaded()
+  {
+    super.onSongLoaded();
+
+    if (GooeyMixOptions.morphoMode == 'On')
+    {
+      PlayState.instance.currentChart.stickerPack = "bonus-morpho";
+    }
+
+    if (GooeyMixOptions.morphoMode == 'On' || GooeyMixOptions.morphoMode == 'No Stickers')
+    {
+      if (PlayState.instance.isMinimalMode) return;
+
+      if (morphoModeDancer != null)
+      {
+        morphoModeDancer.kill();
+      }
+
+      // im to lazy to get Spooky Week 2 and Spooky Blazin to work lol
+      // also skipping some remnants stuff cuz im tired but got all the main ones just missing the bonus songs
+      if (PlayState.instance.currentStageId != "phillyBlazin"
+        && PlayState.instance.currentStageId != "phillyBlazinErect"
+        && PlayState.instance.currentStageId != "phillyStreetsErect"
+        && PlayState.instance.currentStageId != "phillyStreetsSpooky"
+        && PlayState.instance.currentStageId != "schoolSpooky"
+        && PlayState.instance.currentStageId != "phillyStreetsGooey"
+        && PlayState.instance.currentStageId != "hotelCastle"
+        && PlayState.instance.currentStageId != "phillyCity")
+      {
+        morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoMode');
+      }
+
+      switch (PlayState.instance.currentStageId)
+      {
+        case 'phillyBlazin', 'phillyBlazinErect', 'phillyStreetsErect', 'phillyStreetsSpooky', 'phillyStreetsGooey', 'phillyBlazinGooey':
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoModeBlur');
+        case 'hotelCastle':
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoModeHotel');
+        case 'phillyCity':
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoModeMix');
+        case 'schoolSpooky':
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoModePurple');
+        default:
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoMode');
+      }
+
+      morphoModeDancer.animation.addByPrefix('morphoHittingIt', 'morphoHittingIt', 12, true);
+      morphoModeDancer.animation.addByPrefix('hitIt1', 'hitIt1', 12, false);
+      morphoModeDancer.animation.addByPrefix('hitIt2', 'hitIt2', 12, false);
+      morphoModeDancer.animation.addByPrefix('hitIt3', 'hitIt3', 12, false);
+      morphoModeDancer.animation.addByPrefix('hitIt4', 'hitIt4', 12, false);
+      morphoModeDancer.animation.play('morphoHittingIt', true);
+      PlayState.instance.currentStage.add(morphoModeDancer);
+      morphoModeDancer.zIndex = -500;
+      PlayState.instance.currentStage.refresh();
+      morphoDanceNumber = 1;
+
+      switch (PlayState.instance.currentStageId)
+      {
+        case 'hotelCastle':
+          morphoOffset(470, 310, 22, 1, 1, 1);
+          if (PlayState.instance.currentSong.id.toLowerCase() == "comedian-rad-mix") morphoModeDancer.alpha = 0;
+        case 'mainStage', 'mainStageRemnants':
+          morphoOffset(900, 130, 29, 1, 1, 1);
+        case 'spookyMansion', 'spookyMansionRemnants':
+          morphoOffset(-300, 150, 50, 1, 1, 1);
+        case 'spookyMansionSonic':
+          morphoOffset(-300, 150, 50, 1, 1, 1);
+          morphoShader(false, -30, -5, 12, -18, 0xFFFFFFFF, 0, 0.1, 15);
+        case 'phillyTrain':
+          morphoOffset(1000, 130, 150, 1, 1, 1);
+        case 'phillyTrainErect':
+          morphoOffset(1000, 130, 150, 1, 1, 1);
+          morphoShader(false, -5, -26, 0, -16, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'phillyTrainRemnants':
+          morphoOffset(1000, 180, 150, 1, 1, 1);
+        case 'limoRide', 'limoRideErect', 'limoRideSpooky', 'limoRideErectGooey', 'limoRideRemnants':
+          PlayState.instance.currentStage.getNamedProp('limoDancer1').alpha = 0;
+          PlayState.instance.currentStage.getNamedProp('limoDancer2').alpha = 0;
+          morphoOffset(200, -60, 30, 0.75, 0.4, 0.4);
+          if (PlayState.instance.currentStageId == "limoRide") morphoShader(false, 22, -10, -10, 10, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+          else if (PlayState.instance.currentStageId == "limoRideSpooky") morphoShader(false, -10, -10, -20, -20, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+          else if (PlayState.instance.currentStageId == "limoRideErect"
+            || PlayState.instance.currentStageId == "limoRideErectGooey") morphoShader(false, -12, -30, -10, -10, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'mallXmas', 'mallEvil', 'mallEvilHuggy':
+          morphoOffset(1200, 130, 90, 1, 1, 1);
+        case 'mallXmasSpooky':
+          morphoOffset(1200, 130, 90, 1, 1, 1);
+          morphoShader(false, 3, -8, 9, -15, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'mallEvilSpooky':
+          morphoOffset(1200, 130, 90, 1, 1, 1);
+          morphoShader(false, -28, -22, -14, -21, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'mallXmasErect', 'mallXmasHuggy':
+          morphoOffset(1200, 130, 90, 1, 1, 1);
+          morphoShader(false, 0, 5, 0, 20, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'mallXmasGooey':
+          morphoOffset(1200, 130, 90, 1, 1, 1);
+          morphoShader(false, 0, 5, 0, 20, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+          PlayState.instance.currentStage.getNamedProp('bottomMorphoBop').alpha = 0;
+        case 'mallXmasRemnants':
+          morphoOffset(1100, -1000, 301, 1, 1, 1);
+        case 'school', 'schoolEvil', 'schoolEvilErect', 'schoolRemnants', 'schoolEvilRemnants':
+          morphoOffset(1100, 260, 95, 0.75, 1, 1);
+        case 'schoolErect', 'schoolHuggy', 'schoolPico', 'schoolGooey':
+          morphoOffset(1100, 260, 95, 0.75, 1, 1);
+          morphoShader(true, -25, -15, 18, -24, 0xFF52351d, 90, -1, 20); // color, angle, threshold, distance
+        case 'schoolEvilGooey':
+          morphoOffset(1100, -1000, 301, 1, 1, 1);
+          morphoShader(true, -40, -20, 19, 5, 0xFF690832, 180, -1, 20); // color, angle, threshold, distance
+        case 'schoolSpooky':
+          morphoOffset(1000, 260, 95, 0.75, 1, 1);
+        case 'schoolEvilSpooky':
+          morphoOffset(1000, 260, 95, 0.75, 1, 1);
+          morphoShader(true, -100, -30, 10, -30, 0xFF2B0F5E, 180, -1, 20); // color, angle, threshold, distance
+        case 'tankmanBattlefield', 'tankmanBattlefieldRemnants':
+          morphoOffset(950, 130, 101, 1, 1, 1);
+        case 'tankmanBattlefieldSpooky':
+          morphoOffset(-250, 60, 40, 0.75, 1, 1);
+          morphoShader(false, -5, 0, 0, -15, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'tankmanBattlefieldErect':
+          morphoOffset(1400, 170, 150, 1, 1, 1);
+          morphoShader(true, -46, -38, -25, -20, 0xFFDFEF3C, 110, 0.1, 15); // color, angle, threshold, distance
+        case 'phillyBlazin', 'phillyBlazinRemnants':
+          morphoOffset(1400, 530, 39, 0.4, 0.7, 1);
+          morphoShader(false, -120, -10, -70, -40, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+         case 'phillyBlazinGooey':
+          morphoOffset(1400, 600, 39, 0.4, 0.7, 1);
+          morphoShader(false, -120, -10, -70, -40, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'phillyStreets', 'phillyStreetsErect':
+          morphoOffset(1400, 530, 39, 0.4, 0.7, 1);
+          morphoShader(false, -20, -10, -50, -40, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'phillyStreetsSpooky':
+          morphoOffset(1400, 530, 39, 0.4, 0.7, 1);
+          morphoShader(false, -100, -20, -60, -70, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'phillyStreetsRemnants':
+          morphoOffset(800, 600, 70, 0.6, 1, 1);
+        case 'mainStageErect', 'mainStageErectGooey', 'mainStageSpooky', 'mainStageParappa':
+          morphoOffset(1050, 130, 99, 1, 1, 1);
+          morphoShader(false, -13, 4, 7, 0, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'spookyMansionErect', 'spookyMansionMonsterPico':
+          morphoOffset(150, 0, 30, 99, 0.7, 1, 1);
+          morphoModeDancer.zIndex = PlayState.instance.currentStage.getNamedProp('bgLight').zIndex - 1;
+          morphoModeDancer.alpha = 0;
+          morphoModeDancer.color = 0xFF000000;
+        case 'sserafim':
+          morphoOffset(-1500, 250, 400, 1, 1, 1);
+        case 'drippypopErectGooey':
+          morphoOffset(1100, -80, 82, 1, 1, 1);
+        case 'phillyCity':
+          morphoOffset(1300, 435, 41, 0.55, 0.85, 1);
+        case 'spitbucket':
+          morphoOffset(1700, 600, 61, 0.8, 1, 1);
+        case 'cartersroom':
+          morphoOffset(920, 170, 230, 1, 1, 1);
+        case 'skidsAtticTutorial':
+          morphoOffset(1700, 600, 110, 1, 1, 1);
+          morphoShader(true, -53, -16, -14, -20, 0xFF747DCE, 135, 0.1, 15); // color, angle, threshold, distance
+        case 'phillyTrainSpooky':
+          morphoOffset(1820, 190, 19, 0.2, 0.6, 0.6);
+          morphoModeDancer.alpha = 0.2;
+          morphoModeDancer.color = 0xFF000000;
+        case 'oogasHouse':
+          morphoOffset(400, 110, 98, 1, 1, 1);
+        case 'happy', 'cafe':
+          morphoOffset(-830, -667, 98, 1, 1, 1); // haha! he said 67! AHAH! HE SAID 67 AGAIN! AAAAAAA
+        case 'pizzaPlace':
+          morphoOffset(290, 120, 1, 1, 1, 1);
+          morphoShader(false, -8, -6, -20, -33, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'parappaTown', 'parappaTownErect':
+          morphoOffset(-500, 140, 98, 1, 1, 1);
+        case 'qtStage':
+          morphoOffset(1200, 350, 299, 1, 1, 1);
+        case 'qtStagePico':
+          morphoOffset(600, -250, 13, 0.6, 1, 1);
+        case 'fuegoStreets':
+          morphoOffset(300, 200, 140, 1, 1, 1);
+        case 'fuegoLoudStage':
+          morphoOffset(1800, 450, 8, 1, 1, 1);
+        case 'fuegoBusStop', 'fuegoBusStop-grey':
+          morphoOffset(-1000, -450, 10, 1, 1, 1);
+          morphoShader(true, -50, 20, -20, -20, 0xffbd2e, 50, 0.1, 15); // color, angle, threshold, distance
+        case 'natCrystal':
+          morphoOffset(2550, -170, 16, 1, 1, 1);
+          morphoShader(true, -60, -24, -5, -10, 0xFFEF72F9, 112.5, 0.1, 15); // color, angle, threshold, distance
+        case 'desert':
+          morphoOffset(-700, 150, 90, 1, 1, 1);
+        case 'gemBeach':
+          morphoOffset(600, 80, 50, 1, 1, 1);
+        case 'gummibarVoid':
+          morphoOffset(-200, 120, 90, 1, 1, 1);
+          morphoShader(false, -5, -15, -5, -5, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'wf-redux', 'sky-redux':
+          morphoOffset(-300, 40, 90, 1, 1, 1);
+        case 'mani-redux', 'mani-redux-2':
+          morphoOffset(-50, 100, 70, 1, 1, 1);
+        case 'sky-pico':
+          morphoOffset(-400, 190, 90, 1, 1, 1);
+        case 'wf-classic', 'sky-classic', 'mani-classic':
+          morphoOffset(-400, -20, 90, 1, 1, 1);
+        case 'nonsenseRoom', 'nonsenseRoomSpace':
+          morphoOffset(1600, 300, 310, 1, 1, 1);
+        case 'nonsenseRoomErect':
+          morphoOffset(1600, 300, 310, 1, 1, 1);
+          morphoShader(true, -46, -38, -25, -20, 0xFF8FE0FF, 112.5, 0.1, 15); // color, angle, threshold, distance
+        case 'whiteVoidNH':
+          morphoOffset(170, 150, 90, 1, 1, 1);
+        case 'nevadaRedeemer':
+          morphoOffset(1100, 450, 90, 1, 1, 1);
+        case 'nevadaRedeemerErect':
+          morphoOffset(950, 200, 90, 1, 1, 1);
+        case 'neneStage':
+          morphoOffset(1000, 500, 600, 1, 1, 1);
+        case 'neneStageErect':
+          morphoOffset(1000, 500, 600, 1, 1, 1);
+          morphoShader(true, -50, -17, 0, -40, 0xFFFFFFFF, 180, 0.1, 15); // color, angle, threshold, distance
+        case 'emeraldCoast':
+          morphoOffset(1000, 150, 99, 1, 1, 1);
+        case 'emeraldCoastSunset':
+          morphoOffset(1000, 150, 99, 1, 1, 1);
+          morphoShader(false, -11, -6, -20, -2, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'phillyTrainSonic':
+          morphoOffset(1500, 150, 99, 1, 1, 1);
+        case 'phillyStreetsSonic':
+          morphoOffset(1500, 400, 3, 0.6, 1, 1);
+          morphoShader(false, -20, -5, -25, -40, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'whittyAlley', 'whittyAlleyBallistic':
+          morphoOffset(1300, 130, 55, 1, 1, 1);
+        case 'whittyAlleyErect':
+          morphoOffset(-600, 10, 34, 0.1, 0.8, 0.8);
+          morphoShader(false, -20, -10, -20, -50, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'mixRoom', 'mixRoomTutorial':
+          morphoOffset(-300, -50, 2, 0.8, 1, 1);
+        case 'ashtonAlleyway', 'ashtonAlleywayRelease':
+          morphoOffset(500, 0, 6, 0.8, 1, 1);
+        case 'ashtonParkingLot':
+          morphoOffset(1400, -30, 61, 0.8, 1, 1);
+        case 'AlienPhilly':
+          morphoOffset(1550, 50, 0, 1, 1, 1);
+          morphoShader(false, 0, 0.19, 0.22, -40, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'AlienPhillyErect':
+          morphoOffset(1750, 80, 0, 1, 1, 1);
+          morphoShader(false, -35, -48, 0, -50, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'phillyGhetto':
+          morphoOffset(1050, 160, 290, 1, 1, 1);
+          morphoShader(false, 0, 0, 0, -35, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'limoRideReimu':
+          morphoOffset(-1000, -10, 290, 1, 1, 1);
+          morphoModeDancer.color = 0x709D1F3D;
+        case 'phillyStreetsDay':
+          morphoOffset(1400, 530, 39, 0.4, 0.7, 1);
+          morphoShader(false, 0, 0, -30, -10, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'phillyUber':
+          morphoOffset(1180, 160, 290, 1, 1, 1);
+        case 'phillyUberErect':
+          morphoOffset(1180, 160, 290, 1, 1, 1);
+          morphoShader(false, -30, -30, 0, -20, 0xFFFFFFFF, 0, 0.1, 15); // b, h, c, s
+        case 'phillyOverpass':
+          morphoOffset(-300, -150, 290, 1.6, 1, 1);
+		    
+      } // offsets
+      if (GooeyMixOptions.gooeyShaders)
+      {
+        if (PlayState.instance.currentStageId == "qtStage")
+        {
+          if (PlayState.instance.currentStage.getBoyfriend() != null)
+          {
+            if (PlayState.instance.currentStageId == "qtStage"
+              && morphoModeDancer.shader != PlayState.instance.currentStage.getBoyfriend().shader)
+            {
+              morphoModeDancer.shader = PlayState.instance.currentStage.getBoyfriend().shader;
+            }
+          }
+        }
+      }
+      PlayState.instance.currentStage.refresh();
+    }
+  }
+
+  function onStateChangeEnd(e)
+  {
+    super.onStateChangeEnd(e);
+
+    if (e.targetState == 'PolymodScriptClass<pointlesspins.Shop>'
+      && (GooeyMixOptions.morphoMode == 'On' || GooeyMixOptions.morphoMode == 'No Stickers'))
+    {
+      if (morphoModeDancer != null)
+      {
+        morphoModeDancer.kill();
+      }
+
+      morphoModeDancer = new FunkinSprite(-1000, 50).loadSparrow('characters/morpho/morphoMode');
+      morphoModeDancer.animation.addByPrefix('morphoHittingIt', 'morphoHittingIt', 12, true);
+      morphoModeDancer.animation.addByPrefix('hitIt1', 'hitIt1', 12, false);
+      morphoModeDancer.animation.addByPrefix('hitIt2', 'hitIt2', 12, false);
+      morphoModeDancer.animation.addByPrefix('hitIt3', 'hitIt3', 12, false);
+      morphoModeDancer.animation.addByPrefix('hitIt4', 'hitIt4', 12, false);
+      morphoModeDancer.animation.play('morphoHittingIt', true);
+      e.targetState.add(morphoModeDancer);
+      morphoModeDancer.zIndex = 399;
+      morphoModeDancer.scale.set(1.1, 1.1);
+      e.targetState.refresh();
+      morphoDanceNumber = 1;
+    }
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent)
+  {
+    super.onBeatHit(event);
+    if (GooeyMixOptions.morphoMode == 'On' || GooeyMixOptions.morphoMode == 'No Stickers')
+    {
+      if (PlayState.instance != null && morphoModeDancer != null && !PlayState.instance.isChartingMode)
+      {
+        morphoDanceNumber = morphoDanceNumber + 1;
+        if (morphoDanceNumber >= 5)
+        {
+          morphoDanceNumber = 1;
+        }
+
+        morphoModeDancer.animation.play("hitIt" + morphoDanceNumber);
+
+        if (PlayState.instance.currentStageId == "spookyMansionErect" || PlayState.instance.currentStageId == "spookyMansionMonsterPico")
+        {
+          new FlxTimer().start(0.01, function(_)
+          {
+            if (PlayState.instance.currentStage.getNamedProp('bgLight').alpha == 1)
+            {
+              morphoModeDancer.alpha = 1;
+
+              new FlxTimer().start(0.05, function(_)
+              {
+                morphoModeDancer.alpha = 0;
+              });
+              new FlxTimer().start(0.11, function(_)
+              {
+                morphoModeDancer.alpha = 1;
+                FlxTween.tween(morphoModeDancer, {alpha: 0}, 1.5);
+              });
+            }
+          });
+        }
+        if (PlayState.instance.currentStageId == "tankmanBattlefieldSpooky")
+        {
+          if (PlayState.instance.currentStage.getNamedProp('tankRolling').alpha != 1 && morphoModeDancer.alpha != 0)
+          {
+            morphoModeDancer.alpha = 0;
+          }
+        }
+        if (PlayState.instance.currentStage.getBoyfriend() != null)
+        {
+          if (PlayState.instance.currentStageId == "qtStage"
+            && morphoModeDancer.shader != PlayState.instance.currentStage.getBoyfriend().shader)
+          {
+            morphoModeDancer.shader = PlayState.instance.currentStage.getBoyfriend().shader;
+          }
+        }
+      }
+    }
+  }
+}

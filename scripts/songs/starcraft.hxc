@@ -1,0 +1,54 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import funkin.play.PlayStatePlaylist;
+import funkin.graphics.FunkinSprite;
+
+class StarcraftSong extends Song
+{
+  public function new()
+  {
+    super('starcraft');
+
+    this.hasPlayedCutscene = false;
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+    this.hasPlayedCutscene = false;
+  }
+
+  var hasPlayedCutscene:Bool = false;
+
+  public override function onSongEnd(event:CountdownScriptEvent):Void
+  {
+    super.onSongEnd(event);
+
+    if (!PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+    if (!hasPlayedCutscene)
+    {
+      trace('Pausing ending to play a video cutscene (`starcraft`)');
+      hasPlayedCutscene = true;
+      trace('Adding black background behind cutscene over UI');
+      var bgSprite = new FunkinSprite(-100, -100);
+      bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+      bgSprite.cameras = [PlayState.instance.camHUD];
+      bgSprite.zIndex = 60037;
+      PlayState.instance.add(bgSprite);
+      PlayState.instance.refresh();
+      event.cancel();
+      startVideo();
+    }
+    else
+      hasPlayedCutscene = false;
+  }
+
+  function startVideo()
+  {
+    VideoCutscene.play(Paths.videos('week60037ending'), CutsceneType.ENDING);
+    hasPlayedCutscene = true;
+  }
+}

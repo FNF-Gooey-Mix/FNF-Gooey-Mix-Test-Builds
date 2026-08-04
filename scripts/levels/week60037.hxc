@@ -1,0 +1,25 @@
+import funkin.ui.story.Level;
+import funkin.ui.freeplay.FreeplayState;
+
+class Week60037Level extends Level
+{
+  function new()
+  {
+    super('week60037');
+  }
+
+  var isEeveeMix(get, never):Bool;
+
+  function get_isEeveeMix():Bool
+  {
+    if (FlxG.state.subState == null || !(FlxG.state.subState is FreeplayState)) return false;
+    return (FlxG.state.subState.currentDifficulty == 'extra');
+  }
+
+  public function getCapsuleTitle():String
+  {
+    if (isEeveeMix) return 'Extra'
+    else
+      return super.getCapsuleTitle();
+  }
+}

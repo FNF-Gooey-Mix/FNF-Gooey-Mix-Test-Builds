@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bottomBopGooey.png">
+<SubTexture name="bottomBop0000" x="0" y="0" width="1532" height="607" frameX="-889" frameY="-422" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="bottomBop0001" x="1532" y="0" width="1532" height="607" frameX="-889" frameY="-422" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="bottomBop0002" x="0" y="607" width="1527" height="608" frameX="-889" frameY="-421" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="bottomBop0003" x="1527" y="607" width="1526" height="608" frameX="-889" frameY="-421" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="bottomBop0004" x="0" y="1215" width="1524" height="608" frameX="-889" frameY="-421" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="morphoBop0000" x="1524" y="1215" width="389" height="502" frameX="-139" frameY="-433" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="morphoBop0001" x="0" y="1823" width="387" height="504" frameX="-140" frameY="-431" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="morphoBop0002" x="387" y="1823" width="383" height="505" frameX="-142" frameY="-429" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="morphoBop0003" x="0" y="2328" width="381" height="506" frameX="-143" frameY="-428" frameWidth="2500" frameHeight="1114" />
+<SubTexture name="morphoBop0004" x="381" y="2328" width="379" height="506" frameX="-144" frameY="-428" frameWidth="2500" frameHeight="1114" />
+</TextureAtlas>

@@ -1,0 +1,115 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey (Car)",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/gooey/GooeyCar",
+  "flipX": true,
+  "cameraOffsets": [-1, -27],
+  "death": {
+    "cameraOffsets": [-40, 0]
+  },
+  "healthIcon": {
+    "id": "gooey"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "GooeyIdle",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "idle-hold",
+      "prefix": "GooeyIdle",
+      "looped": true,
+      "frameIndices": [8, 9, 10, 11],
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "GooeyLeft",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "GooeyLeft",
+      "looped": true,
+      "frameIndices": [2, 3, 4, 5],
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "GooeyDown",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "GooeyDown",
+      "looped": true,
+      "frameIndices": [2, 3, 4, 5],
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singUP",
+      "prefix": "GooeyUp",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "GooeyUp",
+      "looped": true,
+      "frameIndices": [2, 3, 4, 5],
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "GooeyRight",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "GooeyRight",
+      "looped": true,
+      "frameIndices": [2, 3, 4, 5],
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "GooeyMissLeft",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "GooeyMissDown",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "GooeyMissUp",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "GooeyMissRight",
+      "offsets": [-25, -15]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "GooeyDies",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [-4, -26]
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "GooeyDeadIdle",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [-4, -26],
+      "looped": true
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "GooeyConfirm",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [-4, -26]
+    }
+  ]
+}

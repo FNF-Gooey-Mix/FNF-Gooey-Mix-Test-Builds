@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "name": "Morpho (Player)",
+  "renderType": "multisparrow",
+  "assetPath": "characters/morpho/MorphoPlayer",
+  "flipX": true,
+  "cameraOffsets": [0, 144],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "morphoIdle",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "morphoLeft",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "morphoDown",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singUP",
+      "prefix": "morphoUp",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "morphoRight",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "morphoMissLeft",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "morphoMissDown",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "morphoMissUp",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "morphoMissRight",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "hey",
+      "prefix": "theIconicMorphoPose",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "morphoGoogly",
+      "prefix": "morphoGoogly",
+      "assetPath": "characters/morpho/MorphoGoogly",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "morphoShrugRad",
+      "prefix": "morphoShrugRad",
+      "assetPath": "characters/morpho/MorphoGoogly",
+      "offsets": [-10, -40]
+    }
+  ]
+}

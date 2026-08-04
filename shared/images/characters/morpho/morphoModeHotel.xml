@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="morphoModeHotel.png">
+<SubTexture name="morphoHittingIt0000" x="0" y="0" width="265" height="591" frameX="-243" frameY="-39" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0001" x="265" y="0" width="256" height="589" frameX="-259" frameY="-33" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0002" x="521" y="0" width="253" height="591" frameX="-262" frameY="-30" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0003" x="774" y="0" width="415" height="587" frameX="-285" frameY="-101" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0004" x="1189" y="0" width="411" height="591" frameX="-280" frameY="-97" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0005" x="0" y="591" width="410" height="593" frameX="-276" frameY="-95" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0006" x="521" y="0" width="253" height="591" frameX="-262" frameY="-30" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0007" x="265" y="0" width="256" height="589" frameX="-259" frameY="-33" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0008" x="0" y="0" width="265" height="591" frameX="-243" frameY="-39" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0009" x="410" y="591" width="266" height="553" frameX="-220" frameY="-117" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0010" x="676" y="591" width="266" height="558" frameX="-220" frameY="-112" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0011" x="942" y="591" width="265" height="591" frameX="-198" frameY="-39" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0012" x="1207" y="591" width="256" height="589" frameX="-191" frameY="-33" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0013" x="0" y="1184" width="253" height="591" frameX="-191" frameY="-30" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0014" x="253" y="1184" width="415" height="587" frameX="-6" frameY="-101" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0015" x="668" y="1184" width="411" height="591" frameX="-15" frameY="-97" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0016" x="1079" y="1184" width="410" height="593" frameX="-20" frameY="-95" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0017" x="0" y="1184" width="253" height="591" frameX="-191" frameY="-30" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0018" x="1207" y="591" width="256" height="589" frameX="-191" frameY="-33" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0019" x="942" y="591" width="265" height="591" frameX="-198" frameY="-39" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0020" x="1489" y="1184" width="266" height="553" frameX="-220" frameY="-117" frameWidth="700" frameHeight="700" />
+<SubTexture name="morphoHittingIt0021" x="0" y="1777" width="266" height="558" frameX="-220" frameY="-112" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt10000" x="774" y="0" width="415" height="587" frameX="-285" frameY="-101" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt10001" x="1189" y="0" width="411" height="591" frameX="-280" frameY="-97" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt10002" x="0" y="591" width="410" height="593" frameX="-276" frameY="-95" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt10003" x="521" y="0" width="253" height="591" frameX="-262" frameY="-30" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt10004" x="265" y="0" width="256" height="589" frameX="-259" frameY="-33" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt10005" x="0" y="0" width="265" height="591" frameX="-243" frameY="-39" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt20000" x="410" y="591" width="266" height="553" frameX="-220" frameY="-117" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt20001" x="676" y="591" width="266" height="558" frameX="-220" frameY="-112" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt20002" x="942" y="591" width="265" height="591" frameX="-198" frameY="-39" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt20003" x="1207" y="591" width="256" height="589" frameX="-191" frameY="-33" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt20004" x="0" y="1184" width="253" height="591" frameX="-191" frameY="-30" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt30000" x="253" y="1184" width="415" height="587" frameX="-6" frameY="-101" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt30001" x="668" y="1184" width="411" height="591" frameX="-15" frameY="-97" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt30002" x="1079" y="1184" width="410" height="593" frameX="-20" frameY="-95" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt30003" x="0" y="1184" width="253" height="591" frameX="-191" frameY="-30" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt30004" x="1207" y="591" width="256" height="589" frameX="-191" frameY="-33" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt30005" x="942" y="591" width="265" height="591" frameX="-198" frameY="-39" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt40000" x="1489" y="1184" width="266" height="553" frameX="-220" frameY="-117" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt40001" x="0" y="1777" width="266" height="558" frameX="-220" frameY="-112" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt40002" x="0" y="0" width="265" height="591" frameX="-243" frameY="-39" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt40003" x="265" y="0" width="256" height="589" frameX="-259" frameY="-33" frameWidth="700" frameHeight="700" />
+<SubTexture name="hitIt40004" x="521" y="0" width="253" height="591" frameX="-262" frameY="-30" frameWidth="700" frameHeight="700" />
+</TextureAtlas>

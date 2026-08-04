@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Slimeball",
+  "artist": "ChessBrabo",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 160, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": ["erect", "gooey", "eevee"],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf",
+      "girlfriend": "gf",
+      "opponent": "gooey-opponent",
+      "instrumental": "",
+      "playerVocals": ["bf"],
+      "opponentVocals": ["gooey"],
+      "altInstrumentals": ["gooey", "eevee"]
+    },
+    "stage": "hotelCastle",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 5, "normal": 6, "hard": 7 },
+    "album": "gooeymix2",
+    "stickerPack": "bonus-gooeyWeekBf",
+    "previewStart": 0.228291609007422,
+    "previewEnd": 0.377418543212983
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

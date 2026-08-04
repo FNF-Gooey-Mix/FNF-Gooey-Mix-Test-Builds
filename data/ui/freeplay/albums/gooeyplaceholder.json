@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "name": "Placeholder",
+  "artists": ["Your MOM"],
+  "albumArtAsset": "freeplay/albumRoll/gooeyplaceholder",
+  "albumTitleAsset": "freeplay/albumRoll/gooeyplaceholder-text",
+  "albumTitleOffsets": [-10, 0],
+  "albumOSTName": "PLACEHOLDER"
+}

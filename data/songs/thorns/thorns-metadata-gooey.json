@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Thorns (Gooey Mix)",
+  "artist": "SakiProd (feat. LeGooey)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 190, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-pixel",
+      "girlfriend": "flora-pixel-thorns",
+      "opponent": "spirit",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["spirit"],
+      "altInstrumentals": ["erect", ""]
+    },
+    "stage": "schoolEvilGooey",
+    "noteStyle": "pixel",
+    "ratings": { "easy": 4, "normal": 6, "hard": 7 },
+    "album": "gooeymix2",
+    "stickerPack": null,
+    "previewStart": 0.686149568441175,
+    "previewEnd": 0.877551217439997
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

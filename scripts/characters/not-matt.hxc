@@ -1,0 +1,32 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.CharacterType;
+
+class NotMattCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('not-matt');
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.eventCanceled)
+    {
+      // onNoteHit event was cancelled by the gameplay module.
+      return;
+    }
+    // Override the hit note animation.
+    if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
+    {
+      switch (event.note.kind)
+      {
+        case "hey":
+          holdTimer = 0;
+          this.playAnimation('hey', true, true);
+          return;
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+}

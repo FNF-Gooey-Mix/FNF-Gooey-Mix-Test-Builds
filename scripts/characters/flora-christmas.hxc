@@ -1,0 +1,71 @@
+import gooeymix.characters.FloraBaseCharacter;
+import funkin.play.PlayState;
+import flixel.util.FlxSave;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.graphics.shaders.DropShadowShader;
+
+class FloraChristmasCharacter extends FloraBaseCharacter
+{
+  public function new()
+  {
+    super('flora-christmas');
+  }
+
+  var christmas;
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    if (PlayState.instance?.currentStage != null)
+    {
+      christmas = new FunkinSprite(0, 0).loadSparrow('characters/flora/FloraSpeakerChristmas');
+      christmas.animation.addByPrefix('idle', 'christmas', 12, false);
+    }
+  }
+
+  private function addFloraProps()
+  {
+    super.addFloraProps();
+
+    // My Flora is not kinda speakerless, so we shall add the speaker.
+    if (!isMyFloraKindaSpeakerless)
+    {
+      floraSpeaker?.setPosition(this.x - 113 - (-this.globalOffsets[0] * this.scale.x), this.y + 52 - (-this.globalOffsets[1] * this.scale.y));
+      floraSpeakerScreen?.setPosition(floraSpeaker.x - 5, floraSpeaker.y - 10);
+      christmas.x = floraSpeaker.x - 5;
+      christmas.y = floraSpeaker.y - 12;
+      christmas.zIndex = floraSpeaker.zIndex + 1;
+      currentStage.add(christmas);
+    }
+
+    currentStage.refresh();
+  }
+
+  private function speakerBump(force:Bool = true)
+  {
+    super.speakerBump(force);
+
+    // My Flora is not kinda speakerless, so the speaker goes BOOM DA BOOM BOOM.
+    // Flora's speaker ain't on if Flora ain't on.
+    if (!isMyFloraKindaSpeakerless && setupFloraProps)
+    {
+      christmas?.anim?.play('idle', true);
+    }
+  }
+
+  function synchronizeShader():Void
+  {
+    super.synchronizeShader();
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      if (christmas.shader == floraSpeaker.shader) return;
+      if (floraSpeaker.shader != null)
+      {
+        christmas.shader = floraSpeaker.shader;
+      }
+      trace("Synchronized shader between children!");
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="FloraSpeakerPixel.png">
+<SubTexture name="speaker0000" x="0" y="0" width="117" height="66" frameX="-8" frameY="-9" frameWidth="130" frameHeight="80" />
+<SubTexture name="speaker0001" x="0" y="66" width="117" height="67" frameX="-8" frameY="-8" frameWidth="130" frameHeight="80" />
+<SubTexture name="speaker0002" x="0" y="133" width="117" height="67" frameX="-8" frameY="-8" frameWidth="130" frameHeight="80" />
+<SubTexture name="spirit0000" x="115" y="0" width="117" height="66" frameX="-8" frameY="-9" frameWidth="130" frameHeight="80" />
+<SubTexture name="spirit0001" x="115" y="66" width="117" height="67" frameX="-8" frameY="-8" frameWidth="130" frameHeight="80" />
+<SubTexture name="spirit0002" x="115" y="133" width="117" height="67" frameX="-8" frameY="-8" frameWidth="130" frameHeight="80" />
+</TextureAtlas>

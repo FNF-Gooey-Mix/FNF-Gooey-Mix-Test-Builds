@@ -1,0 +1,30 @@
+{
+  "version": "2.2.4",
+  "songName": "Saloonatic",
+  "artist": "DoubleM (ft. SakiProd)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 170, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["extra"],
+    "characters": {
+      "player": "edd-saloonatic",
+      "opponent": "eduardo-saloonatic",
+      "instrumental": "",
+      "playerVocals": ["edd"],
+      "opponentVocals": ["eduardo"]
+    },
+    "stage": "spitbucket",
+    "noteStyle": "funkin",
+    "ratings": { "extra": 7 },
+    "album": "saloonatic",
+    "stickerPack": null,
+    "previewStart": 0.735508301694339,
+    "previewEnd": 0.899380914603049
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

@@ -1,0 +1,30 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+
+class PicoGooeyMixSong extends Song
+{
+  function new()
+  {
+    super('pico', {
+      variation: 'gooey'
+    });
+  }
+
+  override function onSongLoaded(event)
+  {
+    super.onSongLoaded(event);
+    if (PlayState.instance.currentInstrumental != "gooey" && PlayState.instance.currentInstrumental != "truegooey")
+    {
+      PlayState.instance.currentVariation = "gooeyalt";
+      PlayState.currentChart = PlayState.instance.currentSong.getDifficulty(PlayState.instance.currentDifficulty + "-gooeyalt", "gooeyalt");
+      PlayState.instance.vocals = PlayState.instance.currentChart.buildVocals("gooeyalt");
+      event.notes = PlayState.instance.currentChart.notes.copy();
+      event.events = PlayState.instance.currentChart.getEvents();
+    }
+    if (PlayState.instance.currentInstrumental == "gooey" || PlayState.instance.currentInstrumental == "truegooey")
+    {
+      PlayState.instance.currentInstrumental = "truegooey";
+    }
+  }
+}

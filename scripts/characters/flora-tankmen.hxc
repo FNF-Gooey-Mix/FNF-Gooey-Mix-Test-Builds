@@ -1,0 +1,83 @@
+import gooeymix.characters.FloraBaseCharacter;
+import funkin.play.PlayState;
+import flixel.util.FlxSave;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.graphics.shaders.DropShadowShader;
+
+class FloraTankmenCharacter extends FloraBaseCharacter
+{
+  public function new()
+  {
+    super('flora-tankmen');
+  }
+
+  var tankBopLeft;
+  var tankBopRight;
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    if (PlayState.instance?.currentStage != null)
+    {
+      tankBopLeft = new FunkinSprite(0, 0).loadSparrow('characters/flora/LeftTanker');
+      tankBopLeft.animation.addByPrefix('idle', 'idle', 24, false);
+      tankBopLeft.animation.play('idle');
+
+      tankBopRight = new FunkinSprite(0, 0).loadSparrow('characters/flora/RightTanker');
+      tankBopRight.animation.addByPrefix('idle', 'idle', 24, false);
+      tankBopRight.animation.play('idle');
+    }
+  }
+
+  private function addFloraProps()
+  {
+    super.addFloraProps();
+
+    // My Flora is not kinda speakerless, so we shall add the speaker.
+    if (!isMyFloraKindaSpeakerless)
+    {
+      floraSpeaker?.setPosition(this.x - 183 - (-this.globalOffsets[0] * this.scale.x), this.y + 81 - (-this.globalOffsets[1] * this.scale.y));
+      floraSpeakerScreen?.setPosition(floraSpeaker.x - 5, floraSpeaker.y - 10);
+
+      tankBopLeft.x = floraSpeaker.x - 595;
+      tankBopLeft.y = floraSpeaker.y - 625;
+      tankBopLeft.zIndex = floraSpeaker.zIndex - 1;
+
+      tankBopRight.x = floraSpeaker.x - 583;
+      tankBopRight.y = floraSpeaker.y - 620;
+      tankBopRight.zIndex = floraSpeaker.zIndex - 1;
+      currentStage.add(tankBopRight);
+      currentStage.add(tankBopLeft);
+    }
+
+    currentStage.refresh();
+  }
+
+  private function speakerBump(force:Bool = true)
+  {
+    super.speakerBump(force);
+    // My Flora is not kinda speakerless, so the Tankmen start dancing.
+    if (!isMyFloraKindaSpeakerless && setupFloraProps)
+    {
+      tankBopLeft?.anim?.play('idle', true);
+      tankBopRight?.anim?.play('idle', true);
+    }
+  }
+
+  function synchronizeShader():Void
+  {
+    super.synchronizeShader();
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      if (tankBopRight.shader == floraSpeaker.shader) return;
+      if (floraSpeaker.shader != null)
+      {
+        tankBopLeft.shader = floraSpeaker.shader;
+        tankBopRight.shader = floraSpeaker.shader;
+      }
+      trace("Synchronized shader between children!");
+    }
+  }
+}

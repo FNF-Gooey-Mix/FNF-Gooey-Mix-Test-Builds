@@ -1,0 +1,73 @@
+import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.audio.FunkinSound;
+import flixel.util.FlxTimer;
+import funkin.PlayerSettings;
+import funkin.util.TouchUtil;
+import funkin.util.SwipeUtil;
+import funkin.data.story.level.LevelRegistry;
+import funkin.util.SortUtil;
+import funkin.ui.story.StoryMenuState;
+
+class GooeyStoryMode extends Module
+{
+  public function new()
+  {
+    super('GooeyStoryMode', 1, {state: StoryMenuState});
+  }
+
+  // Thank you Comedy Lost may your Comedy be Lost upon us
+  var gooeyWeek = ['week60037'];
+  var changedCapsules:Array<SongMenuItem>;
+  var changeSelectionCallback:String->Void;
+
+  override function onStateChangeEnd(event)
+  {
+    super.onStateChangeEnd(event);
+    var state = event.targetState;
+    if (event.targetState is StoryMenuState)
+    {
+      var baseSongs = LevelRegistry.instance.listBaseGameEntryIds();
+      insertAfterWeek('weekend1', gooeyWeek);
+    }
+  }
+
+  function insertAfterWeek(weekName:String, songs:Array<String>)
+  {
+    var state = FlxG.state;
+    trace(state.levelList);
+    var levels = [];
+    for (item in state.levelList.copy())
+    {
+      if (songs.contains(item))
+      {
+        state.levelList.remove(item);
+        levels.push(item);
+      }
+    }
+    var hasSeenWeek = false;
+    for (level in state.levelList)
+    {
+      if (level == weekName && !hasSeenWeek) hasSeenWeek = true;
+      if (hasSeenWeek && level != weekName)
+      {
+        for (item in levels)
+        {
+          state.levelList.insert(state.levelList.indexOf(level), item);
+        }
+        levels = [];
+        break;
+      }
+    }
+    if (levels.length > 0)
+    {
+      for (item in levels)
+      {
+        state.levelList.push(item);
+      }
+    }
+    state.updateData();
+    state.buildLevelTitles();
+    state.changeLevel();
+  }
+}

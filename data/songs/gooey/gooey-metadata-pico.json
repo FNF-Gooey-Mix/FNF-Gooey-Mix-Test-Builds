@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Gooey (Pico Mix)",
+  "artist": "Strife4Life (ft. Contentleaf)",
+  "charter": "LeGooey + Rbz_Fzo",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 150, "n": 3, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "pico-playable",
+      "girlfriend": "nene-gooey",
+      "opponent": "gooey-opponent",
+      "instrumental": "pico",
+      "playerVocals": ["pico"],
+      "opponentVocals": ["gooey-opponent"],
+      "altInstrumentals": ["", "gooey", "eevee"]
+    },
+    "stage": "natCrystal",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 3, "normal": 5, "hard": 6 },
+    "album": "gooeyex2",
+    "stickerPack": "bonus-gooeyWeekPico",
+    "previewStart": 0.280351648351648,
+    "previewEnd": 0.560371184371184
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

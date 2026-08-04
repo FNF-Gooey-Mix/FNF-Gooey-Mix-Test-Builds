@@ -1,0 +1,244 @@
+import funkin.PlayerSettings;
+import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.ui.options.OptionsState;
+import funkin.audio.FunkinSound;
+import funkin.ui.FullScreenScaleMode;
+import flixel.FlxSprite;
+import openfl.media.Sound;
+import funkin.util.WindowUtil;
+import CustomIcon;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.story.StoryMenuState;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.title.TitleState;
+import funkin.ui.charSelect.CharSelectSubState;
+import flixel.util.FlxSave;
+import funkin.ui.title.TitleState;
+#if FEATURE_DEBUG_MENU import funkin.ui.debug.DebugMenuSubState; #end
+#if FEATURE_CHART_EDITOR import funkin.ui.debug.charting.ChartEditorState; #end
+
+class GooeyMenuOption extends Module
+{
+  var addedTitle:Bool = false;
+  var optionNumber:Int = 0;
+
+  public function new()
+  {
+    super('GooeyMenuOption');
+  }
+
+  var gooeySongs:Array<String> = ['gooey', 'slimeball', 'starcraft'];
+  var newIcon = null;
+  var curIcon = Constants.TITLE;
+  var changedIntroText:Bool = false;
+
+  function bfWindow()
+  {
+    newIcon = 'Friday Night Funkin\'';
+    if (newIcon != curIcon)
+    {
+      if (!FlxG.onMobile)
+      {
+        WindowUtil.setWindowTitle('Friday Night Funkin\'');
+        CustomIcon.setIcon(Paths.image('boyfriendGameIcon'));
+        curIcon = newIcon;
+      }
+    }
+  }
+
+  function gooeyWindow()
+  {
+    newIcon = 'Gooey Mix';
+    if (newIcon != curIcon)
+    {
+      if (!FlxG.onMobile)
+      {
+        WindowUtil.setWindowTitle('Friday Night Funkin\': Gooey Mix');
+        CustomIcon.setIcon(Paths.image('gooeyGameIcon'));
+        curIcon = newIcon;
+      }
+    }
+  }
+
+  override function onCapsuleSelected(event)
+  {
+    if (gooeySongs.contains(event.capsule?.freeplayData?.data?.id) || FreeplayState.rememberedCharacterId == 'gooey') gooeyWindow();
+    else
+      bfWindow();
+  }
+
+  public function onCharacterSelect(event:CharacterSelectScriptEvent)
+  {
+    if (event.characterId == 'gooey') gooeyWindow();
+    else
+      bfWindow();
+  }
+
+  override function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    if (FlxG.state is StoryMenuState)
+    {
+      if (FlxG.state?.currentLevelId == 'week60037') gooeyWindow();
+      else
+        bfWindow();
+    }
+
+    // TITLE SCREEN
+
+    if (FlxG.state is TitleState)
+    {
+      FlxG.mouse.visible = false;
+
+      if (GooeyMixOptions.gooeyMixMenu == 'Always On'
+        || (GooeyMixOptions.gooeyMixMenu == 'Gooey Selected' && GooeyMixOptions.rememberedStartupCharacter == "gooey"))
+      {
+        if (!changedIntroText)
+        {
+          changedIntroText = true;
+          var fullText:String = Assets.getText(Paths.txt('introTextGooey'));
+          var firstArray:Array<String> = fullText.split('\n').filter(function(s:String) return s != '');
+          var swagGoodArray:Array<Array<String>> = [];
+          for (i in firstArray)
+          {
+            swagGoodArray.push(i.split('--'));
+          }
+          FlxG.state.curWacky = swagGoodArray[
+            FlxG.random.int(0, swagGoodArray.length - 1)
+          ];
+        }
+
+        if (FlxG.state.logoBl != null && FlxG.state.gfDance != null && FlxG.state.titleText != null && FlxG.state.skippedIntro && !addedTitle)
+        {
+          addedTitle = true;
+
+          addTitleScreenObjects();
+        }
+      }
+    }
+
+    // MENU BACKGROUND
+    if (FlxG.state is MainMenuState)
+    {
+      if (FlxG.state.magenta != null)
+      {
+        if (GooeyMixOptions.gooeyMixMenu == 'Always On'
+          || (GooeyMixOptions.gooeyMixMenu == 'Gooey Selected' && GooeyMixOptions.rememberedStartupCharacter == "gooey"))
+        {
+          if (FlxG.state.magenta.graphic.key == 'assets/images/menuBGMagenta.png')
+          {
+            FlxG.state.magenta.loadGraphic(Paths.image('menuBGMagentaGooey'));
+            FlxG.state.members[0].loadGraphic(Paths.image('menuBGgooey'));
+            gooeyWindow();
+          }
+        }
+        else
+        {
+          if (FlxG.state.magenta.graphic.key == 'assets/images/menuBGMagentaGooey.png')
+          {
+            FlxG.state.magenta.loadGraphic(Paths.image('menuBGMagenta'));
+            FlxG.state.members[0].loadGraphic(Paths.image('menuBG'));
+            bfWindow();
+          }
+        }
+      }
+    }
+
+    if (FlxG.state is OptionsState)
+    {
+      if (FlxG.state.members[0] != null)
+      {
+        if (GooeyMixOptions.gooeyMixMenu == 'Always On'
+          || (GooeyMixOptions.gooeyMixMenu == 'Gooey Selected' && GooeyMixOptions.rememberedStartupCharacter == "gooey"))
+        {
+          if (FlxG.state?.members[0]?.graphic.key == 'assets/images/menuBG.png') FlxG.state.members[0].loadGraphic(Paths.image('menuBGgooey'));
+        }
+        else
+        {
+          if (FlxG.state?.members[0]?.graphic.key == 'assets/images/menuBGgooey.png') FlxG.state.members[0].loadGraphic(Paths.image('menuBG'));
+        }
+      }
+    }
+
+    if (!FlxG.onMobile)
+    {
+      if (!FlxG.state.subState is DebugMenuSubState)
+      {
+        if (FlxG.state.subState.members[3] != null)
+        {
+          if (GooeyMixOptions.gooeyMixMenu == 'Always On'
+            || (GooeyMixOptions.gooeyMixMenu == 'Gooey Selected' && GooeyMixOptions.rememberedStartupCharacter == "gooey"))
+          {
+            if (FlxG.state.subState.members[3].graphic.assetPath == 'assets/images/menuDesat.png')
+            {
+              FlxG.state.subState.members[3].loadGraphic(Paths.image('menuDesatGooey'));
+            }
+          }
+          else
+          {
+            if (FlxG.state.subState.members[3].graphic.assetPath == 'assets/images/menuDesatGooey.png')
+            {
+              FlxG.state.subState.members[3].loadGraphic(Paths.image('menuDesat'));
+            }
+          }
+        }
+      }
+
+      if (FlxG.state is ChartEditorState)
+      {
+        if (FlxG.state.menuBG != null)
+        {
+          if (FlxG.state.selectedVariation == 'gooey') if (FlxG.state.menuBG.graphic.assetPath == 'assets/images/menuDesat.png')
+          {
+            FlxG.state.menuBG.loadGraphic(Paths.image('menuDesatGooey'));
+          }
+        }
+        else
+        {
+          if (FlxG.state.menuBG.graphic.assetPath == 'assets/images/menuDesatGooey.png')
+          {
+            FlxG.state.menuBG.loadGraphic(Paths.image('menuDesat'));
+          }
+        }
+      }
+    }
+
+    if (FlxG.state is OptionsState)
+    {
+      if (optionNumber == 0)
+      {
+        for (i in 0...FlxG.state.members[1].members[1].members[0].members.length)
+        {
+          if (FlxG.state.members[1].members[1].members[0].members[i].label.text == "Default Player") optionNumber = i;
+        }
+      }
+    }
+  }
+
+  public function onStateChangeEnd(event:StateChangeScriptEvent)
+  {
+    addedTitle = false;
+  }
+
+  function addTitleScreenObjects():Void
+  {
+    FlxG.state.gfDance.frames = Paths.getSparrowAtlas('floraTitleScreen');
+    FlxG.state.gfDance.animation.addByPrefix('danceLeft', 'leftFloraDance', 24, true);
+    FlxG.state.gfDance.animation.addByPrefix('danceRight', 'rightFloraDance', 24, true);
+    FlxG.state.gfDance.animation.play('dance');
+    FlxG.state.gfDance.shader = FlxG.state.swagShader.shader;
+    FlxG.state.gfDance.x = 560 + (FullScreenScaleMode.gameCutoutSize.x / 2.5);
+    FlxG.state.gfDance.y = 45;
+
+    FlxG.state.logoBl.frames = Paths.getSparrowAtlas('logoBumpin-gooey');
+    FlxG.state.logoBl.scale.x = 0.85;
+    FlxG.state.logoBl.scale.y = 0.85;
+    FlxG.state.logoBl.x = -170 + (FullScreenScaleMode.gameCutoutSize.x / 2.5);
+    FlxG.state.logoBl.y = -100;
+    FlxG.state.logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, true);
+
+    gooeyWindow();
+  }
+}

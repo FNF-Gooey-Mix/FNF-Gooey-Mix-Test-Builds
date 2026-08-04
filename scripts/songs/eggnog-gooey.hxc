@@ -1,0 +1,26 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+
+class EggnogGooeyMixSong extends Song
+{
+  function new()
+  {
+    super('eggnog', {
+      variation: 'gooey'
+    });
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+
+    if (event.step == 1)
+    {
+      if (PlayState.instance.currentInstrumental == "huggy")
+      {
+        FlxG.sound.music?.volume = 0.6;
+      }
+    }
+  }
+}

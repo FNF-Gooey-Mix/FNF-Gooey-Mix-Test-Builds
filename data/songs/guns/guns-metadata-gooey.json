@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Guns (Gooey Mix)",
+  "artist": "FuryGRTX (feat. LeGooey)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 185, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey",
+      "girlfriend": "flora-tankmen",
+      "opponent": "tankman",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["tankman"],
+      "altInstrumentals": ["pico", ""]
+    },
+    "stage": "tankmanBattlefieldErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 5, "normal": 7, "hard": 8 },
+    "album": "gooeymix2",
+    "stickerPack": null,
+    "previewStart": 0.508643272396162,
+    "previewEnd": 0.655214680955383
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

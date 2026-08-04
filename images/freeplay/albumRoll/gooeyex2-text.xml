@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf13'?>
+<TextureAtlas imagePath="gooeyex2-text.png">
+<SubTexture name="idle0000" x="0" y="0" width="303" height="165" frameX="13" frameY="12" frameWidth="350" frameHeight="200" />
+<SubTexture name="idle0001" x="0" y="0" width="303" height="165" frameX="13" frameY="12" frameWidth="350" frameHeight="200" />
+<SubTexture name="idle0002" x="0" y="0" width="303" height="165" frameX="13" frameY="12" frameWidth="350" frameHeight="200" />
+<SubTexture name="idle0003" x="0" y="0" width="303" height="165" frameX="13" frameY="12" frameWidth="350" frameHeight="200" />
+<SubTexture name="switch0000" x="0" y="165" width="303" height="165" frameX="13" frameY="6" frameWidth="350" frameHeight="200" />
+<SubTexture name="switch0001" x="0" y="165" width="303" height="165" frameX="13" frameY="6" frameWidth="350" frameHeight="200" />
+<SubTexture name="switch0002" x="0" y="165" width="303" height="165" frameX="13" frameY="6" frameWidth="350" frameHeight="200" />
+<SubTexture name="switch0003" x="0" y="165" width="303" height="165" frameX="13" frameY="6" frameWidth="350" frameHeight="200" />
+</TextureAtlas>

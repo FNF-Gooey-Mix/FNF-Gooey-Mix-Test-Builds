@@ -1,0 +1,154 @@
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.util.FlxTweenUtil;
+
+class PhillyCityStage extends Stage
+{
+  function new()
+  {
+    super('phillyCity');
+  }
+
+  var backCarCanDrive:Bool = true;
+  var frontCarCanDrive:Bool = true;
+  var allowCarInGeneral:Bool = true;
+
+  function buildStage()
+  {
+    super.buildStage();
+
+    var lighting = getNamedProp('lighting');
+    lighting.blend = 0;
+    allowCarInGeneral = true;
+    // resetFastCar();
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent)
+  {
+    // When overriding onBeatHit, make sure to call super.onBeatHit,
+    // otherwise boppers will not work.
+    super.onBeatHit(event);
+
+    if (event.beat == 332)
+    {
+      var picoWalk = getNamedProp('picoWalk');
+      picoWalk.animation.play('walk', true);
+      FlxTween.tween(picoWalk, {x: 1950}, 10.55, {ease: FlxEase.linear});
+    }
+    if (event.beat == 400)
+    {
+      allowCarInGeneral = false;
+    }
+    if (FlxG.random.bool(10) && backCarCanDrive && allowCarInGeneral) backCarDrive();
+    if (FlxG.random.bool(10) && frontCarCanDrive && allowCarInGeneral) frontCarDrive();
+  }
+
+  function resetBackCar():Void
+  {
+    var backCar = getNamedProp('backCar');
+    if (backCar == null) return;
+    backCar.flipX = false;
+    backCar.x = 0;
+    backCarCanDrive = true;
+  }
+
+  function resetFrontCar():Void
+  {
+    var frontCar = getNamedProp('frontCar');
+    if (frontCar == null) return;
+    frontCar.flipX = false;
+    frontCar.x = -3000;
+    frontCarCanDrive = true;
+  }
+
+  function backCarDrive():Void
+  {
+    var backCarChance:Int = FlxG.random.int(1, 2);
+    carSound = FunkinSound.load(Paths.sound('extra/carPassMix'), 0.4, false, true, true);
+    if (backCarChance == 1)
+    {
+      var backCar = getNamedProp('backCar');
+      FlxTween.tween(backCar, {x: 3000}, 0.5, {ease: FlxEase.linear});
+    }
+    if (backCarChance == 2)
+    {
+      var backCar = getNamedProp('backCar');
+      backCar.x = 3000;
+      FlxTween.tween(backCar, {x: 0}, 0.5, {ease: FlxEase.linear});
+      backCar.flipX = true;
+    }
+    backCarCanDrive = false;
+    new FlxTimer().start(5, function(tmr:FlxTimer)
+    {
+      resetBackCar();
+    });
+  }
+
+  function frontCarDrive():Void
+  {
+    var frontCarChance:Int = FlxG.random.int(1, 2);
+    carSound = FunkinSound.load(Paths.sound('extra/carPassMix'), 0.5, false, true, true);
+    if (frontCarChance == 1)
+    {
+      var frontCar = getNamedProp('frontCar');
+      FlxTween.tween(frontCar, {x: 4000}, 0.5, {ease: FlxEase.linear});
+    }
+    if (frontCarChance == 2)
+    {
+      var frontCar = getNamedProp('frontCar');
+      frontCar.x = 4000;
+      frontCar.flipX = true;
+      FlxTween.tween(frontCar, {x: -3000}, 0.5, {ease: FlxEase.linear});
+    }
+    frontCarCanDrive = false;
+    new FlxTimer().start(7, function(tmr:FlxTimer)
+    {
+      resetFrontCar();
+    });
+  }
+
+  /**
+   * If your stage uses additional assets not specified in the JSON,
+   * make sure to specify them like this, or they won't get cached in the loading screen.
+   */
+  /**
+   * Make sure the fast car is reset when the song restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    resetBackCar();
+    resetFrontCar();
+    var picoWalk = getNamedProp('picoWalk');
+    if (picoWalk != null) FlxTween.cancelTweensOf(picoWalk);
+    picoWalk.x = 1000;
+    allowCarInGeneral = true;
+  }
+
+  function onPause(event:ScriptEvent)
+  {
+    super.onPause(event);
+    if (getNamedProp('picoWalk') != null) FlxTweenUtil.pauseTweensOf(getNamedProp('picoWalk'));
+  }
+
+  function onResume(event:ScriptEvent)
+  {
+    super.onResume(event);
+    if (getNamedProp('picoWalk') != null) FlxTweenUtil.resumeTweensOf(getNamedProp('picoWalk'));
+  }
+
+  /**
+   * Make sure the fast car is reset when the song restarts.
+   */
+  function onCountdownStart(event:ScriptEvent)
+  {
+    super.onCountdownStart(event);
+    resetBackCar();
+    resetFrontCar();
+    PlayState.instance.comboPopUps.offsets = [-450, 350];
+  }
+}

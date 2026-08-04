@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "South (Gooey Mix)",
+  "artist": "SakiProd",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 165, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-dark",
+      "girlfriend": "flora-dark",
+      "opponent": "spooky-dark",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["spooky"],
+      "altInstrumentals": ["pico", ""]
+    },
+    "stage": "spookyMansionErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 2, "normal": 3, "hard": 4 },
+    "album": "gooeymix2",
+    "stickerPack": null,
+    "previewStart": 0.667297723687176,
+    "previewEnd": 0.920295244534595
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

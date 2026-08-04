@@ -1,0 +1,233 @@
+import funkin.play.character.SparrowCharacter;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.vis.dsp.SpectralAnalyzer;
+import flixel.FlxStrip;
+import funkin.Highscore;
+import flixel.util.FlxSave;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.graphics.shaders.DropShadowShader;
+
+using StringTools;
+
+class FloraPixelCharacter extends SparrowCharacter
+{
+  private static var FLORA_VIS_COLOR:Int = 0xFF82FFFF;
+  private static var FLORA_VIS_WIDTH:Int = 102;
+  private static var FLORA_VIS_HEIGHT:Int = 72;
+  private static var FLORA_VIS_BAR_COUNT:Int = 7;
+  private static var FLORA_VIS_FLAT_LEVEL:Float = 0.5;
+
+  function new()
+  {
+    super('flora-pixel'); // gonna do the flora pixel recode once flora's pixel sprites are 100% finished
+  }
+
+  var floraSpeaker;
+  var visualizerFlora:FlxStrip;
+  var refershedLol:Bool = false;
+  // viz stuff
+  var analyzer:SpectralAnalyzer;
+  var vizLevels:Array<Bar> = [];
+  // Shader stuff.
+  private var currentShader = null;
+  private var adjustColor:AdjustColorShader;
+  // Lesbian flags.
+  private var isLesbian:Bool = false;
+  private var floraAnimationSuffix = '';
+  private var alwaysLesbian:Bool = false; // I mean, TECHNICALLY this changes nothing ;3
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    floraSpeaker = new FunkinSprite(0, 0).loadSparrow('characters/flora/FloraSpeakerPixel');
+    floraSpeaker.animation.addByPrefix('idle', 'speaker', 12, false);
+    floraSpeaker.animation.play('idle');
+    floraSpeaker.animation.curAnim.finish();
+    PlayState.instance.currentStage.add(floraSpeaker);
+
+    if (GooeyMixOptions.floraVisualizer)
+    {
+      visualizerFlora = new FlxStrip();
+      visualizerFlora.makeGraphic(1, 1, FLORA_VIS_COLOR);
+
+      PlayState.instance.currentStage.add(visualizerFlora);
+    }
+  }
+
+  override function dance(force)
+  {
+    if (floraSpeaker != null) floraSpeaker.animation.play('idle', false);
+    super.dance(force);
+  }
+
+  function onSongStart(scriptEvent)
+  {
+    super.onSongStart(scriptEvent);
+    if (GooeyMixOptions.floraVisualizer)
+    {
+      analyzer = new SpectralAnalyzer(FlxG.sound.music._channel.__audioSource, FLORA_VIS_BAR_COUNT, 0.1, 40);
+      analyzer.fftN = 256;
+
+      // A-Bot tuning...
+      analyzer.minDb = -65;
+      analyzer.maxDb = -25;
+      analyzer.maxFreq = 22000;
+      // we use a very low minFreq since some songs use low low subbass like a boss
+      analyzer.minFreq = 10;
+    }
+  }
+
+  function onSongRetry(scriptEvent)
+  {
+    super.onSongRetry(scriptEvent);
+    if (!alwaysLesbian) isLesbian = false;
+    if (GooeyMixOptions.floraVisualizer) analyzer = null;
+  }
+
+  var vizTimeoutTime:Float = 0;
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+    if (!refershedLol)
+    {
+      floraSpeaker.zIndex = this.zIndex - 1;
+      floraSpeaker.scale.set(6, 6);
+      floraSpeaker.antialiasing = false;
+      floraSpeaker?.setPosition(this.x + 163 - (-this.globalOffsets[0] * this.scale.x), this.y + 158 - (-this.globalOffsets[1] * this.scale.y));
+
+      if (GooeyMixOptions.floraVisualizer)
+      {
+        visualizerFlora.x = floraSpeaker.x + 17;
+        visualizerFlora.y = floraSpeaker.y + 16;
+        visualizerFlora.zIndex = floraSpeaker.zIndex + 1;
+        visualizerFlora.antialiasing = false;
+      }
+
+      PlayState.instance.currentStage.add(floraSpeaker);
+      PlayState.instance.currentStage.refresh();
+      refershedLol = true;
+      synchronizeShader();
+    }
+
+    if (GooeyMixOptions.floraVisualizer){
+      vizTimeoutTime -= event.elapsed;
+      while (vizTimeoutTime < 0)
+      {
+       updateViz();
+        vizTimeoutTime += 1 / 24;
+      }
+    }
+  }
+
+  function synchronizeShader():Void
+  {
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      if (currentShader == this.shader) return;
+
+      currentShader = this.shader;
+
+      if (Std.isOfType(this.shader, DropShadowShader))
+      {
+        adjustColor = new AdjustColorShader();
+        adjustColor.brightness = this.shader.baseBrightness;
+        adjustColor.hue = this.shader.baseHue;
+        adjustColor.contrast = this.shader.baseContrast;
+        adjustColor.saturation = this.shader.baseSaturation;
+        floraSpeaker.shader = adjustColor;
+        visualizerFlora.shader = adjustColor;
+      }
+      else
+      {
+        floraSpeaker.shader = this.shader;
+        visualizerFlora.shader = this.shader;
+      }
+
+      trace("Synchronized shader between children!");
+    }
+  }
+
+  function updateViz():Void
+  {
+    vizLevels = analyzer?.getLevels(vizLevels) ?? getDefaultLevels();
+
+    final scale:Float = 6.0;
+    final lowResWidth:Float = Math.floor(FLORA_VIS_WIDTH / scale);
+    final lowResHeight:Float = Math.floor(FLORA_VIS_HEIGHT / scale);
+    final barWidth:Float = Math.floor(lowResWidth / FLORA_VIS_BAR_COUNT);
+
+    visualizerFlora.vertices.length = 0;
+    visualizerFlora.indices.length = 0;
+    visualizerFlora.uvtData.length = 0;
+
+    for (i in 0...FLORA_VIS_BAR_COUNT)
+    {
+      var level:Float = FLORA_VIS_FLAT_LEVEL + (vizLevels[i].value * (1 - FLORA_VIS_FLAT_LEVEL));
+
+      var x1:Float = Math.floor((i / FLORA_VIS_BAR_COUNT) * lowResWidth);
+      var x2:Float = Math.floor(((i + 1) / FLORA_VIS_BAR_COUNT) * lowResWidth);
+      var y:Float = Math.floor(lowResHeight - (level * lowResHeight));
+
+      var v:Array<Float> = [
+        x1 * scale,            y * scale,
+        x2 * scale,            y * scale,
+        x1 * scale, lowResHeight * scale,
+        x2 * scale, lowResHeight * scale
+      ];
+      for (val in v) visualizerFlora.vertices.push(val);
+
+      var offset:Int = i * 4;
+      visualizerFlora.indices.push(offset + 0);
+      visualizerFlora.indices.push(offset + 1);
+      visualizerFlora.indices.push(offset + 2);
+
+      visualizerFlora.indices.push(offset + 1);
+      visualizerFlora.indices.push(offset + 3);
+      visualizerFlora.indices.push(offset + 2);
+
+      visualizerFlora.uvtData.push(0);
+      visualizerFlora.uvtData.push(0);
+      visualizerFlora.uvtData.push(1);
+      visualizerFlora.uvtData.push(0);
+      visualizerFlora.uvtData.push(0);
+      visualizerFlora.uvtData.push(1);
+      visualizerFlora.uvtData.push(1);
+      visualizerFlora.uvtData.push(1);
+    }
+  }
+
+  function getDefaultLevels():Array<Bar>
+  {
+    vizLevels.resize(0);
+    for (i in 0...FLORA_VIS_BAR_COUNT) vizLevels.push({value: 0, peak: 0.0});
+    return vizLevels;
+  }
+
+  function retroFloor(value:Float):Float
+  {
+    return Math.floor(value / 6) * 6;
+  }
+
+  override public function playAnimation(name:String, restart:Bool = false, ?ignoreOther:Bool = false, ?reversed:Bool = false)
+  {
+    if (name.startsWith("dance"))
+    {
+      if (isLesbian || alwaysLesbian) floraAnimationSuffix = '-alt';
+      else
+        floraAnimationSuffix = '';
+    }
+    else if (name == "combo200") isLesbian = true;
+    else if (name == "drop70")
+    {
+      if (!alwaysLesbian)
+      {
+        isLesbian = false;
+      }
+    }
+    super.playAnimation(name + floraAnimationSuffix, restart, ignoreOther, reversed);
+  }
+}

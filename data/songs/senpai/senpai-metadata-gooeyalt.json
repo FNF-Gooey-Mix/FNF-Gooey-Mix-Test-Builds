@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Senpai (Gooey Mix)",
+  "artist": "ChessBrabo",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 144, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-pixel",
+      "girlfriend": "flora-pixel",
+      "opponent": "senpai",
+      "instrumental": "truegooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["senpai"],
+      "altInstrumentals": ["pico", ""]
+    },
+    "stage": "schoolGooey",
+    "noteStyle": "pixel",
+    "ratings": { "easy": 2, "normal": 3, "hard": 4 },
+    "album": "gooeymix2",
+    "stickerPack": null
+  },
+  "previewStart": 0,
+  "previewEnd": 15000,
+  "generatedBy": "LeGooey (by hand)"
+}

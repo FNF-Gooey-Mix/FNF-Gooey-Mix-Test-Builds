@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey (QT)",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/gooey/Gooey",
+  "flipX": true,
+  "cameraOffsets": [-1, -32],
+  "death": {
+    "cameraOffsets": [-40, 0]
+  },
+  "healthIcon": {
+    "id": "gooey"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "GooeyIdle",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "GooeyLeft",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "GooeyDown",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singUP",
+      "prefix": "GooeyUp",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "GooeyRight",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "hey",
+      "prefix": "GooeyHey",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "cheer",
+      "prefix": "GooeyCheer",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "GooeyAltLeft",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "GooeyAltDown",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "GooeyAltUp",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "GooeyAltRight",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "GooeyMissLeft",
+      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "offsets": [-3.75, 57.5]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "GooeyMissDown",
+      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "offsets": [-3.75, 57.5]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "GooeyMissUp",
+      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "offsets": [-3.75, 57.5]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "GooeyMissRight",
+      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "offsets": [-3.75, 57.5]
+    },
+    {
+      "name": "GooeyQTwave",
+      "prefix": "GooeyQTwave",
+      "assetPath": "shared:characters/gooey/GooeyQTAnims",
+      "offsets": [-56.5, 12]
+    },
+    {
+      "name": "GooeyBirdBrain",
+      "prefix": "GooeyBirdBrain",
+      "assetPath": "shared:characters/gooey/GooeyQTAnims",
+      "offsets": [-56.5, 12]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "GooeyDies",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [18, -19]
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "GooeyDeadIdle",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [18, -19],
+      "looped": true
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "GooeyConfirm",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [18, -19]
+    }
+  ]
+}

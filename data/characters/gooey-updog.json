@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey (Updog)",
+  "renderType": "multisparrow",
+  "assetPath": "characters/gooey/GooeyUpdog",
+  "flipX": true,
+  "cameraOffsets": [-1, 93],
+  "healthIcon": {
+    "id": "gooey"
+  },
+  "death": {
+    "cameraOffsets": [-40, 0]
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "GooeyUpdogIdle",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "GooeyUpdogLeft",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "GooeyUpdogDown",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "singUP",
+      "prefix": "GooeyUpdogUp",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "GooeyUpdogRight",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "GooeyUpdogMissLeft",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "GooeyUpdogMissDown",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "GooeyUpdogMissUp",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "GooeyUpdogMissRight",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "GooeyUpdogDies",
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "GooeyUpdogGameOver",
+      "looped": true,
+      "offsets": [-20, -85]
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "GooeyUpdogRetry",
+      "offsets": [-20, -85]
+    }
+  ]
+}

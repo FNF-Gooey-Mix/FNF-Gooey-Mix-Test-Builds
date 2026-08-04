@@ -1,0 +1,9 @@
+{
+  "timeFormat": "ms",
+  "artist": "SakiProd",
+  "songName": "Hawawawa",
+  "timeChanges": [{ "d": 4, "n": 4, "t": 0, "bt": [4, 4, 4, 4], "bpm": 112 }],
+  "generatedBy": "otters",
+  "looped": true,
+  "version": "2.0.0"
+}

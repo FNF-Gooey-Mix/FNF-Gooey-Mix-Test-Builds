@@ -1,0 +1,29 @@
+{
+  "version": "2.2.4",
+  "songName": "Tutorial (Gooey Mix)",
+  "artist": "LeGooey",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 100, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey",
+      "opponent": "flora",
+      "instrumental": "gooey",
+      "altInstrumentals": [""]
+    },
+    "stage": "mainStageErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 3, "normal": 1, "hard": 2 },
+    "album": "gooeymix2",
+    "stickerPack": "bonus-tutorialGooey",
+    "previewStart": 0.428679817905918,
+    "previewEnd": 0.719717932696599
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

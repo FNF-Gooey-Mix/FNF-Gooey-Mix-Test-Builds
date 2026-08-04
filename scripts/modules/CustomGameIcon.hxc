@@ -1,0 +1,30 @@
+import funkin.modding.module.Module;
+import openfl.display.BitmapData;
+import lime.app.Application;
+import lime.graphics.Image;
+
+class CustomIcon extends Module
+{
+  public function new()
+  {
+    super('CustomIcon');
+  }
+
+  /*
+   * Can be called anywhere. Example below
+   * CustomIcon.setIcon(Paths.file('icon16.png')); <-- Grabs icon from main mod folder
+   * NOTE: Icons MUST be a type of image file (PNG, JPG).
+   */
+  public static function setIcon(graphic:String)
+  {
+    var icon:Image;
+    if (!Assets.exists(graphic))
+    {
+      trace('ERROR: ' + graphic + " doesn't exist. Check your icon location");
+      return;
+    }
+    var image = Assets.getBytes(graphic);
+    icon = Image.fromBytes(image);
+    Application.current.window.setIcon(icon);
+  }
+}

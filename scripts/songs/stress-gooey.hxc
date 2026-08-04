@@ -1,0 +1,495 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.save.Save;
+import funkin.modding.base.ScriptedFlxSpriteGroup;
+import funkin.play.cutscene.VideoCutscene;
+import openfl.filters.ShaderFilter;
+import flixel.FlxCamera;
+import flixel.math.FlxPoint;
+import funkin.modding.base.ScriptedFunkinSprite;
+import funkin.audio.FunkinSound;
+import funkin.play.stage.Stage;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import flixel.util.FlxTimerManager;
+import funkin.util.Sequence;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.util.TouchUtil;
+import flixel.util.FlxSave;
+
+class StressGooeyMixSong extends Song
+{
+  var hasPlayedCutscene:Bool;
+  var tankmanGroup:TankmanSpriteGroup = null;
+  var cutsceneSkipped:Bool = false;
+  var canSkipCutscene:Bool = false;
+  var skipText:FlxText;
+  var isMobilePauseButtonPressed:Bool = false;
+
+  public function new()
+  {
+    super('stress', {
+      variation: 'gooey'
+    });
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    // Skip the cutscene if we're playtesting in the Chart Editor.
+    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
+
+    if (!hasPlayedCutscene)
+    {
+      trace('Pausing countdown to play a video cutscene (`stress`)');
+
+      hasPlayedCutscene = true;
+
+      event.cancel(); // CANCEL THE COUNTDOWN!
+
+      gooeyStressCutscene();
+    }
+
+    if (!PlayState.instance.isMinimalMode)
+    {
+      if (tankmanGroup != null && !tankmanGroup.isValid())
+      {
+        // Destroy the tankman group if it's not valid.
+        cleanupTankmanGroup();
+      }
+
+      if (tankmanGroup == null)
+      {
+        // Initialize the tankman group if it's not available.
+        trace('Initializing tankman group... ' + PlayState.instance.currentVariation);
+        tankmanGroup = new TankmanSpriteGroup(true);
+      }
+
+      if (tankmanGroup != null)
+      {
+        // resets the tankmen!
+        tankmanGroup.reset(0, 0);
+
+        tankmanGroup.zIndex = 30;
+        PlayState.instance.currentStage.add(tankmanGroup);
+        PlayState.instance.currentStage.refresh();
+      }
+      else
+      {
+        trace('Failed to initialize tankman group!');
+      }
+    }
+  }
+
+  var gooeyCutSequenceData:Array<SequenceData>;
+
+  function gooeyStressCutscene()
+  {
+    var gooeyPos:Array<Float> = [
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+    ];
+    var kamPos:Array<Float> = [
+      PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y
+    ];
+    var tankmanPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+    ];
+
+    skipText = new FlxText(936, 618, 0, 'Skip [ ' + PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true) + ' ]', 20);
+    skipText.setFormat(Paths.font('vcr.ttf'), 40, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+    skipText.scrollFactor.set();
+    skipText.borderSize = 2;
+    skipText.alpha = 0;
+    PlayState.instance.currentStage.add(skipText);
+
+    skipText.cameras = [PlayState.instance.camCutscene];
+
+    fakeFlora = FunkinSprite.createTextureAtlas(0, 0, 'characters/flora/FloraStressCutscene', 'shared');
+    fakeFlora.anim.addByFrameLabel('FloraIdle', 'FloraIdle', 24, true);
+    fakeFlora.anim.addByFrameLabel('FloraRuhRoh', 'FloraRuhRoh', 24, false);
+    fakeFlora.anim.addByFrameLabel('FloraHuh', 'FloraHuh', 24, false);
+    fakeFlora.anim.addByFrameLabel('FlorAdios', 'FlorAdios', 24, false);
+    fakeFlora.animation.play('FloraIdle');
+    PlayState.instance.currentStage.add(fakeFlora);
+    fakeFlora.setPosition(PlayState.instance.currentStage.getGirlfriend().x + 569, PlayState.instance.currentStage.getGirlfriend().y + 429);
+    fakeFlora.zIndex = 199;
+
+    tankBopLeft = new FunkinSprite(PlayState.instance.currentStage.getGirlfriend().x - 26,
+      PlayState.instance.currentStage.getGirlfriend().y + 50).loadSparrow('characters/flora/LeftTanker');
+    tankBopLeft.animation.addByPrefix('idle', 'idle', 24, true);
+    tankBopLeft.animation.addByPrefix('aim', 'aim', 24, false);
+    tankBopLeft.animation.addByPrefix('fuck', 'fuck', 12, false);
+    tankBopLeft.animation.addByPrefix('goodbye', 'goodbye', 12, false);
+    tankBopLeft.animation.play('idle');
+    PlayState.instance.currentStage.add(tankBopLeft);
+    tankBopLeft.zIndex = PlayState.instance.currentStage.getGirlfriend().zIndex - 3;
+
+    tankBopRight = new FunkinSprite(PlayState.instance.currentStage.getGirlfriend().x,
+      PlayState.instance.currentStage.getGirlfriend().y + 50).loadSparrow('characters/flora/RightTanker');
+    tankBopRight.animation.addByPrefix('idle', 'idle', 24, true);
+    tankBopRight.animation.play('idle');
+    tankBopRight.animation.addByPrefix('aim', 'aim', 24, false);
+    tankBopRight.animation.addByPrefix('shit', 'shit', 12, false);
+    tankBopRight.animation.addByPrefix('grab', 'grab', 12, false);
+    tankBopRight.animation.addByPrefix('fuckingDead', 'fuckingDead', 12, false);
+    tankBopRight.animation.addByPrefix('throw', 'throw', 12, false);
+    tankBopRight.animation.addByPrefix('chokeLoop', 'chokeLoop', 12, true);
+    tankBopRight.animation.addByPrefix('goodbye', 'goodbye', 12, false);
+    PlayState.instance.currentStage.add(tankBopRight);
+    tankBopRight.zIndex = PlayState.instance.currentStage.getGirlfriend().zIndex - 3;
+
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      var rim = new DropShadowShader();
+      rim.setAdjustColor(-46, -38, -25, -20);
+      rim.color = 0xFFDFEF3C;
+      fakeFlora.shader = rim;
+      rim.angle = 90;
+      rim.attachedSprite = fakeFlora;
+
+      adjustColor = new AdjustColorShader();
+
+      adjustColor.hue = -40;
+      adjustColor.saturation = -20;
+      adjustColor.brightness = -40;
+      adjustColor.contrast = -25;
+
+      tankBopLeft.shader = adjustColor;
+      tankBopRight.shader = adjustColor;
+
+      fakeFlora.animation.onFrameChange.add(function()
+      {
+        rim.updateFrameInfo(fakeFlora.frame);
+      });
+    }
+
+    PlayState.instance.isInCutscene = true;
+    PlayState.instance.camHUD.alpha = 0;
+
+    PlayState.instance.currentStage.getGirlfriend().visible = false;
+    PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyCutsceneIdle', true, false);
+
+    PlayState.instance.camCutscene.fade(0xFF000000, 1, true, null, true);
+
+    gooeyCutSequenceData = [
+      {
+        time: 0,
+        callback: () ->
+        {
+          cutsceneMusic = FunkinSound.load(Paths.music("cutscene/cutscene", "week7"), true);
+          cutsceneMusic.play(false);
+
+          if (GooeyMixOptions.gooeyShaders)
+          {
+            PlayState.instance.currentStage.getBoyfriend().shader.threshold = 0.2;
+          }
+          PlayState.instance.tweenCameraToPosition(tankmanPos[0] + 0, tankmanPos[1] - 0, 2, FlxEase.smoothStepInOut);
+          PlayState.instance.currentStage.getDad().playAnimation('tankmanGooeyCutscene', true, false);
+        }
+      },
+      {
+        time: 6.5 / 24,
+        callback: () ->
+        {
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/lines/1'), 1.0);
+          if (Preferences.subtitles)
+          {
+            subtitlesSound = FunkinSound.load(Paths.sound('stressGooeyCutscene/blank'), 1);
+            subtitlesSound.play(false);
+            PlayState.instance.subtitles.offsets = [0, 42];
+            PlayState.instance.subtitles.alignment = 'bottom';
+            if (Preferences.subtitles) PlayState.instance.subtitles.assignSubtitles('songs/stress/subtitles/start-cutscene-gooey', subtitlesSound);
+          }
+        }
+      },
+      {time: 61 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/lines/2'), 1.0)},
+      {time: 93 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.71, 1, true, FlxEase.expoOut)},
+      {time: 135 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.7, 5, true, FlxEase.expoOut)},
+      {time: 269 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.71, 1, true, FlxEase.expoOut)},
+      {time: 301 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.72, 1, true, FlxEase.expoOut)},
+      {time: 93 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.71, 1, true, FlxEase.expoOut)},
+      {
+        time: 311 / 24,
+        callback: () ->
+        {
+          PlayState.instance.tweenCameraToPosition(kamPos[0] + 120, kamPos[1] + 200, 1.5, FlxEase.expoOut);
+          PlayState.instance.tweenCameraZoom(0.9, 2.6, true, FlxEase.smoothStepInOut);
+        }
+      },
+      {
+        time: 332 / 24,
+        callback: () ->
+        {
+          tankBopLeft.animation.play('aim');
+          tankBopRight.animation.play('aim');
+          fakeFlora.animation.play('FloraRuhRoh');
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyCutUhOh', true, false);
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/gockCockStress'), 1.0);
+        }
+      },
+      {time: 350 / 24, callback: () -> PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyCutCrystalGlow', true, false)},
+      {
+        time: 352 / 24,
+        callback: () ->
+        {
+          fakeFlora.animation.play('FloraHuh');
+        }
+      },
+      {
+        time: 366 / 24,
+        callback: () ->
+        {
+          fakeFlora.animation.play('FlorAdios');
+        }
+      },
+      {
+        time: 371 / 24,
+        callback: () ->
+        {
+          PlayState.instance.tweenCameraZoom(0.8, 0.5, true, FlxEase.expoOut);
+          PlayState.instance.tweenCameraToPosition(kamPos[0] + 80, kamPos[1] + 120, 1, FlxEase.expoOut);
+          PlayState.instance.currentStage.getGirlfriend().playAnimation('kamMurder', true, false);
+          tankBopLeft.animation.play('fuck');
+          tankBopRight.animation.play('shit');
+          PlayState.instance.currentStage.getGirlfriend().visible = true;
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyCutsceneHappy', true, false);
+        }
+      },
+      {time: 372 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/kamMurder'), 1.0)},
+      {
+        time: 391 / 24,
+        callback: () ->
+        {
+          PlayState.instance.currentStage.getGirlfriend().playAnimation('grab', true, false);
+          tankBopRight.animation.play('grab');
+        }
+      },
+      {
+        time: 401 / 24,
+        callback: () ->
+        {
+          tankBopRight.animation.play('chokeLoop');
+          tankBopLeft.animation.play('goodbye');
+        }
+      },
+      {time: 431 / 24, callback: () -> tankBopRight.animation.play('fuckingDead')},
+      {
+        time: 446 / 24,
+        callback: () ->
+        {
+          PlayState.instance.currentStage.getGirlfriend().playAnimation('helmetGrab', true, false);
+          PlayState.instance.tweenCameraZoom(0.75, 0.5, true, FlxEase.expoOut);
+          PlayState.instance.tweenCameraToPosition(kamPos[0] + 200, kamPos[1] + 200, 1, FlxEase.expoOut);
+        }
+      },
+      {
+        time: 456 / 24,
+        callback: () ->
+        {
+          PlayState.instance.currentStage.getGirlfriend().playAnimation('iDontKnow', true, false);
+          tankBopRight.animation.play('throw');
+        }
+      },
+      {
+        time: 460 / 24,
+        callback: () ->
+        {
+          PlayState.instance.tweenCameraToPosition(kamPos[0] + 375, kamPos[1] + 275, 1, FlxEase.expoOut);
+          PlayState.instance.tweenCameraZoom(0.9, 0.5, true, FlxEase.expoOut);
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyCutHelmetOn', true, false);
+          if (GooeyMixOptions.gooeyShaders)
+          {
+            PlayState.instance.currentStage.getBoyfriend().shader.threshold = 0.1;
+          }
+        }
+      },
+      {
+        time: 479 / 24,
+        callback: () ->
+        {
+          PlayState.instance.tweenCameraToPosition(tankmanPos[0], tankmanPos[1], 3, FlxEase.smoothStepInOut);
+          PlayState.instance.tweenCameraZoom(0.8, 3, true, FlxEase.expoOut);
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/lines/3'), 1.0);
+          tankBopRight.animation.play('goodbye');
+        }
+      },
+      {
+        time: 495 / 24,
+        callback: () ->
+        {
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('fakeIdle', true, false);
+          PlayState.instance.currentStage.getGirlfriend().playAnimation('fakeIdle', true, false);
+        }
+      },
+      {time: 545 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/lines/4'), 1.0)},
+      {time: 580 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.81, 1, true, FlxEase.expoOut)},
+      {time: 607 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.83, 1, true, FlxEase.expoOut)}, // he said 67!
+      {
+        time: 611 / 24,
+        callback: () ->
+        {
+          PlayState.instance.tweenCameraToPosition(tankmanPos[0] + 0, tankmanPos[1] - 0, 2, FlxEase.smoothStepInOut);
+          PlayState.instance.tweenCameraZoom(0.7, 1, true, FlxEase.smoothStepInOut);
+        }
+      },
+      {
+        time: 635 / 24,
+        callback: () ->
+        {
+          canSkipCutscene = false;
+          hasPlayedCutscene = true;
+          cutsceneSkipped = true;
+          PlayState.instance.isInCutscene = false;
+          FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1);
+          cutsceneMusic.stop();
+
+          skipText.visible = false;
+          tankBopLeft.destroy();
+          tankBopRight.destroy();
+          fakeFlora.destroy();
+          PlayState.instance.currentStage.getGirlfriend().playAnimation('idle', true, false);
+          PlayState.instance.currentStage.getDad().playAnimation('idle', true, false);
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('idle', true, false);
+          PlayState.instance.subtitles.offsets = [0, 139];
+
+          PlayState.instance.startCountdown();
+        }
+      },
+
+    ];
+    gooeyCutSequence = new Sequence(gooeyCutSequenceData);
+  }
+
+  function skipCutscene()
+  {
+    cutsceneSkipped = true;
+    hasPlayedCutscene = true;
+    PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
+    cutsceneMusic.fadeOut(0.5, 0);
+    if (gooeyCutSound != null)
+    {
+      gooeyCutSound.fadeOut(0.5, 0);
+    }
+
+    new FlxTimer().start(0.5, _ ->
+    {
+      PlayState.instance.justUnpaused = true;
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
+
+      gooeyCutSequence.destroy();
+      cutsceneMusic.stop();
+      if (gooeyCutSound != null)
+      {
+        gooeyCutSound.stop();
+      }
+
+      PlayState.instance.startCountdown();
+      skipText.visible = false;
+
+      tankBopLeft.destroy();
+      tankBopRight.destroy();
+      fakeFlora.destroy();
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1);
+
+      PlayState.instance.currentStage.getGirlfriend().visible = true;
+
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('idle', true);
+      PlayState.instance.currentStage.getDad().playAnimation('idle', true);
+      PlayState.instance.currentStage.getBoyfriend().playAnimation('idle', true);
+      subtitlesSound.stop();
+      PlayState.instance.subtitles.offsets = [0, 139];
+      if (GooeyMixOptions.gooeyShaders)
+      {
+        PlayState.instance.currentStage.getBoyfriend().shader.threshold = 0.1;
+      }
+    });
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedCutscene = true;
+
+    // resets the tankmen!
+    if (tankmanGroup != null)
+    {
+      tankmanGroup.reset(0, 0);
+    }
+    if (PlayState.instance.currentStage?.getGirlfriend() != null)
+    {
+      PlayState.instance.currentStage?.getGirlfriend().reset();
+      trace('reset pico!');
+    }
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+    cutsceneSkipped = false;
+    canSkipCutscene = false;
+  }
+
+  function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    if (FlxG.onMobile)
+    {
+      isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
+    }
+
+    if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && !cutsceneSkipped)
+    {
+      if (!canSkipCutscene)
+      {
+        trace('cant skip yet!');
+        if (skipText != null)
+        {
+          FlxTween.tween(skipText, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+          new FlxTimer().start(0.5, _ ->
+          {
+            canSkipCutscene = true;
+            trace('can skip!');
+          });
+        }
+      }
+    }
+    if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && !cutsceneSkipped && canSkipCutscene)
+    {
+      skipCutscene();
+      trace('skipped');
+    }
+  }
+
+  function onDestroy(event:ScriptEvent):Void
+  {
+    super.onDestroy(event);
+    cleanupTankmanGroup();
+  }
+
+  function cleanupTankmanGroup():Void
+  {
+    if (tankmanGroup != null)
+    {
+      PlayState.instance.currentStage.remove(tankmanGroup, true);
+      tankmanGroup = null;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.character.CharacterType;
+
+class EeveeGooeyCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('eevee-gooey');
+  }
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+    GameOverSubState.musicSuffix = '-eevee';
+    GameOverSubState.blueBallSuffix = '-eevee';
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+    GameOverSubState.musicSuffix = '-eevee';
+    GameOverSubState.blueBallSuffix = '-eevee';
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.eventCanceled)
+    {
+      // onNoteHit event was cancelled by the gameplay module.
+      return;
+    }
+    // Override the hit note animation.
+    if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+    {
+      switch (event.note.kind)
+      {
+        case "hey":
+          holdTimer = 0;
+          this.playAnimation('hey', true, true);
+          return;
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+}

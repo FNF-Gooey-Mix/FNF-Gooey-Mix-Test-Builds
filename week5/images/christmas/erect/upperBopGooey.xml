@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="upperBopGooey.png">
+<SubTexture name="upperBop0000" x="0" y="722" width="2533" height="359" frameX="-91" frameY="-72" frameWidth="2722" frameHeight="450" />
+<SubTexture name="upperBop0001" x="2530" y="0" width="2531" height="360" frameX="-92" frameY="-68" frameWidth="2722" frameHeight="450" />
+<SubTexture name="upperBop0002" x="0" y="0" width="2530" height="361" frameX="-93" frameY="-66" frameWidth="2722" frameHeight="450" />
+<SubTexture name="upperBop0003" x="0" y="361" width="2527" height="361" frameX="-94" frameY="-65" frameWidth="2722" frameHeight="450" />
+</TextureAtlas>

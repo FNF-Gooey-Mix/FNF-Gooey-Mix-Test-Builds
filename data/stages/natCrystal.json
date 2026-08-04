@@ -1,0 +1,173 @@
+{
+  "version": "1.0.0",
+  "name": "Nat Crystal (Hotel Castle Erect)",
+  "cameraZoom": 0.6,
+  "props": [
+    {
+      "name": "backWall",
+      "assetPath": "gooeyMix/week60037/natCrystal/backWall",
+      "position": [-600, -900],
+      "scale": [1, 1],
+      "scroll": [0.7, 0.7],
+      "zIndex": 10
+    },
+    {
+      "name": "crystalBackWall",
+      "assetPath": "gooeyMix/week60037/natCrystal/crystalBackWall",
+      "position": [-600, -900],
+      "scale": [1, 1],
+      "scroll": [0.7, 0.7],
+      "zIndex": 11,
+      "blend": "add"
+    },
+    {
+      "name": "topCrystal",
+      "assetPath": "gooeyMix/week60037/natCrystal/topCrystal",
+      "position": [200, -800],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 12
+    },
+    {
+      "name": "bottomCrystal",
+      "assetPath": "gooeyMix/week60037/natCrystal/bottomCrystal",
+      "position": [0, 0],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 13
+    },
+    {
+      "name": "bottomCrystalLight",
+      "assetPath": "gooeyMix/week60037/natCrystal/bottomCrystalLight",
+      "position": [820, -160],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 14,
+      "blend": "add"
+    },
+    {
+      "name": "natCrystal",
+      "assetPath": "gooeyMix/week60037/natCrystal/natCrystal",
+      "position": [1350, -1100],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 15
+    },
+    {
+      "name": "bottomCrystalLight2",
+      "assetPath": "gooeyMix/week60037/natCrystal/bottomCrystalLight",
+      "position": [820, -160],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 16,
+      "blend": "add"
+    },
+    {
+      "name": "natCrystalLight",
+      "assetPath": "gooeyMix/week60037/natCrystal/natCrystalLight",
+      "position": [650, -2100],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 71,
+      "blend": "add"
+    },
+    {
+      "name": "floorLight",
+      "assetPath": "gooeyMix/week60037/natCrystal/floorLight",
+      "position": [100, -200],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 76,
+      "blend": "overlay"
+    },
+    {
+      "name": "overlay1",
+      "assetPath": "gooeyMix/week60037/natCrystal/Overlay1",
+      "position": [-400, -1300],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 72,
+      "blend": "multiply"
+    },
+    {
+      "name": "overlay2",
+      "assetPath": "gooeyMix/week60037/natCrystal/Overlay2",
+      "position": [-400, -1300],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 73,
+      "blend": "multiply"
+    },
+    {
+      "name": "backWallLights",
+      "assetPath": "gooeyMix/week60037/natCrystal/backWallLights",
+      "position": [-600, -900],
+      "scale": [1, 1],
+      "scroll": [0.7, 0.7],
+      "zIndex": 74,
+      "blend": "add"
+    },
+    {
+      "name": "overlay3",
+      "assetPath": "gooeyMix/week60037/natCrystal/Overlay3",
+      "position": [-155, -1000],
+      "scale": [0.85, 0.85],
+      "scroll": [1, 1],
+      "zIndex": 90,
+      "blend": "multiply",
+      "alpha": 0.3
+    },
+    {
+      "name": "natCrystalLight2",
+      "assetPath": "gooeyMix/week60037/natCrystal/natCrystalLight",
+      "position": [650, -2100],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 76,
+      "blend": "add"
+    },
+    {
+      "name": "starcraftLight",
+      "zIndex": 80,
+      "assetPath": "#9E86AB",
+      "position": [-2000, -1000],
+      "scale": [6000, 4000],
+      "scroll": [0, 0],
+      "blend": "colordodge"
+    },
+    {
+      "name": "crystalReflections1",
+      "assetPath": "gooeyMix/week60037/natCrystal/crystalReflections",
+      "position": [-150, -2300],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "zIndex": 81,
+      "blend": "colorburn"
+    },
+    {
+      "name": "crystalReflections2",
+      "assetPath": "gooeyMix/week60037/natCrystal/crystalReflections",
+      "position": [250, -1900],
+      "scale": [0.8, 0.8],
+      "scroll": [1, 1],
+      "zIndex": 82,
+      "flipX": true,
+      "flipY": true,
+      "blend": "overlay"
+    }
+  ],
+  "characters": {
+    "bf": {
+      "zIndex": 60,
+      "position": [2340, 560],
+      "cameraOffsets": [-200, -150]
+    },
+    "gf": { "zIndex": 40, "position": [1795, 490], "cameraOffsets": [0, -100] },
+    "dad": {
+      "zIndex": 50,
+      "position": [1390, 560],
+      "cameraOffsets": [200, -150]
+    }
+  },
+  "directory": ""
+}

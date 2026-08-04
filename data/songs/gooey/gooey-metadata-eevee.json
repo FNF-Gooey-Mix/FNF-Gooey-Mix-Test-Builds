@@ -1,0 +1,31 @@
+{
+  "version": "2.2.4",
+  "songName": "Gooey (Eevee Mix)",
+  "artist": "aUseriGuess",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 150, "n": 3, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "difficulties": ["extra"],
+    "characters": {
+      "player": "eevee-gooey",
+      "girlfriend": "pikafriend-gooey",
+      "opponent": "gooey-opponent",
+      "instrumental": "eevee",
+      "playerVocals": ["eevee"],
+      "opponentVocals": ["gooey"],
+      "altInstrumentals": ["", "gooey", "pico"]
+    },
+    "stage": "natCrystal",
+    "noteStyle": "funkin",
+    "ratings": { "extra": 5 },
+    "album": "gooeyeeveemix",
+    "stickerPack": null,
+    "previewStart": 0.280351648351648,
+    "previewEnd": 0.560371184371184
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

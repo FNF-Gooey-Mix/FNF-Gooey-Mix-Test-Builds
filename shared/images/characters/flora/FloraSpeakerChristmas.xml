@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="FloraChristmas.png">
+<SubTexture name="christmas0000" x="0" y="0" width="502" height="257" frameX="-186" frameY="-23" frameWidth="800" frameHeight="450" />
+<SubTexture name="christmas0001" x="0" y="257" width="502" height="257" frameX="-186" frameY="-26" frameWidth="800" frameHeight="450" />
+<SubTexture name="christmas0002" x="0" y="514" width="502" height="257" frameX="-186" frameY="-26" frameWidth="800" frameHeight="450" />
+</TextureAtlas>

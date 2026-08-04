@@ -1,0 +1,31 @@
+{
+  "version": "2.2.4",
+  "songName": "Slimeball (Eevee Mix)",
+  "artist": "aUseriGuess (ft. SkyManta)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 160, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "difficulties": ["extra"],
+    "characters": {
+      "player": "eevee-gooey",
+      "girlfriend": "pikafriend-gooey",
+      "opponent": "gooey-opponent",
+      "instrumental": "eevee",
+      "playerVocals": ["eevee"],
+      "opponentVocals": ["gooey"],
+      "altInstrumentals": ["", "gooey"]
+    },
+    "stage": "natCrystal",
+    "noteStyle": "funkin",
+    "ratings": { "extra": 7 },
+    "album": "gooeyeeveemix",
+    "stickerPack": null,
+    "previewStart": 0.228291609007422,
+    "previewEnd": 0.377418543212983
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

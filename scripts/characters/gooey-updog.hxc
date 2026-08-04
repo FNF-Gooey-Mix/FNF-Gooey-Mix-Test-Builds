@@ -1,0 +1,62 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import funkin.play.PlayState;
+import funkin.audio.FunkinSound;
+
+class GooeyUpdogCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('gooey-updog');
+  }
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    if (PlayState.instance?.currentStage != null)
+    {
+      GameOverSubState.musicSuffix = '-gooey';
+      GameOverSubState.blueBallSuffix = '-gooey-drip';
+      PauseSubState.musicSuffix = '-gooey';
+    }
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (event.beat % 4 == 0)
+    {
+      if (PlayState.instance?.currentStage != null)
+      {
+        if (getCurrentAnimation().indexOf('miss') != -1)
+        {
+          this.playAnimation('idle', false, false);
+        }
+      }
+    }
+  }
+
+  override function onCountdownStart(event)
+  {
+    super.onCountdownStart(event);
+    PlayState.instance.comboPopUps.offsets = [-450, 350];
+  }
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+    if (PlayState.instance?.currentStage != null)
+    {
+      if (name == "deathConfirm")
+      {
+        gooeyRetry = FunkinSound.load(Paths.music('gameplay/gameover/gameOverEnd-gooeyReal'), true);
+        gooeyRetry.volume = 1;
+        gooeyRetry.play(false);
+      }
+    }
+  }
+}

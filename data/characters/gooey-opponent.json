@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey (Opponent)",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/gooey/Gooey",
+  "flipX": true,
+  "cameraOffsets": [-1, -32],
+  "death": {
+    "cameraOffsets": [-40, 40]
+  },
+  "healthIcon": {
+    "id": "gooey"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "GooeyIdle",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "GooeyRight",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "GooeyDown",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singUP",
+      "prefix": "GooeyUp",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "GooeyLeft",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "hey",
+      "prefix": "GooeyHey",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "cheer",
+      "prefix": "GooeyCheer",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "GooeyAltRight",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "GooeyAltDown",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "GooeyAltUp",
+      "offsets": [-7, 1]
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "GooeyAltLeft",
+      "offsets": [-7, 1]
+    }
+  ]
+}

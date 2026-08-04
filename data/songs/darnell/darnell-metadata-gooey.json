@@ -1,0 +1,34 @@
+{
+  "version": "2.2.4",
+  "songName": "Darnell (Gooey Mix)",
+  "artist": "krimzonred",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 155, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey",
+      "girlfriend": "flora",
+      "opponent": "darnell",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["darnell"],
+      "altInstrumentals": ["bf", ""]
+    },
+    "stage": "phillyStreetsErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 3, "normal": 5, "hard": 6 },
+    "album": "gooeyex2",
+    "stickerPack": null,
+    "previewStart": 0.1898622259126,
+    "previewEnd": 0.47718885506043
+  },
+  "previewStart": 0,
+  "previewEnd": 15000,
+  "generatedBy": "LeGooey (by hand)"
+}

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="KamAndMatt.png">
+<SubTexture name="talkLoop0000" x="0" y="0" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="talkLoop0001" x="0" y="385" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="yoink0000" x="0" y="770" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="yoink0001" x="0" y="1155" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="yoink0002" x="0" y="1540" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="yoink0003" x="0" y="1925" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="yoink0004" x="0" y="2310" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="yoink0005" x="0" y="2695" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="yoink0006" x="0" y="3080" width="908" height="384" frameX="-84" frameY="0" frameWidth="1920" frameHeight="1080" />
+</TextureAtlas>

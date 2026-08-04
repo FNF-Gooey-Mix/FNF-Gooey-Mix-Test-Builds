@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "name": "Edd (Saloonatic)",
+  "renderType": "sparrow",
+  "assetPath": "characters/extra/saloonatic/Edd",
+  "flipX": true,
+  "healthIcon": {
+    "id": "edd-gooey"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "eddIdle",
+      "frameRate": 12
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "eddLeft",
+      "frameRate": 12
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "eddDown",
+      "frameRate": 12
+    },
+    {
+      "name": "singUP",
+      "prefix": "eddUp",
+      "frameRate": 12
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "eddRight",
+      "frameRate": 12
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "eddMissLeft",
+      "frameRate": 12
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "eddMissDown",
+      "frameRate": 12
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "eddMissUp",
+      "frameRate": 12
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "eddMissRight",
+      "frameRate": 12
+    },
+    {
+      "name": "something",
+      "prefix": "eddSomething",
+      "frameRate": 12
+    }
+  ]
+}

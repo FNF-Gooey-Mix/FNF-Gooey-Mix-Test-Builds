@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey Expansion Volume 2",
+  "artists": [
+    "ContentLeaf",
+    "DigitLuck",
+    "DoubleM",
+    "FuryGTRX",
+    "HEV",
+    "krimzonred",
+    "LeGooey",
+    "SakiProd",
+    "Strife4Life",
+    "swagsalt"
+  ],
+  "albumArtAsset": "freeplay/albumRoll/gooeyex2",
+  "albumTitleAsset": "freeplay/albumRoll/gooeyex2-text",
+  "albumTitleOffsets": [-10, 0],
+  "albumOSTName": "GOOEY MIX OST"
+}

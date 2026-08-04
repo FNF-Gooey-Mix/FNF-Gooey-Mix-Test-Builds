@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="floraTitleScreen.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="leftFloraDance0000" x="1598" y="3864" width="784" height="628" frameX="0" frameY="-14" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0001" x="1598" y="4502" width="784" height="628" frameX="0" frameY="-14" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0002" x="10" y="3918" width="784" height="638" frameX="0" frameY="-4" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0003" x="10" y="4566" width="784" height="638" frameX="0" frameY="-4" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0004" x="10" y="1314" width="784" height="641" frameX="0" frameY="-1" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0005" x="10" y="1965" width="784" height="641" frameX="0" frameY="-1" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0006" x="10" y="5214" width="784" height="638" frameX="0" frameY="-4" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0007" x="10" y="5862" width="784" height="636" frameX="0" frameY="-6" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0008" x="10" y="6508" width="784" height="636" frameX="0" frameY="-6" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0009" x="804" y="10" width="784" height="635" frameX="0" frameY="-7" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0010" x="804" y="655" width="784" height="635" frameX="0" frameY="-7" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0011" x="804" y="1300" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0012" x="804" y="1944" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0013" x="804" y="2588" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0014" x="804" y="3232" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="leftFloraDance0015" x="804" y="3876" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0000" x="1598" y="2584" width="784" height="630" frameX="0" frameY="-12" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0001" x="1598" y="3224" width="784" height="630" frameX="0" frameY="-12" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0002" x="10" y="2616" width="784" height="641" frameX="0" frameY="-1" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0003" x="10" y="3267" width="784" height="641" frameX="0" frameY="-1" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0004" x="10" y="10" width="784" height="642"/>
+	<SubTexture name="rightFloraDance0005" x="10" y="662" width="784" height="642"/>
+	<SubTexture name="rightFloraDance0006" x="10" y="7154" width="784" height="636" frameX="0" frameY="-6" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0007" x="1598" y="1298" width="784" height="633" frameX="0" frameY="-9" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0008" x="1598" y="1941" width="784" height="633" frameX="0" frameY="-9" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0009" x="804" y="4520" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0010" x="804" y="5164" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0011" x="804" y="5808" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0012" x="804" y="6452" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0013" x="804" y="7096" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0014" x="1598" y="10" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+	<SubTexture name="rightFloraDance0015" x="1598" y="654" width="784" height="634" frameX="0" frameY="-8" frameWidth="784" frameHeight="642"/>
+</TextureAtlas>

@@ -1,0 +1,72 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+
+class DadbattleGooeyMixSong extends Song
+{
+  function new()
+  {
+    super('dadbattle', {
+      variation: 'gooey'
+    });
+  }
+
+  override function onSongLoaded(event)
+  {
+    super.onSongLoaded(event);
+    if (PlayState.instance.currentInstrumental != "gooey" && PlayState.instance.currentInstrumental != "truegooey")
+    {
+      PlayState.instance.currentVariation = "gooeyalt";
+      PlayState.currentChart = PlayState.instance.currentSong.getDifficulty(PlayState.instance.currentDifficulty + "-gooeyalt", "gooeyalt");
+      PlayState.instance.vocals = PlayState.instance.currentChart.buildVocals("gooeyalt");
+      event.notes = PlayState.instance.currentChart.notes.copy();
+      event.events = PlayState.instance.currentChart.getEvents();
+    }
+    if (PlayState.instance.currentInstrumental == "gooey" || PlayState.instance.currentInstrumental == "truegooey")
+    {
+      PlayState.instance.currentInstrumental = "truegooey";
+    }
+  }
+
+  var leGasp:FunkinSprite;
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    leGasp = new FunkinSprite(682, 290).loadSparrow('erect/week1CrowdGasp', 'week1');
+    leGasp.animation.addByPrefix('gasp', 'gasp', 24, false);
+    leGasp.scrollFactor.set(0.8, 0.8);
+    PlayState.instance.currentStage.add(leGasp);
+    leGasp.zIndex = 6;
+    leGasp.alpha = 0;
+    PlayState.instance.currentStage.refresh();
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+    if (PlayState.instance.currentInstrumental == "gooey" || PlayState.instance.currentInstrumental == "truegooey")
+    {
+      if (event.step == 984)
+      {
+        leGasp.alpha = 1;
+        PlayState.instance.currentStage.getNamedProp('crowd').alpha = 0;
+        leGasp.animation.play('gasp', true);
+      }
+      if (event.step == 1008)
+      {
+        PlayState.instance.currentStage.getNamedProp('crowd').alpha = 1;
+        leGasp.alpha = 0;
+      }
+    }
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    PlayState.instance.currentStage.getNamedProp('crowd').alpha = 1;
+    leGasp.alpha = 0;
+  }
+}

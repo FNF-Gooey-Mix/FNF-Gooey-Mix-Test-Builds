@@ -1,0 +1,9 @@
+{
+  "timeFormat": "ms",
+  "artist": "LeGooey",
+  "songName": "You're doing GOOd",
+  "timeChanges": [{ "d": 4, "n": 4, "t": 0, "bt": [4, 4, 4, 4], "bpm": 75 }],
+  "generatedBy": "yes",
+  "looped": true,
+  "version": "2.0.0"
+}

@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "name": "Eevee (Gooey)",
+  "renderType": "multisparrow",
+  "assetPath": "characters/extra/eevee/Playable_Eevee",
+  "cameraOffsets": [-1, 94],
+  "flipX": true,
+  "healthIcon": {
+    "id": "eevee-gooey"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "eeveeIdle",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "eeveeLeft",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "eeveeDown",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "singUP",
+      "prefix": "eeveeUp",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "eeveeRight",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "eeveeMissLeft",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "eeveeMissDown",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "eeveeMissUp",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "eeveeMissRight",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "hey",
+      "prefix": "eeveeHey",
+      "offsets": [-35, -45]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "DeathStart",
+      "assetPath": "characters/extra/eevee/EeveeDeath",
+      "offsets": [-10, -63],
+      "frameRate": 12
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "DeathIdle",
+      "assetPath": "characters/extra/eevee/EeveeDeath",
+      "offsets": [-10, -63],
+      "frameRate": 12,
+      "looped": true
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "Confirm",
+      "assetPath": "characters/extra/eevee/EeveeDeath",
+      "offsets": [-10, -63],
+      "frameRate": 12
+    }
+  ]
+}

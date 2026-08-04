@@ -1,0 +1,166 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFB3DFD8"
+  },
+
+  "music": {
+    "asset": "Lunchbox",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": [
+        "It seems like yet another lovely mademoiselle has arrived to our humble school!"
+      ]
+    },
+    {
+      "speaker": "flora-nervous-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["...What?"]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": [
+        "Oh! and you brought a little pet with you. You do know those aren't allowed on campus, right?"
+      ]
+    },
+
+    {
+      "speaker": "gooey-done-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": [
+        "Says the rip off Monika. I'm pretty sure I can be here, Flowery."
+      ]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": [
+        "My! Such a strong attitude from such a tiny creature! but my mistake, little friend."
+      ]
+    },
+    {
+      "speaker": "gooey-done-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Sure..."]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": [
+        "Now, I'm certain the lovely lady here would like to start our date?"
+      ]
+    },
+    {
+      "speaker": "flora-sideeye-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["You a girl?"]
+    },
+    {
+      "speaker": "senpai-confused",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["...No?"]
+    },
+    {
+      "speaker": "flora-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Pass."]
+    },
+    {
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["lol get rejected nerd"]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": [
+        "A-ah, I guess we have just met. Of course you must be won over by my angelic singing first."
+      ]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+      "text": [
+        "So little friend,",
+        " would you care to join me in a short ballad for a palatable warm up after school?"
+      ]
+    },
+    {
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": ["Ok gay boy."]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["hahaha..."]
+    },
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Don't call me that."]
+    }
+  ]
+}

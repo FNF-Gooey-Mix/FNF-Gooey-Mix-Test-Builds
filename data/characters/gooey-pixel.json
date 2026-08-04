@@ -1,0 +1,79 @@
+{
+  "version": "1.0.1",
+  "name": "Gooey (Pixel)",
+  "assetPath": "characters/gooey/GooeyPixel",
+  "flipX": true,
+  "offsets": [-6, 12],
+  "isPixel": true,
+  "healthIcon": {
+    "id": "gooey-pixel",
+    "isPixel": true
+  },
+  "death": {
+    "cameraOffsets": [-40, 0]
+  },
+  "scale": 6,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "missLeft",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "missDown",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "missUp",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "missRight",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "gooeyDies",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "gameOverLoop",
+      "looped": true,
+      "offsets": [0, 0]
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "jesusChrist",
+      "offsets": [0, 0]
+    }
+  ]
+}

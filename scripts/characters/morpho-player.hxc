@@ -1,0 +1,128 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.PauseSubState;
+import funkin.play.character.CharacterType;
+import funkin.play.GameOverSubState;
+import funkin.audio.FunkinSound;
+import flixel.util.FlxTimer;
+import funkin.play.PlayState;
+import funkin.graphics.video.FunkinVideoSprite;
+
+class MorphoPlayerCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('morpho-player');
+  }
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+    PauseSubState.musicSuffix = '-morpho';
+    GameOverSubState.musicSuffix = '-blank';
+    GameOverSubState.blueBallSuffix = '-blank';
+
+    vid = new FunkinVideoSprite();
+
+    if (PlayState.instance?.currentStage != null)
+    {
+      if (vid != null)
+      {
+        vid.bitmap.onEncounteredError.add((msg:String) ->
+        {
+          trace('[VLC] Encountered an error: $msg');
+          stopVideo();
+        });
+
+        vid.bitmap.onEndReached.add(stopVideo);
+
+        vid.bitmap.onFormatSetup.add(() ->
+        {
+          vid.setGraphicSize(FlxG.initialWidth, FlxG.initialHeight);
+          vid.updateHitbox();
+          vid.screenCenter();
+        });
+
+        var filePath:String = Paths.videos("MorphoComedianGameOver");
+        vid.load(filePath);
+
+        vid.cameras = [PlayState.instance.camCutscene];
+        PlayState.instance.add(vid);
+      }
+      else
+      {
+        trace('ALERT: Video is null! Could not play Tutorial intro!');
+      }
+
+      PlayState.instance.refresh();
+    }
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+    PauseSubState.musicSuffix = '-morpho';
+    GameOverSubState.musicSuffix = '-blank';
+    GameOverSubState.blueBallSuffix = '-blank';
+    this.visible = true;
+  }
+
+  public function stopVideo():Void
+  {
+    vid.stop();
+    vid.visible = false;
+    playingVideo = false;
+
+    FlxTween.cancelTweensOf(vidBG);
+    vidBG.alpha = 1;
+    FlxTween.tween(vidBG, {alpha: 0}, 1);
+
+    PlayState.instance.disableKeys = false;
+  }
+
+  function onGameOver(e)
+  {
+    super.onGameOver(e);
+    GameOverSubState.blueballed;
+    vid = new FunkinVideoSprite(0, 0);
+    vid.load(Paths.videos('MorphoComedianGameOver'));
+    vid.scrollFactor.set(0, 0);
+    vid.cameras = [PlayState.instance.camCutscene];
+    vid.play();
+    FlxTimer.wait(0.001, () ->
+    {
+      vid.bitmap.onFormatSetup.add(function():Void
+      {
+        if (vid.bitmap != null && vid.bitmap.bitmapData != null)
+        {
+          vid.setGraphicSize(FlxG.width, FlxG.height);
+          vid.updateHitbox();
+        }
+      });
+      FlxG.state.subState.add(vid);
+      GameOverSubState.instance.boyfriend.visible = false;
+    });
+
+    vid.bitmap.onEndReached.removeAll();
+    vid.bitmap.onEndReached.add(function()
+    {
+      if (vid != null && vid.bitmap != null)
+      {
+        vid.visible = false;
+        vid.bitmap.stop();
+        GameOverSubState.instance.confirmDeath();
+      }
+    });
+  }
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+    if (name == "morphoGoogly")
+    {
+      new FlxTimer().start(2 / 24, function(tmr:FlxTimer)
+      {
+        FunkinSound.playOnce(Paths.sound('extra/morphoHit'), 1.0);
+      });
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Blissful (Gooey Mix)",
+  "artist": "SakiProd (feat. LeGooey)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 138, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-qt",
+      "girlfriend": "flora-qt",
+      "opponent": "qt",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["qt"],
+      "altInstrumentals": ["pico", ""]
+    },
+    "stage": "qtStageCityErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 4, "normal": 6, "hard": 7 },
+    "album": "gooeyBlissful",
+    "stickerPack": "bonus-qtStickersGooey",
+    "previewStart": 0.431272936176521,
+    "previewEnd": 0.602629043018458
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

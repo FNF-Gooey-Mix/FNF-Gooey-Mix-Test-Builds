@@ -1,0 +1,31 @@
+{
+  "version": "2.2.4",
+  "songName": "Drippypop (Gooey Mix)",
+  "artist": "LeGooey (og: EthanTheDoodler & NeatoNG)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 190, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["extra"],
+    "characters": {
+      "player": "gooey-updog",
+      "girlfriend": "kam-updog",
+      "opponent": "drippypop-updog",
+      "instrumental": "",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["drippypop"]
+    },
+    "stage": "drippypopErectGooey",
+    "noteStyle": "funkin",
+    "ratings": { "extra": 12 },
+    "album": "gooeyDrip",
+    "stickerPack": null,
+    "previewStart": 0.190363608468855,
+    "previewEnd": 0.310690395826941
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

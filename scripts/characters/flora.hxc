@@ -1,0 +1,474 @@
+package gooeymix.characters;
+
+import funkin.play.PlayState;
+import funkin.play.character.CharacterType;
+import funkin.play.character.BaseCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.math.FlxMath;
+import flixel.util.FlxTimer;
+import flixel.util.FlxGradient;
+import flixel.util.FlxColor;
+import flixel.util.FlxSave;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.vis.dsp.SpectralAnalyzer;
+import funkin.play.notes.Strumline;
+import funkin.play.Countdown;
+import funkin.Highscore;
+import animate.internal.RenderTexture;
+import openfl._Vector.IntVector;
+import openfl._Vector.FloatVector;
+
+using StringTools;
+
+class FloraBaseCharacter extends MultiAnimateAtlasCharacter
+{
+  public static var baseCharId:String = 'flora';
+
+  /**
+   * Please, Gooey, I need this!
+   * 
+   * My Flora's kinda speakerless...
+   */
+  public var isMyFloraKindaSpeakerless:Bool = false;
+
+  // Flora's animation suffix (Alt animations...)
+  public var suffix:String = '';
+  // Flora's speaker: the place where music comes from.
+  public var floraSpeaker:FunkinSprite;
+  // Flora's speaker's screen: the thing you can play Bad Apple on.
+  public var floraSpeakerScreen:FloraSpeakerScreen;
+
+  // A flag for detecting if Flora's props were set up yet.
+  private var setupFloraProps:Bool = false;
+  // Lesbian flags.
+  private var isLesbian:Bool = false;
+  private var isBecomingLesbian:Bool = false;
+  private var lesbianTimer:FlxTimer;
+  private var floraAnimationSuffix = '';
+  private var alwaysLesbian:Bool = false; // I mean, TECHNICALLY this changes nothing ;3
+  // Shader stuff.
+  private var currentShader = null;
+  private var adjustColor:AdjustColorShader;
+
+  public function new(id:String)
+  {
+    super(id == 'UNKNOWN' ? baseCharId : id);
+  }
+
+  override function onAdd()
+  {
+    if (PlayState.instance?.currentStage != null)
+    {
+      if (PlayState.instance.currentSong.id.toLowerCase() == "tutorial")
+      {
+        if (!debug && this.characterType == CharacterType.DAD)
+        {
+          var pos:FlxPoint = PlayState.instance.currentStage.getGirlfriendPosition();
+          this.originalPosition.x = pos.x - this.characterOrigin.x;
+          this.originalPosition.y = pos.y - this.characterOrigin.y;
+          this.resetPosition();
+        }
+      }
+    }
+  }
+
+  override public function onCreate(e)
+  {
+    super.onCreate(e);
+
+    // My Flora is not kinda speakerless, so we shall make the speaker.
+    if (!isMyFloraKindaSpeakerless)
+    {
+      floraSpeaker = FunkinSprite.createTextureAtlas(0, 0, 'characters/flora/FloraSpeaker', 'shared');
+      floraSpeaker.anim.addByFrameLabel('idle', 'FloraSpeakerBop', 24, false);
+
+      floraSpeakerScreen = new FloraSpeakerScreen(GooeyMixOptions.floraVisualizer);
+
+      floraSpeakerScreen.animation.onFinish.add(function(animName:String)
+      {
+        if (animName == "50combo" || animName == "200combo" || animName == "lossCombo") floraSpeakerScreen.animation.play('lightLoop', true);
+      });
+      floraSpeakerScreen.animation.onFinish.add(function(animName:String)
+      {
+        if (animName == "lightBop") floraSpeakerScreen.animation.play('lightLoop', true);
+      });
+    }
+  }
+
+  override public function onUpdate(e)
+  {
+    super.onUpdate(e);
+
+    if (currentStage == null || isMyFloraKindaSpeakerless) return;
+
+    if (setupFloraProps) synchronizeShader();
+    else
+    {
+      addFloraProps();
+    }
+  }
+
+  function synchronizeShader():Void
+  {
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      if (currentShader == this.shader) return;
+
+      currentShader = this.shader;
+
+      if (Std.isOfType(this.shader, DropShadowShader))
+      {
+        adjustColor = new AdjustColorShader();
+        adjustColor.brightness = this.shader.baseBrightness;
+        adjustColor.hue = this.shader.baseHue;
+        adjustColor.contrast = this.shader.baseContrast;
+        adjustColor.saturation = this.shader.baseSaturation;
+        floraSpeaker.shader = adjustColor;
+        floraSpeakerScreen.shader = adjustColor;
+      }
+      else
+      {
+        floraSpeaker.shader = this.shader;
+        floraSpeakerScreen.shader = this.shader;
+      }
+
+      trace("Synchronized shader between children!");
+    }
+  }
+
+  override public function onSongRetry(e)
+  {
+    super.onSongRetry(e);
+
+    lesbianTimer?.cancel();
+    if (!alwaysLesbian) isLesbian = false;
+    isBecomingLesbian = false;
+    floraSpeakerScreen?.dumpSound();
+  }
+
+  override public function onSongStart(e)
+  {
+    super.onSongStart(e);
+
+    if (GooeyMixOptions.floraVisualizer) floraSpeakerScreen?.initAnalyzer(FlxG.sound.music);
+    speakerBump();
+  }
+
+  override public function dance(?force:Bool)
+  {
+    super.dance(force);
+    speakerBump(force);
+  }
+
+  override public function playAnimation(name:String, restart:Bool = false, ?ignoreOther:Bool = false, ?reversed:Bool = false)
+  {
+    if (!isMyFloraKindaSpeakerless)
+    {
+      if (name == "combo50") floraSpeakerScreen?.animation.play('50combo', true);
+      if (name == "combo200") floraSpeakerScreen?.animation.play('200combo', true);
+      if (name == "drop70") floraSpeakerScreen?.animation.play('lossCombo', true);
+    }
+    if (name.startsWith("dance"))
+    {
+      if (isLesbian || alwaysLesbian) floraAnimationSuffix = '-alt';
+      else if (isBecomingLesbian)
+      {
+        floraAnimationSuffix = '-trans';
+
+        lesbianTimer?.cancel();
+
+        // This is the time it will take for Flora to become lesbian.
+        lesbianTimer = new FlxTimer().start(0.05, _ ->
+        {
+          isLesbian = true;
+          isBecomingLesbian = false;
+        });
+      }
+      else
+        floraAnimationSuffix = '';
+    }
+    else if (name == "combo200") isBecomingLesbian = true;
+    else if (name == "drop70")
+    {
+      if (!alwaysLesbian)
+      {
+        lesbianTimer?.cancel();
+        isLesbian = false;
+        isBecomingLesbian = false;
+      }
+    }
+    super.playAnimation(name + floraAnimationSuffix, restart, ignoreOther, reversed);
+  }
+
+  /**
+   * This syncs the `colorTransform` of the screen objects with ``,
+   * for the startup effect when you start a song.
+   * @param twn 
+   */
+  private function addFloraProps()
+  {
+    if (setupFloraProps) return;
+
+    // My Flora is not kinda speakerless, so we shall add the speaker.
+    if (!isMyFloraKindaSpeakerless)
+    {
+      floraSpeaker.zIndex = this.zIndex - 2;
+      currentStage.add(floraSpeaker);
+
+      floraSpeakerScreen.zIndex = this.zIndex - 1;
+      currentStage.add(floraSpeakerScreen);
+
+      floraSpeaker?.setPosition(this.x - 56 - (-this.globalOffsets[0] * this.scale.x), this.y + 51 - (-this.globalOffsets[1] * this.scale.y));
+      floraSpeakerScreen?.setPosition(floraSpeaker.x - 5, floraSpeaker.y - 10);
+      floraSpeakerScreen.blend = 0;
+    }
+
+    currentStage.refresh();
+    setupFloraProps = true;
+  }
+
+  /**
+   * This is still triggered upon `dance()` whilst `isMyFloraKindaSpeakerless == false`,
+   * just in case you ever want to override this function.
+   * @param force Bool
+   */
+  var comboAnims = ["50combo", "200combo", "lossCombo"];
+
+  private function speakerBump(force:Bool = true)
+  {
+    // My Flora is not kinda speakerless, so the speaker goes BOOM DA BOOM BOOM.
+    // Flora's speaker ain't on if Flora ain't on.
+    if (!isMyFloraKindaSpeakerless && setupFloraProps)
+    {
+      floraSpeaker?.anim?.play('idle', true);
+
+      if (!comboAnims.contains(floraSpeakerScreen.animation?.curAnim?.name)
+        || (comboAnims.contains(floraSpeakerScreen.animation?.curAnim?.name)
+          && floraSpeakerScreen.animation?.finished)) floraSpeakerScreen?.animation?.play('lightBop', true);
+    }
+  }
+}
+
+class FloraSpeakerScreen extends FunkinSprite
+{
+  private static var FLORA_VIS_COLOR:Int = 0xFF6CFFFA;
+  private static var FLORA_VIS_WIDTH:Int = 115;
+  private static var FLORA_VIS_HEIGHT:Int = 74;
+  private static var FLORA_VIS_OFFSETS:Map<String, Array<Float>> = [
+    "lightBop0000" => [132, 18],
+    "lightBop0001" => [132, 18],
+    "lightBop0002" => [129, 13],
+    "lightBop0003" => [129, 13],
+    "lightBop0004" => [127, 11],
+    "lightBop0005" => [127, 11],
+    "lightLoop0000" => [127, 11],
+    "lightLoop0001" => [127, 11],
+    "lightLoop0002" => [127, 11]
+  ];
+  private static var FLORA_VIS_BAR_COUNT:Int = 7;
+  private static var FLORA_VIS_FLAT_LEVEL:Float = 0.5;
+
+  var vizSquare:FlxGraphic;
+  var vizIndices:IntVector;
+  var vizVertices:FloatVector;
+  var vizUvtData:FloatVector;
+  var analyzer:SpectralAnalyzer;
+  var vizLevels:Array<Bar> = [];
+  var vizTimeoutTime:Float = 0;
+
+  public function new(enableViz:Bool)
+  {
+    super();
+
+    loadSparrow('characters/flora/FloraLights', 'shared');
+    animation.addByPrefix('lightBop', 'lightBop', 24, false);
+    animation.addByPrefix('lightLoop', 'lightLoop', 24, true);
+    animation.addByPrefix('50combo', '50combo', 24, false);
+    animation.addByPrefix('200combo', '200combo', 24, false);
+    animation.addByPrefix('lossCombo', 'lossCombo', 24, false);
+    animation.play('lightBop');
+
+    if (enableViz)
+    {
+      vizSquare = FlxG.bitmap.add(Paths.image('characters/flora/floraVis'));
+
+      vizVertices = new FloatVector(0, false, null);
+      vizIndices = new IntVector(0, false, null);
+      vizUvtData = new FloatVector(0, false, null);
+    }
+  }
+
+  public function initAnalyzer(snd:FlxSound):Void
+  {
+    analyzer = new SpectralAnalyzer(snd._channel.__audioSource, FLORA_VIS_BAR_COUNT, 0.1, 40);
+    analyzer.fftN = 256;
+
+    // A-Bot tuning...
+    analyzer.minDb = -65;
+    analyzer.maxDb = -25;
+    analyzer.maxFreq = 22000;
+    // we use a very low minFreq since some songs use low low subbass like a boss
+    analyzer.minFreq = 10;
+
+    shouldUpdateViz = false;
+  }
+
+  public function dumpSound():Void
+  {
+    analyzer = null;
+  }
+
+  override public function update(elapsed:Float):Void
+  {
+    super.update(elapsed);
+
+    if (GooeyMixOptions.floraVisualizer){
+    vizTimeoutTime -= elapsed;
+    while (vizTimeoutTime < 0)
+    {
+      updateViz();
+      vizTimeoutTime += 1 / 24;
+    }
+    }
+  }
+
+  override function drawFrameComplex(frame:FlxFrame, camera:FlxCamera):Void
+  {
+    if (!['lightBop', 'lightLoop'].contains(getCurrentAnimation()) || vizSquare == null)
+    {
+      super.drawFrameComplex(frame, camera);
+      return;
+    }
+
+    final matrix = this._matrix;
+    final point = this._point;
+
+    frame.prepareMatrix(matrix, 0, checkFlipX(), checkFlipY());
+    prepareDrawMatrix(matrix, camera);
+
+    final bounds:Array<Int> = [Math.ceil(frame.frame.width), Math.ceil(frame.frame.height)];
+    if (_renderTexture == null) _renderTexture = new RenderTexture(bounds[0], bounds[1]);
+
+    if (_renderTextureDirty)
+    {
+      final visOffset:Array<Float> = FLORA_VIS_OFFSETS.get(_frame.name) ?? [];
+      point.set(visOffset[0] ?? 0, visOffset[1] ?? 0);
+
+      _renderTexture.init(bounds[0], bounds[1]);
+      _renderTexture.drawToCamera((camera, mat) ->
+      {
+        camera.drawPixels(frame, framePixels, mat, null, null, false, null);
+        camera.drawTriangles(vizSquare, vizVertices, vizIndices, vizUvtData, null, point, null, false, true);
+      });
+
+      _renderTexture.render();
+    }
+
+    camera.drawPixels(_renderTexture.graphic.imageFrame.frame, framePixels, matrix, colorTransform, blend, antialiasing, shader);
+  }
+
+  function updateViz():Void
+  {
+    vizLevels = analyzer?.getLevels(vizLevels) ?? getDefaultLevels();
+
+    vizVertices.length = 0;
+    vizIndices.length = 0;
+    vizUvtData.length = 0;
+
+    final pointsLength:Int = FLORA_VIS_BAR_COUNT + 1;
+    final stepWidth:Float = FLORA_VIS_WIDTH / pointsLength;
+
+    var oldPointX:Float = 0;
+    var oldPointY:Float = FLORA_VIS_HEIGHT * 0.6;
+
+    for (i in 0...pointsLength)
+    {
+      var levelValue:Float = 0.5;
+      if (i < FLORA_VIS_BAR_COUNT)
+      {
+        levelValue = (vizLevels[i].value * 0.5) + 0.5;
+      }
+
+      final x:Float = (i / (pointsLength - 1)) * FLORA_VIS_WIDTH;
+      final y:Float = FLORA_VIS_HEIGHT * (1 - levelValue + 0.1);
+
+      // Your original used curveTo, creating a midpoint path:
+      final midX:Float = (oldPointX + x) * 0.5;
+      final midY:Float = (oldPointY + y) * 0.5;
+
+      final progress:Float = i / pointsLength;
+
+      // Vert Top
+      vizVertices.push(midX);
+      vizVertices.push(midY);
+
+      // Vert Bottom
+      vizVertices.push(midX);
+      vizVertices.push(FLORA_VIS_HEIGHT);
+
+      // UVT mapping for the fill
+      vizUvtData.push(progress);
+      vizUvtData.push(0.0);
+      vizUvtData.push(progress);
+      vizUvtData.push(1.0);
+
+      // Standard index pairing to construct the solid fill mesh blocks
+      if (i > 0)
+      {
+        final prevTop:Int = (i - 1) * 2;
+        final prevBottom:Int = prevTop + 1;
+        final curTop:Int = i * 2;
+        final curBottom:Int = curTop + 1;
+
+        vizIndices.push(prevTop);
+        vizIndices.push(curTop);
+        vizIndices.push(prevBottom);
+
+        vizIndices.push(curTop);
+        vizIndices.push(curBottom);
+        vizIndices.push(prevBottom);
+      }
+
+      if (i == (pointsLength - 1))
+      {
+        vizVertices.push(FLORA_VIS_WIDTH);
+        vizVertices.push(y);
+
+        vizVertices.push(FLORA_VIS_WIDTH);
+        vizVertices.push(FLORA_VIS_HEIGHT);
+
+        vizUvtData.push(1.0);
+        vizUvtData.push(0.0);
+
+        vizUvtData.push(1.0);
+        vizUvtData.push(1.0);
+
+        final prevTop:Int = i * 2;
+        final prevBottom:Int = prevTop + 1;
+        final curTop:Int = (i + 1) * 2;
+        final curBottom:Int = curTop + 1;
+
+        vizIndices.push(prevTop);
+        vizIndices.push(curTop);
+        vizIndices.push(prevBottom);
+
+        vizIndices.push(curTop);
+        vizIndices.push(curBottom);
+        vizIndices.push(prevBottom);
+      }
+
+      oldPointX = x;
+      oldPointY = y;
+    }
+  }
+
+  function getDefaultLevels():Array<Bar>
+  {
+    vizLevels.resize(0);
+    for (i in 0...FLORA_VIS_BAR_COUNT) vizLevels.push({value: 0, peak: 0.0});
+    return vizLevels;
+  }
+}

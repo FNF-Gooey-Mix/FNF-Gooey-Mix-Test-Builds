@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "name": "Flora (Pixel Thorns)",
+  "assetPath": "characters/flora/FloraThornsPixel",
+  "cameraOffsets": [-80, -80],
+  "startingAnimation": "danceRight",
+  "isPixel": true,
+  "scale": 6,
+  "offsets": [0, 10],
+  "healthIcon": {
+    "id": "flora-pixel",
+    "isPixel": true
+  },
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "FloraIdleLeft",
+      "offsets": [0, 40]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "FloraIdleRight",
+      "offsets": [0, 40]
+    }
+  ]
+}

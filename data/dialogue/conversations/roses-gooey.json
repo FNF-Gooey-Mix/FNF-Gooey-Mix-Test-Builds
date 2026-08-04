@@ -1,0 +1,167 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFB3DFD8"
+  },
+
+  "music": {
+    "asset": "",
+    "fadeTime": 0,
+    "looped": false
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": [
+        "You stupid mongrel! How dare you sing over me with such a distasteful melody!"
+      ]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": [
+        "I should have you put down for even disrespecting me like that! I should...should..."
+      ]
+    },
+    {
+      "speaker": "senpai-bwuh-gooey",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "gooey-sleeping-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": ["zzz..."]
+    },
+    {
+      "speaker": "senpai-bwuh-gooey",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["...are you seriously sleeping right now..."]
+    },
+    {
+      "speaker": "gooey-tired-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": [
+        "*yawn* mmm... sorry, you were complaining so much it put me to sleep. Are we going again?"
+      ]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": [
+        "Shut it, brat! Once were done here I'll make sure you never sing again, you ugly amalgamation!"
+      ]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["You're going to regret-"]
+    },
+    {
+      "speaker": "senpai-appalled",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["re...gret..."]
+    },
+    {
+      "speaker": "gooey-sleeping-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": ["zzz..."]
+    },
+    {
+      "speaker": "senpai-appalled",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["WAKE"]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["UP!"]
+    },
+    {
+      "speaker": "gooey-tired-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": ["Huh- sorry gay boy. I'll take that as a yes for the rematch."]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["I SAID DON'T CALL ME-"]
+    },
+    {
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": ["Anyways, are we gonna sing or what, gay boy?"]
+    },
+    {
+      "speaker": "flora-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["I'm a lesbian :D"]
+    },
+    {
+      "speaker": "senpai-appalled",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["I swear to god i'm actually about to end myself."]
+    }
+  ]
+}

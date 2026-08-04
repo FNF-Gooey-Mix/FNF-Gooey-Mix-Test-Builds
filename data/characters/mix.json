@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "name": "Mix",
+  "renderType": "multisparrow",
+  "assetPath": "characters/extra/Mix",
+  "flipX": true,
+  "cameraOffsets": [0, 90],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [90, -60]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "right",
+      "offsets": [90, -60]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [90, -60]
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [90, -60]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "left",
+      "offsets": [90, -60]
+    },
+    {
+      "name": "hey",
+      "prefix": "hey",
+      "offsets": [90, -60]
+    },
+    {
+      "name": "showOffassBITCH",
+      "prefix": "showOffassBITCH",
+      "offsets": [90, 140],
+      "assetPath": "characters/extra/mixIntro"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="targets.png">
+<SubTexture name="xOne0000" x="0" y="0" width="47" height="52" frameX="-2" frameY="-6" frameWidth="60" frameHeight="60" />
+<SubTexture name="xOne0001" x="47" y="0" width="41" height="46" frameX="-5" frameY="-9" frameWidth="60" frameHeight="60" />
+<SubTexture name="xTwo0000" x="88" y="0" width="43" height="44" frameX="-4" frameY="-9" frameWidth="60" frameHeight="60" />
+<SubTexture name="xTwo0001" x="0" y="52" width="39" height="40" frameX="-6" frameY="-11" frameWidth="60" frameHeight="60" />
+<SubTexture name="xThree0000" x="39" y="52" width="41" height="61" frameX="-7" frameY="-1" frameWidth="60" frameHeight="60" />
+<SubTexture name="xThree0001" x="80" y="52" width="37" height="53" frameX="-9" frameY="-5" frameWidth="60" frameHeight="60" />
+<SubTexture name="xFour0000" x="0" y="113" width="47" height="53" frameX="-4" frameY="-4" frameWidth="60" frameHeight="60" />
+<SubTexture name="xFour0001" x="47" y="113" width="42" height="47" frameX="-6" frameY="-7" frameWidth="60" frameHeight="60" />
+<SubTexture name="xFive0000" x="89" y="113" width="41" height="47" frameX="-5" frameY="-9" frameWidth="60" frameHeight="60" />
+<SubTexture name="xFive0001" x="0" y="166" width="35" height="39" frameX="-8" frameY="-13" frameWidth="60" frameHeight="60" />
+<SubTexture name="xSix0000" x="35" y="166" width="38" height="42" frameX="-8" frameY="-12" frameWidth="60" frameHeight="60" />
+<SubTexture name="xSix0001" x="73" y="166" width="34" height="38" frameX="-10" frameY="-14" frameWidth="60" frameHeight="60" />
+<SubTexture name="blank0000" x="0" y="0" width="1" height="1" frameX="-2" frameY="-6" frameWidth="60" frameHeight="60" />
+</TextureAtlas>

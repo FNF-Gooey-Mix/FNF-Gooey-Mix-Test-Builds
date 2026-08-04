@@ -1,0 +1,309 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.PlayState;
+import flixel.util.FlxSort;
+import funkin.Conductor;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+import flixel.util.FlxSpriteUtil;
+import funkin.vis.dsp.SpectralAnalyzer;
+import funkin.Highscore;
+import funkin.play.notes.Strumline;
+import flixel.FlxSprite;
+import flixel.util.FlxSave;
+import funkin.play.character.CharacterType;
+import funkin.play.character.BaseCharacter;
+import flixel.tweens.FlxTween;
+import flixel.math.FlxMath;
+import flixel.util.FlxTimer;
+import flixel.util.FlxColor;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.Countdown;
+import gooeymix.characters.FloraSpeakerScreen;
+
+class KamSpeakerStressCharacter extends MultiSparrowCharacter
+{
+  var shootTimes:Array<Float> = [];
+  var shootDirs:Array<Int> = [];
+  var muzzleFlash:FlxSprite;
+
+  function new()
+  {
+    super('kam-speaker-stress');
+    ignoreExclusionPref.push("shoot1");
+    ignoreExclusionPref.push("shoot2");
+    ignoreExclusionPref.push("shoot3");
+    ignoreExclusionPref.push("shoot4");
+  }
+
+  /**
+   * Please, Gooey, I need this!
+   * 
+   * My Flora's kinda speakerless...
+   */
+  public var isMyFloraKindaSpeakerless:Bool = false;
+
+  // Flora's speaker: the place where music comes from.
+  public var floraSpeaker:FunkinSprite;
+  // Flora's speaker's screen: the thing you can play Bad Apple on.
+  public var floraSpeakerScreen:FloraSpeakerScreen;
+
+  // A flag for detecting if Flora's props were set up yet.
+  private var setupFloraProps:Bool = false;
+  // Shader stuff.
+  private var currentShader = null;
+  private var adjustColor:AdjustColorShader;
+
+  override public function onCreate(e)
+  {
+    super.onCreate(e);
+
+    // My Flora is not kinda speakerless, so we shall make the speaker.
+    if (!isMyFloraKindaSpeakerless)
+    {
+      floraSpeaker = FunkinSprite.createTextureAtlas(0, 0, 'characters/flora/FloraSpeaker', 'shared');
+      floraSpeaker.anim.addByFrameLabel('idle', 'FloraSpeakerBop', 24, false);
+
+      floraSpeakerScreen = new FloraSpeakerScreen(GooeyMixOptions.floraVisualizer);
+
+      floraSpeakerScreen.animation.onFinish.add(function(animName:String)
+      {
+        if (animName == "50combo" || animName == "200combo" || animName == "lossCombo") floraSpeakerScreen.animation.play('lightLoop', true);
+      });
+      floraSpeakerScreen.animation.onFinish.add(function(animName:String)
+      {
+        if (animName == "lightBop") floraSpeakerScreen.animation.play('lightLoop', true);
+      });
+
+      initTimemap();
+
+      muzzleFlash = new FlxSprite(0, 0);
+      muzzleFlash.frames = Paths.getSparrowAtlas("characters/kam/kam_flashes");
+      muzzleFlash.animation.addByPrefix('shoot1', 'shoot back0', 24, false);
+      muzzleFlash.animation.addByPrefix('shoot2', 'shoot back low0', 24, false);
+      muzzleFlash.animation.addByPrefix('shoot3', 'shoot forward0', 24, false);
+      muzzleFlash.animation.addByPrefix('shoot4', 'shoot forward low0', 24, false);
+      muzzleFlash.animation.addByPrefix('blank', 'blank', 24, false);
+      muzzleFlash.animation.play('blank', true);
+      PlayState.instance.currentStage.add(muzzleFlash);
+
+      muzzleFlash.animation.onFrameChange.add(function()
+      {
+        updateMuzzle();
+      });
+    }
+  }
+
+  override public function onUpdate(e)
+  {
+    super.onUpdate(e);
+
+    // Each Pico animation is shifted from the array when it's time to play it.
+    if (shootTimes.length > 0 && shootTimes[0] <= Conductor.instance.songPosition)
+    {
+      var nextTime:Float = shootTimes.shift();
+      var nextDir:Int = shootDirs.shift();
+
+      playPicoAnimation(nextDir);
+    }
+
+    if (currentStage == null) return;
+
+    if (isMyFloraKindaSpeakerless) return;
+
+    if (setupFloraProps) synchronizeShader();
+    else
+    {
+      addFloraProps();
+    }
+  }
+
+  function synchronizeShader():Void
+  {
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      if (currentShader == this.shader) return;
+
+      currentShader = this.shader;
+
+      if (Std.isOfType(this.shader, DropShadowShader))
+      {
+        adjustColor = new AdjustColorShader();
+        adjustColor.brightness = this.shader.baseBrightness;
+        adjustColor.hue = this.shader.baseHue;
+        adjustColor.contrast = this.shader.baseContrast;
+        adjustColor.saturation = this.shader.baseSaturation;
+        floraSpeaker.shader = adjustColor;
+        floraSpeakerScreen.shader = adjustColor;
+      }
+      else
+      {
+        floraSpeaker.shader = this.shader;
+        floraSpeakerScreen.shader = this.shader;
+      }
+
+      trace("Synchronized shader between children!");
+    }
+  }
+
+  override public function onSongRetry(e)
+  {
+    super.onSongRetry(e);
+    floraSpeakerScreen?.dumpSound();
+  }
+
+  override public function onSongStart(e)
+  {
+    super.onSongStart(e);
+
+    floraSpeakerScreen?.initAnalyzer(FlxG.sound.music);
+    speakerBump();
+  }
+
+  override public function dance(?force:Bool)
+  {
+    super.dance(force);
+    speakerBump(force);
+  }
+
+  /**
+   * This syncs the `colorTransform` of the screen objects with ``,
+   * for the startup effect when you start a song.
+   * @param twn 
+   */
+  private function addFloraProps()
+  {
+    if (setupFloraProps) return;
+
+    // My Flora is not kinda speakerless, so we shall add the speaker.
+    if (!isMyFloraKindaSpeakerless)
+    {
+      floraSpeaker.zIndex = this.zIndex - 2;
+      currentStage.add(floraSpeaker);
+
+      floraSpeakerScreen.zIndex = this.zIndex - 1;
+      currentStage.add(floraSpeakerScreen);
+
+      floraSpeaker?.setPosition(this.x + 580 - (-this.globalOffsets[0] * this.scale.x), this.y + 650 - (-this.globalOffsets[1] * this.scale.y));
+      floraSpeakerScreen?.setPosition(floraSpeaker.x - 5, floraSpeaker.y - 10);
+      floraSpeakerScreen.blend = 0;
+
+      muzzleFlash.zIndex = this.zIndex + 1;
+      muzzleFlash.blend = 0;
+    }
+
+    currentStage.refresh();
+    setupFloraProps = true;
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+    if (PlayState.instance?.currentStage != null)
+    {
+      if (!isMyFloraKindaSpeakerless)
+      {
+        if (!event.note.noteData.getMustHitNote(Strumline.KEY_COUNT)) return;
+        if (event.comboCount == 50 && !event.isComboBreak) floraSpeakerScreen.animation.play('50combo', true);
+        if (event.comboCount == 200 && !event.isComboBreak) floraSpeakerScreen.animation.play('200combo', true);
+        if (event.comboCount >= 70 && event.isComboBreak) floraSpeakerScreen.animation.play('lossCombo', true);
+      }
+    }
+  }
+
+  function onNoteMiss(event:NoteScriptEvent)
+  {
+    if (PlayState.instance?.currentStage != null)
+    {
+      if (!isMyFloraKindaSpeakerless && event.comboCount >= 70) floraSpeakerScreen.animation.play('lossCombo', true);
+      super.onNoteMiss(event);
+    }
+  }
+
+  /**
+   * This is still triggered upon `dance()` whilst `isMyFloraKindaSpeakerless == false`,
+   * just in case you ever want to override this function.
+   * @param force Bool
+   */
+  var comboAnims = ["50combo", "200combo", "lossCombo"];
+
+  private function speakerBump(force:Bool = true)
+  {
+    // My Flora is not kinda speakerless, so the speaker goes BOOM DA BOOM BOOM.
+    // Flora's speaker ain't on if Flora ain't on.
+    if (!isMyFloraKindaSpeakerless && setupFloraProps)
+    {
+      floraSpeaker?.anim?.play('idle', true);
+
+      if (!comboAnims.contains(floraSpeakerScreen.animation?.curAnim?.name)
+        || (comboAnims.contains(floraSpeakerScreen.animation?.curAnim?.name)
+          && floraSpeakerScreen.animation?.finished)) floraSpeakerScreen?.animation?.play('lightBop', true);
+    }
+  }
+
+  function updateMuzzle()
+  {
+    muzzleFlash.visible = !muzzleFlash.animation.finished;
+  }
+
+  function reset():Void
+  {
+    initTimemap();
+  }
+
+  function initTimemap():Void
+  {
+    trace('Initializing Otis timings...');
+    shootTimes = [];
+    shootDirs = [];
+    // The tankmen's timings and directions are determined
+    // by the chart, specifically the internal "picospeaker" difficulty.
+    var animChart:SongDifficulty = PlayState.instance.currentSong.getDifficulty('picospeaker', PlayState.instance.currentVariation);
+    if (animChart == null)
+    {
+      trace('Initializing Otis (speaker) failed; no `picospeaker` chart found for this song.');
+      return;
+    }
+    else
+    {
+      trace('Initializing Otis (speaker); found `picospeaker` chart, continuing...');
+    }
+    var animNotes:Array<SongNoteData> = animChart.notes;
+
+    // turns out sorting functions are completely useless in polymod right now and do nothing
+    // i had to sort the whole pico chart by hand im gonna go insane
+    // animNotes.sort(function(a:SongNoteData, b:SongNoteData):Int
+    // {
+    // return FlxSort.byValues(FlxSort.ASCENDING, a.time, b.time);
+    // });
+    // hope this isnt THAT important cuz it kills the visualizer so i dissabled it
+
+    for (note in animNotes)
+    {
+      shootTimes.push(note.time);
+      shootDirs.push(note.data);
+    }
+  }
+
+  function playPicoAnimation(direction:Int):Void
+  {
+    switch (direction)
+    {
+      case 0:
+        this.playAnimation('shoot1', true, true);
+        muzzleFlash.setPosition(this.x + 1250, this.y + 290);
+        muzzleFlash.animation.play('shoot1', true);
+      case 1:
+        this.playAnimation('shoot2', true, true);
+        muzzleFlash.setPosition(this.x + 1300, this.y + 400);
+        muzzleFlash.animation.play('shoot2', true);
+      case 2:
+        this.playAnimation('shoot3', true, true);
+        muzzleFlash.setPosition(this.x + 120, this.y + 290);
+        muzzleFlash.animation.play('shoot3', true);
+      case 3:
+        this.playAnimation('shoot4', true, true);
+        muzzleFlash.setPosition(this.x + 70, this.y + 380);
+        muzzleFlash.animation.play('shoot4', true);
+    }
+  }
+}

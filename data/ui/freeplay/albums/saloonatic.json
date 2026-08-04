@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "name": "Saloonatic",
+  "artists": ["DoubleM", "SakiProd"],
+  "albumArtAsset": "freeplay/albumRoll/saloonatic",
+  "albumTitleAsset": "freeplay/albumRoll/gooeymixExtra-text",
+  "albumTitleOffsets": [-10, 0],
+  "albumOSTName": "GOOEY MIX OST"
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "name": "Senpai (Bwuh?Gooey)",
+  "assetPath": "weeb/portrait-senpai-bwuh",
+  "flipX": false,
+  "isPixel": true,
+  "scale": 5.4,
+  "offsets": [-342.5, -240],
+  "animations": [
+    {
+      "name": "talkEnter",
+      "prefix": "portraitEnter0",
+      "frameRate": 12
+    },
+    {
+      "name": "talk",
+      "prefix": "portraitTalk0",
+      "offsets": [-65.6, 10]
+    }
+  ]
+}

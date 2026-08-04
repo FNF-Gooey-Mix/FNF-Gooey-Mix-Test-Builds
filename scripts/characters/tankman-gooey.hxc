@@ -1,0 +1,114 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.util.FlxTimer;
+
+class TankmanGooeyCharacter extends MultiAnimateAtlasCharacter
+{
+  function new()
+  {
+    super('tankman-gooey');
+  }
+
+  var isGooey:Bool = false;
+  var refershedLol:Bool = false;
+  var stressSplat;
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    if (PlayState.instance?.currentStage != null)
+    {
+      stressSplat = new FunkinSprite(0, 0).loadSparrow('characters/tankman/stressGooSplat');
+      stressSplat.animation.addByPrefix('gooSplat', 'gooSplat', 24, false);
+      stressSplat.animation.addByPrefix('frame', 'frame', 24, false);
+      stressSplat.animation.addByPrefix('blank', 'blank', 24, false);
+      stressSplat.animation.play('blank');
+      PlayState.instance.currentStage.add(stressSplat);
+    }
+  }
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+    if (!refershedLol && PlayState.instance?.currentStage != null)
+    {
+      stressSplat.x = this.x + 150;
+      stressSplat.y = this.y + -70;
+      stressSplat.zIndex = this.zIndex + 1;
+
+      PlayState.instance.currentStage.refresh();
+      refershedLol = true;
+    }
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+    if (PlayState.instance?.currentStage != null)
+    {
+      if (PlayState.instance.currentSong.id.toLowerCase() == "stress")
+      {
+        if (event.step == 760)
+        {
+          if (stressSplat != null)
+          {
+            stressSplat.animation.play('gooSplat');
+          }
+        }
+      }
+    }
+  }
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    if (isGooey)
+    {
+      super.playAnimation(name + '-gooey', restart, ignoreOther, reversed);
+    }
+    else
+    {
+      super.playAnimation(name, restart, ignoreOther, reversed);
+    }
+
+    if (name == 'isGooey') isGooey = true;
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+    isGooey = false;
+  }
+
+  override function onCountdownStart(event)
+  {
+    super.onCountdownStart(event);
+    if (PlayState.instance.currentSong.id.toLowerCase() == "ugh" || PlayState.instance.currentSong.id.toLowerCase() == "stress")
+    {
+      PlayState.instance.comboPopUps.offsets = [-450, 350];
+    }
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+
+    if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
+    {
+      // Override the hit note animation.
+      switch (event.note.kind)
+      {
+        case "ugh":
+          holdTimer = 0;
+          this.playAnimation('ugh', true, true);
+          return;
+        case "hehPrettyGood":
+          holdTimer = 0;
+          this.playAnimation('hehPrettyGood', true, true);
+          return;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey",
+  "ownedChars": [
+    "gooey",
+    "gooey-car",
+    "gooey-christmas",
+    "gooey-dark",
+    "gooey-stress",
+    "gooey-pixel",
+    "gooey-blazin",
+    "gooey-updog",
+    "gooey-qt",
+    "gooey-garcello",
+    "bf-gooey",
+    "kam-player",
+    "not-matt-player",
+    "morpho-player",
+    "edd-saloonatic",
+    "eevee-gooey"
+  ],
+  "showUnownedChars": false,
+  "unlocked": true,
+  "freeplayStyle": "gooey",
+  "stickerPack": "standard-gooey",
+  "freeplayDJ": {
+    "assetPath": "freeplay/freeplay-gooey",
+    "text1": "GOOBER ALERT!",
+    "text2": "GOOBER ALERT!",
+    "text3": "GOOBER ALERT!",
+    "scriptClass": "GooeyFreeplayDJ",
+    "fistPump": {
+      "introStartFrame": 0,
+      "introEndFrame": 4,
+
+      "loopStartFrame": 4,
+      "loopEndFrame": -1,
+
+      "introBadStartFrame": 0,
+      "introBadEndFrame": 0,
+
+      "loopBadStartFrame": 0,
+      "loopBadEndFrame": -1
+    },
+    "charSelect": {
+      "transitionDelay": 0.45
+    },
+    "animations": [
+      {
+        "name": "intro",
+        "prefix": "gooeyIntro",
+        "offsets": [-317, -32.5]
+      },
+      {
+        "name": "idle",
+        "prefix": "gooeyIdle",
+        "offsets": [-317, -32.5]
+      },
+      {
+        "name": "idleEasterEgg",
+        "prefix": "gooeyMorpho",
+        "offsets": [-317, -32.5]
+      },
+      {
+        "name": "confirm",
+        "prefix": "gooeyConfirm",
+        "offsets": [-317, -32.5]
+      },
+      {
+        "name": "fistPump",
+        "prefix": "gooeyCheer",
+        "offsets": [-317, -32.5]
+      },
+      {
+        "name": "loss",
+        "prefix": "gooeyFail",
+        "offsets": [-317, -32.5]
+      },
+      {
+        "name": "charSelect",
+        "prefix": "gooeyCS",
+        "offsets": [-317, -32.5]
+      }
+    ]
+  },
+  "charSelect": {
+    "position": 1,
+    "gf": {
+      "assetPath": "charSelect/floraChill",
+      "animInfoPath": "charSelect/floraAnimInfo",
+      "visualizer": false
+    }
+  },
+  "results": {
+    "music": {
+      "PERFECT_GOLD": "resultsPERFECT-gooey",
+      "PERFECT": "resultsPERFECT-gooey",
+      "EXCELLENT": "resultsEXCELLENT-gooey",
+      "GREAT": "resultsNORMAL-gooey",
+      "GOOD": "resultsNORMAL-gooey",
+      "SHIT": "resultsSHIT-gooey"
+    },
+    "perfectGold": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-gooey/resultsPERFECT",
+        "zIndex": 500,
+        "offsets": [-1470, -1465],
+        "scale": 0.9,
+        "loopFrame": 55
+      }
+    ],
+    "perfect": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-gooey/resultsPERFECT",
+        "zIndex": 500,
+        "offsets": [-1470, -1465],
+        "scale": 0.9,
+        "loopFrame": 55
+      }
+    ],
+    "excellent": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-gooey/resultsEXCELLENT",
+        "zIndex": 500,
+        "offsets": [580, 0],
+
+        "loopFrame": 65
+      }
+    ],
+    "great": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-gooey/resultsGOOD",
+        "zIndex": 500,
+        "offsets": [550, -436],
+
+        "loopFrame": 36
+      }
+    ],
+    "good": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-gooey/resultsGOOD",
+        "zIndex": 500,
+        "offsets": [550, -436],
+
+        "loopFrame": 36
+      }
+    ],
+    "loss": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-gooey/resultsSHIT",
+        "zIndex": 500,
+        "offsets": [790, 280],
+
+        "loopFrame": 68
+      }
+    ]
+  }
+}

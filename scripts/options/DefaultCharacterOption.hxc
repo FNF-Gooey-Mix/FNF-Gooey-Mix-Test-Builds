@@ -1,0 +1,64 @@
+import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.save.Save;
+import funkin.ui.options.OptionsState;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.mainmenu.MainMenuState;
+import haxe.Json;
+import flixel.util.FlxSave;
+import funkin.data.freeplay.player.PlayerRegistry;
+import funkin.modding.ModStore;
+
+class DefaultCharacterOption extends Module
+{
+  var openedFreeplay(get, set):Bool;
+
+  function get_openedFreeplay()
+  {
+    return ModStore.get('GooeyOpenedFreeplay') ?? false;
+  }
+
+  function set_openedFreeplay(value)
+  {
+    trace("Don't set anymore");
+    ModStore.register('GooeyOpenedFreeplay', value);
+    return value;
+  }
+
+  public function new()
+  {
+    super('DefaultCharacterOption');
+
+    if (GooeyMixOptions.defaultStartupCharacter != null && !openedFreeplay)
+    {
+      FreeplayState.rememberedCharacterId = GooeyMixOptions.defaultStartupCharacter;
+      GooeyMixOptions.rememberedStartupCharacter = GooeyMixOptions.defaultStartupCharacter;
+    }
+  }
+
+  override function onStateChangeEnd(event)
+  {
+    if ((event.targetState is MainMenuState) || (event.targetState is OptionsState))
+    {
+      if (!openedFreeplay)
+      {
+        FreeplayState.rememberedCharacterId = GooeyMixOptions.rememberedStartupCharacter;
+
+        if (GooeyMixOptions.defaultStartupCharacter != null)
+        {
+          FreeplayState.rememberedCharacterId = GooeyMixOptions.defaultStartupCharacter;
+          GooeyMixOptions.rememberedStartupCharacter = GooeyMixOptions.defaultStartupCharacter;
+        }
+      }
+    }
+  }
+
+  override function onSubStateOpenEnd(event)
+  {
+    if (event.targetState is FreeplayState)
+    {
+      openedFreeplay = true;
+      GooeyMixOptions.rememberedStartupCharacter = FreeplayState.rememberedCharacterId;
+    }
+  }
+}

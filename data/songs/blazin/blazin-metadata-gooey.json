@@ -1,0 +1,29 @@
+{
+  "version": "2.2.4",
+  "songName": "Blazin' (Gooey Mix)",
+  "artist": "swagsalt",
+  "charter": "LeGooey + swagsalt",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 195 }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-blazin",
+      "girlfriend": "flora",
+      "opponent": "darnell-blazin",
+      "instrumental": "gooey"
+    },
+    "stage": "phillyBlazinGooey",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 8, "normal": 10, "hard": 11 },
+    "album": "gooeyex2",
+    "stickerPack": null,
+    "previewStart": 0.072488660866979,
+    "previewEnd": 0.219681760725705
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

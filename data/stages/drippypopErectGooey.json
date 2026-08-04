@@ -1,0 +1,85 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-350, -350],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "space",
+      "assetPath": "gooeyMix/extra/drippypopErect/space",
+      "scroll": [0.1, 0.1]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 21,
+      "position": [-350, -350],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "starShines1",
+      "assetPath": "gooeyMix/extra/drippypopErect/starShines",
+      "scroll": [0.1, 0.1]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 22,
+      "position": [-350, -350],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "starShines2",
+      "assetPath": "gooeyMix/extra/drippypopErect/starShines",
+      "scroll": [0.1, 0.1]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 50,
+      "position": [-500, -500],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "glowFloor",
+      "assetPath": "gooeyMix/extra/drippypopErect/glowFloor",
+      "scroll": [1, 1]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 90,
+      "position": [-500, -500],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "floorGlow",
+      "assetPath": "gooeyMix/extra/drippypopErect/floorGlow",
+      "scroll": [1, 1]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 91,
+      "position": [-500, -500],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "purpleOverlay",
+      "assetPath": "gooeyMix/extra/drippypopErect/purpleOverlay",
+      "scroll": [1, 1]
+    }
+  ],
+  "cameraZoom": 0.8,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 80,
+      "position": [1050, 550],
+      "cameraOffsets": [-300, -150]
+    },
+    "dad": {
+      "zIndex": 70,
+      "position": [300, 550],
+      "cameraOffsets": [200, -50]
+    },
+    "gf": {
+      "zIndex": 60,
+      "cameraOffsets": [-35, 200],
+      "position": [800, 480]
+    }
+  },
+  "name": "Drippypop Stage (Gooey Erect)",
+  "directory": ""
+}

@@ -1,0 +1,155 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.audio.FunkinSound;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.play.PlayStatePlaylist;
+import funkin.util.TouchUtil;
+import funkin.util.Sequence;
+
+class MixdUpSong extends Song
+{
+  function new()
+  {
+    super('mixd-up');
+  }
+
+  var hasPlayedCutscene:Bool = false;
+  var isMobilePauseButtonPressed:Bool = false;
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+
+    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!hasPlayedCutscene)
+    {
+      trace('Pausing countdown to play a cutscene (`gooey`)');
+
+      hasPlayedCutscene = true;
+
+      event.cancel(); // CANCEL THE COUNTDOWN!
+
+      preloadMixCut();
+      mixCut();
+    }
+  }
+
+  function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (FlxG.onMobile)
+    {
+      isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
+    }
+  }
+
+  var cutsceneSequence:Sequence;
+
+  function preloadMixCut()
+  {
+    // PlayState.instance.camGame.alpha = 0;
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.currentStage.getDad().visible = true;
+
+    PlayState.instance.currentStage.refresh();
+    FlxG.camera.fade(0xFF000000, 1, true);
+    var mixPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+    ];
+    PlayState.instance.tweenCameraZoom(1, 0.01, true, FlxEase.expoOut);
+    PlayState.instance.tweenCameraToPosition(mixPos[0] + 1000, mixPos[1] + 30, 0.01, FlxEase.expoOut);
+  }
+
+  function mixCut()
+  {
+    var mixPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+    ];
+
+    PlayState.instance.isInCutscene = true;
+
+    var events = [];
+
+    events.push({
+      time: 0.365,
+      callback: () ->
+      {
+        cutsceneMusic = FunkinSound.load(Paths.music("cutscene/mixed-up-melody"), true);
+        cutsceneMusic.volume = 1;
+        cutsceneMusic.play(false);
+      }
+    });
+
+    events.push({
+      time: 1,
+      callback: () ->
+      {
+        PlayState.instance.tweenCameraToPosition(mixPos[0] - 10, mixPos[1] + 30, 3, FlxEase.quadInOut);
+        PlayState.instance.tweenCameraZoom(0.8, 3, true, FlxEase.quadOut);
+      }
+    });
+
+    events.push({
+      time: 3,
+      callback: () ->
+      {
+        PlayState.instance.currentStage.getDad().playAnimation('showOffassBITCH', true);
+        mixCutAudio = FunkinSound.load(Paths.sound('extra/mixCutAudio'), 1, false, true, true);
+        PlayState.instance.tweenCameraZoom(0.9, 3, true, FlxEase.expoOut);
+      }
+    });
+
+    events.push({
+      time: 3.5,
+      callback: () ->
+      {
+        PlayState.instance.tweenCameraZoom(0.85, 3, true, FlxEase.expoOut);
+      }
+    });
+
+    events.push({
+      time: 4.05,
+      callback: () ->
+      {
+        PlayState.instance.tweenCameraZoom(0.9, 1, true, FlxEase.elasticOut);
+      }
+    });
+
+    events.push({
+      time: 5.1,
+      callback: () ->
+      {
+        PlayState.instance.tweenCameraZoom(0.65, 6, true, FlxEase.expoOut);
+        PlayState.instance.tweenCameraToPosition(mixPos[0], mixPos[1], 2, FlxEase.expoOut);
+
+        hasPlayedCutscene = true;
+        PlayState.instance.isInCutscene = false;
+
+        cutsceneMusic.fadeOut(1, 0);
+
+        PlayState.instance.startCountdown();
+
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1);
+      }
+    });
+
+    cutsceneSequence = new Sequence(events);
+  }
+}

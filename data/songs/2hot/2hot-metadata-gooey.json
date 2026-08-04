@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "2hot (Gooey Mix)",
+  "artist": "HEV",
+  "charter": "LeGooey + Rbz_Fzo",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 182, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey",
+      "girlfriend": "flora",
+      "opponent": "darnell",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["darnell"],
+      "altInstrumentals": [""]
+    },
+    "stage": "phillyStreetsErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 6, "normal": 9, "hard": 10 },
+    "album": "gooeyex2",
+    "stickerPack": null,
+    "previewStart": 0.340085709443373,
+    "previewEnd": 0.612879014099284
+  },
+  "generatedBy": "LeGooey (By Hand)"
+}

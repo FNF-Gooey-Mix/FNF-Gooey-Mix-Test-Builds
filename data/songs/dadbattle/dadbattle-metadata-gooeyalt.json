@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "DadBattle (Gooey Mix)",
+  "artist": "LeGooey",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 180, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey",
+      "girlfriend": "flora",
+      "opponent": "dad",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["dad"],
+      "altInstrumentals": ["pico", ""]
+    },
+    "stage": "mainStageErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 4, "normal": 5, "hard": 6 },
+    "album": "gooeyex1",
+    "stickerPack": null,
+    "previewStart": 0.708863159937888,
+    "previewEnd": 0.912962927018634
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

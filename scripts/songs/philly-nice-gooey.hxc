@@ -1,0 +1,36 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+
+class PhillyNiceGooeyMixSong extends Song
+{
+  function new()
+  {
+    super('philly-nice', {
+      variation: 'gooey'
+    });
+  }
+
+  override function onSongLoaded(event)
+  {
+    super.onSongLoaded(event);
+    if (PlayState.instance.currentInstrumental != "gooey" && PlayState.instance.currentInstrumental != "truegooey")
+    {
+      PlayState.instance.currentVariation = "gooeyalt";
+      PlayState.currentChart = PlayState.instance.currentSong.getDifficulty(PlayState.instance.currentDifficulty + "-gooeyalt", "gooeyalt");
+      PlayState.instance.vocals = PlayState.instance.currentChart.buildVocals("gooeyalt");
+      event.notes = PlayState.instance.currentChart.notes.copy();
+      event.events = PlayState.instance.currentChart.getEvents();
+    }
+    if (PlayState.instance.currentInstrumental == "gooey" || PlayState.instance.currentInstrumental == "truegooey")
+    {
+      PlayState.instance.currentInstrumental = "truegooey";
+    }
+  }
+
+  public override function listAltInstrumentals(difficultyId:String, variationId:String):Array<String>
+  {
+    var results:Array<String> = super.listAltInstrumentals(difficultyId, variationId);
+    results.remove('gooey');
+  }
+}

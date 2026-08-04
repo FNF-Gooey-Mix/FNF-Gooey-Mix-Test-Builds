@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "name": "Flora (Pixel)",
+  "assetPath": "characters/flora/FloraPixel",
+  "cameraOffsets": [-80, -80],
+  "isPixel": true,
+  "scale": 6,
+  "offsets": [0, 10],
+  "healthIcon": {
+    "id": "flora-pixel",
+    "isPixel": true
+  },
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "FloraIdleLeft",
+      "offsets": [0, 40]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "FloraIdleRight",
+      "offsets": [0, 40]
+    },
+    {
+      "name": "combo50",
+      "prefix": "Flora50Combo",
+      "offsets": [0, 40]
+    },
+    {
+      "name": "combo200",
+      "prefix": "Flora200Combo",
+      "offsets": [0, 40]
+    },
+    {
+      "name": "danceLeft-alt",
+      "prefix": "FloraAltIdleLeft",
+      "offsets": [0, 40]
+    },
+    {
+      "name": "danceRight-alt",
+      "prefix": "FloraAltIdleRight",
+      "offsets": [0, 40]
+    },
+    {
+      "name": "drop70",
+      "prefix": "FloraBreakCombo",
+      "offsets": [0, 40]
+    },
+    {
+      "name": "cheer",
+      "prefix": "Flora50Combo",
+      "offsets": [0, 40]
+    }
+  ]
+}

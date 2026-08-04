@@ -1,0 +1,35 @@
+{
+  "version": "2.2.4",
+  "songName": "Key Lime Pie",
+  "artist": "FuryGRTX (ft. Rubyyy, MindOfThomas, & LeGooey)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [
+    { "t": 0, "bpm": 82 },
+    { "t": 49756.0975609756, "bpm": 184 },
+    { "t": 129321.31495228, "bpm": 145, "n": 3},
+    { "t": 169045.452883315, "bpm": 92 },
+    { "t": 171654.148535489, "bpm": 184 }
+  ],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-christmas",
+      "girlfriend": "flora-christmas",
+      "opponent": "monster-christmas",
+      "instrumental": "gooey"
+    },
+    "stage": "mallEvil",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 4, "normal": 6, "hard": 7 },
+    "album": "gooeyex2",
+    "stickerPack": null,
+    "previewStart": 0.372732507802046,
+    "previewEnd": 0.472922645505174
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

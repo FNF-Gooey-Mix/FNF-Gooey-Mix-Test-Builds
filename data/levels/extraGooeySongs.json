@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "Extra Songs whoa",
+  "titleAsset": "storymenu/titles/week1",
+  "capsule": {
+    "name": "EXTRA"
+  },
+  "visible": false,
+  "props": [],
+  "background": "#F9CF51",
+  "songs": ["drippypop-gooey-mix", "mixd-up", "comedian-rad-mix", "saloonatic"]
+}

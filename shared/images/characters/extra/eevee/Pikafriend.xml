@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Pikafriend.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Pika idleright0000" x="0" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0001" x="0" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0002" x="650" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0003" x="650" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0004" x="1300" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0005" x="1300" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0006" x="1950" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0007" x="1950" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0008" x="2600" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleright0009" x="2600" y="0" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0000" x="0" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0001" x="0" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0002" x="650" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0003" x="650" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0004" x="1300" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0005" x="1300" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0006" x="1950" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0007" x="1950" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0008" x="2600" y="750" width="650" height="750"/>
+	<SubTexture name="Pika idleleft0009" x="2600" y="750" width="650" height="750"/>
+	<SubTexture name="Pika cheer0000" x="0" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0001" x="0" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0002" x="650" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0003" x="650" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0004" x="1300" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0005" x="1300" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0006" x="1950" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0007" x="1950" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0008" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0009" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0010" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0011" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0012" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0013" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0014" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0015" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0016" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0017" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0018" x="2600" y="1500" width="650" height="750"/>
+	<SubTexture name="Pika cheer0019" x="2600" y="1500" width="650" height="750"/>
+</TextureAtlas>

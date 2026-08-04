@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "name": "Eduardo (Saloonatic)",
+  "renderType": "sparrow",
+  "assetPath": "characters/extra/saloonatic/Eduardo",
+  "flipX": false,
+  "healthIcon": {
+    "id": "eduardo-gooey"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "eduardoIdle",
+      "frameRate": 12
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "eduardoLeft",
+      "frameRate": 12
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "eduardoDown",
+      "frameRate": 12
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "eduardoRight",
+      "frameRate": 12
+    },
+    {
+      "name": "singUP",
+      "prefix": "eduardoUp",
+      "frameRate": 12
+    },
+    {
+      "name": "what",
+      "prefix": "eduardoWhat",
+      "frameRate": 12
+    },
+    {
+      "name": "the",
+      "prefix": "eduardoThe",
+      "frameRate": 12
+    },
+    {
+      "name": "FUCK",
+      "prefix": "eduardoFUCK",
+      "frameRate": 12
+    },
+    {
+      "name": "MYKNEE",
+      "prefix": "eduardoMYKNEE",
+      "frameRate": 15
+    },
+    {
+      "name": "MYSECONDFAVORITEKNEE",
+      "prefix": "eduardoMYSECONDFAVORITEKNEE",
+      "frameRate": 15
+    },
+    {
+      "name": "freezeFrame",
+      "prefix": "eduardoIdle",
+      "frameRate": 1,
+      "frameIndices": [1, 1, 1, 1]
+    }
+  ]
+}

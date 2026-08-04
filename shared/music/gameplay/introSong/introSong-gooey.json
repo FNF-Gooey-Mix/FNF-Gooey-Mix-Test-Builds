@@ -1,0 +1,17 @@
+{
+  "timeFormat": "ms",
+  "artist": "DoubleM",
+  "songName": "Intro Countdown (Gooey Mix)",
+  "timeChanges": [
+    {
+      "d": 4,
+      "n": 4,
+      "t": 0,
+      "bt": [4, 4, 4, 4],
+      "bpm": 107
+    }
+  ],
+  "generatedBy": "Manual (by LeGooey)",
+  "looped": false,
+  "version": "2.0.0"
+}

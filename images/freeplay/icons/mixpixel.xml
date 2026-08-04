@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="mix-pixel.png">
+<SubTexture name="confirm0000" x="0" y="0" width="34" height="39" frameX="-8" frameY="-3" frameWidth="45" frameHeight="45" />
+<SubTexture name="confirm0001" x="34" y="0" width="32" height="43" frameX="-9" frameY="0" frameWidth="45" frameHeight="45" />
+<SubTexture name="confirm0002" x="0" y="43" width="38" height="37" frameX="-7" frameY="-6" frameWidth="45" frameHeight="45" />
+<SubTexture name="confirm0003" x="38" y="43" width="34" height="39" frameX="-9" frameY="-3" frameWidth="45" frameHeight="45" />
+<SubTexture name="idle0000" x="0" y="0" width="34" height="39" frameX="-8" frameY="-3" frameWidth="45" frameHeight="45" />
+<SubTexture name="confirm-hold0000" x="38" y="43" width="34" height="39" frameX="-9" frameY="-3" frameWidth="45" frameHeight="45" />
+</TextureAtlas>

@@ -1,0 +1,99 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import Date;
+
+class GooeyDiscordRPC extends Module
+{
+  /**
+   * The icons available to The Gooey Mix Discord RPC.
+   * These will be automatically replaced.
+   */
+  public static final RPC_ICONS:Array<String> = [
+    'eduardo-gooey',
+    'drippypop-updog',
+    'flora',
+    'gooey',
+    'kam',
+    'mix',
+    'morpho',
+    'not-matt',
+    'QT',
+    'rad',
+    'tankman-gooey'
+  ];
+
+  /**
+   * The albums available to The Gooey Mix Discord RPC.
+   * These will be automatically replaced.
+   */
+  public static final RPC_ALBUMS:Array<String> = [
+    'comedianRad',
+    'gooeydetour1',
+    'gooeyDrip',
+    'gooeyeeveemix',
+    'gooeyex1',
+    'gooeyex2',
+    'gooeymix1',
+    'gooeymix2',
+    'gooeyplaceholder',
+    'mixdUp',
+    'saloonatic'
+  ];
+
+  /**
+   * Builds a URL for grabbing a Discord RPC asset.
+   * @param path The path to the asset.
+   * @return The ending URL.
+   */
+  public static function buildURL(path:String):String
+  {
+    return 'https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/$path?raw=true&t=${Date.now().getTime()}';
+  }
+
+  var lastAlbum:String = null;
+  var lastIcon:String = null;
+
+  public function new()
+  {
+    super('gooeyDiscordRPC');
+  }
+
+  #if FEATURE_DISCORD_RPC
+  override public function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (PlayState.instance?.currentStage == null) return;
+
+    if (lastAlbum != PlayState.instance.discordRPCAlbum)
+    {
+      updateAlbum();
+      lastAlbum = PlayState.instance.discordRPCAlbum;
+      PlayState.instance?.initDiscord();
+    }
+
+    if (lastIcon != PlayState.instance.discordRPCIcon)
+    {
+      updateIcon();
+      lastIcon = PlayState.instance.discordRPCIcon;
+      PlayState.instance?.initDiscord();
+    }
+  }
+
+  function updateAlbum():Void
+  {
+    var albumId:String = PlayState.instance?.currentChart?.album ?? 'volume1';
+    if (!RPC_ALBUMS.contains(albumId)) return;
+
+    PlayState.instance.discordRPCAlbum = buildURL('assets/album-covers/$albumId.png');
+  }
+
+  function updateIcon():Void
+  {
+    var healthIcon:String = PlayState.instance?.currentStage?.getDad()?._data?.healthIcon?.id ?? 'face';
+    if (!RPC_ICONS.contains(healthIcon)) return;
+
+    PlayState.instance.discordRPCIcon = buildURL('assets/icons/$healthIcon.png');
+  }
+  #end
+}

@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "name": "Not Matt",
+  "renderType": "multisparrow",
+  "assetPath": "characters/matt/Not Matt",
+  "flipX": false,
+  "singTime": 8.0,
+  "cameraOffsets": [0, 144],
+  "healthIcon": {
+    "id": "not-matt"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "mattIdle",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "mattRight",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "mattDown",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "singUP",
+      "prefix": "mattUp",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "mattLeft",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "mattMissRight",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "mattMissDown",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "mattMissUp",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "mattMissLeft",
+      "offsets": [-15, -75]
+    },
+    {
+      "name": "hey",
+      "prefix": "mattYeah",
+      "offsets": [-15, -75]
+    }
+  ]
+}

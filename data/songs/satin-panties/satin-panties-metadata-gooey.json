@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Satin Panties (Gooey Mix)",
+  "artist": "LeGooey",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 110, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-car",
+      "girlfriend": "flora-car",
+      "opponent": "mom-car",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["mom"],
+      "altInstrumentals": [""]
+    },
+    "stage": "limoRideErectGooey",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "album": "gooeymix2",
+    "stickerPack": null,
+    "previewStart": 0.619562607765677,
+    "previewEnd": 0.903572909618701
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

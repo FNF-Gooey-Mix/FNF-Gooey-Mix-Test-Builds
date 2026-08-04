@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Juan.png">
+<SubTexture name="juanShoot0000" x="200" y="0" width="198" height="382" frameX="-133" frameY="-68" frameWidth="450" frameHeight="450" />
+<SubTexture name="juanShoot0001" x="0" y="0" width="200" height="377" frameX="-131" frameY="-74" frameWidth="450" frameHeight="450" />
+<SubTexture name="juanDodge10000" x="398" y="0" width="230" height="411" frameX="-137" frameY="-39" frameWidth="450" frameHeight="450" />
+<SubTexture name="juanDodge10001" x="0" y="411" width="222" height="395" frameX="-136" frameY="-55" frameWidth="450" frameHeight="450" />
+<SubTexture name="juanDodge20000" x="222" y="411" width="199" height="355" frameX="-125" frameY="-98" frameWidth="450" frameHeight="450" />
+<SubTexture name="juanDodge20001" x="421" y="411" width="185" height="364" frameX="-134" frameY="-88" frameWidth="450" frameHeight="450" />
+<SubTexture name="juanDodge30000" x="0" y="806" width="259" height="376" frameX="-84" frameY="-77" frameWidth="450" frameHeight="450" />
+<SubTexture name="juanDodge30001" x="259" y="806" width="255" height="370" frameX="-93" frameY="-83" frameWidth="450" frameHeight="450" />
+</TextureAtlas>

@@ -1,0 +1,87 @@
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import flixel.tweens.FlxEase;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import openfl.filters.ShaderFilter;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.util.FlxSave;
+
+class DrippyPopErectGooeyStage extends Stage
+{
+  function new()
+  {
+    super('drippypopErectGooey');
+  }
+
+  function buildStage()
+  {
+    super.buildStage();
+
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      tvShader = new FlxRuntimeShader(Assets.getText(Paths.frag("ferzyShader")));
+      PlayState.instance.camGame.filters = [new ShaderFilter(tvShader)];
+      PlayState.instance.camHUD.filters = [new ShaderFilter(tvShader)];
+      tvShader.setFloat("force", 0.1);
+    }
+
+    var starShines1 = getNamedProp('starShines1');
+    starShines1.blend = 0;
+    starShines1.alpha = 0.0001;
+
+    var starShines2 = getNamedProp('starShines2');
+    starShines2.blend = 0;
+    starShines2.alpha = 0.0001;
+
+    var floorGlow = getNamedProp('floorGlow');
+    floorGlow.blend = 0;
+
+    var purpleOverlay = getNamedProp('purpleOverlay');
+    purpleOverlay.blend = 0;
+
+    tvTime = new FunkinSprite(0, 0).loadTexture('gooeyMix/extra/drippypopErect/tvbars');
+    PlayState.instance.add(tvTime);
+    tvTime.cameras = [PlayState.instance.camHUD];
+    tvTime.alpha = 0.5;
+    tvTime.scale.set(1.5, 1.5);
+    tvTime.zIndex = 1010;
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+    {
+      PlayState.instance.currentStage.getGirlfriend().visible = false;
+    }
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+    {
+      if (event.beat % 4 == 0)
+      {
+        PlayState.instance.currentStage.getNamedProp('starShines1').alpha = 1;
+        PlayState.instance.currentStage.getNamedProp('starShines2').alpha = 1;
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('starShines1'), {alpha: 0}, 1);
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('starShines2'), {alpha: 0}, 1);
+      }
+    }
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    PlayState.instance.currentStage.getGirlfriend().visible = false;
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+    if (event.step == 1140)
+    {
+      PlayState.instance.currentStage.getGirlfriend().visible = true;
+    }
+  }
+}

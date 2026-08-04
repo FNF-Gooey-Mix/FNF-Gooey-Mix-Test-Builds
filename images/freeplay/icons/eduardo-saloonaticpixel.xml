@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="eduardo-saloonaticpixel.png">
+<SubTexture name="idle0000" x="0" y="0" width="37" height="34" frameX="-2" frameY="-3" frameWidth="40" frameHeight="40" />
+<SubTexture name="confirm0000" x="0" y="0" width="37" height="34" frameX="-2" frameY="-3" frameWidth="40" frameHeight="40" />
+<SubTexture name="confirm0001" x="0" y="34" width="39" height="32" frameX="-1" frameY="-5" frameWidth="40" frameHeight="40" />
+<SubTexture name="confirm0002" x="0" y="66" width="34" height="38" frameX="-3" frameY="-1" frameWidth="40" frameHeight="40" />
+<SubTexture name="confirm0003" x="0" y="104" width="37" height="34" frameX="-2" frameY="-3" frameWidth="40" frameHeight="40" />
+<SubTexture name="confirm-hold0000" x="0" y="104" width="37" height="34" frameX="-2" frameY="-3" frameWidth="40" frameHeight="40" />
+</TextureAtlas>

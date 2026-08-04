@@ -1,0 +1,337 @@
+{
+  "version": "1.0.0",
+  "name": "Hotel Castle",
+  "cameraZoom": 0.7,
+  "props": [
+    {
+      "name": "backWall",
+      "assetPath": "gooeyMix/week60037/hotelCastle/backWall",
+      "position": [-1000, -1000],
+      "scroll": [1.1, 1.1],
+      "zIndex": 10
+    },
+    {
+      "name": "stageWall",
+      "assetPath": "gooeyMix/week60037/hotelCastle/projWall",
+      "position": [360, -400],
+      "scroll": [0.9, 0.9],
+      "danceEvery": 0,
+      "zIndex": 11,
+      "startingAnimation": "morpho",
+      "animations": [
+        {
+          "name": "morpho",
+          "prefix": "morpho",
+          "frameRate": 12,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "name": "backFrame",
+      "assetPath": "gooeyMix/week60037/hotelCastle/backFrame",
+      "position": [870, -150],
+      "scroll": [0.95, 0.95],
+      "zIndex": 12
+    },
+    {
+      "name": "wires",
+      "assetPath": "gooeyMix/week60037/hotelCastle/wires",
+      "position": [570, -250],
+      "scroll": [0.975, 0.975],
+      "zIndex": 13
+    },
+    {
+      "name": "topLantern1",
+      "assetPath": "gooeyMix/week60037/hotelCastle/hangingLantern",
+      "position": [800, -100],
+      "scroll": [0.975, 0.975],
+      "zIndex": 14
+    },
+    {
+      "name": "topLantern2",
+      "assetPath": "gooeyMix/week60037/hotelCastle/hangingLantern",
+      "position": [2240, -100],
+      "scroll": [0.975, 0.975],
+      "zIndex": 15
+    },
+    {
+      "name": "morphoStage",
+      "assetPath": "gooeyMix/week60037/hotelCastle/morphoStage",
+      "position": [549, 727],
+      "zIndex": 16
+    },
+    {
+      "name": "candleBack",
+      "assetPath": "gooeyMix/week60037/hotelCastle/candle",
+      "position": [2160, 720],
+      "flipX": true,
+      "zIndex": 17
+    },
+    {
+      "name": "candleBackLight",
+      "assetPath": "gooeyMix/week60037/hotelCastle/candleFlame",
+      "position": [2120, 720],
+      "danceEvery": 0,
+      "zIndex": 18,
+      "startingAnimation": "flame",
+      "animations": [
+        {
+          "name": "flame",
+          "prefix": "flame",
+          "frameRate": 12,
+          "looped": true,
+          "flipX": true
+        }
+      ],
+      "blend": "add"
+    },
+    {
+      "name": "bottomLantern1",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lantern",
+      "position": [575, 770],
+      "zIndex": 19
+    },
+    {
+      "name": "bottomLantern2",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lantern",
+      "position": [2450, 750],
+      "zIndex": 20
+    },
+    {
+      "name": "noodleBop",
+      "assetPath": "gooeyMix/week60037/hotelCastle/ComedyBoppers",
+      "animType": "animateatlas",
+      "position": [900, 310],
+      "danceEvery": 1,
+      "zIndex": 21,
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "noodleBop",
+          "frameRate": 24
+        }
+      ]
+    },
+    {
+      "name": "morphoBop",
+      "assetPath": "gooeyMix/week60037/hotelCastle/ComedyBoppers",
+      "animType": "animateatlas",
+      "position": [600, 410],
+      "danceEvery": 1,
+      "zIndex": 22,
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "morphoBop",
+          "frameRate": 24
+        }
+      ]
+    },
+    {
+      "name": "cerealBop",
+      "assetPath": "gooeyMix/week60037/hotelCastle/ComedyBoppers",
+      "animType": "animateatlas",
+      "position": [1790, 320],
+      "danceEvery": 1,
+      "zIndex": 23,
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "cerealBop",
+          "frameRate": 24
+        }
+      ]
+    },
+    {
+      "name": "blueBop",
+      "assetPath": "gooeyMix/week60037/hotelCastle/ComedyBoppers",
+      "animType": "animateatlas",
+      "position": [2110, 415],
+      "danceEvery": 1,
+      "zIndex": 24,
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "blueBop",
+          "frameRate": 24
+        }
+      ]
+    },
+    {
+      "name": "candleFront",
+      "assetPath": "gooeyMix/week60037/hotelCastle/candle",
+      "position": [860, 940],
+      "zIndex": 25
+    },
+    {
+      "name": "candleFrontLight",
+      "assetPath": "gooeyMix/week60037/hotelCastle/candleFlame",
+      "position": [860, 940],
+      "danceEvery": 0,
+      "zIndex": 26,
+      "startingAnimation": "flame",
+      "animations": [
+        {
+          "name": "flame",
+          "prefix": "flame",
+          "frameRate": 12,
+          "looped": true
+        }
+      ],
+      "blend": "add"
+    },
+    {
+      "name": "spotlight1",
+      "assetPath": "gooeyMix/week60037/hotelCastle/spotlight1",
+      "position": [384, -299],
+      "zIndex": 100,
+      "blend": "multiply"
+    },
+    {
+      "name": "spotlight2",
+      "assetPath": "gooeyMix/week60037/hotelCastle/spotlight2",
+      "position": [924, -90],
+      "zIndex": 101,
+      "blend": "add",
+      "alpha": 0.05
+    },
+    {
+      "name": "bottomLantern1Light",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lanternLight",
+      "position": [390, 620],
+      "scroll": [0.975, 0.975],
+      "zIndex": 104,
+      "blend": "add"
+    },
+    {
+      "name": "bottomLantern2Light",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lanternLight",
+      "position": [2280, 600],
+      "scroll": [0.975, 0.975],
+      "zIndex": 104,
+      "blend": "add"
+    },
+    {
+      "name": "topLantern1Light",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lanternLight",
+      "position": [625, 120],
+      "scroll": [0.975, 0.975],
+      "zIndex": 104,
+      "blend": "add"
+    },
+    {
+      "name": "topLantern2Light",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lanternLight",
+      "position": [2070, 120],
+      "scroll": [0.975, 0.975],
+      "zIndex": 105,
+      "blend": "add"
+    },
+    {
+      "name": "extraSpotlight2",
+      "assetPath": "gooeyMix/week60037/hotelCastle/spotlight2",
+      "position": [924, -90],
+      "zIndex": 107,
+      "blend": "multiply",
+      "alpha": 0.0001
+    },
+    {
+      "name": "spotlight3",
+      "assetPath": "gooeyMix/week60037/hotelCastle/spotlight3",
+      "position": [1169, -106],
+      "zIndex": 108,
+      "blend": "add",
+      "alpha": 0.5
+    },
+    {
+      "name": "stageLighting",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lighting3",
+      "position": [575, -108],
+      "scroll": [1.1, 1.1],
+      "zIndex": 109,
+      "blend": "multiply"
+    },
+    {
+      "name": "stageBorder",
+      "assetPath": "gooeyMix/week60037/hotelCastle/stageBorder",
+      "position": [326, -366],
+      "scroll": [1.1, 1.1],
+      "zIndex": 110
+    },
+    {
+      "name": "radBop",
+      "assetPath": "gooeyMix/week60037/hotelCastle/RadComedyStage",
+      "position": [2495, 705],
+      "scroll": [1.1, 1.1],
+      "danceEvery": 2,
+      "zIndex": 111,
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "radBop",
+          "frameRate": 24
+        }
+      ]
+    },
+    {
+      "name": "radEyeBop",
+      "assetPath": "gooeyMix/week60037/hotelCastle/RadComedyStage",
+      "position": [2495, 705],
+      "scroll": [1.1, 1.1],
+      "danceEvery": 2,
+      "zIndex": 112,
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "radEyeBop",
+          "frameRate": 24
+        }
+      ],
+      "blend": "add"
+    },
+    {
+      "name": "lighting",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lighting",
+      "position": [-1000, -1000],
+      "scale": [5000, 1],
+      "zIndex": 130,
+      "blend": "add"
+    },
+    {
+      "name": "lighting2",
+      "assetPath": "gooeyMix/week60037/hotelCastle/lighting2",
+      "position": [-1000, -1000],
+      "zIndex": 130,
+      "blend": "multiply"
+    },
+    {
+      "name": "extraSpotlight",
+      "assetPath": "gooeyMix/week60037/hotelCastle/extraSpotlight",
+      "position": [-190, -1000],
+      "zIndex": 140,
+      "blend": "multiply",
+      "alpha": 0.0001
+    }
+  ],
+  "characters": {
+    "bf": {
+      "zIndex": 60,
+      "position": [2000, 1050],
+      "cameraOffsets": [-100, -125]
+    },
+    "gf": { "zIndex": 40, "position": [1570, 950], "cameraOffsets": [-10, 0] },
+    "dad": {
+      "zIndex": 50,
+      "position": [1160, 1050],
+      "cameraOffsets": [120, -125]
+    }
+  },
+  "directory": "shared"
+}

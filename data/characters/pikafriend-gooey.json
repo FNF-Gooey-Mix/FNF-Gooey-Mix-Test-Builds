@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "name": "Pikafriend (Gooey)",
+  "renderType": "multisparrow",
+  "assetPath": "characters/extra/eevee/Pikafriend",
+  "cameraOffsets": [-1, 94],
+  "flipX": false,
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "Pika idleleft",
+      "offsets": [-55, -20]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "Pika idleright",
+      "offsets": [-55, -20]
+    },
+    {
+      "name": "cheer",
+      "prefix": "Pika cheer",
+      "offsets": [-55, -20]
+    },
+    {
+      "name": "combo50",
+      "prefix": "Pika cheer",
+      "offsets": [-55, -20]
+    }
+  ]
+}

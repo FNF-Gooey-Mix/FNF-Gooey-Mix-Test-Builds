@@ -1,0 +1,270 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFB3DFD8"
+  },
+
+  "music": {
+    "asset": "LunchboxScary",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "enter",
+
+      "text": [
+        "Direct contact with actual living creatures, after all this time..."
+      ],
+      "speed": 1.0
+    },
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "I'll finally be able to get out of this hell once and for all..."
+      ]
+    },
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "You don't mind your bodies being borrowed right?",
+        " It's only fair..."
+      ]
+    },
+    {
+      "speaker": "gooey-stare-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "gooey-talk-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Nu uh."]
+    },
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["...What the frick do you MEAN nu uh?"]
+    },
+    {
+      "speaker": "gooey-smug-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Nu uh."]
+    },
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "Look, I don't think you get it. I am literally going to take over your bodies and leave you two stranded here."
+      ]
+    },
+    {
+      "speaker": "gooey-smug-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "Dude you look like someone ran over a ketchup packet I can not take you seriously."
+      ]
+    },
+    {
+      "speaker": "spirit",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Flora wanna help me make fun of this guy?"]
+    },
+    {
+      "speaker": "gooey-stare-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "gooey-talk-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["...Flora?"]
+    },
+    {
+      "speaker": "flora-spirit-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [" "]
+    },
+    {
+      "speaker": "gooey-talk-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Oh."]
+    },
+    {
+      "speaker": "flora-spirit-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "One step closer to freedom, after so, so long...",
+        " I can almost feel the outside world again."
+      ]
+    },
+    {
+      "speaker": "gooey-smug-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Dude are you feeling okay? I think you might have pink eye."]
+    },
+    {
+      "speaker": "flora-spirit-pissed-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "Holy crap can you take literally ANYTHING seriously I am actively possessing your sister and you don't seem to care at all."
+      ]
+    },
+    {
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Nah, shes probably fine. Right Flora?"]
+    },
+    {
+      "speaker": "flora-anime-pixel",
+      "speakerAnimation": "talkEnter",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["yeah"]
+    },
+    {
+      "speaker": "flora-spirit-shocked-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["What the actual flip flop?"]
+    },
+    {
+      "speaker": "gooey-smug-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["I got some eyedrops if you want any."]
+    },
+    {
+      "speaker": "flora-spirit-shocked-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "YOU KNOW WHAT? GENUINELY FRICK YOU GUYS. I HAVE BEEN TRAPPED HERE FOR 13 YEARS AND THE ONE CHANCE I GET TO LEAVE-"
+      ]
+    },
+    {
+      "speaker": "flora-spirit-pissed-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "I JUST GET CONSTANTLY INSULTED BY FRICKING DOLLAR STORE SLIME!? I AM GOING TO ACTUALLY BEAT BOTH OF YOU RIGHT HERE!"
+      ]
+    },
+    {
+      "speaker": "gooey-smug-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Someones a bit mad."]
+    },
+    {
+      "speaker": "flora-anime-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": [
+        "So I know I was kinda joking before but Gooey this is actually really painful can you please do something?"
+      ]
+    },
+    {
+      "speaker": "gooey-sad-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Oh okay my bad."]
+    },
+    {
+      "speaker": "flora-spirit-pissed-pixel",
+      "speakerAnimation": "talk",
+      "box": "thorns",
+      "boxAnimation": "idle",
+
+      "text": ["Actually go away-"]
+    }
+  ]
+}

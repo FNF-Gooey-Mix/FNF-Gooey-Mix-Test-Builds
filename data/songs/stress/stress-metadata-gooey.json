@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Stress (Gooey Mix)",
+  "artist": "HEV",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": -1, "bpm": 178, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "gooey-stress",
+      "girlfriend": "kam-speaker-stress",
+      "opponent": "tankman-gooey",
+      "instrumental": "gooey",
+      "playerVocals": ["gooey"],
+      "opponentVocals": ["tankman"],
+      "altInstrumentals": ["pico", ""]
+    },
+    "stage": "tankmanBattlefieldErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 7, "normal": 9, "hard": 10 },
+    "album": "gooeyex1",
+    "stickerPack": "bonus-stressGooey",
+    "previewStart": 0.521789610326784,
+    "previewEnd": 0.782611850645424
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

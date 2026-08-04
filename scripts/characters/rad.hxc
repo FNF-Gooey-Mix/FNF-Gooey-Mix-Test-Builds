@@ -1,0 +1,64 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.PauseSubState;
+import funkin.play.character.CharacterType;
+import funkin.play.GameOverSubState;
+import funkin.audio.FunkinSound;
+import flixel.util.FlxTimer;
+import funkin.play.PlayState;
+import funkin.play.character.CharacterDataParser;
+
+class RadCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('rad');
+  }
+
+  var radEye:BaseCharacter;
+  var refershedLol:Bool = false;
+
+  function onAdd(event:ScriptEvent)
+  {
+    super.onAdd(event);
+    radEye = CharacterDataParser.fetchCharacter('rad-eye');
+    PlayState.instance.currentStage.add(radEye);
+  }
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+    if (!this.debug)
+    {
+      if (!refershedLol)
+      {
+        radEye.setPosition(this.x, this.y);
+        radEye.zIndex = this.zIndex + 1;
+        radEye.blend = 0;
+
+        PlayState.instance.currentStage.refresh();
+        refershedLol = true;
+      }
+    }
+  }
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+    if (radEye != null)
+    {
+      radEye.playAnimation(name, restart, false);
+      radEye.setPosition(this.x, this.y);
+    }
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    if (PlayState.instance.currentStage != null)
+    {
+      radEye.playAnimation('idle', false, false, false);
+      animation.curAnim.finish();
+      playAnimation('idle', false);
+    }
+  }
+}

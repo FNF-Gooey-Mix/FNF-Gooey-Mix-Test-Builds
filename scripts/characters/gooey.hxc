@@ -1,0 +1,410 @@
+package gooeymix.characters;
+
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PauseSubState;
+import funkin.play.character.CharacterType;
+import funkin.play.GameOverSubState;
+import funkin.audio.FunkinSound;
+import funkin.play.PlayState;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.graphics.shaders.AdjustColorShader;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import flixel.graphics.FlxGraphic;
+import funkin.graphics.FunkinSprite;
+import flixel.effects.FlxFlicker;
+import flixel.util.FlxSave;
+import funkin.FunkinMemory;
+import funkin.util.HapticUtil;
+import funkin.save.Save;
+
+class GooeyBaseCharacter extends MultiAnimateAtlasCharacter
+{
+  public static var baseCharId:String = 'gooey';
+
+  function new(id:String)
+  {
+    super(id == 'UNKNOWN' ? baseCharId : id);
+    ignoreExclusionPref.push("preAttack");
+    ignoreExclusionPref.push("attack");
+  }
+
+  var gooballs:FunkinSprite;
+  private var currentShader = null;
+  private var adjustColor:AdjustColorShader;
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+    GameOverSubState.musicSuffix = '-gooey';
+    GameOverSubState.blueBallSuffix = '-gooey';
+    PauseSubState.musicSuffix = '-gooey';
+    GameOverSubState.animationSuffix = '';
+    var tankDeathLine = null;
+
+    // We don't need these sounds outside of Weekend 1.
+    if (Paths.currentLevel == "weekend1")
+    {
+      for (snd in CACHE_SOUND_PATHS)
+      {
+        FunkinMemory.cacheSound(Paths.sound(snd, "weekend1"));
+      }
+    }
+  }
+
+  function onAdd(event:ScriptEvent)
+  {
+    if (PlayState.instance.currentSong.id.toLowerCase() == "2hot"
+      || PlayState.instance.currentSong.id.toLowerCase() == "dadbattle"
+      || PlayState.instance.currentSong.id.toLowerCase() == "stress")
+    {
+      gooballs = FunkinSprite.createTextureAtlas(this.x - 857 - (-this.globalOffsets[0] * this.scale.x),
+        this.y - 310 - (-this.globalOffsets[1] * this.scale.y), 'characters/gooey/Gooballs', 'shared');
+      gooballs.anim.addByFrameLabel('BlankAttack', 'BlankAttack', 24, false);
+
+      if (PlayState.instance.currentSong.id.toLowerCase() == "dadbattle") gooballs.anim.addByFrameLabel('CanAttack', 'DadAttack', 24, false);
+      else if (PlayState.instance.currentSong.id.toLowerCase() == "stress") gooballs.anim.addByFrameLabel('CanAttack', 'StressAttack', 24, false);
+      else
+        gooballs.anim.addByFrameLabel('CanAttack', 'CanAttack', 24, false);
+
+      gooballs?.anim?.play('BlankAttack', true);
+      gooballs.zIndex = this.zIndex + 1;
+      addToStage(gooballs);
+      currentStage.refresh();
+    }
+  }
+
+  public var CACHE_SOUND_PATHS(get, never):Array<String>;
+
+  function get_CACHE_SOUND_PATHS():Array<String>
+  {
+    return [
+      "singed_loop",
+      "Gun_Prep",
+      "Pico_Bonk",
+      "shot1",
+      "shot2",
+      "shot3",
+      "shot4"
+    ];
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.eventCanceled)
+    {
+      // onNoteHit event was cancelled by the gameplay module.
+      return;
+    }
+    // Override the hit note animation.
+    if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+    {
+      switch (event.note.kind)
+      {
+        case "weekend-1-cockgun":
+          holdTimer = 0;
+          playCockGunAnim();
+        case "weekend-1-firegun":
+          holdTimer = 0;
+          playFireGunAnim();
+        case "weekend-1-hitcheck":
+          trace(getCurrentAnimation());
+          if (getCurrentAnimation() != "attackMISS")
+          {
+            this.playSingAnimation(event.note.noteData.getDirection(), false);
+          }
+        case "weekend-1-alt-hitcheck":
+          trace(getCurrentAnimation());
+          if (getCurrentAnimation() != "attackMISS")
+          {
+            this.playSingAnimation(event.note.noteData.getDirection(), false, 'alt');
+          }
+
+        case "hey":
+          holdTimer = 0;
+          this.playAnimation('hey', true, true);
+          return;
+        case "cheer":
+          holdTimer = 0;
+          this.playAnimation('cheer', true, true);
+          return;
+        case "alt":
+          holdTimer = 0;
+          this.playSingAnimation(event.note.noteData.getDirection(), false, 'alt');
+          return;
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+
+  function onNoteMiss(event:NoteScriptEvent)
+  {
+    // Override the miss note animation.
+    switch (event.note.kind)
+    {
+      case "weekend-1-cockgun":
+        // playCockMissAnim();
+      case "weekend-1-firegun":
+        playCanExplodeAnim();
+      case "weekend-1-hitcheck", "weekend-1-alt-hitcheck":
+        trace(getCurrentAnimation());
+        if (getCurrentAnimation() != "attackMISS")
+        {
+          super.onNoteMiss(event);
+        }
+      default:
+        super.onNoteMiss(event);
+    }
+  }
+
+  function playCanExplodeAnim():Void
+  {
+    this.playAnimation('attackMISS', true, true);
+    // Donk.
+    FunkinSound.playOnce(Paths.sound('Pico_Bonk'), 1.0);
+  }
+
+  var gooeyFade:FunkinSprite;
+
+  function playCockGunAnim():Void
+  {
+    this.playAnimation('preAttack', true, true);
+
+    var currentFrameGraphic:FlxGraphic = FlxGraphic.fromBitmapData(this.updateFramePixels(), true, null, false);
+
+    gooeyFade = new FunkinSprite(this.x + 20, this.y - 85);
+    gooeyFade.frame = currentFrameGraphic.imageFrame.frame;
+    gooeyFade.alpha = 0.3;
+    gooeyFade.zIndex = this.zIndex - 3;
+    gooeyFade.updateHitbox();
+
+    FlxTween.tween(gooeyFade.scale, {x: 1.3, y: 1.3}, 0.4);
+    FlxTween.tween(gooeyFade, {alpha: 0}, 0.4);
+    addToStage(gooeyFade);
+
+    FunkinSound.playOnce(Paths.sound('Gun_Prep'), 1.0);
+  }
+
+  function playFireGunAnim():Void
+  {
+    this.playAnimation('attack', true, true);
+    FunkinSound.playOnce(Paths.soundRandom('shot', 1, 4));
+  }
+
+  var gooeyFlicker:FlxFlicker = null;
+
+  override function onAnimationFinished(name:String)
+  {
+    super.onAnimationFinished(name);
+
+    if (name == 'attackMISS' && PlayState.instance?.health > 0.0 && !PlayState.instance?.isPlayerDying)
+    {
+      gooeyFlicker = FlxFlicker.flicker(super, 1, 1 / 30, true, true, function(_)
+      {
+        gooeyFlicker = FlxFlicker.flicker(super, 0.5, 1 / 60, true, true, function(_)
+        {
+          gooeyFlicker = null;
+        });
+      });
+    }
+  }
+
+  public override function onPause(event:PauseScriptEvent)
+  {
+    super.onPause(event);
+    if (gooeyFlicker != null)
+    {
+      gooeyFlicker.pause();
+      this.visible = true;
+    }
+  }
+
+  public override function onResume(event:ScriptEvent)
+  {
+    super.onResume(event);
+    if (gooeyFlicker != null)
+    {
+      gooeyFlicker.resume();
+    }
+  }
+
+  function addToStage(sprite:FunkinSprite):Void
+  {
+    if (this.debug)
+    {
+      // We are in the chart editor or something.
+      // TODO: Make this work properly.
+    }
+    else if (PlayState.instance != null && currentStage != null)
+    {
+      currentStage.add(sprite);
+    }
+    else
+    {
+      trace('Could not add sprite to stage.');
+    }
+  }
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    synchronizeShader();
+  }
+
+  var rimChecked:Bool = false;
+
+  function synchronizeShader():Void
+  {
+    if (rimChecked) return;
+    rimChecked = true;
+    if (!GooeyMixOptions.gooeyShaders) return;
+    if (!(this.shader is DropShadowShader)) return;
+    if (this.shader.threshold <= 0) return;
+    this.shader.threshold = 0.2;
+    trace();
+  }
+
+  var gooballd:Bool = false;
+
+  function gooball():Void
+  {
+    if ((PlayState.instance.currentSong.id.toLowerCase() == "2hot"
+      || PlayState.instance.currentSong.id.toLowerCase() == "dadbattle"
+      || PlayState.instance.currentSong.id.toLowerCase() == "stress")
+      && gooballs != null)
+    {
+      if (!gooballd)
+      {
+        currentShader = this.shader;
+        if (Std.isOfType(this.shader, DropShadowShader))
+        {
+          adjustColor = new AdjustColorShader();
+          adjustColor.brightness = this.shader.baseBrightness;
+          adjustColor.hue = this.shader.baseHue;
+          adjustColor.contrast = this.shader.baseContrast;
+          adjustColor.saturation = this.shader.baseSaturation;
+          gooballs.shader = adjustColor;
+        }
+        else
+        {
+          gooballs.shader = this.shader;
+        }
+        gooballd = true;
+      }
+      gooballs?.anim?.play('CanAttack', true);
+    }
+  }
+
+  public var randomInt:Int;
+
+  override function getDeathQuote():Null<String>
+  {
+    if (Paths.currentLevel == "week7") return Paths.sound('jeffGameover-gooey/jeffGameover-' + FlxG.random.int(1, 8));
+    else if (PlayState.instance?.currentStage?.getDad()?.characterId == "qt") {
+      randomInt = FlxG.random.int(1, 7);
+      gameoverSound = Paths.sound('qtgameover/' + Save.instance.modOptions.get(QtOptionsCategory.SAVE_KEY_LANG_QT) + '/bf/qtGameover-' + randomInt);
+      return gameoverSound;
+    }  
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+    rimChecked = false;
+    GameOverSubState.musicSuffix = '-gooey';
+    GameOverSubState.blueBallSuffix = '-gooey';
+    PauseSubState.musicSuffix = '-gooey';
+    GameOverSubState.animationSuffix = '';
+  }
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+
+    if (name == "firstDeath")
+    {
+      if (GameOverSubState.blueBallSuffix == '-gooey-explode')
+      {
+        // Explosion death animation.
+        doExplosionDeath();
+        return;
+      }
+    }
+    else if (name == "deathConfirm" || name == "deathConfirm-explosion")
+    {
+      gooeyRetry = FunkinSound.load(Paths.music('gameplay/gameover/gameOverEnd-gooeyReal'), true);
+      gooeyRetry.volume = 1;
+      gooeyRetry.play(false);
+      if (GameOverSubState.blueBallSuffix == '-gooey-explode')
+      {
+        doExplosionConfirm();
+        return;
+      }
+    }
+    else if (name == "attack")
+    {
+      if (!this.debug) gooball();
+    }
+  }
+
+  public override function getDeathCameraOffsets():Array<Float>
+  {
+    var result = super.getDeathCameraOffsets();
+
+    if (GameOverSubState.blueBallSuffix == '-gooey-explode')
+    {
+      return [result[0] + 50, result[1] - 150];
+    }
+
+    return [result[0], result[1]];
+  }
+
+  function doExplosionDeath():Void
+  {
+    if (gooeyFlicker != null)
+    {
+      gooeyFlicker.stop(); // this sets visible to true, but we make it false a few lines down anyways
+    }
+
+    // Suffixed death sound will already play.
+    GameOverSubState.instance.resetCameraZoom();
+
+    // Move the camera up.
+    GameOverSubState.instance.cameraFollowPoint.y -= 300;
+    GameOverSubState.instance.cameraFollowPoint.x += 200;
+
+    HapticUtil.vibrate(0, 0.5);
+
+    // Death by Darnell's can.
+    FlxTimer.wait(2, function()
+    {
+      // Gooey Fucking Dies
+      HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    });
+
+    FlxTimer.wait(3.0, afterGooeyDeathExplosionIntro);
+  }
+
+  var singed:FunkinSound;
+
+  function afterGooeyDeathExplosionIntro():Void
+  {
+    // Start the (standard) death music, 3.5 seconds after the explosion starts,
+    // not when the explosion sound finishes or when the loop starts.
+    GameOverSubState.instance.startDeathMusic(1.0, false);
+    singed = FunkinSound.load(Paths.sound('singed_loop'), true, false, true);
+    // singed.fadeIn(0.5, 0.3, 1.0);
+  }
+
+  function doExplosionConfirm():Void
+  {
+    if (singed != null)
+    {
+      singed.stop();
+      singed = null;
+    }
+  }
+}

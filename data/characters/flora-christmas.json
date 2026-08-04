@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "name": "Flora (Christmas)",
+  "assetPath": "shared:characters/flora/FloraChristmas",
+  "startingAnimation": "danceRight",
+  "renderType": "multianimateatlas",
+  "healthIcon": {
+    "id": "flora"
+  },
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "FloraIdleLeft",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "FloraIdleRight",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "combo50",
+      "prefix": "Flora50Combo",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "combo200",
+      "prefix": "Flora200Combo",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "danceLeft-alt",
+      "prefix": "FloraAltIdleLeft",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "danceRight-alt",
+      "prefix": "FloraAltIdleRight",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "danceLeft-trans",
+      "prefix": "FloraAltIdleLeft",
+      "offsets": [-65, 235],
+      "frameIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+      "name": "danceRight-trans",
+      "prefix": "FloraAltIdleRight",
+      "offsets": [-65, 235],
+      "frameIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+      "name": "drop70",
+      "prefix": "FloraBreakCombo",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "scared",
+      "prefix": "FloraScared",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "cheer",
+      "prefix": "Flora50Combo",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "FloraSingLeft",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "FloraSingDown",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "singUP",
+      "prefix": "FloraSingUp",
+      "offsets": [-65, 235]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "FloraSingRight",
+      "offsets": [-65, 235]
+    }
+  ]
+}

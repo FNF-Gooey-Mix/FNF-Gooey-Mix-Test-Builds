@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="drippypopupdog-pixel.png">
+<SubTexture name="confirm0000" x="0" y="0" width="37" height="32" frameX="-8" frameY="-10" frameWidth="50" frameHeight="50" />
+<SubTexture name="confirm0001" x="0" y="32" width="39" height="30" frameX="-4" frameY="-12" frameWidth="50" frameHeight="50" />
+<SubTexture name="confirm0002" x="0" y="62" width="30" height="35" frameX="-15" frameY="-9" frameWidth="50" frameHeight="50" />
+<SubTexture name="confirm0003" x="0" y="97" width="32" height="33" frameX="-12" frameY="-10" frameWidth="50" frameHeight="50" />
+<SubTexture name="idle0000" x="0" y="0" width="37" height="32" frameX="-8" frameY="-10" frameWidth="50" frameHeight="50" />
+<SubTexture name="confirm-hold0000" x="0" y="97" width="32" height="33" frameX="-12" frameY="-10" frameWidth="50" frameHeight="50" />
+</TextureAtlas>

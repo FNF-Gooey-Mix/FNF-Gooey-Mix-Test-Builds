@@ -1,0 +1,39 @@
+{
+  "version": "2.2.4",
+  "songName": "Starcraft (Pico Mix)",
+  "artist": "SakiProd (ft. Contentleaf)",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [
+    { "t": 0, "b": 0, "bpm": 178, "bt": [4, 4, 4, 4] },
+    { "t": 21574.045, "b": 64.003, "bpm": 178, "n": 5, "bt": [4, 4, 4, 4] },
+    { "t": 23258.4551, "b": 69.0001, "bpm": 178, "bt": [4, 4, 4, 4] },
+    { "t": 75843.2023, "b": 225.0015, "bpm": 156, "bt": [4, 4, 4, 4] },
+    { "t": 103536.0193, "b": 297.0028, "bpm": 178, "n": 5, "bt": [4, 4, 4, 4] },
+    { "t": 105220.8878, "b": 302.0012, "bpm": 178, "bt": [4, 4, 4, 4] }
+  ],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "pico-playable",
+      "girlfriend": "nene-gooey",
+      "opponent": "gooey-opponent",
+      "instrumental": "pico",
+      "playerVocals": ["pico"],
+      "opponentVocals": ["gooey"],
+      "altInstrumentals": ["", "gooey"]
+    },
+    "stage": "natCrystal",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 7, "normal": 10, "hard": 11 },
+    "album": "gooeydetour1",
+    "stickerPack": "bonus-gooeyWeekPico",
+    "previewStart": 0.16589159095519,
+    "previewEnd": 0.313854675926897
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

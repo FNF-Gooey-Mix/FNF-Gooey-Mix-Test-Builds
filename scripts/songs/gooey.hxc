@@ -1,0 +1,418 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import flixel.util.FlxTimerManager;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.audio.FunkinSound;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.play.PlayStatePlaylist;
+import funkin.util.TouchUtil;
+import funkin.util.Sequence;
+import funkin.Conductor;
+import funkin.data.song.SongRegistry;
+import flixel.util.FlxSave;
+
+class GooeySong extends Song
+{
+  function new()
+  {
+    super('gooey');
+  }
+
+  var hasPlayedCutscene:Bool = false;
+  var cutsceneSkipped:Bool = false;
+  var canSkipCutscene:Bool = false;
+  var gooeyCutSound:FunkinSound;
+  var isMobilePauseButtonPressed:Bool = false;
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!PlayStatePlaylist.isStoryMode)
+    {
+      hasPlayedCutscene = true;
+      cutsceneSkipped = true;
+    }
+
+    if (!hasPlayedCutscene)
+    {
+      trace('Pausing countdown to play a cutscene (`gooey`)');
+
+      hasPlayedCutscene = true;
+
+      event.cancel(); // CANCEL THE COUNTDOWN!
+      gooeyCut();
+    }
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    cutsceneSkipped = false;
+    canSkipCutscene = false;
+    hasPlayedCutscene = false;
+  }
+
+  var gooeyCutSequenceData:Array<SequenceData>;
+  var cutsceneConductor:Conductor;
+
+  private inline function onCutsceneBeatHit():Void
+  {
+    PlayState.instance.currentStage.getGirlfriend().dance(false);
+    PlayState.instance.currentStage.getBoyfriend().dance(false);
+    PlayState.instance.currentStage.getNamedProp('morphoBop').animation.play('idle');
+    PlayState.instance.currentStage.getNamedProp('cerealBop').animation.play('idle');
+    PlayState.instance.currentStage.getNamedProp('noodleBop').animation.play('idle');
+    PlayState.instance.currentStage.getNamedProp('blueBop').animation.play('idle');
+    PlayState.instance.currentStage.getNamedProp('radBop').animation.play('idle');
+    PlayState.instance.currentStage.getNamedProp('radEyeBop').animation.play('idle');
+  }
+
+  function gooeyCut()
+  {
+    skipText = new FlxText(936, 618, 0, 'Skip [ ' + PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true) + ' ]', 20);
+    skipText.setFormat(Paths.font('vcr.ttf'), 40, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+    skipText.scrollFactor.set();
+    skipText.borderSize = 2;
+    skipText.alpha = 0;
+    PlayState.instance.currentStage.add(skipText);
+
+    skipText.cameras = [PlayState.instance.camCutscene];
+
+    // PlayState.instance.camGame.alpha = 0;
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.currentStage.getDad().visible = false;
+
+    fakeGooey = FunkinSprite.createTextureAtlas(0, 0, 'characters/gooey/GooeyCutscene', "shared");
+    fakeGooey.animation.addByPrefix('idle', 'balls', 12, false);
+    fakeGooey.animation.addByPrefix('walk', 'walk', 12, false);
+    fakeGooey.animation.addByPrefix('huh', 'huh', 12, false);
+    fakeGooey.animation.addByPrefix('hmmm', 'hmmm', 12, false);
+    fakeGooey.animation.addByPrefix('imSoSmart', 'imSoSmart', 12, false);
+    fakeGooey.animation.addByPrefix('bye', 'bye', 24, false);
+    fakeGooey.animation.addByPrefix('hi', 'hi', 12, false);
+    fakeGooey.animation.play('idle');
+    PlayState.instance.currentStage.add(fakeGooey);
+    fakeGooey.setPosition(-1000, 800); // moved down by 200
+    fakeGooey.zIndex = 111;
+    fakeGooey.scrollFactor.set(1.1, 1.1);
+
+    bubble = new FunkinSprite(0, 0).loadSparrow('gooeyMix/week60037/hotelCastle/GooeyCutBubble');
+    bubble.animation.addByPrefix('idle', 'buble', 6, true);
+    bubble.animation.play('idle');
+    PlayState.instance.currentStage.add(bubble);
+    bubble.scrollFactor.set(0, 0);
+    bubble.setPosition(FlxG.width - bubble.width, FlxG.height - bubble.height);
+    bubble.zIndex = 300;
+    bubble.alpha = 0;
+    bubble.flipX = true;
+    bubble.scale.set(1.3, 1.3);
+
+    thoughts = new FunkinSprite(0, 0).loadSparrow('gooeyMix/week60037/hotelCastle/GooeyCutBubble');
+    thoughts.animation.addByPrefix('idle', 'blank', 12, true);
+    thoughts.animation.addByPrefix('solike', 'solike', 12, false);
+    thoughts.animation.addByPrefix('imBrokeAF', 'imBrokeAF', 12, false);
+    thoughts.animation.addByPrefix('butWhatIf', 'butWhatIf', 12, false);
+    thoughts.animation.addByPrefix('iRobMyFriends', 'iRobMyFriends', 12, false);
+    thoughts.animation.addByPrefix('andUseTheMoney', 'andUseTheMoney', 12, false);
+    thoughts.animation.addByPrefix('toWin', 'toWin', 12, false);
+    thoughts.animation.addByPrefix('andGetMOREmoney', 'andGetMOREmoney', 12, false);
+    thoughts.animation.addByPrefix('imSoFuckingSmart', 'imSoFuckingSmart', 12, false);
+    thoughts.animation.play('idle');
+    PlayState.instance.currentStage.add(thoughts);
+    thoughts.scrollFactor.set(0, 0);
+    thoughts.setPosition(FlxG.width - thoughts.width - 230, FlxG.height - thoughts.height + 200);
+    thoughts.zIndex = 301;
+
+    theBois = new FunkinSprite(0, 0).loadSparrow('gooeyMix/week60037/hotelCastle/KamAndMatt');
+    theBois.animation.addByPrefix('idle', 'talkLoop', 3, true);
+    theBois.animation.addByPrefix('yoink', 'yoink', 12, false);
+    theBois.animation.play('idle');
+    PlayState.instance.currentStage.add(theBois);
+    theBois.scrollFactor.set(0, 0);
+    theBois.setPosition(FlxG.width - theBois.width, FlxG.height - theBois.height);
+    theBois.zIndex = 302;
+    theBois.alpha = 0;
+
+    var gooeyPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+    ];
+
+    PlayState.instance.currentStage.refresh();
+    FlxG.camera.fade(0xFF000000, 1, true);
+    PlayState.instance.tweenCameraZoom(1.1, 0.5, true, FlxEase.expoOut);
+    PlayState.instance.tweenCameraToPosition(gooeyPos[0] - 700, gooeyPos[1] + 600, 3, FlxEase.expoOut);
+
+    songIntro = FunkinSound.load(Paths.music("cutscene/TheEpic", "shared"), true);
+    songIntro.play();
+    songIntro.volume = 0;
+
+    cutsceneConductor = new Conductor();
+
+    songIntro.fadeIn(1, 0, 1);
+
+    var songMusicData = SongRegistry.instance.parseMusicData("cutscene/TheEpic", "shared");
+    if (songMusicData != null) cutsceneConductor.mapTimeChanges(songMusicData.timeChanges);
+
+    cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
+
+    PlayState.instance.isInCutscene = true;
+
+    gooeyCutSequenceData = [
+      {time: 0.05, callback: () -> gooeyCutSound = fakeGooey.animation.play('walk')},
+      {
+        time: 0.365,
+        callback: () ->
+        {
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/GooeyCutSound1'), 1.0);
+        }
+      },
+      {
+        time: 3.5,
+        callback: () ->
+        {
+          PlayState.instance.tweenCameraToPosition(gooeyPos[0] - 100, gooeyPos[1] + 300, 3, FlxEase.expoOut);
+          PlayState.instance.tweenCameraZoom(0.6, 3, true, FlxEase.expoOut);
+        }
+      },
+      {
+        time: 5.5,
+        callback: () ->
+        {
+          fakeGooey.animation.play('huh');
+          PlayState.instance.tweenCameraToPosition(gooeyPos[0] - 1000, gooeyPos[1] + 500, 3, FlxEase.expoOut);
+          PlayState.instance.tweenCameraZoom(0.9, 3, true, FlxEase.expoOut);
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/GooeyCutSound2'), 1.0);
+        }
+      },
+      {
+        time: 7.5,
+        callback: () ->
+        {
+          PlayState.instance.tweenCameraToPosition(gooeyPos[0] - 850, gooeyPos[1] + 600, 2, FlxEase.quadInOut);
+          PlayState.instance.tweenCameraZoom(1, 2, true, FlxEase.quadInOut);
+          fakeGooey.animation.play('hmmm');
+          FlxTween.tween(bubble, {alpha: 1}, 2, {ease: FlxEase.quadInOut});
+          FlxTween.tween(bubble.scale, {x: 1, y: 1}, 2, {ease: FlxEase.quadInOut});
+        }
+      },
+      {
+        time: 9.5,
+        callback: () ->
+        {
+          thoughts.animation.play('solike');
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/GooeyCutSound3'), 1.0);
+        }
+      },
+      {time: 10, callback: () -> gooeyCutSound = thoughts.animation.play('imBrokeAF')},
+      {time: 10.5, callback: () -> gooeyCutSound = thoughts.animation.play('butWhatIf')},
+      {time: 11, callback: () -> gooeyCutSound = thoughts.animation.play('iRobMyFriends')},
+      {time: 11.5, callback: () -> gooeyCutSound = thoughts.animation.play('andUseTheMoney')},
+      {
+        time: 12,
+        callback: () ->
+        {
+          thoughts.animation.play('toWin');
+          fakeGooey.animation.play('imSoSmart');
+        }
+      },
+      {time: 12.65, callback: () -> gooeyCutSound = thoughts.animation.play('andGetMOREmoney')},
+      {
+        time: 13.5,
+        callback: () -> gooeyCutSound =
+          {
+            thoughts.animation.play('imSoFuckingSmart');
+            FlxTween.tween(bubble, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+          }
+      },
+      {time: 11.5, callback: () -> gooeyCutSound = thoughts.animation.play('andUseTheMoney')},
+      {
+        time: 14.5,
+        callback: () ->
+        {
+          fakeGooey.animation.play('bye');
+          theBois.alpha = 1;
+          FlxTween.tween(theBois, {x: FlxG.width - theBois.width + 300}, 2, {ease: FlxEase.expoOut});
+          FlxTween.tween(theBois, {y: FlxG.height - theBois.height + 300}, 2, {ease: FlxEase.expoOut});
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/GooeyCutSound4'), 1.0);
+        }
+      },
+      {time: 15.5, callback: () -> gooeyCutSound = theBois.animation.play('yoink')},
+      {
+        time: 16.5,
+        callback: () ->
+        {
+          fakeGooey.setPosition(-1078, 708);
+          fakeGooey.scrollFactor.set(1, 1);
+          FlxTween.tween(theBois, {x: FlxG.width - theBois.width - 500}, 1, {ease: FlxEase.quadInOut});
+          FlxTween.tween(theBois, {y: FlxG.height - theBois.height - 500}, 1, {ease: FlxEase.quadInOut});
+        }
+      },
+      {
+        time: 17,
+        callback: () ->
+        {
+          fakeGooey.animation.play('hi');
+          PlayState.instance.tweenCameraToPosition(gooeyPos[0], gooeyPos[1], 3, FlxEase.expoOut);
+          PlayState.instance.tweenCameraZoom(0.7, 3, true, FlxEase.expoOut);
+          theBois.alpha = 0;
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/GooeyCutSound5'), 1.0);
+          fakeGooey.zIndex = 52;
+          PlayState.instance.currentStage.refresh();
+        }
+      },
+      {time: 18.85, callback: () -> gooeyCutSound = gooeyShaderApply()},
+      {
+        time: 19.5,
+        callback: () ->
+        {
+          PlayState.instance.currentStage.getDad().visible = true;
+          fakeGooey.visible = false;
+          PlayState.instance.currentStage.getDad().playAnimation('hey', true);
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('hey', true);
+          songIntro.fadeOut(1, 0);
+
+          new FlxTimer().start(1, _ ->
+          {
+            songIntro.stop();
+          });
+        }
+      },
+      {
+        time: 20.5,
+        callback: () ->
+        {
+          PlayState.instance.currentStage.getDad().playAnimation('idle', true);
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('idle', true);
+
+          fakeGooey.destroy();
+          theBois.destroy();
+          thoughts.destroy();
+          bubble.destroy();
+
+          canSkipCutscene = false;
+          hasPlayedCutscene = true;
+          cutsceneSkipped = true;
+          PlayState.instance.isInCutscene = false;
+          skipText.visible = false;
+
+          PlayState.instance.startCountdown();
+
+          FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1);
+        }
+      },
+
+    ];
+    gooeyCutSequence = new Sequence(gooeyCutSequenceData);
+  }
+
+  var currentShader = null;
+
+  function gooeyShaderApply():Void
+  {
+    if (GooeyMixOptions.gooeyShaders)
+    {
+      var rim = new DropShadowShader();
+      rim.setAdjustColor(0, 0, 0, 0);
+      rim.color = 0xFF423427;
+      fakeGooey.shader = rim;
+      rim.attachedSprite = fakeGooey;
+      rim.threshold = -1;
+      rim.angle = 101.25;
+      fakeGooey.animation.onFrameChange.add(function()
+      {
+        rim.updateFrameInfo(fakeGooey.frame);
+      });
+    }
+  }
+
+  function skipCutscene()
+  {
+    cutsceneSkipped = true;
+    hasPlayedCutscene = true;
+    PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
+    songIntro.fadeOut(0.5, 0);
+    if (gooeyCutSound != null)
+    {
+      gooeyCutSound.fadeOut(0.5, 0);
+    }
+    new FlxTimer().start(0.5, _ ->
+    {
+      PlayState.instance.justUnpaused = true;
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
+
+      gooeyCutSequence.destroy();
+      songIntro.stop();
+      if (gooeyCutSound != null)
+      {
+        gooeyCutSound.stop();
+      }
+
+      PlayState.instance.startCountdown();
+      skipText.visible = false;
+
+      fakeGooey.destroy();
+      theBois.destroy();
+      thoughts.destroy();
+      bubble.destroy();
+
+      PlayState.instance.currentStage.getDad().visible = true;
+      PlayState.instance.currentStage.getDad().playAnimation('idle', true);
+      PlayState.instance.currentStage.getBoyfriend().playAnimation('idle', true);
+
+      var gooeyPos:Array<Float> = [
+        PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+        PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+      ];
+
+      PlayState.instance.tweenCameraToPosition(gooeyPos[0], gooeyPos[1], 2, FlxEase.expoOut);
+      PlayState.instance.tweenCameraZoom(0.8, 2, true, FlxEase.expoOut);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1);
+    });
+  }
+
+  function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (PlayState.instance.isInCutscene && cutsceneConductor != null)
+    {
+      cutsceneConductor.update(songIntro.time);
+    }
+
+    if (FlxG.onMobile)
+    {
+      isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
+    }
+
+    if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && !cutsceneSkipped)
+    {
+      if (!canSkipCutscene)
+      {
+        trace('cant skip yet!');
+        if (skipText != null)
+        {
+          FlxTween.tween(skipText, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+          new FlxTimer().start(0.5, _ ->
+          {
+            canSkipCutscene = true;
+            trace('can skip!');
+          });
+        }
+      }
+    }
+    if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && !cutsceneSkipped && canSkipCutscene)
+    {
+      skipCutscene();
+      trace('skipped');
+    }
+  }
+}

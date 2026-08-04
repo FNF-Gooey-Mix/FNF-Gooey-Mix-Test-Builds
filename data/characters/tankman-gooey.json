@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "name": "Tankman (Gooey)",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/tankman/basic",
+  "offsets": [3, -44],
+  "cameraOffsets": [-3, 32],
+  "healthIcon": {
+    "id": "tankman"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    },
+    {
+      "assetPath": "shared:characters/tankman/extra-animations",
+      "name": "ugh",
+      "prefix": "ugh",
+      "offsets": [5, -40]
+    },
+    {
+      "assetPath": "shared:characters/tankman/extra-animations",
+      "name": "augh",
+      "prefix": "argh",
+      "offsets": [5, -40]
+    },
+    {
+      "frameRate": 24,
+      "loop": true,
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "prefix": "tankDance",
+      "offsets": [-4, -1],
+      "name": "tankDance"
+    },
+    {
+      "frameRate": 24,
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "offsets": [-4, -1],
+      "prefix": "done",
+      "name": "done"
+    },
+    {
+      "offsets": [-3, -2],
+      "frameRate": 24,
+      "prefix": "prettyFUCK",
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "name": "fuck"
+    },
+    {
+      "offsets": [-3, -2],
+      "frameRate": 48,
+      "prefix": "prettyFUCK",
+      "frameIndices": [68],
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "name": "isGooey"
+    },
+    {
+      "offsets": [-4, -1],
+      "frameRate": 24,
+      "prefix": "gooIdle",
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "name": "idle-gooey"
+    },
+    {
+      "frameRate": 24,
+      "offsets": [-4, -1],
+      "prefix": "gooLeft",
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "name": "singLEFT-gooey"
+    },
+    {
+      "frameRate": 24,
+      "offsets": [-4, -1],
+      "prefix": "gooDown",
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "name": "singDOWN-gooey"
+    },
+    {
+      "frameRate": 24,
+      "offsets": [-4, -1],
+      "prefix": "gooUp",
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "name": "singUP-gooey"
+    },
+    {
+      "frameRate": 24,
+      "offsets": [-4, -1],
+      "prefix": "gooRight",
+      "assetPath": "shared:characters/tankman/tankmanGooey",
+      "name": "singRIGHT-gooey"
+    },
+    {
+      "offsets": [7, -15],
+      "frameRate": 24,
+      "prefix": "GooeyStressTank",
+      "assetPath": "shared:characters/tankman/StressCutTankGooey",
+      "animType": "symbol",
+      "name": "tankmanGooeyCutscene"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+import funkin.data.event.SongEventSchema;
+import funkin.data.event.SongEventFieldType;
+import funkin.util.ReflectUtil;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.util.FlxTweenUtil;
+
+using StringTools;
+
+class CrystalLights extends SongEvent
+{
+  var props:Array<String> = [
+    'bottomCrystalLight2',    'natCrystalLight2',
+               'overlay3',      'backWallLights',
+    'crystalReflections1', 'crystalReflections2',
+         'starcraftLight',     'crystalBackWall'
+  ];
+  var on:Array<String> = [
+    1,
+    1,
+    1,
+    1,
+    0.4,
+    0.7,
+    0.75,
+    0.5
+  ];
+  var off:Array<String> = [
+    0,
+    0,
+    0.3,
+    0,
+    0,
+    0,
+    0,
+    0
+  ];
+
+  public function new()
+  {
+    super('CrystalLights', {
+      processOldEvents: true
+    });
+  }
+
+  override public function handleEvent(data:SongEventData)
+  {
+    // Does nothing if there is no PlayState camera or stage.
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    // Does nothing if we are minimal mode.
+    if (PlayState.instance.isMinimalMode) return;
+
+    if (PlayState.instance.currentStage.id != 'natCrystal') return;
+
+    for (prop in 0...props.length)
+    {
+      var val = data.getBool('state') ? on[prop] : off[prop];
+
+      var ease = data.getString('ease');
+      var easeDir = data.getString('easeDir');
+
+      var easeFunctionName = '$ease$easeDir';
+      var easeFunction:Null<Float->Float> = ReflectUtil.field(FlxEase, easeFunctionName);
+      if (easeFunction == null)
+      {
+        trace('Invalid ease function: $easeFunctionName');
+        return;
+      }
+
+      FlxTween.tween(PlayState.instance.currentStage.getNamedProp(props[prop]), {alpha: val}, data.getFloat('dur'), {ease: easeFunction});
+    }
+  }
+
+  override public function onPause(e)
+  {
+    for (prop in props)
+    {
+      FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp(prop));
+    }
+  }
+
+  override public function onResume(e)
+  {
+    for (prop in props)
+    {
+      FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp(prop));
+    }
+  }
+
+  override public function onCountdownStart(e)
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    if (PlayState.instance.isMinimalMode) return;
+
+    if (PlayState.instance.currentStage.id != 'natCrystal') return;
+
+    for (i in 0...props.length)
+    {
+      var prop = PlayState.instance.currentStage.getNamedProp(props[i]);
+      FlxTween.cancelTweensOf(prop, ['alpha']);
+      prop.alpha = off[i];
+    }
+  }
+
+  override public function getTitle():String
+  {
+    return 'Crystal Lights';
+  }
+
+  override public function getEventSchema()
+  {
+    return new SongEventSchema([
+      {
+        name: 'state',
+        title: 'Target State',
+        defaultValue: true,
+        type: SongEventFieldType.BOOL
+      },
+      {
+        name: 'dur',
+        title: 'Duration',
+        defaultValue: 2.8,
+        min: 0,
+        step: 0.1,
+        type: SongEventFieldType.FLOAT
+      },
+      {
+        name: 'ease',
+        title: 'Easing Type',
+        defaultValue: 'quart',
+        type: SongEventFieldType.ENUM,
+        keys: [
+          'Linear' => 'linear',
+          'Sine' => 'sine',
+          'Quad' => 'quad',
+          'Cube' => 'cube',
+          'Quart' => 'quart',
+          'Quint' => 'quint',
+          'Expo' => 'expo',
+          'Smooth Step' => 'smoothStep',
+          'Smoother Step' => 'smootherStep',
+          'Elastic' => 'elastic',
+          'Back' => 'back',
+          'Bounce' => 'bounce',
+          'Circ ' => 'circ',
+        ]
+      },
+      {
+        name: 'easeDir',
+        title: 'Easing Direction',
+        defaultValue: 'In',
+        type: SongEventFieldType.ENUM,
+        keys: ['In' => 'In', 'Out' => 'Out', 'In/Out' => 'InOut']
+      }
+    ]);
+  }
+}

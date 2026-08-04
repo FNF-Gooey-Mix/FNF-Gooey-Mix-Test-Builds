@@ -1,0 +1,79 @@
+import gooeymix.characters.FloraBaseCharacter;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+
+using StringTools;
+
+class FloraQtCharacter extends FloraBaseCharacter
+{
+  public function new()
+  {
+    super('flora-qt');
+  }
+
+  var isQtDance:Bool = false;
+
+  override public function playAnimation(name:String, restart:Bool = false, ?ignoreOther:Bool = false, ?reversed:Bool = false)
+  {
+    if (!isMyFloraKindaSpeakerless)
+    {
+      if (name == "combo50") floraSpeakerScreen?.animation.play('50combo', true);
+      if (name == "combo200") floraSpeakerScreen?.animation.play('200combo', true);
+      if (name == "drop70") floraSpeakerScreen?.animation.play('lossCombo', true);
+    }
+    if (name.startsWith("dance") && isQtDance) floraAnimationSuffix = '-qt';
+    else if (name.startsWith("dance"))
+    {
+      if (isLesbian || alwaysLesbian) floraAnimationSuffix = '-alt';
+      else if (isBecomingLesbian)
+      {
+        floraAnimationSuffix = '-trans';
+
+        lesbianTimer?.cancel();
+
+        // This is the time it will take for Flora to become lesbian.
+        lesbianTimer = new FlxTimer().start(0.05, _ ->
+        {
+          isLesbian = true;
+          isBecomingLesbian = false;
+        });
+      }
+      else
+        floraAnimationSuffix = '';
+    }
+    else if (name == "combo200") isBecomingLesbian = true;
+    else if (name == "drop70")
+    {
+      if (!alwaysLesbian)
+      {
+        lesbianTimer?.cancel();
+        isLesbian = false;
+        isBecomingLesbian = false;
+      }
+    }
+    else if (name == 'FloraQtIntro') isQtDance = true;
+    super.playAnimation(name + floraAnimationSuffix, restart, ignoreOther, reversed);
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+    if (PlayState.instance?.currentStage != null)
+    {
+      if (PlayState.instance.currentSong.id.toLowerCase() == "blissful")
+      {
+        if (event.step == 1408)
+        {
+          isQtDance = false;
+        }
+      }
+    }
+  }
+
+  override public function onSongRetry(e)
+  {
+    super.onSongRetry(e);
+
+    isQtDance = false;
+  }
+}

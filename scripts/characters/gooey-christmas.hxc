@@ -1,0 +1,16 @@
+import gooeymix.characters.GooeyBaseCharacter;
+import funkin.play.PlayState;
+
+class GooeyChristmasCharacter extends GooeyBaseCharacter
+{
+  public function new()
+  {
+    super('gooey-christmas');
+  }
+
+  override function onCountdownStart(event)
+  {
+    super.onCountdownStart(event);
+    PlayState.instance.comboPopUps.offsets = [-450, 350];
+  }
+}

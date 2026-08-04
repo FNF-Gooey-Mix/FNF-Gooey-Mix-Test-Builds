@@ -1,0 +1,303 @@
+{
+  "props": [
+    {
+      "zIndex": 20,
+      "position": [-400, -1800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "sky",
+      "assetPath": "gooeyMix/extra/spitbucket/sky",
+      "scroll": [0.5, 0.5]
+    },
+    {
+      "zIndex": 21,
+      "position": [1900, 100],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "mountain",
+      "assetPath": "gooeyMix/extra/spitbucket/mountain",
+      "scroll": [0.9, 0.9]
+    },
+    {
+      "zIndex": 22,
+      "position": [-400, 800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "sand",
+      "assetPath": "gooeyMix/extra/spitbucket/iDontLikeSand",
+      "scroll": [1, 1]
+    },
+    {
+      "zIndex": 23,
+      "position": [-400, -950],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "saloon",
+      "assetPath": "gooeyMix/extra/spitbucket/saloon",
+      "scroll": [1, 1]
+    },
+    {
+      "zIndex": 35,
+      "position": [1400, 120],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "juan",
+      "assetPath": "characters/extra/saloonatic/Juan",
+      "scroll": [1, 1],
+      "animations": [
+        {
+          "name": "shoot",
+          "prefix": "juanShoot",
+          "frameRate": 12
+        },
+        {
+          "name": "dodge1",
+          "prefix": "juanDodge1",
+          "frameRate": 12
+        },
+        {
+          "name": "dodge2",
+          "prefix": "juanDodge2",
+          "frameRate": 12
+        },
+        {
+          "name": "dodge3",
+          "prefix": "juanDodge3",
+          "frameRate": 12
+        }
+      ],
+      "startingAnimation": "shoot"
+    },
+    {
+      "zIndex": 36,
+      "position": [1620, 125],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "marco",
+      "assetPath": "characters/extra/saloonatic/Marco",
+      "scroll": [1, 1],
+      "animations": [
+        {
+          "name": "shoot",
+          "prefix": "marcoShoot",
+          "frameRate": 12
+        },
+        {
+          "name": "dodge1",
+          "prefix": "marcoDodge1",
+          "frameRate": 12
+        },
+        {
+          "name": "dodge2",
+          "prefix": "marcoDodge2",
+          "frameRate": 12
+        },
+        {
+          "name": "dodge3",
+          "prefix": "marcoDodge3",
+          "frameRate": 12
+        }
+      ],
+      "startingAnimation": "shoot"
+    },
+    {
+      "zIndex": 60,
+      "position": [895, 385],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "railing",
+      "assetPath": "gooeyMix/extra/spitbucket/railing",
+      "scroll": [1, 1]
+    },
+    {
+      "zIndex": 100,
+      "position": [-100, -200],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "rock",
+      "assetPath": "gooeyMix/extra/spitbucket/rock",
+      "scroll": [1.3, 1.3]
+    },
+    {
+      "zIndex": 120,
+      "position": [-400, -1800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "lighting1",
+      "assetPath": "gooeyMix/extra/spitbucket/lighting",
+      "scroll": [1, 1]
+    },
+    {
+      "zIndex": 121,
+      "position": [-400, -1800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "lighting2",
+      "assetPath": "gooeyMix/extra/spitbucket/lighting",
+      "scroll": [1, 1]
+    },
+    {
+      "name": "itsHighNoon",
+      "zIndex": 122,
+      "assetPath": "#F3C269",
+      "position": [-2000, -1000],
+      "scale": [6000, 4000],
+      "scroll": [0, 0]
+    },
+    {
+      "zIndex": 123,
+      "position": [2092, 290],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "targetOne",
+      "assetPath": "gooeyMix/extra/spitbucket/targets",
+      "scroll": [1, 1],
+      "animations": [
+        {
+          "name": "xOne",
+          "prefix": "xOne",
+          "frameRate": 24
+        },
+        {
+          "name": "blank",
+          "prefix": "blank",
+          "frameRate": 24
+        }
+      ],
+      "startingAnimation": "blank"
+    },
+    {
+      "zIndex": 123,
+      "position": [1560, 323],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "targetTwo",
+      "assetPath": "gooeyMix/extra/spitbucket/targets",
+      "scroll": [1, 1],
+      "animations": [
+        {
+          "name": "xTwo",
+          "prefix": "xTwo",
+          "frameRate": 24
+        },
+        {
+          "name": "blank",
+          "prefix": "blank",
+          "frameRate": 24
+        }
+      ],
+      "startingAnimation": "blank"
+    },
+    {
+      "zIndex": 123,
+      "position": [1861, 293],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "targetThree",
+      "assetPath": "gooeyMix/extra/spitbucket/targets",
+      "scroll": [1, 1],
+      "animations": [
+        {
+          "name": "xThree",
+          "prefix": "xThree",
+          "frameRate": 24
+        },
+        {
+          "name": "blank",
+          "prefix": "blank",
+          "frameRate": 24
+        }
+      ],
+      "startingAnimation": "blank"
+    },
+    {
+      "zIndex": 123,
+      "position": [1770, 390],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "targetFour",
+      "assetPath": "gooeyMix/extra/spitbucket/targets",
+      "scroll": [1, 1],
+      "animations": [
+        {
+          "name": "xFour",
+          "prefix": "xFour",
+          "frameRate": 24
+        },
+        {
+          "name": "blank",
+          "prefix": "blank",
+          "frameRate": 24
+        }
+      ],
+      "startingAnimation": "blank"
+    },
+    {
+      "zIndex": 123,
+      "position": [1630, 380],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "targetFive",
+      "assetPath": "gooeyMix/extra/spitbucket/targets",
+      "scroll": [1, 1],
+      "animations": [
+        {
+          "name": "xFive",
+          "prefix": "xFive",
+          "frameRate": 24
+        },
+        {
+          "name": "blank",
+          "prefix": "blank",
+          "frameRate": 24
+        }
+      ],
+      "startingAnimation": "blank"
+    },
+    {
+      "zIndex": 123,
+      "position": [1970, 465],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "targetSix",
+      "assetPath": "gooeyMix/extra/spitbucket/targets",
+      "scroll": [1, 1],
+      "animations": [
+        {
+          "name": "xSix",
+          "prefix": "xSix",
+          "frameRate": 24
+        },
+        {
+          "name": "blank",
+          "prefix": "blank",
+          "frameRate": 24
+        }
+      ],
+      "startingAnimation": "blank"
+    }
+  ],
+  "cameraZoom": 0.5,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 110,
+      "position": [1050, 1500],
+      "cameraOffsets": [300, -250],
+      "scroll": [1.3, 1.3]
+    },
+    "dad": {
+      "zIndex": 40,
+      "position": [2050, 580],
+      "cameraOffsets": [-230, 0]
+    },
+    "gf": {
+      "zIndex": 111,
+      "position": [950, 1500],
+      "cameraOffsets": [400, -250],
+      "scroll": [1.1, 1.1]
+    }
+  },
+  "name": "Spitbucket",
+  "directory": ""
+}

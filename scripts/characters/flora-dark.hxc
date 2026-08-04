@@ -1,0 +1,91 @@
+import gooeymix.characters.FloraBaseCharacter;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+import funkin.data.character.CharacterDataParser;
+import funkin.graphics.FunkinSprite;
+
+using StringTools;
+
+class FloraDarkCharacter extends FloraBaseCharacter
+{
+  public function new()
+  {
+    super('flora-dark');
+  }
+
+  var normalChar:BaseCharacter;
+  var fakeSpeaker:FunkinSprite;
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    if (PlayState.instance?.currentStage != null)
+    {
+      normalChar = CharacterDataParser.fetchCharacter('flora-speakerless');
+      normalChar.zIndex = this.zIndex - 1;
+      normalChar.alpha = 1;
+      PlayState.instance.currentStage.add(normalChar);
+
+      fakeSpeaker = FunkinSprite.createTextureAtlas(0, 0, "characters/flora/FloraSpeakerDark", "shared");
+      fakeSpeaker.anim.addByFrameLabel('idle', 'FloraSpeakerBop', 24, false);
+      normalChar.zIndex = this.zIndex - 1;
+      PlayState.instance.currentStage.add(fakeSpeaker);
+    }
+  }
+
+  override function set_alpha(val:Float):Float
+  {
+    super.set_alpha(val);
+    fakeSpeaker.alpha = val;
+    if (val != 1) normalChar.alpha = 1;
+    else
+      normalChar.alpha = 0.0001;
+
+    return val;
+  }
+
+  private function addFloraProps()
+  {
+    super.addFloraProps();
+
+    // My Flora is not kinda speakerless, so we shall add the speaker.
+    if (!isMyFloraKindaSpeakerless)
+    {
+      normalChar.zIndex = this.zIndex - 1;
+      normalChar.flipX = false;
+      normalChar.setPosition(this.x, this.y);
+
+      fakeSpeaker?.setPosition(this.x - 56 - (-this.globalOffsets[0] * this.scale.x), this.y + 51 - (-this.globalOffsets[1] * this.scale.y));
+      fakeSpeaker.zIndex = this.zIndex - 2;
+      floraSpeaker.zIndex = this.zIndex - 3;
+      floraSpeakerScreen.zIndex = this.zIndex - 2;
+    }
+
+    PlayState.instance.currentStage.refresh();
+  }
+
+  override public function playAnimation(name:String, restart:Bool = false, ?ignoreOther:Bool = false, ?reversed:Bool = false)
+  {
+    super.playAnimation(name + floraAnimationSuffix, restart, ignoreOther, reversed);
+    if (normalChar != null)
+    {
+      normalChar.playAnimation(name + floraAnimationSuffix, restart, ignoreOther, reversed);
+      normalChar.setPosition(this.x, this.y);
+    }
+  }
+
+  private function speakerBump(force:Bool = true)
+  {
+    // My Flora is not kinda speakerless, so the dark speaker goes BOOM DA BOOM BOOM.
+    // Flora's dark speaker ain't on if Flora ain't on.
+    if (!isMyFloraKindaSpeakerless && setupFloraProps)
+    {
+      fakeSpeaker?.anim?.play('idle', true);
+      floraSpeaker?.anim?.play('idle', true);
+      if (!comboAnims.contains(floraSpeakerScreen.animation?.curAnim?.name)
+        || (comboAnims.contains(floraSpeakerScreen.animation?.curAnim?.name)
+          && floraSpeakerScreen.animation?.finished)) floraSpeakerScreen?.animation?.play('lightBop', true);
+    }
+  }
+}

@@ -1,0 +1,80 @@
+import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.util.FlxSave;
+import flixel.FlxSprite;
+import flixel.util.FlxColor;
+import openfl.filters.ShaderFilter;
+import flixel.addons.display.FlxRuntimeShader;
+import funkin.play.ResultState;
+import funkin.ui.transition.stickers.StickerSubState;
+
+class NightcoreModeOption extends Module
+{
+  public function new()
+  {
+    super('NightcoreModeOption');
+  }
+
+  var nightcoreOverlay:FunkinSprite;
+  var nightcoreOverlay2:FunkinSprite;
+
+  function onSubStateOpenBegin(event)
+  {
+    super.onSubStateOpenBegin();
+    if (event.targetState is ResultState || event.targetState is StickerSubState) if (GooeyMixOptions.gooeyShaders && GooeyMixOptions.nightcoreMode)
+    {
+      FlxG.game.setFilters([]);
+    }
+  }
+
+  function onDestroy()
+  {
+    super.onDestroy();
+    if (GooeyMixOptions.gooeyShaders && GooeyMixOptions.nightcoreMode)
+    {
+      FlxG.game.setFilters([]);
+    }
+  }
+
+  function onSongLoaded()
+  {
+    super.onSongLoaded();
+    if (GooeyMixOptions.nightcoreMode)
+    {
+      if (nightcoreOverlay != null)
+      {
+        nightcoreOverlay.kill();
+        nightcoreOverlay2.kill();
+      }
+
+      nightcoreOverlay = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF7642AC);
+      nightcoreOverlay.cameras = [PlayState.instance.camCutscene];
+      PlayState.instance.add(nightcoreOverlay);
+      nightcoreOverlay.blend = 21;
+
+      nightcoreOverlay2 = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF46005E);
+      nightcoreOverlay2.cameras = [PlayState.instance.camCutscene];
+      PlayState.instance.add(nightcoreOverlay2);
+      nightcoreOverlay2.blend = 15;
+
+      PlayState.instance.playbackRate = 1.35;
+      PlayState.instance.playerStrumline.scrollSpeed = PlayState.instance.currentChart.scrollSpeed / (PlayState.instance.playbackRate
+        - (PlayState.instance.playbackRate / 16));
+      PlayState.instance.opponentStrumline.scrollSpeed = PlayState.instance.currentChart.scrollSpeed / (PlayState.instance.playbackRate
+        - (PlayState.instance.playbackRate / 16));
+
+      if (GooeyMixOptions.gooeyShaders)
+      {
+        bloomShader = new FlxRuntimeShader(Assets.getText(Paths.frag("BloomShader")));
+        FlxG.game.setFilters([new ShaderFilter(bloomShader)]);
+        bloomShader.setFloat('funrange', 0.1);
+        bloomShader.setFloat('funsteps', 0.01);
+        bloomShader.setFloat('funthreshhold', 0);
+        bloomShader.setFloat('funbrightness', 4);
+      }
+      PlayState.instance.currentStage.refresh();
+    }
+  }
+}

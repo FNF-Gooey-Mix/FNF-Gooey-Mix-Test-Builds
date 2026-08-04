@@ -1,0 +1,15 @@
+import funkin.play.cutscene.dialogue.Conversation;
+
+class RosesGooeyConversation extends Conversation
+{
+  function new()
+  {
+    super('roses-gooey');
+  }
+
+  function onTypingComplete():Void
+  {
+    super.onTypingComplete();
+    if (currentDialogueEntry == 13) advanceConversation();
+  }
+}

@@ -1,0 +1,61 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.util.FlxTweenUtil;
+
+class DrippypopGooeyMixSong extends Song
+{
+  function new()
+  {
+    super('drippypop-gooey-mix');
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    blackScreen = new FlxSprite(-2000, -1000).makeGraphic(FlxG.width * 3, FlxG.height * 3, 0xFF000000);
+    blackScreen.zIndex = 1100;
+    PlayState.instance.add(blackScreen);
+    PlayState.instance.camHUD.alpha = 0;
+
+    if (PlayState.instance.isChartingMode) blackScreen.alpha = 0;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    if (blackScreen != null) FlxTween.cancelTweensOf(blackScreen);
+    if (!PlayState.instance.isChartingMode) blackScreen.alpha = 1;
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+
+    if (event.step == 2)
+    {
+      FlxTween.tween(blackScreen, {alpha: 0}, 8);
+    }
+    if (event.step == 112)
+    {
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1);
+    }
+  }
+
+  function onPause(event:ScriptEvent)
+  {
+    super.onPause(event);
+    if (blackScreen != null) FlxTweenUtil.pauseTweensOf(blackScreen);
+  }
+
+  function onResume(event:ScriptEvent)
+  {
+    super.onResume(event);
+    if (blackScreen != null) FlxTweenUtil.resumeTweensOf(blackScreen);
+  }
+}

@@ -1,0 +1,61 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+import funkin.data.event.SongEventSchema;
+import funkin.data.event.SongEventFieldType;
+
+using StringTools;
+
+class ComedyBoppersSpeed extends SongEvent
+{
+  public function new()
+  {
+    super('ComedyBoppersSpeed', {
+      processOldEvents: true
+    });
+  }
+
+  override public function handleEvent(data:SongEventData)
+  {
+    // Does nothing if there is no PlayState camera or stage.
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    // Does nothing if we are minimal mode.
+    if (PlayState.instance.isMinimalMode) return;
+
+    if (PlayState.instance.currentStage.id != 'hotelCastle') return;
+
+    for (bopper in [
+      'morphoBop',
+      'radBop',
+      'radEyeBop',
+      'blueBop',
+      'noodleBop',
+      'cerealBop'
+    ])
+    {
+      var speed = data.getFloat('rate');
+      if (bopper.startsWith('rad')) speed *= 2;
+      PlayState.instance.currentStage.getNamedProp(bopper).danceEvery = speed;
+    }
+  }
+
+  override public function getTitle():String
+  {
+    return 'Comedy Boppers Speed';
+  }
+
+  override public function getEventSchema()
+  {
+    return new SongEventSchema([
+      {
+        name: 'rate',
+        title: 'Rate',
+        defaultValue: Constants.DEFAULT_PROP_RATE,
+        min: 0,
+        step: 0.25,
+        type: SongEventFieldType.FLOAT,
+        units: 'beats/dance'
+      }
+    ]);
+  }
+}

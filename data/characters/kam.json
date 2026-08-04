@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "name": "Kam",
+  "renderType": "multisparrow",
+  "assetPath": "characters/kam/Kam",
+  "cameraOffsets": [0, 144],
+  "healthIcon": {
+    "id": "kam"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "kamIdle",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "kamLeft",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "kamDown",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "singUP",
+      "prefix": "kamUp",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "kamRight",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "kamMissLeft",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "kamMissDown",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "kamMissUp",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "kamMissRight",
+      "offsets": [-10, -70]
+    },
+    {
+      "name": "hey",
+      "prefix": "kamHey",
+      "offsets": [-10, -70]
+    }
+  ]
+}

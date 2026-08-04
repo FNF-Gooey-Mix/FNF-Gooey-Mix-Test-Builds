@@ -1,0 +1,67 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.character.CharacterType;
+import funkin.graphics.shaders.DropShadowShader;
+import flixel.util.FlxSave;
+
+class GooeyOpponentCharacter extends MultiAnimateAtlasCharacter
+{
+  function new()
+  {
+    super('gooey-opponent');
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.eventCanceled)
+    {
+      // onNoteHit event was cancelled by the gameplay module.
+      return;
+    }
+    // Override the hit note animation.
+    if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
+    {
+      switch (event.note.kind)
+      {
+        case "hey":
+          holdTimer = 0;
+          this.playAnimation('hey', true, true);
+          return;
+        case "cheer":
+          holdTimer = 0;
+          this.playAnimation('cheer', true, true);
+          return;
+        case "alt":
+          holdTimer = 0;
+          this.playSingAnimation(event.note.noteData.getDirection(), false, 'alt');
+          return;
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+    synchronizeShader();
+  }
+
+  var rimChecked:Bool = false;
+
+  function synchronizeShader():Void
+  {
+    if (rimChecked) return;
+    rimChecked = true;
+    if (!GooeyMixOptions.gooeyShaders) return;
+    if (!(this.shader is DropShadowShader)) return;
+    if (this.shader.threshold <= 0) return;
+    this.shader.threshold = 0.2;
+    trace();
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+    rimChecked = false;
+  }
+}

@@ -1,0 +1,215 @@
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.FlxSprite;
+import funkin.util.FlxTweenUtil;
+
+class SpitbucketStage extends Stage
+{
+  function new()
+  {
+    super('spitbucket');
+  }
+
+  function buildStage()
+  {
+    super.buildStage();
+
+    var lighting1 = getNamedProp('lighting1');
+    lighting1.blend = 11;
+
+    var lighting2 = getNamedProp('lighting2');
+    lighting2.blend = 0;
+    lighting2.alpha = 0.2;
+
+    var itsHighNoon = getNamedProp('itsHighNoon');
+    itsHighNoon.blend = 21;
+    itsHighNoon.alpha = 0;
+
+    blackScreen = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+    blackScreen.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(blackScreen);
+
+    if (!PlayState.instance.isChartingMode) PlayState.instance.camHUD.alpha = 0;
+
+    if (PlayState.instance.isChartingMode) blackScreen.alpha = 0;
+  }
+
+  var strumMoved:Bool = false;
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+    if (!FlxG.onMobile)
+    {
+      if (strumMoved == false)
+      {
+        PlayState.instance.playerStrumline.x -= (PlayState.instance.playerStrumline.x - FlxG.width * 0.5) * -1 + FlxG.width * 0.47;
+        PlayState.instance.opponentStrumline.x += (PlayState.instance.opponentStrumline.x - FlxG.width * 0.5) + FlxG.width;
+        strumMoved = true;
+      }
+    }
+    PlayState.instance.comboPopUps.offsets = [90, -160];
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+    {
+      if (event.beat > 20 && event.beat < 360)
+      {
+        juanShoots = FlxG.random.bool(65);
+        marcoShoots = FlxG.random.bool(80);
+        if (juanShoots) getNamedProp('juan').animation.play('shoot');
+        if (marcoShoots) getNamedProp('marco').animation.play('shoot');
+      }
+    }
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    getNamedProp('itsHighNoon').alpha = 0;
+    getNamedProp('targetOne').animation.play('blank');
+    getNamedProp('targetTwo').animation.play('blank');
+    getNamedProp('targetThree').animation.play('blank');
+    getNamedProp('targetFour').animation.play('blank');
+    getNamedProp('targetFive').animation.play('blank');
+    getNamedProp('targetSix').animation.play('blank');
+    getNamedProp('marco').animation.play('shoot');
+    getNamedProp('juan').animation.play('shoot');
+
+    if (blackScreen != null) FlxTween.cancelTweensOf(blackScreen);
+    if (getNamedProp('rock') != null) FlxTween.cancelTweensOf(getNamedProp('rock'));
+    if (PlayState.instance.currentStage.getBoyfriend() != null) FlxTween.cancelTweensOf(PlayState.instance.currentStage.getBoyfriend());
+
+    getNamedProp('rock').alpha = 1;
+    PlayState.instance.currentStage.getBoyfriend().alpha = 1;
+
+    if (!PlayState.instance.isChartingMode)
+    {
+      blackScreen.alpha = 1;
+      PlayState.instance.camHUD.alpha = 0;
+    }
+  }
+
+  public function onStateChangeBegin(event)
+  {
+    super.onStateChangeBegin(event);
+    strumMoved = false;
+  }
+
+  function onDestroy(event)
+  {
+    super.onDestroy(event);
+    strumMoved = false;
+  }
+
+  function onPause(event:ScriptEvent)
+  {
+    super.onPause(event);
+    if (blackScreen != null) FlxTweenUtil.pauseTweensOf(blackScreen);
+    if (getNamedProp('rock') != null) FlxTweenUtil.pauseTweensOf(getNamedProp('rock'));
+    if (PlayState.instance.currentStage.getBoyfriend() != null) FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getBoyfriend());
+  }
+
+  function onResume(event:ScriptEvent)
+  {
+    super.onResume(event);
+    if (blackScreen != null) FlxTweenUtil.resumeTweensOf(blackScreen);
+    if (getNamedProp('rock') != null) FlxTweenUtil.resumeTweensOf(getNamedProp('rock'));
+    if (PlayState.instance.currentStage.getBoyfriend() != null) FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getBoyfriend());
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+    if (event.step == 2)
+    {
+      FlxTween.tween(blackScreen, {alpha: 0}, 6);
+    }
+    if (event.step == 120)
+    {
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1);
+    }
+    if (event.step == 416 || event.step == 544 || event.step == 928)
+    {
+      PlayState.instance.camGame.flash(0x40FFFFFF, 1);
+    }
+    if (event.step == 1424)
+    {
+      FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {alpha: 0}, 1);
+      FlxTween.tween(getNamedProp('rock'), {alpha: 0}, 1);
+    }
+    if (event.step == 1440)
+    {
+      PlayState.instance.camGame.flash(0x60FFFFFF, 1);
+      getNamedProp('itsHighNoon').alpha = 0.8;
+    }
+    if (event.step == 1444)
+    {
+      getNamedProp('targetOne').animation.play('xOne');
+    }
+    if (event.step == 1446)
+    {
+      getNamedProp('targetTwo').animation.play('xTwo');
+    }
+    if (event.step == 1450)
+    {
+      getNamedProp('targetThree').animation.play('xThree');
+    }
+    if (event.step == 1452)
+    {
+      getNamedProp('targetFour').animation.play('xFour');
+    }
+    if (event.step == 1456)
+    {
+      getNamedProp('targetFive').animation.play('xFive');
+    }
+    if (event.step == 1458)
+    {
+      getNamedProp('targetSix').animation.play('xSix');
+    }
+    if (event.step == 1464)
+    {
+      PlayState.instance.camGame.flash(0x40FFFFFF, 1);
+      getNamedProp('itsHighNoon').alpha = 0;
+      getNamedProp('targetOne').animation.play('blank');
+      getNamedProp('targetTwo').animation.play('blank');
+      getNamedProp('targetThree').animation.play('blank');
+      getNamedProp('targetFour').animation.play('blank');
+      getNamedProp('targetFive').animation.play('blank');
+      getNamedProp('targetSix').animation.play('blank');
+    }
+    if (event.step == 1465)
+    {
+      getNamedProp('juan').animation.play('dodge1');
+    }
+    if (event.step == 1466)
+    {
+      getNamedProp('marco').animation.play('dodge1');
+    }
+    if (event.step == 1468)
+    {
+      getNamedProp('juan').animation.play('dodge2');
+    }
+    if (event.step == 1469)
+    {
+      getNamedProp('marco').animation.play('dodge2');
+    }
+    if (event.step == 1471)
+    {
+      getNamedProp('juan').animation.play('dodge3');
+    }
+    if (event.step == 1472)
+    {
+      getNamedProp('marco').animation.play('dodge3');
+    }
+    if (event.step == 1536)
+    {
+      blackScreen.alpha = 1;
+    }
+  }
+}

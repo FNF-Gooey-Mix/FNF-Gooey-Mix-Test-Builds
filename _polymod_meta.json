@@ -1,0 +1,155 @@
+{
+  "title": "FNF: GOOEY MIX",
+  "description": "Goober Alert!",
+  "id": "GooeyMix",
+  "contributors": [
+    {
+      "name": "LeGooey",
+      "role": "Director, Artist, Composer, VA, Charter, Coder",
+      "url": "https://www.youtube.com/@LeGooey"
+    },
+    {
+      "name": "Mythical Sam",
+      "role": "Artist",
+      "url": "https://www.youtube.com/@Mythicalsam"
+    },
+    {
+      "name": "Bluemelt",
+      "role": "Artist",
+      "url": "https://x.com/Blues_Melt"
+    },
+    {
+      "name": "Official_NO",
+      "role": "Artist",
+      "url": "https://x.com/official_no6"
+    },
+    {
+      "name": "SakiProd",
+      "role": "Artist, Composer",
+      "url": "https://x.com/SakiProd"
+    },
+    {
+      "name": "Strife4Life",
+      "role": "Artist, Composer, Coder",
+      "url": "https://x.com/Strife_4_life"
+    },
+    {
+      "name": "swagsalt",
+      "role": "Artist, Composer, Charter",
+      "url": "https://www.youtube.com/@swagsalt"
+    },
+    {
+      "name": "ADA_Funni",
+      "role": "Composer, Coder",
+      "url": "https://www.youtube.com/@ada_funni"
+    },
+    {
+      "name": "ChessBrabo",
+      "role": "Composer",
+      "url": "https://x.com/ChessBrabo"
+    },
+    {
+      "name": "DigitLuck",
+      "role": "Composer",
+      "url": "https://x.com/digit_luck"
+    },
+    {
+      "name": "DoubleM",
+      "role": "Composer",
+      "url": "https://x.com/The_DoubleM_"
+    },
+    {
+      "name": "FuryGRTX",
+      "role": "Composer",
+      "url": "https://www.youtube.com/@FuryGRTX"
+    },
+    {
+      "name": "HEV",
+      "role": "Composer",
+      "url": "https://www.youtube.com/@Art4Henry"
+    },
+    {
+      "name": "krimzonred",
+      "role": "Composer",
+      "url": "https://x.com/devotedgutz"
+    },
+    {
+      "name": "RixFX",
+      "role": "Composer",
+      "url": "https://www.youtube.com/@rixfx_"
+    },
+    {
+      "name": "ContentLeaf",
+      "role": "VA",
+      "url": "https://x.com/leaf_vo"
+    },
+    {
+      "name": "MindOfThomas",
+      "role": "VA",
+      "url": "https://x.com/MindOfTom"
+    },
+    {
+      "name": "RubyyyButCool",
+      "role": "VA",
+      "url": "https://twitter.com/Rubyyy_but_cool"
+    },
+    {
+      "name": "7oltan",
+      "role": "Coder",
+      "url": "https://www.youtube.com/@7oltan"
+    },
+    {
+      "name": "Comedy Lost",
+      "role": "Coder",
+      "url": "https://x.com/C0MEDYLOST"
+    },
+    {
+      "name": "Denoohay",
+      "role": "Coder",
+      "url": "https://x.com/Denoohay"
+    },
+    {
+      "name": "MightyTheArmiddilo",
+      "role": "Coder",
+      "url": "https://www.youtube.com/@mightythearmiddilo"
+    },
+    {
+      "name": "requazar",
+      "role": "Coder",
+      "url": "https://x.com/requazar_"
+    },
+    {
+      "name": "Srt",
+      "role": "Coder",
+      "url": "https://x.com/SrtPro278"
+    },
+    {
+      "name": "TechnikTil",
+      "role": "Coder",
+      "url": "https://x.com/TechnikTil"
+    },
+    {
+      "name": "Rbz_Fzo",
+      "role": "Charter",
+      "url": "https://www.youtube.com/@FZO_RBZ"
+    },
+    {
+      "name": "Chipallino",
+      "role": "Guest Album Artist",
+      "url": "https://www.youtube.com/@chipallinooo"
+    },
+    {
+      "name": "Coffee Kat",
+      "role": "Guest Album Artist",
+      "url": "https://www.youtube.com/@coffeekat-"
+    },
+    {
+      "name": "z_zmag8",
+      "role": "Guest Album Artist",
+      "url": "https://x.com/z_zmag8"
+    }
+  ],
+  "api_version": "0.8.0",
+  "mod_version": "5.1.1",
+  "license": "Apache-2.0"
+}

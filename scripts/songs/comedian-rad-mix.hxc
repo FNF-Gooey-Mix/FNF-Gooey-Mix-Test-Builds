@@ -1,0 +1,71 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+class ComedianRadMixSong extends Song
+{
+  function new()
+  {
+    super('comedian-rad-mix');
+  }
+
+  // public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  // {
+  //  if (currentDifficulty == 'extra')
+  //  {
+  //    return !Save.instance.hasBeatenSong(this.id, ['extra']);
+  //  }
+  //  return false;
+  // }
+  // saving for future use
+  var blackScreen:FlxSprite;
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+
+    blackScreen = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFFFF4427);
+    // blackScreen.zIndex = 1100;
+    blackScreen.cameras = [PlayState.instance.camHUD];
+    PlayState.instance.add(blackScreen);
+    blackScreen.alpha = 0;
+    blackScreen.blend = 14;
+    // blackScreen.visible = false;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    blackScreen.alpha = 0;
+  }
+
+  override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    PlayState.instance.comboPopUps.offsets = [-450, 350];
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+
+    if (event.step == 320)
+    {
+      FlxTween.tween(blackScreen, {alpha: 0.4}, 4.5);
+    }
+    if (event.step == 352)
+    {
+      FlxTween.tween(blackScreen, {alpha: 1}, 2.2, {ease: FlxEase.smoothStepIn});
+    }
+    if (event.step == 368)
+    {
+      FlxTween.tween(blackScreen, {alpha: 0}, 1, {ease: FlxEase.expoOut});
+    }
+  }
+}

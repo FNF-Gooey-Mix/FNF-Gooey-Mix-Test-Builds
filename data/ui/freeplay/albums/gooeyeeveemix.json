@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey (Eevee Mix)",
+  "artists": ["aUseriGuess"],
+  "albumArtAsset": "freeplay/albumRoll/gooeyeeveemix",
+  "albumTitleAsset": "freeplay/albumRoll/gooeymixExtra-text",
+  "albumTitleOffsets": [-10, 0],
+  "albumOSTName": "GOOEY/VEE OST"
+}

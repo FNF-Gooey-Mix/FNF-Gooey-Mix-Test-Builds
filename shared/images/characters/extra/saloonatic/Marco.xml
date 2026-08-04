@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Marco.png">
+<SubTexture name="marcoShoot0000" x="0" y="0" width="199" height="434" frameX="-110" frameY="-18" frameWidth="450" frameHeight="450" />
+<SubTexture name="marcoShoot0001" x="199" y="0" width="208" height="425" frameX="-106" frameY="-26" frameWidth="450" frameHeight="450" />
+<SubTexture name="marcoDodge10000" x="407" y="0" width="262" height="423" frameX="-91" frameY="-28" frameWidth="450" frameHeight="450" />
+<SubTexture name="marcoDodge10001" x="0" y="434" width="222" height="422" frameX="-93" frameY="-29" frameWidth="450" frameHeight="450" />
+<SubTexture name="marcoDodge20000" x="222" y="434" width="228" height="416" frameX="-147" frameY="-37" frameWidth="450" frameHeight="450" />
+<SubTexture name="marcoDodge20001" x="450" y="434" width="231" height="412" frameX="-140" frameY="-41" frameWidth="450" frameHeight="450" />
+<SubTexture name="marcoDodge30000" x="0" y="856" width="214" height="423" frameX="-84" frameY="-29" frameWidth="450" frameHeight="450" />
+<SubTexture name="marcoDodge30001" x="214" y="856" width="206" height="418" frameX="-92" frameY="-34" frameWidth="450" frameHeight="450" />
+</TextureAtlas>

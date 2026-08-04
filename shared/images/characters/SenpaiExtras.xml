@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="SenpaiExtras.png">
+<SubTexture name="youMadBro0000" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0001" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0002" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0003" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0004" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0005" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0006" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0007" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0008" x="71" y="0" width="71" height="118" frameX="-69" frameY="-45" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0009" x="71" y="0" width="71" height="118" frameX="-69" frameY="-45" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0010" x="142" y="0" width="73" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0011" x="142" y="0" width="73" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0012" x="215" y="0" width="69" height="121" frameX="-70" frameY="-42" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0013" x="215" y="0" width="69" height="121" frameX="-70" frameY="-42" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0014" x="0" y="121" width="69" height="120" frameX="-70" frameY="-43" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0015" x="0" y="121" width="69" height="120" frameX="-70" frameY="-43" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0016" x="69" y="121" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0017" x="69" y="121" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0018" x="69" y="121" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="youMadBro0019" x="69" y="121" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0000" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0001" x="0" y="0" width="71" height="119" frameX="-69" frameY="-44" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0002" x="140" y="121" width="71" height="118" frameX="-68" frameY="-45" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0003" x="140" y="121" width="71" height="118" frameX="-68" frameY="-45" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0004" x="211" y="121" width="76" height="114" frameX="-65" frameY="-49" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0005" x="211" y="121" width="76" height="114" frameX="-65" frameY="-49" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0006" x="0" y="241" width="75" height="115" frameX="-64" frameY="-48" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0007" x="0" y="241" width="75" height="115" frameX="-64" frameY="-48" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0008" x="75" y="241" width="75" height="116" frameX="-63" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0009" x="75" y="241" width="75" height="116" frameX="-63" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0010" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0011" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0012" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0013" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0014" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0015" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0016" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0017" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0018" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+<SubTexture name="wink0019" x="150" y="241" width="70" height="116" frameX="-68" frameY="-47" frameWidth="200" frameHeight="200" />
+</TextureAtlas>

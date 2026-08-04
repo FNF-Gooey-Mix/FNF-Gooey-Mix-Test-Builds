@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "name": "Gooey (Dark)",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/gooey/GooeyDark",
+  "flipX": true,
+  "atlasSettings": { "useRenderTexture": true },
+  "cameraOffsets": [-1, -32],
+  "death": {
+    "cameraOffsets": [-40, 0]
+  },
+  "healthIcon": {
+    "id": "gooey"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "GooeyIdle",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "GooeyLeft",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "GooeyDown",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "singUP",
+      "prefix": "GooeyUp",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "GooeyRight",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "hey",
+      "prefix": "GooeyHey",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "cheer",
+      "prefix": "GooeyCheer",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "GooeyMissLeft",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "GooeyMissDown",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "GooeyMissUp",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "GooeyMissRight",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "scared",
+      "prefix": "GooeyScared",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "burp",
+      "prefix": "GooeyBurp",
+      "offsets": [-3.45, 1]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "GooeyDies",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [19, -21]
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "GooeyDeadIdle",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [19, -21],
+      "looped": true
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "GooeyConfirm",
+      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "offsets": [19, -21]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "name": "Flora (Tankmen)",
+  "assetPath": "shared:characters/flora/Flora",
+  "startingAnimation": "danceRight",
+  "renderType": "multianimateatlas",
+  "offsets": [21, 7],
+  "cameraOffsets": [-21, -7],
+  "healthIcon": {
+    "id": "flora"
+  },
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "FloraIdleLeft",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "FloraIdleRight",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "combo50",
+      "prefix": "Flora50Combo",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "combo200",
+      "prefix": "Flora200Combo",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "danceLeft-alt",
+      "prefix": "FloraAltIdleLeft",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "danceRight-alt",
+      "prefix": "FloraAltIdleRight",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "danceLeft-trans",
+      "prefix": "FloraAltIdleLeft",
+      "offsets": [53, 205],
+      "frameIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+      "name": "danceRight-trans",
+      "prefix": "FloraAltIdleRight",
+      "offsets": [53, 205],
+      "frameIndices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+      "name": "drop70",
+      "prefix": "FloraBreakCombo",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "scared",
+      "prefix": "FloraScared",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "cheer",
+      "prefix": "Flora50Combo",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "FloraSingLeft",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "FloraSingDown",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "singUP",
+      "prefix": "FloraSingUp",
+      "offsets": [53, 205]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "FloraSingRight",
+      "offsets": [53, 205]
+    }
+  ]
+}

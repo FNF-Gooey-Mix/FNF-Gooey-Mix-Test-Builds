@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "name": "Morpho",
+  "renderType": "multisparrow",
+  "assetPath": "characters/morpho/Morpho",
+  "cameraOffsets": [0, 144],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "morphoIdle",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "morphoLeft",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "morphoDown",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singUP",
+      "prefix": "morphoUp",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "morphoRight",
+      "offsets": [-10, -40]
+    },
+    {
+      "name": "hey",
+      "prefix": "theIconicMorphoPose",
+      "offsets": [-10, -40]
+    }
+  ]
+}

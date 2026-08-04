@@ -1,0 +1,31 @@
+{
+  "version": "2.2.4",
+  "songName": "Comedian (Rad Mix)",
+  "artist": "LeGooey",
+  "charter": "LeGooey",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 105, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["extra"],
+    "characters": {
+      "player": "morpho-player",
+      "opponent": "rad",
+      "instrumental": "",
+      "playerVocals": ["morpho"],
+      "opponentVocals": ["rad"],
+      "altInstrumentals": []
+    },
+    "stage": "hotelCastle",
+    "noteStyle": "funkin",
+    "ratings": { "extra": 8 },
+    "album": "comedianRad",
+    "stickerPack": "bonus-comedianRad",
+    "previewStart": 0.535146147140511,
+    "previewEnd": 0.741166095647414
+  },
+  "generatedBy": "LeGooey (by hand)"
+}

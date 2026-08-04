@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "name": "Radiation",
+  "renderType": "multisparrow",
+  "assetPath": "characters/rad/Radiation",
+  "cameraOffsets": [0, 244],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "radIdle",
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "idle-hold",
+      "prefix": "radIdle",
+      "looped": true,
+      "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "radLeft",
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "radLeft",
+      "looped": true,
+      "frameIndices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "radDown",
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "radDown",
+      "looped": true,
+      "frameIndices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "singUP",
+      "prefix": "radUp",
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "radUp",
+      "looped": true,
+      "frameIndices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "radRight",
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "radRight",
+      "looped": true,
+      "frameIndices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "offsets": [-10, -140]
+    },
+    {
+      "name": "radGooglyEyes",
+      "prefix": "radGooglyEyes",
+      "assetPath": "characters/rad/radGooglyEyes",
+      "offsets": [-10, -140]
+    }
+  ]
+}

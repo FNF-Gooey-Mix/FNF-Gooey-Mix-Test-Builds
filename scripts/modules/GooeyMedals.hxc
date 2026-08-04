@@ -1,0 +1,106 @@
+import funkin.modding.module.Module;
+import flixel.util.FlxTimer;
+import funkin.save.Save;
+import flixel.graphics.FlxGraphic;
+import openfl.display.BitmapData;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import funkin.save.Save;
+import funkin.data.story.level.LevelRegistry;
+#if FEATURE_NEWGROUNDS
+import funkin.util.plugins.NewgroundsMedalPlugin as NGMedal;
+#end
+
+class GooeyMedals extends Module
+{
+  public function new()
+  {
+    super('GooeyMedals');
+    #if !FEATURE_NEWGROUNDS
+    active = false;
+    #end
+  }
+
+  function onSongEnd(event:ScriptEvent)
+  {
+    super.onSongEnd(event);
+    if (!PlayState.instance.isChartingMode)
+    {
+      var script = event;
+      if (script.eventCanceled) return;
+      if (PlayState.instance.isMinimalMode) return;
+
+      var playlist = LevelRegistry.instance.fetchEntry(PlayStatePlaylist.campaignId)?.getSongs();
+      if (PlayStatePlaylist.isStoryMode
+        && !hasBeatenLevel('week60037')
+        && PlayStatePlaylist.campaignId == 'week60037'
+        && playlist[playlist.length - 1] == PlayState.instance.currentSong.id)
+      {
+        new FlxTimer().start(0.6, _ ->
+        {
+          if (script.eventCanceled) return;
+          giveMedal(10, 'A Failed Experiment', Paths.image("gooeyMix/medals/gooeyWeek"));
+        });
+      }
+      else if (PlayState.instance.currentSong.id == 'stress'
+        && PlayState.instance.currentVariation == 'gooey'
+        && !Save.instance.hasBeatenSong('stress', null, 'gooey'))
+      {
+        new FlxTimer().start(0.6, _ ->
+        {
+          giveMedal(10, 'Cock Joke', Paths.image('gooeyMix/medals/stressGooey'));
+        });
+      }
+      else if (PlayState.instance.currentSong.id == 'saloonatic' && !Save.instance.hasBeatenSong('saloonatic', ['extra']))
+      {
+        new FlxTimer().start(0.6, _ ->
+        {
+          giveMedal(10, 'Fistfull of Stupid', Paths.image('gooeyMix/medals/saloonatic'));
+        });
+      }
+      else if (PlayState.instance.currentSong.id == 'starcraft'
+        && PlayState.instance.currentVariation == 'gooey'
+        && !Save.instance.hasBeatenSong('starcraft', null, 'gooey'))
+      {
+        new FlxTimer().start(0.6, _ ->
+        {
+          giveMedal(10, 'Getting Gooey with Gooey', Paths.image('gooeyMix/medals/starcraftGooey'));
+        });
+      }
+    }
+  }
+
+  public function hasBeatenLevel(levelId:String, ?difficultyList:Array<String>)
+  {
+    if (difficultyList == null)
+    {
+      difficultyList = ['easy', 'normal', 'hard'];
+    }
+    for (difficulty in difficultyList)
+    {
+      var score = Save.instance.getLevelScore(levelId, difficulty);
+      if (score != null)
+      {
+        if (score.score > 0) return true;
+        else
+          continue;
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Plays the Newgrounds medal popup
+   * @param points The amount of points to give (Only visual)
+   * @param title The name of the achievement
+   * @param graphic The path to the medal graphic
+   */
+  public static function giveMedal(points:Int, title:String, graphic:String)
+  {
+    var medalGraphic:FlxGraphic;
+    var image = Assets.getBitmapData(graphic);
+    medalGraphic = FlxGraphic.fromBitmapData(image);
+    medalGraphic.persist = true;
+    NGMedal.play(points, title, medalGraphic);
+  }
+}

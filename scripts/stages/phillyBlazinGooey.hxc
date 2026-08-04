@@ -1,0 +1,356 @@
+import funkin.graphics.shaders.GaussianBlurShader;
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.shaders.RuntimeRainShader;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import openfl.filters.ShaderFilter;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.util.FlxTweenUtil;
+import funkin.play.stage.StageProp;
+import flixel.addons.display.FlxTiledSprite;
+import funkin.util.MathUtil;
+import funkin.util.HapticUtil;
+import funkin.graphics.shaders.AdjustColorShader;
+import flixel.addons.display.FlxBackdrop;
+
+/**
+ * This stage includes a partial version of the Philly Streets stage with shaders applied.
+ */
+class PhillyBlazinGooeyStage extends Stage
+{
+  function new()
+  {
+    super('phillyBlazinGooey');
+  }
+
+  var rainShader:RuntimeRainShader = new RuntimeRainShader();
+  var scrollingSky:FlxTiledSprite;
+
+  // var rainShaderFilter:ShaderFilter;
+
+  override function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+    cameraInitialized = false;
+    cameraDarkened = false;
+    lightningActive = true;
+
+    rainShader.scale = FlxG.height / 200; // adjust this value so that the rain looks nice
+    rainShader.intensity = 0.5;
+
+    rainShaderFilter = new ShaderFilter(rainShader);
+    FlxG.camera.filters = [rainShaderFilter];
+  }
+
+  override function onGameOver(event:ScriptEvent):Void
+  {
+    super.onGameOver(event);
+    // Make it so the rain shader doesn't show over the game over screen
+    new FlxTimer().start(0.125, _ ->
+    {
+      getBoyfriend().shader = null;
+      FlxG.camera.filters = [];
+    });
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+    // Make it so the rain shader doesn't show over the game over screen
+    FlxG.camera.filters = [rainShaderFilter];
+    lightningActive = true;
+  }
+
+  var mist0:FlxBackdrop;
+  var mist1:FlxBackdrop;
+  var mist2:FlxBackdrop;
+  var mist3:FlxBackdrop;
+  var colorShader:AdjustColorShader;
+
+  override function buildStage()
+  {
+    super.buildStage();
+
+    var skyAdditive = getNamedProp('skyAdditive');
+    skyAdditive.blend = 0; // ADD
+    skyAdditive.visible = false;
+
+    var lightning = getNamedProp('lightning');
+    lightning.visible = false;
+
+    var foregroundMultiply = getNamedProp('foregroundMultiply');
+    foregroundMultiply.blend = 9; // MULTIPLY
+    foregroundMultiply.visible = false;
+
+    var additionalLighten = getNamedProp('additionalLighten');
+    additionalLighten.blend = 0; // ADD
+    additionalLighten.visible = false;
+
+    scrollingSky = new FlxTiledSprite(Paths.image('gooey/skyBlurErect'), 4000, 495, true, false);
+    scrollingSky.setPosition(-700, -120);
+    scrollingSky.scrollFactor.set(0, 0);
+    scrollingSky.zIndex = 10;
+
+    colorShader = new AdjustColorShader();
+    colorShader.hue = -5;
+    colorShader.saturation = -40;
+    colorShader.contrast = -25;
+    colorShader.brightness = -20;
+
+    mist0 = new FlxBackdrop(Paths.image('phillyStreets/erect/mistMid'), 0x01);
+    mist0.setPosition(-650, -100);
+    mist0.scrollFactor.set(1.2, 1.2);
+    mist0.zIndex = 4000;
+    mist0.blend = 0;
+    mist0.color = 0xFF5c5c5c;
+    mist0.alpha = 0.6;
+    mist0.velocity.x = 172;
+
+    PlayState.instance.currentStage.add(mist0);
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+    mist1 = new FlxBackdrop(Paths.image('phillyStreets/erect/mistMid'), 0x01);
+    mist1.setPosition(-650, -100);
+    mist1.scrollFactor.set(1.1, 1.1);
+    mist1.zIndex = 4000;
+    mist1.blend = 0;
+    mist1.color = 0xFF5c5c5c;
+    mist1.alpha = 0.6;
+    mist1.velocity.x = 150;
+
+    PlayState.instance.currentStage.add(mist1);
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+    mist2 = new FlxBackdrop(Paths.image('phillyStreets/erect/mistBack'), 0x01);
+    mist2.setPosition(-650, -100);
+    mist2.scrollFactor.set(1.2, 1.2);
+    mist2.zIndex = 4001;
+    mist2.blend = 0;
+    mist2.color = 0xFF5c5c5c;
+    mist2.alpha = 0.8;
+    mist2.velocity.x = -80;
+
+    PlayState.instance.currentStage.add(mist2);
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+    mist3 = new FlxBackdrop(Paths.image('phillyStreets/erect/mistMid'), 0x01);
+    mist3.setPosition(-650, -100);
+    mist3.scrollFactor.set(0.95, 0.95);
+    mist3.zIndex = 1501;
+    mist3.blend = 0;
+    mist3.color = 0xFF5c5c5c;
+    mist3.alpha = 0.5;
+    mist3.velocity.x = -50;
+    mist3.scale.set(0.8, 0.8);
+
+    PlayState.instance.currentStage.add(mist3);
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+    mist4 = new FlxBackdrop(Paths.image('phillyStreets/erect/mistBack'), 0x01);
+    mist4.setPosition(-650, -100);
+    mist4.scrollFactor.set(0.8, 0.8);
+    mist4.zIndex = 1500;
+    mist4.blend = 0;
+    mist4.color = 0xFF5c5c5c;
+    mist4.alpha = 1;
+    mist4.velocity.x = 40;
+    mist4.scale.set(0.7, 0.7);
+
+    PlayState.instance.currentStage.add(mist4);
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+    add(scrollingSky);
+    refresh(); // Apply z-index.
+
+    // scrollingSky.velocity.x = -20;
+  }
+
+  var cameraInitialized:Bool = false;
+  var cameraDarkened:Bool = false;
+  var lightningTimer:Float = 3.0;
+  var lightningActive:Bool = true;
+  var rainTimeScale:Float = 1.0;
+  var _timer:Float = 0;
+
+  override function onUpdate(event:ScriptEvent)
+  {
+    super.onUpdate(event);
+
+    _timer += event.elapsed;
+    mist0.y = 660 + (Math.sin(_timer * 0.35) * 70);
+    mist1.y = 500 + (Math.sin(_timer * 0.3) * 80);
+    mist2.y = 540 + (Math.sin(_timer * 0.4) * 60);
+    mist3.y = 230 + (Math.sin(_timer * 0.3) * 70);
+    mist4.y = 170 + (Math.sin(_timer * 0.35) * 50);
+    // mist3.y = -20 + (Math.sin(_timer*0.5)*200);
+    // mist4.y = -180 + (Math.sin(_timer*0.4)*300);
+    // mist5.y = -450 + (Math.sin(_timer*0.2)*1xxx50);
+    // trace(mist1.y);
+
+    rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
+    rainShader.update(event.elapsed * rainTimeScale);
+    rainTimeScale = MathUtil.smoothLerpPrecision(rainTimeScale, 0.02, event.elapsed, 1.535);
+
+    if (scrollingSky != null) scrollingSky.scrollX -= FlxG.elapsed * 35;
+
+    // Manually focus the camera before the song starts.
+    if (!cameraInitialized && getGirlfriend().cameraFocusPoint != null)
+    {
+      cameraInitialized = true;
+      initializeCamera();
+
+      getBoyfriend().color = 0xFFDEDEDE;
+      getDad().color = 0xFFDEDEDE;
+      getGirlfriend().color = 0xFF888888;
+      getGirlfriend().floraSpeaker.color = 0xFF888888;
+      getGirlfriend().floraSpeakerScreen.color = 0xFF888888;
+    }
+
+    if (lightningActive)
+    {
+      lightningTimer -= FlxG.elapsed;
+    }
+    else
+    {
+      lightningTimer = 1;
+    }
+
+    if (lightningTimer <= 0)
+    {
+      applyLightning();
+      lightningTimer = FlxG.random.float(7, 15);
+    }
+  }
+
+  public function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+    rainTimeScale += 0.7;
+  }
+
+  function applyLightning():Void
+  {
+    var lightning = getNamedProp('lightning');
+    var skyAdditive = getNamedProp('skyAdditive');
+    var foregroundMultiply = getNamedProp('foregroundMultiply');
+    var additionalLighten = getNamedProp('additionalLighten');
+
+    var LIGHTNING_FULL_DURATION = 1.5;
+    var LIGHTNING_FADE_DURATION = 0.3;
+
+    skyAdditive.visible = true;
+    skyAdditive.alpha = 0.7;
+    FlxTween.tween(skyAdditive, {alpha: 0.0}, LIGHTNING_FULL_DURATION, {
+      onComplete: cleanupLightning, // Make sure to call this only once!
+    });
+
+    foregroundMultiply.visible = true;
+    foregroundMultiply.alpha = 0.64;
+    FlxTween.tween(foregroundMultiply, {alpha: 0.0}, LIGHTNING_FULL_DURATION);
+
+    additionalLighten.visible = true;
+    additionalLighten.alpha = 0.3;
+    FlxTween.tween(additionalLighten, {alpha: 0.0}, LIGHTNING_FADE_DURATION);
+
+    lightning.visible = true;
+    lightning.animation.play('strike');
+
+    if (FlxG.random.bool(65))
+    {
+      lightning.x = FlxG.random.int(-250, 280);
+    }
+    else
+    {
+      lightning.x = FlxG.random.int(780, 900);
+    }
+
+    // Darken characters
+    var boyfriend = getBoyfriend();
+    FlxTween.color(boyfriend, LIGHTNING_FADE_DURATION, 0xFF606060, 0xFFDEDEDE);
+    var dad = getDad();
+    FlxTween.color(dad, LIGHTNING_FADE_DURATION, 0xFF606060, 0xFFDEDEDE);
+    var girlfriend = getGirlfriend();
+    FlxTween.color(girlfriend, LIGHTNING_FADE_DURATION, 0xFF606060, 0xFF888888);
+
+    // Sound
+    FunkinSound.playOnce(Paths.soundRandom('Lightning', 1, 3), 1.0);
+
+    triggerLightningHaptics();
+  }
+
+  var doPostShockHaptics:Bool = false;
+
+  function triggerLightningHaptics()
+  {
+    HapticUtil.vibrate(0, 0.05, 1);
+
+    doPostShockHaptics = true;
+  }
+
+  var postShockCounter:Int = 0;
+  var counterTargetNum:Int = 10;
+
+  function onStepHit(event:SongTimeScriptEvent)
+  {
+    super.onStepHit(event);
+
+    if (doPostShockHaptics)
+    {
+      postShockCounter++;
+
+      var postShockAmplitude:Float = 0.05 * (counterTargetNum - postShockCounter) * 2.5;
+      HapticUtil.vibrate(0, 0.01, postShockAmplitude, 0);
+
+      if (postShockCounter == counterTargetNum)
+      {
+        doPostShockHaptics = false;
+        postShockCounter = 0;
+      }
+    }
+  }
+
+  public override function onSongEnd(event:CountdownScriptEvent):Void
+  {
+    super.onSongEnd(event);
+    // Disable lightning during ending cutscene.
+    lightningActive = false;
+  }
+
+  function cleanupLightning(tween:FlxTween):Void
+  {
+    var skyAdditive = getNamedProp('skyAdditive');
+    var foregroundMultiply = getNamedProp('foregroundMultiply');
+    var additionalLighten = getNamedProp('additionalLighten');
+    var lightning = getNamedProp('lightning');
+    skyAdditive.visible = false;
+    foregroundMultiply.visible = false;
+    additionalLighten.visible = false;
+    lightning.visible = false;
+  }
+
+  function initializeCamera():Void
+  {
+    var xTarget:Float = getGirlfriend().cameraFocusPoint.x;
+    var yTarget:Float = getGirlfriend().cameraFocusPoint.y;
+    // yTarget += 200;
+    xTarget += 50;
+    yTarget -= 150;
+    PlayState.instance.cameraFollowPoint.setPosition(xTarget, yTarget);
+    PlayState.instance.resetCamera();
+
+    PlayState.instance.comboPopUps.offsets = [480, -50];
+    PlayState.instance.camGame.fade(0xFF000000, 1.5, true, null, true);
+  }
+
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    // Apply the shader automatically to each character as it gets added.
+    super.addCharacter(character, charType);
+    trace('Applied stage shader to ' + character.characterName);
+    character.shader = colorShader;
+  }
+}
