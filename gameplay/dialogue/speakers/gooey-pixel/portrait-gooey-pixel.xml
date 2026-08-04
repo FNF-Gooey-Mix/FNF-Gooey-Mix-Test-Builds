@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="portrait-gooey-pixel.png">
+<SubTexture name="gooeyTalk0000" x="0" y="0" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="tiredTalk0000" x="60" y="0" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="mehTalk0000" x="120" y="0" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sadTalk'0000" x="0" y="46" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="smugTalk0000" x="60" y="46" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareEnter0000" x="120" y="46" width="60" height="46" frameX="-9" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareEnter0001" x="120" y="46" width="60" height="46" frameX="-9" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareEnter0002" x="0" y="92" width="60" height="46" frameX="-6" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareEnter0003" x="0" y="92" width="60" height="46" frameX="-6" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareEnter0004" x="60" y="92" width="60" height="46" frameX="-3" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareEnter0005" x="60" y="92" width="60" height="46" frameX="-3" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareEnter0006" x="120" y="92" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareEnter0007" x="120" y="92" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepEnter0000" x="0" y="138" width="56" height="46" frameX="-10" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepEnter0001" x="0" y="138" width="56" height="46" frameX="-10" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepEnter0002" x="56" y="138" width="56" height="46" frameX="-7" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepEnter0003" x="56" y="138" width="56" height="46" frameX="-7" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepEnter0004" x="112" y="138" width="56" height="46" frameX="-4" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepEnter0005" x="112" y="138" width="56" height="46" frameX="-4" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepEnter0006" x="0" y="184" width="56" height="46" frameX="-1" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepEnter0007" x="0" y="184" width="56" height="46" frameX="-1" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneEnter0000" x="56" y="184" width="60" height="46" frameX="-9" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneEnter0001" x="56" y="184" width="60" height="46" frameX="-9" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneEnter0002" x="116" y="184" width="60" height="46" frameX="-6" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneEnter0003" x="116" y="184" width="60" height="46" frameX="-6" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneEnter0004" x="0" y="230" width="60" height="46" frameX="-3" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneEnter0005" x="0" y="230" width="60" height="46" frameX="-3" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneEnter0006" x="60" y="230" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneEnter0007" x="60" y="230" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="stareTalk0000" x="120" y="92" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="sleepTalk0000" x="0" y="184" width="56" height="46" frameX="-1" frameY="-6" frameWidth="69" frameHeight="50" />
+<SubTexture name="doneTalk0000" x="60" y="230" width="60" height="46" frameX="0" frameY="-6" frameWidth="69" frameHeight="50" />
+</TextureAtlas>

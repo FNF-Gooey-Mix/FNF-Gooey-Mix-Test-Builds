@@ -48,8 +48,8 @@
       "text": ["..."]
     },
     {
-      "speaker": "gooey-sleeping-pixel",
-      "speakerAnimation": "talkEnter",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "sleepEnter",
       "box": "roses",
       "boxAnimation": "enter",
 
@@ -64,8 +64,8 @@
       "text": ["...are you seriously sleeping right now..."]
     },
     {
-      "speaker": "gooey-tired-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "tiredTalk",
       "box": "roses",
       "boxAnimation": "enter",
 
@@ -100,8 +100,8 @@
       "text": ["re...gret..."]
     },
     {
-      "speaker": "gooey-sleeping-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "sleepTalk",
       "box": "roses",
       "boxAnimation": "enter",
 
@@ -124,8 +124,8 @@
       "text": ["UP!"]
     },
     {
-      "speaker": "gooey-tired-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "tiredTalk",
       "box": "roses",
       "boxAnimation": "enter",
 
@@ -141,7 +141,7 @@
     },
     {
       "speaker": "gooey-pixel",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "gooeyTalk",
       "box": "roses",
       "boxAnimation": "enter",
 
@@ -149,7 +149,7 @@
     },
     {
       "speaker": "flora-pixel",
-      "speakerAnimation": "talkEnter",
+      "speakerAnimation": "floraEnter",
       "box": "roses",
       "boxAnimation": "speaking",
 

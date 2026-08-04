@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="portrait-flora-pixel.png">
+<SubTexture name="floraEnter0000" x="53" y="58" width="53" height="58" frameX="-12" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="floraEnter0001" x="53" y="58" width="53" height="58" frameX="-12" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="floraEnter0002" x="106" y="58" width="53" height="58" frameX="-9" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="floraEnter0003" x="106" y="58" width="53" height="58" frameX="-9" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="floraEnter0004" x="0" y="116" width="53" height="58" frameX="-6" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="floraEnter0005" x="0" y="116" width="53" height="58" frameX="-6" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="floraEnter0006" x="53" y="116" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="floraEnter0007" x="53" y="116" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="floraTalk0000" x="53" y="116" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeEnter0000" x="0" y="0" width="53" height="58" frameX="-12" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeEnter0001" x="0" y="0" width="53" height="58" frameX="-12" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeEnter0002" x="53" y="0" width="53" height="58" frameX="-9" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeEnter0003" x="53" y="0" width="53" height="58" frameX="-9" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeEnter0004" x="106" y="0" width="53" height="58" frameX="-6" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeEnter0005" x="106" y="0" width="53" height="58" frameX="-6" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeEnter0006" x="0" y="58" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeEnter0007" x="0" y="58" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="animeTalk0000" x="0" y="58" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousEnter0000" x="106" y="116" width="53" height="58" frameX="-12" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousEnter0001" x="106" y="116" width="53" height="58" frameX="-12" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousEnter0002" x="0" y="174" width="53" height="58" frameX="-9" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousEnter0003" x="0" y="174" width="53" height="58" frameX="-9" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousEnter0004" x="53" y="174" width="53" height="58" frameX="-6" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousEnter0005" x="53" y="174" width="53" height="58" frameX="-6" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousEnter0006" x="106" y="174" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousEnter0007" x="106" y="174" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="nervousTalk0000" x="106" y="174" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="sideeyeTalk0000" x="0" y="232" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+</TextureAtlas>

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Senpai (Appalled)",
-  "assetPath": "weeb/portrait-senpai-appalled",
+  "assetPath": "gameplay/dialogue/speakers/senpai-appalled/portrait-senpai-appalled",
   "flipX": false,
   "isPixel": true,
   "scale": 5.4,

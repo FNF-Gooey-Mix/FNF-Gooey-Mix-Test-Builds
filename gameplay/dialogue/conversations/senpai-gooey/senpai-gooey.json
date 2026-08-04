@@ -30,8 +30,8 @@
       ]
     },
     {
-      "speaker": "flora-nervous-pixel",
-      "speakerAnimation": "talkEnter",
+      "speaker": "flora-pixel",
+      "speakerAnimation": "nervousEnter",
       "box": "roses",
       "boxAnimation": "speaking",
 
@@ -49,8 +49,8 @@
     },
 
     {
-      "speaker": "gooey-done-pixel",
-      "speakerAnimation": "talkEnter",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "doneEnter",
       "box": "roses",
       "boxAnimation": "speaking",
 
@@ -69,8 +69,8 @@
       ]
     },
     {
-      "speaker": "gooey-done-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "doneTalk",
       "box": "roses",
       "boxAnimation": "speaking",
 
@@ -87,8 +87,8 @@
       ]
     },
     {
-      "speaker": "flora-sideeye-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "flora-pixel",
+      "speakerAnimation": "sideeyeTalk",
       "box": "roses",
       "boxAnimation": "speaking",
 
@@ -104,7 +104,7 @@
     },
     {
       "speaker": "flora-pixel",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "floraTalk",
       "box": "roses",
       "boxAnimation": "speaking",
 
@@ -112,7 +112,7 @@
     },
     {
       "speaker": "gooey-pixel",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "gooeyTalk",
       "box": "roses",
       "boxAnimation": "speaking",
 
@@ -140,7 +140,7 @@
     },
     {
       "speaker": "gooey-pixel",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "gooeyTalk",
       "box": "roses",
       "boxAnimation": "enter",
 

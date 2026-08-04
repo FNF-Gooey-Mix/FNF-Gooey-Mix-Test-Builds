@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Senpai",
-  "assetPath": "weeb/portrait-senpai-confused",
+  "assetPath": "gameplay/dialogue/speakers/senpai-confused/portrait-senpai-confused",
   "flipX": false,
   "isPixel": true,
   "scale": 5.4,

@@ -52,16 +52,16 @@
       ]
     },
     {
-      "speaker": "gooey-stare-pixel",
-      "speakerAnimation": "talkEnter",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "stareEnter",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["..."]
     },
     {
-      "speaker": "gooey-talk-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "mehTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -76,8 +76,8 @@
       "text": ["...What the fuck do you MEAN nu uh?"]
     },
     {
-      "speaker": "gooey-smug-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "smugTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -94,8 +94,8 @@
       ]
     },
     {
-      "speaker": "gooey-smug-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "smugTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -113,23 +113,23 @@
     },
     {
       "speaker": "gooey-pixel",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "gooeyTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["Flora wanna help me make fun of this guy?"]
     },
     {
-      "speaker": "gooey-stare-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "stareTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["..."]
     },
     {
-      "speaker": "gooey-talk-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "mehTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -137,15 +137,15 @@
     },
     {
       "speaker": "flora-spirit-pixel",
-      "speakerAnimation": "talkEnter",
+      "speakerAnimation": "spiritEnter",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": [" "]
     },
     {
-      "speaker": "gooey-talk-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "mehTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -153,7 +153,7 @@
     },
     {
       "speaker": "flora-spirit-pixel",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "spiritTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -163,16 +163,16 @@
       ]
     },
     {
-      "speaker": "gooey-smug-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "smugTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["Dude are you feeling okay? I think you might have pink eye."]
     },
     {
-      "speaker": "flora-spirit-pissed-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "flora-spirit-pixel",
+      "speakerAnimation": "pissedTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -182,39 +182,39 @@
     },
     {
       "speaker": "gooey-pixel",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "gooeyTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["Nah, shes probably fine. Right Flora?"]
     },
     {
-      "speaker": "flora-anime-pixel",
-      "speakerAnimation": "talkEnter",
+      "speaker": "flora-pixel",
+      "speakerAnimation": "animeEnter",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["yeah"]
     },
     {
-      "speaker": "flora-spirit-shocked-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "flora-spirit-pixel",
+      "speakerAnimation": "shockedTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["What the actual fuck?"]
     },
     {
-      "speaker": "gooey-smug-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "smugTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["I got some eyedrops if you want any."]
     },
     {
-      "speaker": "flora-spirit-shocked-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "flora-spirit-pixel",
+      "speakerAnimation": "shockedTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -223,8 +223,8 @@
       ]
     },
     {
-      "speaker": "flora-spirit-pissed-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "flora-spirit-pixel",
+      "speakerAnimation": "pissedTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -233,16 +233,16 @@
       ]
     },
     {
-      "speaker": "gooey-smug-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "smugTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["Someones a bit mad."]
     },
     {
-      "speaker": "flora-anime-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "flora-pixel",
+      "speakerAnimation": "animeTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
@@ -251,16 +251,16 @@
       ]
     },
     {
-      "speaker": "gooey-sad-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "gooey-pixel",
+      "speakerAnimation": "sadTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 
       "text": ["Oh okay my bad."]
     },
     {
-      "speaker": "flora-spirit-pissed-pixel",
-      "speakerAnimation": "talk",
+      "speaker": "flora-spirit-pixel",
+      "speakerAnimation": "pissedTalk",
       "box": "thorns",
       "boxAnimation": "idle",
 

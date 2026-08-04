@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="portrait-flora-spirit-pixel.png">
+<SubTexture name="spiritEnter0000" x="0" y="0" width="53" height="58" frameX="6" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="spiritEnter0001" x="0" y="0" width="53" height="58" frameX="6" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="spiritEnter0002" x="53" y="0" width="53" height="58" frameX="3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="spiritEnter0003" x="53" y="0" width="53" height="58" frameX="3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="spiritEnter0004" x="0" y="58" width="53" height="58" frameX="0" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="spiritEnter0005" x="0" y="58" width="53" height="58" frameX="0" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="spiritEnter0006" x="53" y="58" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="spiritEnter0007" x="53" y="58" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="spiritTalk0000" x="53" y="58" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="pissedTalk0000" x="0" y="116" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+<SubTexture name="shockedTalk0000" x="53" y="116" width="53" height="58" frameX="-3" frameY="-1" frameWidth="57" frameHeight="57" />
+</TextureAtlas>

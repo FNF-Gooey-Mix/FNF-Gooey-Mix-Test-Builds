@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Senpai (Bwuh?Gooey)",
-  "assetPath": "weeb/portrait-senpai-bwuh",
+  "assetPath": "gameplay/dialogue/speakers/senpai-bwuh/portrait-senpai-bwuh",
   "flipX": false,
   "isPixel": true,
   "scale": 5.4,

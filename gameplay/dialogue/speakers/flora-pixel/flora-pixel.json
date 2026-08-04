@@ -1,20 +1,42 @@
 {
   "version": "1.0.0",
   "name": "Flora (Pixel)",
-  "assetPath": "weeb/portrait-flora",
+  "assetPath": "gameplay/dialogue/speakers/flora-pixel/portrait-flora-pixel",
   "flipX": false,
   "isPixel": true,
   "scale": 5.4,
   "offsets": [160, -193],
   "animations": [
     {
-      "name": "talkEnter",
-      "prefix": "portraitEnter0",
+      "name": "floraEnter",
+      "prefix": "floraEnter",
       "frameRate": 12
     },
     {
-      "name": "talk",
-      "prefix": "portraitTalk0"
+      "name": "animeEnter",
+      "prefix": "animeEnter",
+      "frameRate": 12
+    },
+    {
+      "name": "nervousEnter",
+      "prefix": "nervousEnter",
+      "frameRate": 12
+    },
+    {
+      "name": "floraTalk",
+      "prefix": "floraTalk"
+    },
+    {
+      "name": "animeTalk",
+      "prefix": "animeTalk"
+    },
+    {
+      "name": "nervousTalk",
+      "prefix": "nervousTalk"
+    },
+    {
+      "name": "sideeyeTalk",
+      "prefix": "sideeyeTalk"
     }
   ]
 }

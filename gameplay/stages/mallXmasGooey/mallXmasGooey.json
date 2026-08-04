@@ -13,7 +13,7 @@
     },
     {
       "name": "upperBoppers",
-      "assetPath": "christmas/erect/upperBopGooey",
+      "assetPath": "gameplay/stages/mallXmasGooey/upperBopGooey",
       "position": [-450, -135],
       "scale": [0.85, 0.85],
       "scroll": [0.28, 0.28],
@@ -30,7 +30,7 @@
     },
     {
       "name": "bgEscalator",
-      "assetPath": "christmas/erect/bgEscalator",
+      "assetPath": "gameplay/stages/mallXmasErect/escalator",
       "position": [-1100, -540],
       "scale": [0.9, 0.9],
       "scroll": [0.3, 0.3],
@@ -38,7 +38,7 @@
     },
     {
       "name": "christmasTree",
-      "assetPath": "christmas/erect/christmasTree",
+      "assetPath": "gameplay/stages/mallXmasErect/tree",
       "position": [370, -250],
       "scale": [1, 1],
       "scroll": [0.4, 0.4],
@@ -46,7 +46,7 @@
     },
     {
       "name": "bottomMorphoBop",
-      "assetPath": "christmas/erect/bottomBopGooey",
+      "assetPath": "gameplay/stages/mallXmasGooey/bottomBopGooey",
       "position": [-550, -200],
       "scroll": [0.9, 0.9],
       "zIndex": 50,
@@ -62,7 +62,7 @@
     },
     {
       "name": "bottomBoppers",
-      "assetPath": "christmas/erect/bottomBopGooey",
+      "assetPath": "gameplay/stages/mallXmasGooey/bottomBopGooey",
       "position": [-550, -200],
       "scroll": [0.9, 0.9],
       "zIndex": 50,
@@ -78,7 +78,7 @@
     },
     {
       "name": "fog",
-      "assetPath": "christmas/erect/white",
+      "assetPath": "gameplay/stages/mallXmasErect/white",
       "position": [-1000, 100],
       "scale": [0.9, 0.9],
       "scroll": [0.85, 0.85],
@@ -86,7 +86,7 @@
     },
     {
       "name": "fgSnow",
-      "assetPath": "christmas/fgSnow",
+      "assetPath": "gameplay/stages/mallXmas/snow-foreground",
       "position": [-1350, 680],
       "scale": [1.1, 1],
       "scroll": [1, 1],
@@ -102,7 +102,7 @@
     },
     {
       "name": "santa",
-      "assetPath": "christmas/santa",
+      "assetPath": "gameplay/stages/mallXmas/santa",
       "position": [-840, 150],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -136,6 +136,5 @@
       "position": [42, 882],
       "cameraOffsets": [150, -100]
     }
-  },
-  "directory": "week5"
+  }
 }

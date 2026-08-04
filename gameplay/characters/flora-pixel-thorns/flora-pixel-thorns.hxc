@@ -208,14 +208,12 @@ class FloraPixelThornsCharacter extends SparrowCharacter
     if (floraSpeaker == null) return;
     if (name == "danceLeft")
     {
-      FLORA_VIS_COLOR = 0xFF82FFFF;
-      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = FLORA_VIS_COLOR;
+      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = 0xFF82FFFF;
       floraSpeaker?.animation.play('blue', true);
     }
     else if (name == "danceRight")
     {
-      FLORA_VIS_COLOR = 0xFFFF4973;
-      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = FLORA_VIS_COLOR;
+      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = 0xFFFF4973;
       floraSpeaker?.animation.play('red', true);
     }
   }

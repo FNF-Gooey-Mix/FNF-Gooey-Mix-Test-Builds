@@ -1,20 +1,28 @@
 {
   "version": "1.0.0",
   "name": "Flora Spirit (Pixel)",
-  "assetPath": "weeb/portrait-flora-spirit",
+  "assetPath": "gameplay/dialogue/speakers/flora-spirit-pixel/portrait-flora-spirit-pixel",
   "flipX": false,
   "isPixel": true,
   "scale": 5.4,
   "offsets": [-450, -193],
   "animations": [
     {
-      "name": "talkEnter",
-      "prefix": "portraitEnter0",
+      "name": "spiritEnter",
+      "prefix": "spiritEnter",
       "frameRate": 12
     },
     {
-      "name": "talk",
-      "prefix": "portraitTalk0"
+      "name": "spiritTalk",
+      "prefix": "spiritTalk"
+    },
+    {
+      "name": "pissedTalk",
+      "prefix": "pissedTalk"
+    },
+    {
+      "name": "shockedTalk",
+      "prefix": "shockedTalk"
     }
   ]
 }
