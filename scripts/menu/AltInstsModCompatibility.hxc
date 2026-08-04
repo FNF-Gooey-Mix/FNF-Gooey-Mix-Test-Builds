@@ -3,7 +3,7 @@ import funkin.play.song.Song;
 import funkin.data.song.SongRegistry;
 import funkin.modding.module.Module;
 import funkin.save.Save;
-import haxe.Json;
+import funkin.data.freeplay.player.PlayerRegistry;
 
 using StringTools;
 
@@ -31,6 +31,13 @@ class AltInstsModCompatibility extends Module
       return;
     }
 
+    // Fixes a bug with QT Rewired
+    if (FlxG.state.subState.instSelectMenu.members[3].text != 'INSTRUMENTAL')
+    {
+      addedInsts = false;
+      return;
+    }
+
     if (addedInsts || FlxG.state.subState.curSelected == 0) return;
 
     var targetSongId:String = FlxG.state.subState.currentCapsule?.freeplayData?.data?.id;
@@ -43,7 +50,7 @@ class AltInstsModCompatibility extends Module
     var unfilteredList = targetDifficulty?.characters?.altInstrumentals ?? [];
 
     // Adds modded instrumentals to the unfiltered list
-    for (character in Save.instance.charactersSeen.value)
+    for (character in PlayerRegistry.instance.listEntryIds().concat(Save.instance.charactersSeen.value))
     {
       var currentInstList:Array<String> = null;
       var addingInstList:Array<String> = null;
