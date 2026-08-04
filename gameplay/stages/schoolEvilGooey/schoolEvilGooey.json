@@ -15,7 +15,7 @@
       "animType": "sparrow",
       "name": "school",
       "isPixel": true,
-      "assetPath": "weeb/erect/evil/weebSchool",
+      "assetPath": "gameplay/stages/schoolEvilErect/evil-school-erect",
       "scroll": [0.75, 0.75],
       "animations": []
     },
@@ -28,7 +28,7 @@
       "name": "backspike",
       "animType": "sparrow",
       "isPixel": true,
-      "assetPath": "weeb/erect/evil/backSpike",
+      "assetPath": "gameplay/stages/schoolEvilErect/evil-school-erect-back-spike",
       "scroll": [0.85, 0.85],
       "animations": []
     },
@@ -40,7 +40,7 @@
       "name": "backspikes",
       "animType": "sparrow",
       "isPixel": true,
-      "assetPath": "weeb/erect/evil/weebBackSpikes",
+      "assetPath": "gameplay/stages/schoolEvilErect/evil-school-erect-back-spikes",
       "scroll": [0.5, 0.5],
       "animations": []
     },
@@ -52,7 +52,7 @@
       "animType": "sparrow",
       "name": "evilstreet",
       "isPixel": true,
-      "assetPath": "weeb/erect/evil/weebStreet",
+      "assetPath": "gameplay/stages/schoolEvilErect/evil-school-erect-street",
       "scroll": [1, 1],
       "animations": []
     }
@@ -70,8 +70,7 @@
       "position": [0, 648],
       "cameraOffsets": [440, 270]
     },
-    "gf": { "zIndex": 100, "cameraOffsets": [40, 40], "position": [724, 773] }
+    "gf": { "zIndex": 100, "cameraOffsets": [40, 40], "position": [724, 823] }
   },
-  "name": "School (Hate) [Gooey]",
-  "directory": "week6"
+  "name": "School (Hate) [Gooey]"
 }

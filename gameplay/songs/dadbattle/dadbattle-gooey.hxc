@@ -35,7 +35,7 @@ class DadbattleGooeyMixSong extends Song
   {
     super.onCreate(event);
 
-    leGasp = new FunkinSprite(682, 290).loadSparrow('erect/week1CrowdGasp', 'week1');
+    leGasp = new FunkinSprite(682, 290).loadSparrow('gameplay/stages/mainStageErect/week1CrowdGasp');
     leGasp.animation.addByPrefix('gasp', 'gasp', 24, false);
     leGasp.scrollFactor.set(0.8, 0.8);
     PlayState.instance.currentStage.add(leGasp);

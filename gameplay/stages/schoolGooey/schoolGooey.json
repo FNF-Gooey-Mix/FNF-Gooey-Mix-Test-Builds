@@ -8,7 +8,7 @@
       "animType": "sparrow",
       "name": "sky",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebSky",
+      "assetPath": "gameplay/stages/schoolErect/weeb-sky",
       "scroll": [0.2, 0.2],
       "animations": []
     },
@@ -20,7 +20,7 @@
       "animType": "sparrow",
       "name": "school",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebSchool",
+      "assetPath": "gameplay/stages/schoolErect/weeb-school",
       "scroll": [0.75, 0.75],
       "animations": []
     },
@@ -32,7 +32,7 @@
       "animType": "sparrow",
       "name": "backTrees",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebBackTrees",
+      "assetPath": "gameplay/stages/schoolErect/weeb-back-trees",
       "scroll": [0.5, 0.5],
       "animations": []
     },
@@ -44,7 +44,7 @@
       "animType": "sparrow",
       "name": "street",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebStreet",
+      "assetPath": "gameplay/stages/schoolErect/weeb-street",
       "scroll": [1, 1],
       "animations": []
     },
@@ -56,7 +56,7 @@
       "animType": "sparrow",
       "name": "treesFG",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebTreesBack",
+      "assetPath": "gameplay/stages/schoolErect/weeb-trees-back",
       "scroll": [1, 1],
       "animations": []
     },
@@ -69,7 +69,7 @@
       "name": "treesBG",
       "startingAnimation": "treeLoop",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebTrees",
+      "assetPath": "gameplay/stages/schoolErect/weeb-trees",
       "scroll": [1, 1],
       "animations": [
         {
@@ -94,7 +94,7 @@
       "name": "petals",
       "startingAnimation": "leaves",
       "isPixel": true,
-      "assetPath": "weeb/erect/petals",
+      "assetPath": "gameplay/stages/schoolErect/petals",
       "scroll": [0.85, 0.85],
       "animations": [
         {
@@ -117,7 +117,7 @@
       "name": "freaks",
       "startingAnimation": "danceLeft",
       "isPixel": true,
-      "assetPath": "weeb/bgFreaks",
+      "assetPath": "gameplay/stages/school/bg-freaks",
       "scroll": [0.9, 0.9],
       "alpha": 0,
       "animations": [
@@ -183,6 +183,5 @@
     },
     "gf": { "zIndex": 100, "cameraOffsets": [40, 40], "position": [724, 763] }
   },
-  "name": "School (Date) [Gooey]",
-  "directory": "week6"
+  "name": "School (Date) [Gooey]"
 }

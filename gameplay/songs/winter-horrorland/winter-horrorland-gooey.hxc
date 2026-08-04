@@ -36,7 +36,7 @@ class KeyLimePieSong extends Song
   {
     super.onCountdownStart(event);
     var evilTree = PlayState.instance.currentStage.getNamedProp('evilTree');
-    evilTree.loadGraphic(Paths.image('christmas/erect/evilTreeFlora', 'week5'));
+    evilTree.loadGraphic(Paths.image('gameplay/stages/mallXmasGooey/evilTreeFlora'));
     if (!hasPlayedCutscene)
     {
       hasPlayedCutscene = true;
