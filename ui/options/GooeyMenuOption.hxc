@@ -127,19 +127,19 @@ class GooeyMenuOption extends Module
         if (GooeyMixOptions.gooeyMixMenu == 'Always On'
           || (GooeyMixOptions.gooeyMixMenu == 'Gooey Selected' && GooeyMixOptions.rememberedStartupCharacter == "gooey"))
         {
-          if (FlxG.state.magenta.graphic.key == 'assets/images/menuBGMagenta.png')
+          if (FlxG.state.magenta.graphic.key == 'assets/ui/main-menu/menu-bg-magenta.png')
           {
-            FlxG.state.magenta.loadGraphic(Paths.image('menuBGMagentaGooey'));
-            FlxG.state.members[0].loadGraphic(Paths.image('menuBGgooey'));
+            FlxG.state.magenta.loadGraphic(Paths.image('ui/main-menu/menu-bg-magenta-gooey'));
+            FlxG.state.members[0].loadGraphic(Paths.image('ui/main-menu/menu-bg-gooey'));
             gooeyWindow();
           }
         }
         else
         {
-          if (FlxG.state.magenta.graphic.key == 'assets/images/menuBGMagentaGooey.png')
+          if (FlxG.state.magenta.graphic.key == 'assets/ui/main-menu/menu-bg-magenta-gooey.png')
           {
-            FlxG.state.magenta.loadGraphic(Paths.image('menuBGMagenta'));
-            FlxG.state.members[0].loadGraphic(Paths.image('menuBG'));
+            FlxG.state.magenta.loadGraphic(Paths.image('ui/main-menu/menu-bg-magenta'));
+            FlxG.state.members[0].loadGraphic(Paths.image('ui/main-menu/menu-bg'));
             bfWindow();
           }
         }
@@ -153,11 +153,11 @@ class GooeyMenuOption extends Module
         if (GooeyMixOptions.gooeyMixMenu == 'Always On'
           || (GooeyMixOptions.gooeyMixMenu == 'Gooey Selected' && GooeyMixOptions.rememberedStartupCharacter == "gooey"))
         {
-          if (FlxG.state?.members[0]?.graphic.key == 'assets/images/menuBG.png') FlxG.state.members[0].loadGraphic(Paths.image('menuBGgooey'));
+          if (FlxG.state?.members[0]?.graphic.key == 'assets/ui/main-menu/menu-bg.png') FlxG.state.members[0].loadGraphic(Paths.image('ui/main-menu/menu-bg-gooey'));
         }
         else
         {
-          if (FlxG.state?.members[0]?.graphic.key == 'assets/images/menuBGgooey.png') FlxG.state.members[0].loadGraphic(Paths.image('menuBG'));
+          if (FlxG.state?.members[0]?.graphic.key == 'assets/ui/main-menu/menu-bg-gooey.png') FlxG.state.members[0].loadGraphic(Paths.image('ui/main-menu/menu-bg'));
         }
       }
     }
@@ -171,16 +171,16 @@ class GooeyMenuOption extends Module
           if (GooeyMixOptions.gooeyMixMenu == 'Always On'
             || (GooeyMixOptions.gooeyMixMenu == 'Gooey Selected' && GooeyMixOptions.rememberedStartupCharacter == "gooey"))
           {
-            if (FlxG.state.subState.members[3].graphic.assetPath == 'assets/images/menuDesat.png')
+            if (FlxG.state.subState.members[3].graphic.assetPath == 'assets/ui/main-menu/menu-desat.png')
             {
-              FlxG.state.subState.members[3].loadGraphic(Paths.image('menuDesatGooey'));
+              FlxG.state.subState.members[3].loadGraphic(Paths.image('ui/main-menu/menu-desat-gooey'));
             }
           }
           else
           {
-            if (FlxG.state.subState.members[3].graphic.assetPath == 'assets/images/menuDesatGooey.png')
+            if (FlxG.state.subState.members[3].graphic.assetPath == 'assets/ui/main-menu/menu-desat-gooey.png')
             {
-              FlxG.state.subState.members[3].loadGraphic(Paths.image('menuDesat'));
+              FlxG.state.subState.members[3].loadGraphic(Paths.image('ui/main-menu/menu-desat'));
             }
           }
         }
@@ -190,16 +190,16 @@ class GooeyMenuOption extends Module
       {
         if (FlxG.state.menuBG != null)
         {
-          if (FlxG.state.selectedVariation == 'gooey') if (FlxG.state.menuBG.graphic.assetPath == 'assets/images/menuDesat.png')
+          if (FlxG.state.selectedVariation == 'gooey') if (FlxG.state.menuBG.graphic.assetPath == 'assets/ui/main-menu/menu-desat.png')
           {
-            FlxG.state.menuBG.loadGraphic(Paths.image('menuDesatGooey'));
+            FlxG.state.menuBG.loadGraphic(Paths.image('ui/main-menu/menu-desat-gooey'));
           }
         }
         else
         {
-          if (FlxG.state.menuBG.graphic.assetPath == 'assets/images/menuDesatGooey.png')
+          if (FlxG.state.menuBG.graphic.assetPath == 'assets/ui/main-menu/menu-desat-gooey.png')
           {
-            FlxG.state.menuBG.loadGraphic(Paths.image('menuDesat'));
+            FlxG.state.menuBG.loadGraphic(Paths.image('ui/main-menu/menu-desat'));
           }
         }
       }
