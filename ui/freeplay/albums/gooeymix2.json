@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "name": "Gooey Mix Volume 2",
   "artists": ["ChessBrabo", "FuryGTRX", "HEV", "LeGooey", "SakiProd"],
-  "albumArtAsset": "freeplay/albumRoll/gooeymix2",
-  "albumTitleAsset": "freeplay/albumRoll/gooeymix2-text",
+  "albumArtAsset": "ui/freeplay/albums/gooeymix2",
+  "albumTitleAsset": "ui/freeplay/albums/gooeymix2-text",
   "albumTitleOffsets": [-10, 0],
   "albumOSTName": "GOOEY MIX OST"
 }

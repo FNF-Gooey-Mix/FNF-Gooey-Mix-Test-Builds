@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "name": "Gooey Expansion Volume 1",
   "artists": ["FuryGTRX", "HEV", "LeGooey", "RixFX"],
-  "albumArtAsset": "freeplay/albumRoll/gooeyex1",
-  "albumTitleAsset": "freeplay/albumRoll/gooeyex1-text",
+  "albumArtAsset": "ui/freeplay/albums/gooeyex1",
+  "albumTitleAsset": "ui/freeplay/albums/gooeyex1-text",
   "albumTitleOffsets": [-10, 0],
   "albumOSTName": "GOOEY MIX OST"
 }

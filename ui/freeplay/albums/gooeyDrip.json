@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "name": "April Fools Gooey Mix Vol 1",
   "artists": ["LeGooey"],
-  "albumArtAsset": "freeplay/albumRoll/gooeyDrip",
-  "albumTitleAsset": "freeplay/albumRoll/gooeymixExtra-text",
+  "albumArtAsset": "ui/freeplay/albums/gooeyDrip",
+  "albumTitleAsset": "ui/freeplay/albums/gooeymixExtra-text",
   "albumTitleOffsets": [-10, 0],
   "albumOSTName": "GOOEY MIX OST"
 }

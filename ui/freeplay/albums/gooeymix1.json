@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "name": "Gooey Mix Volume 1",
   "artists": ["LeGooey"],
-  "albumArtAsset": "freeplay/albumRoll/gooeymix1",
-  "albumTitleAsset": "freeplay/albumRoll/gooeymix1-text",
+  "albumArtAsset": "ui/freeplay/albums/gooeymix1",
+  "albumTitleAsset": "ui/freeplay/albums/gooeymix1-text",
   "albumTitleOffsets": [-10, 0],
   "albumOSTName": "GOOEY MIX OST"
 }

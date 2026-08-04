@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "name": "Comedian (Rad Mix)",
   "artists": ["LeGooey"],
-  "albumArtAsset": "freeplay/albumRoll/comedianRad",
-  "albumTitleAsset": "freeplay/albumRoll/gooeymixExtra-text",
+  "albumArtAsset": "ui/freeplay/albums/comedianRad",
+  "albumTitleAsset": "ui/freeplay/albums/gooeymixExtra-text",
   "albumTitleOffsets": [-10, 0],
   "albumOSTName": "GOOEY MIX OST"
 }
