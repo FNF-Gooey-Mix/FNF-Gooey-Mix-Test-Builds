@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Gooey (Opponent)",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/gooey/Gooey",
+  "assetPath": "gameplay/characters/gooey/Gooey",
   "flipX": true,
   "cameraOffsets": [-1, -32],
   "death": {

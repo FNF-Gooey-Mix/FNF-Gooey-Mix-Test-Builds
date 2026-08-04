@@ -19,7 +19,7 @@
       "opponentVocals": ["gooey-opponent"],
       "altInstrumentals": ["", "eevee"]
     },
-    "stage": "natCrystal",
+    "stage": "hotelCastleErect",
     "noteStyle": "funkin",
     "ratings": { "easy": 6, "normal": 7, "hard": 8 },
     "album": "gooeyex2",

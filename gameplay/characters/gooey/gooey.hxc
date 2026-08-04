@@ -60,7 +60,7 @@ class GooeyBaseCharacter extends MultiAnimateAtlasCharacter
       || PlayState.instance.currentSong.id.toLowerCase() == "stress")
     {
       gooballs = FunkinSprite.createTextureAtlas(this.x - 857 - (-this.globalOffsets[0] * this.scale.x),
-        this.y - 310 - (-this.globalOffsets[1] * this.scale.y), 'characters/gooey/Gooballs', 'shared');
+        this.y - 310 - (-this.globalOffsets[1] * this.scale.y), 'gameplay/characters/gooey/Gooballs', 'shared');
       gooballs.anim.addByFrameLabel('BlankAttack', 'BlankAttack', 24, false);
 
       if (PlayState.instance.currentSong.id.toLowerCase() == "dadbattle") gooballs.anim.addByFrameLabel('CanAttack', 'DadAttack', 24, false);
@@ -302,7 +302,7 @@ class GooeyBaseCharacter extends MultiAnimateAtlasCharacter
 
   override function getDeathQuote():Null<String>
   {
-    if (Paths.currentLevel == "week7") return Paths.sound('jeffGameover-gooey/jeffGameover-' + FlxG.random.int(1, 8));
+    if (Paths.currentLevel == "week7") return Paths.sound('gameplay/characters/gooey-stress/sounds/jeffGameover-' + FlxG.random.int(1, 8));
     else if (PlayState.instance?.currentStage?.getDad()?.characterId == "qt") {
       randomInt = FlxG.random.int(1, 7);
       gameoverSound = Paths.sound('qtgameover/' + Save.instance.modOptions.get(QtOptionsCategory.SAVE_KEY_LANG_QT) + '/bf/qtGameover-' + randomInt);
@@ -335,7 +335,7 @@ class GooeyBaseCharacter extends MultiAnimateAtlasCharacter
     }
     else if (name == "deathConfirm" || name == "deathConfirm-explosion")
     {
-      gooeyRetry = FunkinSound.load(Paths.music('gameplay/gameover/gameOverEnd-gooeyReal'), true);
+      gooeyRetry = FunkinSound.load(Paths.music('gameplay/playable-characters/gooey/gameover/game-over-gooey/game-over-gooey-end-real'), true);
       gooeyRetry.volume = 1;
       gooeyRetry.play(false);
       if (GameOverSubState.blueBallSuffix == '-gooey-explode')

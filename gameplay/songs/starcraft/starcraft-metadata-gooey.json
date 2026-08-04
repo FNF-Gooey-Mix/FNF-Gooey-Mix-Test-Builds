@@ -27,7 +27,7 @@
       "opponentVocals": ["gooey-opponent"],
       "altInstrumentals": ["", "pico"]
     },
-    "stage": "natCrystal",
+    "stage": "hotelCastleErect",
     "noteStyle": "funkin",
     "ratings": { "easy": 8, "normal": 10, "hard": 11 },
     "album": "gooeyex2",

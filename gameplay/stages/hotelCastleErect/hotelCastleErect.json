@@ -5,7 +5,7 @@
   "props": [
     {
       "name": "backWall",
-      "assetPath": "gooeyMix/week60037/natCrystal/backWall",
+      "assetPath": "gameplay/stages/hotelCastleErect/backWall",
       "position": [-600, -900],
       "scale": [1, 1],
       "scroll": [0.7, 0.7],
@@ -13,7 +13,7 @@
     },
     {
       "name": "crystalBackWall",
-      "assetPath": "gooeyMix/week60037/natCrystal/crystalBackWall",
+      "assetPath": "gameplay/stages/hotelCastleErect/crystalBackWall",
       "position": [-600, -900],
       "scale": [1, 1],
       "scroll": [0.7, 0.7],
@@ -22,7 +22,7 @@
     },
     {
       "name": "topCrystal",
-      "assetPath": "gooeyMix/week60037/natCrystal/topCrystal",
+      "assetPath": "gameplay/stages/hotelCastleErect/topCrystal",
       "position": [200, -800],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -30,7 +30,7 @@
     },
     {
       "name": "bottomCrystal",
-      "assetPath": "gooeyMix/week60037/natCrystal/bottomCrystal",
+      "assetPath": "gameplay/stages/hotelCastleErect/bottomCrystal",
       "position": [0, 0],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -38,7 +38,7 @@
     },
     {
       "name": "bottomCrystalLight",
-      "assetPath": "gooeyMix/week60037/natCrystal/bottomCrystalLight",
+      "assetPath": "gameplay/stages/hotelCastleErect/bottomCrystalLight",
       "position": [820, -160],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -47,7 +47,7 @@
     },
     {
       "name": "natCrystal",
-      "assetPath": "gooeyMix/week60037/natCrystal/natCrystal",
+      "assetPath": "gameplay/stages/hotelCastleErect/natCrystal",
       "position": [1350, -1100],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -55,7 +55,7 @@
     },
     {
       "name": "bottomCrystalLight2",
-      "assetPath": "gooeyMix/week60037/natCrystal/bottomCrystalLight",
+      "assetPath": "gameplay/stages/hotelCastleErect/bottomCrystalLight",
       "position": [820, -160],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -64,7 +64,7 @@
     },
     {
       "name": "natCrystalLight",
-      "assetPath": "gooeyMix/week60037/natCrystal/natCrystalLight",
+      "assetPath": "gameplay/stages/hotelCastleErect/natCrystalLight",
       "position": [650, -2100],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -73,7 +73,7 @@
     },
     {
       "name": "floorLight",
-      "assetPath": "gooeyMix/week60037/natCrystal/floorLight",
+      "assetPath": "gameplay/stages/hotelCastleErect/floorLight",
       "position": [100, -200],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -82,7 +82,7 @@
     },
     {
       "name": "overlay1",
-      "assetPath": "gooeyMix/week60037/natCrystal/Overlay1",
+      "assetPath": "gameplay/stages/hotelCastleErect/Overlay1",
       "position": [-400, -1300],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -91,7 +91,7 @@
     },
     {
       "name": "overlay2",
-      "assetPath": "gooeyMix/week60037/natCrystal/Overlay2",
+      "assetPath": "gameplay/stages/hotelCastleErect/Overlay2",
       "position": [-400, -1300],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -100,7 +100,7 @@
     },
     {
       "name": "backWallLights",
-      "assetPath": "gooeyMix/week60037/natCrystal/backWallLights",
+      "assetPath": "gameplay/stages/hotelCastleErect/backWallLights",
       "position": [-600, -900],
       "scale": [1, 1],
       "scroll": [0.7, 0.7],
@@ -109,7 +109,7 @@
     },
     {
       "name": "overlay3",
-      "assetPath": "gooeyMix/week60037/natCrystal/Overlay3",
+      "assetPath": "gameplay/stages/hotelCastleErect/Overlay3",
       "position": [-155, -1000],
       "scale": [0.85, 0.85],
       "scroll": [1, 1],
@@ -119,7 +119,7 @@
     },
     {
       "name": "natCrystalLight2",
-      "assetPath": "gooeyMix/week60037/natCrystal/natCrystalLight",
+      "assetPath": "gameplay/stages/hotelCastleErect/natCrystalLight",
       "position": [650, -2100],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -137,7 +137,7 @@
     },
     {
       "name": "crystalReflections1",
-      "assetPath": "gooeyMix/week60037/natCrystal/crystalReflections",
+      "assetPath": "gameplay/stages/hotelCastleErect/crystalReflections",
       "position": [-150, -2300],
       "scale": [1, 1],
       "scroll": [1, 1],
@@ -146,7 +146,7 @@
     },
     {
       "name": "crystalReflections2",
-      "assetPath": "gooeyMix/week60037/natCrystal/crystalReflections",
+      "assetPath": "gameplay/stages/hotelCastleErect/crystalReflections",
       "position": [250, -1900],
       "scale": [0.8, 0.8],
       "scroll": [1, 1],

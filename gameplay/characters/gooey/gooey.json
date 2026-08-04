@@ -3,7 +3,7 @@
   "name": "Gooey",
   "renderType": "multianimateatlas",
   "atlasSettings": { "useRenderTexture": true },
-  "assetPath": "shared:characters/gooey/Gooey",
+  "assetPath": "gameplay/characters/gooey/Gooey",
   "flipX": true,
   "cameraOffsets": [-1, -32],
   "death": {
@@ -71,99 +71,99 @@
     {
       "name": "singLEFTmiss",
       "prefix": "GooeyMissLeft",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "singDOWNmiss",
       "prefix": "GooeyMissDown",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "singUPmiss",
       "prefix": "GooeyMissUp",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "singRIGHTmiss",
       "prefix": "GooeyMissRight",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "preAttack",
       "prefix": "GooeyPreAttack",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "attack",
       "prefix": "GooeyAttack",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "attackMISS",
       "prefix": "GooeyHit",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "dodge",
       "prefix": "GooeyDodge",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "scared",
       "prefix": "GooeyScared",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "burp",
       "prefix": "GooeyBurp",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "firstDeath",
       "prefix": "GooeyDies",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [18, -19]
     },
     {
       "name": "deathLoop",
       "prefix": "GooeyDeadIdle",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [18, -19],
       "looped": true
     },
     {
       "name": "deathConfirm",
       "prefix": "GooeyConfirm",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [18, -19]
     },
     {
       "name": "firstDeath-explosion",
       "prefix": "GooeyExplodes",
-      "assetPath": "shared:characters/gooey/GooeyExplodes",
+      "assetPath": "gameplay/characters/gooey/GooeyExplodes",
       "offsets": [400, 1402]
     },
     {
       "name": "deathLoop-explosion",
       "prefix": "GooeyExplosionLoop",
-      "assetPath": "shared:characters/gooey/GooeyExplodes",
+      "assetPath": "gameplay/characters/gooey/GooeyExplodes",
       "offsets": [400, 1402],
       "looped": true
     },
     {
       "name": "deathConfirm-explosion",
       "prefix": "GooeyExplodeConfirm",
-      "assetPath": "shared:characters/gooey/GooeyExplodes",
+      "assetPath": "gameplay/characters/gooey/GooeyExplodes",
       "offsets": [400, 1402]
     }
   ]

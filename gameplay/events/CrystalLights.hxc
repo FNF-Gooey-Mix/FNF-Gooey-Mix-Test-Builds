@@ -53,7 +53,7 @@ class CrystalLights extends SongEvent
     // Does nothing if we are minimal mode.
     if (PlayState.instance.isMinimalMode) return;
 
-    if (PlayState.instance.currentStage.id != 'natCrystal') return;
+    if (PlayState.instance.currentStage.id != 'hotelCastleErect') return;
 
     for (prop in 0...props.length)
     {
