@@ -19,7 +19,7 @@ class GooeyMainMenu extends Module
 
     var originalText:String = FlxG.state.rightWatermarkText.text;
 
-    var metadata:ModMetadata = PolymodHandler.modFileSystem.getMetadataById("GooeyMix");
+    var metadata:ModMetadata = PolymodHandler.modFileSystem.getMetadataByModId("GooeyMix");
     var version:String = Version.toString(metadata.modVersion);
 
     FlxG.state.rightWatermarkText.text = "FNF: Gooey Mix v" + version;

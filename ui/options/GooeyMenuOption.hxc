@@ -98,7 +98,7 @@ class GooeyMenuOption extends Module
         if (!changedIntroText)
         {
           changedIntroText = true;
-          var fullText:String = Assets.getText(Paths.txt('introTextGooey'));
+          var fullText:String = Assets.getText(Paths.txt('ui/title/intro-text-gooey'));
           var firstArray:Array<String> = fullText.split('\n').filter(function(s:String) return s != '');
           var swagGoodArray:Array<Array<String>> = [];
           for (i in firstArray)
@@ -224,7 +224,7 @@ class GooeyMenuOption extends Module
 
   function addTitleScreenObjects():Void
   {
-    FlxG.state.gfDance.frames = Paths.getSparrowAtlas('floraTitleScreen');
+    FlxG.state.gfDance.frames = Paths.getSparrowAtlas('ui/title/flora-dance-title');
     FlxG.state.gfDance.animation.addByPrefix('danceLeft', 'leftFloraDance', 24, true);
     FlxG.state.gfDance.animation.addByPrefix('danceRight', 'rightFloraDance', 24, true);
     FlxG.state.gfDance.animation.play('dance');
@@ -232,7 +232,7 @@ class GooeyMenuOption extends Module
     FlxG.state.gfDance.x = 560 + (FullScreenScaleMode.gameCutoutSize.x / 2.5);
     FlxG.state.gfDance.y = 45;
 
-    FlxG.state.logoBl.frames = Paths.getSparrowAtlas('logoBumpin-gooey');
+    FlxG.state.logoBl.frames = Paths.getSparrowAtlas('ui/title/logo-bumpin-gooey');
     FlxG.state.logoBl.scale.x = 0.85;
     FlxG.state.logoBl.scale.y = 0.85;
     FlxG.state.logoBl.x = -170 + (FullScreenScaleMode.gameCutoutSize.x / 2.5);
