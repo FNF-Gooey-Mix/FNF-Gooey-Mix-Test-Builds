@@ -129,12 +129,12 @@ class FloraPixelThornsCharacter extends SparrowCharacter
         adjustColor.contrast = this.shader.baseContrast;
         adjustColor.saturation = this.shader.baseSaturation;
         floraSpeaker.shader = adjustColor;
-        visualizerFlora.shader = adjustColor;
+        //visualizerFlora.shader = adjustColor;
       }
       else
       {
         floraSpeaker.shader = this.shader;
-        visualizerFlora.shader = this.shader;
+        //visualizerFlora.shader = this.shader;
       }
 
       trace("Synchronized shader between children!");
@@ -208,12 +208,14 @@ class FloraPixelThornsCharacter extends SparrowCharacter
     if (floraSpeaker == null) return;
     if (name == "danceLeft")
     {
-      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = 0xFF82FFFF;
+      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = 0xFF12BCBC;
+      else visualizerFlora.color = 0xFF82FFFF;
       floraSpeaker?.animation.play('blue', true);
     }
     else if (name == "danceRight")
     {
-      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = 0xFFFF4973;
+      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = 0xFFD00012;
+      else visualizerFlora.color = 0xFFFF4973;
       floraSpeaker?.animation.play('red', true);
     }
   }
