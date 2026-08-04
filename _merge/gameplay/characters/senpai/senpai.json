@@ -1,0 +1,13 @@
+[
+  { "op": "add", "path": "/renderType", "value": "multisparrow" },
+  {
+    "op": "add",
+    "path": "/animations/-",
+    "value": {
+      "name": "wink",
+      "assetPath": "gameplay/characters/senpai/SenpaiExtras",
+      "prefix": "wink",
+      "offsets": [41, 12]
+    }
+  }
+]
