@@ -9,7 +9,7 @@
     "path": "/animations/-",
     "value": {
       "name": "hurt",
-      "assetPath": "shared:characters/DadFucked",
+      "assetPath": "gameplay/characters/dad/DadFucked",
       "prefix": "DadHit",
       "offsets": [212, 82]
     }
@@ -19,7 +19,7 @@
     "path": "/animations/-",
     "value": {
       "name": "pissed",
-      "assetPath": "shared:characters/DadFucked",
+      "assetPath": "gameplay/characters/dad/DadFucked",
       "prefix": "DadHit",
       "offsets": [212, 82],
       "looped": true,

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Flora",
-  "assetPath": "shared:characters/flora/Flora",
+  "assetPath": "gameplay/characters/flora/Flora",
   "startingAnimation": "danceRight",
   "renderType": "multianimateatlas",
   "animations": [

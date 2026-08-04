@@ -5,7 +5,7 @@
     "path": "/animations/-",
     "value": {
       "name": "youMadBro",
-      "assetPath": "characters/SenpaiExtras",
+      "assetPath": "gameplay/characters/senpai/SenpaiExtras",
       "prefix": "youMadBro",
       "offsets": [40, 12]
     }

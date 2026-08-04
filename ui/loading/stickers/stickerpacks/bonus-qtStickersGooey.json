@@ -3,18 +3,19 @@
   "name": "Gooey Blissful Stickers",
   "artist": "LeGooey",
   "stickers": [
-    "transitionSwag/stickers-set-gooey-1/gooeySticker1",
-    "transitionSwag/stickers-set-gooey-1/gooeySticker2",
-    "transitionSwag/stickers-set-gooey-1/gooeySticker3",
-    "transitionSwag/stickers-set-gooey-1/floraSticker1",
-    "transitionSwag/stickers-set-gooey-1/floraSticker2",
-    "transitionSwag/stickers-set-gooey-1/floraSticker3",
-    "transitionSwag/stickers-set-gooey-2/qtSticker1",
-    "transitionSwag/stickers-set-gooey-2/qtSticker2",
-    "transitionSwag/stickers-set-gooey-2/qtSticker3",
-    "transitionSwag/stickers-set-gooey-2/skullSticker",
-    "transitionSwag/stickers-set-gooey-2/spraycanSticker",
-    "transitionSwag/stickers-set-gooey-2/youFoundTheMarkerSticker",
-    "transitionSwag/stickers-set-gooey-2/calmingCrystalSticker"
+    "transitionSwag/stickers-set-gooey-1/sticker-gooey-1",
+    "transitionSwag/stickers-set-gooey-1/sticker-gooey-2",
+    "transitionSwag/stickers-set-gooey-1/sticker-gooey-3",
+    "transitionSwag/stickers-set-gooey-1/sticker-flora-1",
+    "transitionSwag/stickers-set-gooey-1/sticker-flora-2",
+    "transitionSwag/stickers-set-gooey-1/sticker-flora-3",
+    "transitionSwag/stickers-set-gooey-2/sticker-qt-1",
+    "transitionSwag/stickers-set-gooey-2/sticker-qt-2",
+    "transitionSwag/stickers-set-gooey-2/sticker-qt-3",
+    "transitionSwag/stickers-set-gooey-2/sticker-misc-1",
+    "transitionSwag/stickers-set-gooey-2/sticker-misc-2",
+    "transitionSwag/stickers-set-gooey-2/sticker-misc-3",
+    "transitionSwag/stickers-set-gooey-2/sticker-misc-4",
+    "transitionSwag/stickers-set-gooey-2/sticker-misc-5"
   ]
 }

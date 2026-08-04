@@ -82,7 +82,7 @@ class FloraBaseCharacter extends MultiAnimateAtlasCharacter
     // My Flora is not kinda speakerless, so we shall make the speaker.
     if (!isMyFloraKindaSpeakerless)
     {
-      floraSpeaker = FunkinSprite.createTextureAtlas(0, 0, 'characters/flora/FloraSpeaker', 'shared');
+      floraSpeaker = FunkinSprite.createTextureAtlas(0, 0, 'gameplay/characters/flora/FloraSpeaker');
       floraSpeaker.anim.addByFrameLabel('idle', 'FloraSpeakerBop', 24, false);
 
       floraSpeakerScreen = new FloraSpeakerScreen(GooeyMixOptions.floraVisualizer);
@@ -283,7 +283,7 @@ class FloraSpeakerScreen extends FunkinSprite
   {
     super();
 
-    loadSparrow('characters/flora/FloraLights', 'shared');
+    loadSparrow('gameplay/characters/flora/FloraLights');
     animation.addByPrefix('lightBop', 'lightBop', 24, false);
     animation.addByPrefix('lightLoop', 'lightLoop', 24, true);
     animation.addByPrefix('50combo', '50combo', 24, false);
@@ -293,7 +293,7 @@ class FloraSpeakerScreen extends FunkinSprite
 
     if (enableViz)
     {
-      vizSquare = FlxG.bitmap.add(Paths.image('characters/flora/floraVis'));
+      vizSquare = FlxG.bitmap.add(Paths.image('gameplay/characters/flora/floraVis'));
 
       vizVertices = new FloatVector(0, false, null);
       vizIndices = new IntVector(0, false, null);
