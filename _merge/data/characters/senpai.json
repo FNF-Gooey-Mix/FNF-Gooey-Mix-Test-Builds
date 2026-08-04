@@ -5,7 +5,7 @@
     "path": "/animations/-",
     "value": {
       "name": "wink",
-      "assetPath": "gameplay/characters/senpai/SenpaiExtras",
+      "assetPath": "characters/SenpaiExtras",
       "prefix": "wink",
       "offsets": [41, 12]
     }
