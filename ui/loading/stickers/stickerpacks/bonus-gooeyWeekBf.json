@@ -3,14 +3,14 @@
   "name": "Gooey Week BF Stickers",
   "artist": "LeGooey",
   "stickers": [
-    "transitionSwag/stickers-set-gooey-2/sticker-gooey-4",
-    "transitionSwag/stickers-set-gooey-2/sticker-gooey-5",
-    "transitionSwag/stickers-set-gooey-2/sticker-gooey-6",
-    "transitionSwag/stickers-set-1/bfSticker1",
-    "transitionSwag/stickers-set-1/bfSticker2",
-    "transitionSwag/stickers-set-1/bfSticker3",
-    "transitionSwag/stickers-set-1/gfSticker1",
-    "transitionSwag/stickers-set-1/gfSticker2",
-    "transitionSwag/stickers-set-1/gfSticker3"
+    "ui/loading/stickers/graphics/stickers-set-gooey-2/sticker-gooey-4",
+    "ui/loading/stickers/graphics/stickers-set-gooey-2/sticker-gooey-5",
+    "ui/loading/stickers/graphics/stickers-set-gooey-2/sticker-gooey-6",
+    "ui/loading/stickers/graphics/stickers-set-1/sticker-bf-1",
+    "ui/loading/stickers/graphics/stickers-set-1/sticker-bf-2",
+    "ui/loading/stickers/graphics/stickers-set-1/sticker-bf-3",
+    "ui/loading/stickers/graphics/stickers-set-1/sticker-gf-1",
+    "ui/loading/stickers/graphics/stickers-set-1/sticker-gf-2",
+    "ui/loading/stickers/graphics/stickers-set-1/sticker-gf-3"
   ]
 }

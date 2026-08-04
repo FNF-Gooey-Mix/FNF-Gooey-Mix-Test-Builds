@@ -3,17 +3,17 @@
   "name": "Gooey Stress Stickers",
   "artist": "LeGooey",
   "stickers": [
-    "transitionSwag/stickers-set-gooey-1/sticker-gooey-1",
-    "transitionSwag/stickers-set-gooey-1/sticker-gooey-2",
-    "transitionSwag/stickers-set-gooey-1/sticker-gooey-3",
-    "transitionSwag/stickers-set-gooey-1/sticker-flora-1",
-    "transitionSwag/stickers-set-gooey-1/sticker-flora-2",
-    "transitionSwag/stickers-set-gooey-1/sticker-flora-3",
-    "transitionSwag/stickers-set-gooey-1/sticker-kam-1",
-    "transitionSwag/stickers-set-gooey-1/sticker-kam-2",
-    "transitionSwag/stickers-set-gooey-1/sticker-kam-3",
-    "transitionSwag/stickers-set-gooey-extra/sticker-tankman-1",
-    "transitionSwag/stickers-set-gooey-extra/sticker-tankman-1",
-    "transitionSwag/stickers-set-gooey-extra/sticker-tankman-1"
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-gooey-1",
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-gooey-2",
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-gooey-3",
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-flora-1",
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-flora-2",
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-flora-3",
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-kam-1",
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-kam-2",
+    "ui/loading/stickers/graphics/stickers-set-gooey-1/sticker-kam-3",
+    "ui/loading/stickers/graphics/stickers-set-gooey-extra/sticker-tankman-1",
+    "ui/loading/stickers/graphics/stickers-set-gooey-extra/sticker-tankman-1",
+    "ui/loading/stickers/graphics/stickers-set-gooey-extra/sticker-tankman-1"
   ]
 }
