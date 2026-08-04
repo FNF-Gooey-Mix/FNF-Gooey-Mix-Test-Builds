@@ -73,7 +73,6 @@ class FloraQtCharacter extends FloraBaseCharacter
   override public function onSongRetry(e)
   {
     super.onSongRetry(e);
-
     isQtDance = false;
   }
 }

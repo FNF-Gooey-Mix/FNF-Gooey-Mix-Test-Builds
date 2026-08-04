@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Kam",
   "renderType": "multisparrow",
-  "assetPath": "characters/kam/KamPlayer",
+  "assetPath": "gameplay/characters/kam-player/KamPlayer",
   "flipX": true,
   "cameraOffsets": [0, 144],
   "healthIcon": {

@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Gooey (QT)",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/gooey/Gooey",
+  "assetPath": "gameplay/characters/gooey/Gooey",
   "flipX": true,
   "cameraOffsets": [-1, -32],
   "death": {
@@ -70,56 +70,56 @@
     {
       "name": "singLEFTmiss",
       "prefix": "GooeyMissLeft",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "singDOWNmiss",
       "prefix": "GooeyMissDown",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "singUPmiss",
       "prefix": "GooeyMissUp",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "singRIGHTmiss",
       "prefix": "GooeyMissRight",
-      "assetPath": "shared:characters/gooey/GooeyPlayerAnims",
+      "assetPath": "gameplay/characters/gooey/GooeyPlayerAnims",
       "offsets": [-3.75, 57.5]
     },
     {
       "name": "GooeyQTwave",
       "prefix": "GooeyQTwave",
-      "assetPath": "shared:characters/gooey/GooeyQTAnims",
+      "assetPath": "gameplay/characters/gooey-qt/GooeyQTAnims",
       "offsets": [-56.5, 12]
     },
     {
       "name": "GooeyBirdBrain",
       "prefix": "GooeyBirdBrain",
-      "assetPath": "shared:characters/gooey/GooeyQTAnims",
+      "assetPath": "gameplay/characters/gooey-qt/GooeyQTAnims",
       "offsets": [-56.5, 12]
     },
     {
       "name": "firstDeath",
       "prefix": "GooeyDies",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [18, -19]
     },
     {
       "name": "deathLoop",
       "prefix": "GooeyDeadIdle",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [18, -19],
       "looped": true
     },
     {
       "name": "deathConfirm",
       "prefix": "GooeyConfirm",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [18, -19]
     }
   ]

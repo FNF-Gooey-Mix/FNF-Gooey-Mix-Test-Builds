@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Morpho (Player)",
   "renderType": "multisparrow",
-  "assetPath": "characters/morpho/MorphoPlayer",
+  "assetPath": "gameplay/characters/morpho-player/MorphoPlayer",
   "flipX": true,
   "cameraOffsets": [0, 144],
   "animations": [
@@ -59,13 +59,13 @@
     {
       "name": "morphoGoogly",
       "prefix": "morphoGoogly",
-      "assetPath": "characters/morpho/MorphoGoogly",
+      "assetPath": "gameplay/characters/morpho-player/MorphoGoogly",
       "offsets": [-10, -40]
     },
     {
       "name": "morphoShrugRad",
       "prefix": "morphoShrugRad",
-      "assetPath": "characters/morpho/MorphoGoogly",
+      "assetPath": "gameplay/characters/morpho-player/MorphoGoogly",
       "offsets": [-10, -40]
     }
   ]

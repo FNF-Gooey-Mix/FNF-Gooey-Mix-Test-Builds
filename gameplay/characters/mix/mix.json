@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Mix",
   "renderType": "multisparrow",
-  "assetPath": "characters/extra/Mix",
+  "assetPath": "gameplay/characters/mix/Mix",
   "flipX": true,
   "cameraOffsets": [0, 90],
   "animations": [
@@ -40,7 +40,7 @@
       "name": "showOffassBITCH",
       "prefix": "showOffassBITCH",
       "offsets": [90, 140],
-      "assetPath": "characters/extra/mixIntro"
+      "assetPath": "gameplay/characters/mix/mixIntro"
     }
   ]
 }

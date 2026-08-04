@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Flora (Dark)",
-  "assetPath": "shared:characters/flora/FloraDark",
+  "assetPath": "gameplay/characters/flora-dark/FloraDark",
   "startingAnimation": "danceRight",
   "renderType": "multianimateatlas",
   "atlasSettings": { "useRenderTexture": true },

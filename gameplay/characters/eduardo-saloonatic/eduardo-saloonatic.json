@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Eduardo (Saloonatic)",
   "renderType": "sparrow",
-  "assetPath": "characters/extra/saloonatic/Eduardo",
+  "assetPath": "gameplay/characters//eduardo-saloonatic/Eduardo",
   "flipX": false,
   "healthIcon": {
     "id": "eduardo-gooey"

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Kam (Speaker Shooter)",
-  "assetPath": "characters/kam/KamStress",
+  "assetPath": "gameplay/characters/kam-speaker-stress/KamStress",
   "renderType": "multisparrow",
   "singTime": 10,
   "offsets": [-6, 32],
@@ -38,17 +38,17 @@
     {
       "name": "kamMurder",
       "prefix": "kamMurder",
-      "assetPath": "characters/kam/KamStressCutscene"
+      "assetPath": "gameplay/characters/kam-speaker-stress/KamStressCutscene"
     },
     {
       "name": "grab",
       "prefix": "grab",
-      "assetPath": "characters/kam/KamStressCutscene"
+      "assetPath": "gameplay/characters/kam-speaker-stress/KamStressCutscene"
     },
     {
       "name": "iDontKnow",
       "prefix": "iDontKnow",
-      "assetPath": "characters/kam/KamStressCutscene"
+      "assetPath": "gameplay/characters/kam-speaker-stress/KamStressCutscene"
     }
   ]
 }

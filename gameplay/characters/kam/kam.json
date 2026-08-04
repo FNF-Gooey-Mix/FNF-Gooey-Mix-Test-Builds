@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Kam",
   "renderType": "multisparrow",
-  "assetPath": "characters/kam/Kam",
+  "assetPath": "gameplay/characters/kam/Kam",
   "cameraOffsets": [0, 144],
   "healthIcon": {
     "id": "kam"

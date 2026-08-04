@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Kam (Updog)",
   "renderType": "multisparrow",
-  "assetPath": "characters/kam/KamUpdog",
+  "assetPath": "gameplay/characters/kam-updog/KamUpdog",
   "flipX": false,
   "cameraOffsets": [-1, 93],
   "healthIcon": {

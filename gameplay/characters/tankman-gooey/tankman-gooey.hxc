@@ -21,7 +21,7 @@ class TankmanGooeyCharacter extends MultiAnimateAtlasCharacter
 
     if (PlayState.instance?.currentStage != null)
     {
-      stressSplat = new FunkinSprite(0, 0).loadSparrow('characters/tankman/stressGooSplat');
+      stressSplat = new FunkinSprite(0, 0).loadSparrow('gameplay/characters/tankman-gooey/stressGooSplat');
       stressSplat.animation.addByPrefix('gooSplat', 'gooSplat', 24, false);
       stressSplat.animation.addByPrefix('frame', 'frame', 24, false);
       stressSplat.animation.addByPrefix('blank', 'blank', 24, false);

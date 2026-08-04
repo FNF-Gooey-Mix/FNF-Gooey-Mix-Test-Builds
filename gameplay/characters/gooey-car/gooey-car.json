@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Gooey (Car)",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/gooey/GooeyCar",
+  "assetPath": "gameplay/characters/gooey-car/GooeyCar",
   "flipX": true,
   "cameraOffsets": [-1, -27],
   "death": {
@@ -95,20 +95,20 @@
     {
       "name": "firstDeath",
       "prefix": "GooeyDies",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [-4, -26]
     },
     {
       "name": "deathLoop",
       "prefix": "GooeyDeadIdle",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [-4, -26],
       "looped": true
     },
     {
       "name": "deathConfirm",
       "prefix": "GooeyConfirm",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [-4, -26]
     }
   ]

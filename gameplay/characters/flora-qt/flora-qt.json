@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Flora",
-  "assetPath": "shared:characters/flora/Flora",
+  "assetPath": "gameplay/characters/flora/Flora",
   "startingAnimation": "danceRight",
   "renderType": "multianimateatlas",
   "cameraOffsets": [0, -230],
@@ -89,19 +89,19 @@
     {
       "name": "FloraQtIntro",
       "prefix": "FloraQtIntro",
-      "assetPath": "shared:characters/flora/FloraQT",
+      "assetPath": "gameplay/characters/flora-qt/FloraQT",
       "offsets": [-106, 196]
     },
     {
       "name": "danceLeft-qt",
       "prefix": "FloraQTIdleLeft",
-      "assetPath": "shared:characters/flora/FloraQT",
+      "assetPath": "gameplay/characters/flora-qt/FloraQT",
       "offsets": [-106, 196]
     },
     {
       "name": "danceRight-qt",
       "prefix": "FloraQTIdleRight",
-      "assetPath": "shared:characters/flora/FloraQT",
+      "assetPath": "gameplay/characters/flora-qt/FloraQT",
       "offsets": [-106, 196]
     }
   ]

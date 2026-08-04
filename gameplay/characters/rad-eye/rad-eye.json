@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Radiation (Eyes)",
   "renderType": "multisparrow",
-  "assetPath": "characters/rad/RadiationEye",
+  "assetPath": "gameplay/characters/rad-eye/RadiationEye",
   "cameraOffsets": [0, 244],
   "healthIcon": {
     "id": "rad"

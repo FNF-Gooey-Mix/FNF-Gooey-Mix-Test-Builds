@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Flora (Pixel Thorns)",
-  "assetPath": "characters/flora/FloraThornsPixel",
+  "assetPath": "gameplay/characters/flora-pixel-thorns/FloraThornsPixel",
   "cameraOffsets": [-80, -80],
   "startingAnimation": "danceRight",
   "isPixel": true,

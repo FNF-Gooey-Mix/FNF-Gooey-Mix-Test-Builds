@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Gooey (Christmas)",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/gooey/GooeyChristmas",
+  "assetPath": "gameplay/characters/gooey-christmas/GooeyChristmas",
   "flipX": true,
   "cameraOffsets": [-1, -30],
   "death": {
@@ -60,20 +60,20 @@
     {
       "name": "firstDeath",
       "prefix": "GooeyChristmasDies",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [19, -21]
     },
     {
       "name": "deathLoop",
       "prefix": "GooeyDeadIdle",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [19, -21],
       "looped": true
     },
     {
       "name": "deathConfirm",
       "prefix": "GooeyConfirm",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [19, -21]
     }
   ]

@@ -1,7 +1,7 @@
 {
   "version": "1.0.1",
   "name": "Gooey (Pixel)",
-  "assetPath": "characters/gooey/GooeyPixel",
+  "assetPath": "gameplay/characters/gooey-pixel/GooeyPixel",
   "flipX": true,
   "offsets": [-6, 12],
   "isPixel": true,

@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Edd (Saloonatic)",
   "renderType": "sparrow",
-  "assetPath": "characters/extra/saloonatic/Edd",
+  "assetPath": "gameplay/characters/edd-saloonatic/Edd",
   "flipX": true,
   "healthIcon": {
     "id": "edd-gooey"

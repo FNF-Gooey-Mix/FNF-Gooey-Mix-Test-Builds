@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Boyfriend (For Extra Difficulty Songs)",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/bf",
+  "assetPath": "gameplay/characters/bf/boyfriend",
   "flipX": true,
   "offsets": [17, 14],
   "cameraOffsets": [-18, 36],
@@ -58,7 +58,7 @@
       "prefix": "Cheer"
     },
     {
-      "asset": "shared:characters/bf-death",
+      "assetPath": "gameplay/characters/bf/bf-dead",
       "name": "firstDeath",
       "prefix": "Death Intro",
       "offsets": [22, 15],
@@ -67,20 +67,20 @@
       }
     },
     {
-      "assetPath": "shared:characters/bf-death",
+      "assetPath": "gameplay/characters/bf/bf-dead",
       "name": "deathLoop",
       "prefix": "Death Loop",
       "looped": true,
       "offsets": [22, 15]
     },
     {
-      "asset": "shared:characters/bf-death",
+      "assetPath": "gameplay/characters/bf/bf-dead",
       "name": "deathConfirm",
       "prefix": "Death Confirm",
       "offsets": [22, 15]
     },
     {
-      "assetPath": "shared:characters/bfFakeOut",
+      "assetPath": "gameplay/characters/bf/bf-fakeout",
       "name": "fakeoutDeath",
       "prefix": "fake out death BF",
       "animType": "symbol",

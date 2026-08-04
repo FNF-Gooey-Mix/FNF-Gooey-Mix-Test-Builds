@@ -20,7 +20,7 @@ class FloraChristmasCharacter extends FloraBaseCharacter
 
     if (PlayState.instance?.currentStage != null)
     {
-      christmas = new FunkinSprite(0, 0).loadSparrow('characters/flora/FloraSpeakerChristmas');
+      christmas = new FunkinSprite(0, 0).loadSparrow('gameplay/characters/flora-christmas/FloraSpeakerChristmas');
       christmas.animation.addByPrefix('idle', 'christmas', 12, false);
     }
   }

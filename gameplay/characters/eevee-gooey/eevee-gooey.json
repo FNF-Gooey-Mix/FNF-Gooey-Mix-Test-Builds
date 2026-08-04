@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Eevee (Gooey)",
   "renderType": "multisparrow",
-  "assetPath": "characters/extra/eevee/Playable_Eevee",
+  "assetPath": "gameplay/characters/eevee-gooey/Playable_Eevee",
   "cameraOffsets": [-1, 94],
   "flipX": true,
   "healthIcon": {
@@ -62,14 +62,14 @@
     {
       "name": "firstDeath",
       "prefix": "DeathStart",
-      "assetPath": "characters/extra/eevee/EeveeDeath",
+      "assetPath": "gameplay/characters/eevee-gooey/EeveeDeath",
       "offsets": [-10, -63],
       "frameRate": 12
     },
     {
       "name": "deathLoop",
       "prefix": "DeathIdle",
-      "assetPath": "characters/extra/eevee/EeveeDeath",
+      "assetPath": "gameplay/characters/eevee-gooey/EeveeDeath",
       "offsets": [-10, -63],
       "frameRate": 12,
       "looped": true
@@ -77,7 +77,7 @@
     {
       "name": "deathConfirm",
       "prefix": "Confirm",
-      "assetPath": "characters/extra/eevee/EeveeDeath",
+      "assetPath": "gameplay/characters/eevee-gooey/EeveeDeath",
       "offsets": [-10, -63],
       "frameRate": 12
     }

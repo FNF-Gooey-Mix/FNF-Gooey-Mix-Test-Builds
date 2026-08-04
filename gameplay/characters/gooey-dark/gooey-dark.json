@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Gooey (Dark)",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/gooey/GooeyDark",
+  "assetPath": "gameplay/characters/gooey-dark/GooeyDark",
   "flipX": true,
   "atlasSettings": { "useRenderTexture": true },
   "cameraOffsets": [-1, -32],
@@ -81,20 +81,20 @@
     {
       "name": "firstDeath",
       "prefix": "GooeyDies",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [19, -21]
     },
     {
       "name": "deathLoop",
       "prefix": "GooeyDeadIdle",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [19, -21],
       "looped": true
     },
     {
       "name": "deathConfirm",
       "prefix": "GooeyConfirm",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [19, -21]
     }
   ]

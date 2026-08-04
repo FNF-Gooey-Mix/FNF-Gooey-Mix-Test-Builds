@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Nene (Gooey Mix)",
-  "assetPath": "shared:characters/nene",
+  "assetPath": "gameplay/characters/nene/nene",
   "startingAnimation": "danceRight",
   "renderType": "animateatlas",
   "offsets": [4, -89],

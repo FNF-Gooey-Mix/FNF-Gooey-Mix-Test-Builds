@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Flora (Pixel)",
-  "assetPath": "characters/flora/FloraPixel",
+  "assetPath": "gameplay/characters/flora-pixel/FloraPixel",
   "cameraOffsets": [-80, -80],
   "isPixel": true,
   "scale": 6,

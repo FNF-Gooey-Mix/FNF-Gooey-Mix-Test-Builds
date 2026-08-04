@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Gooey (Stress)",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/gooey/GooeyStress",
+  "assetPath": "gameplay/characters/gooey-stress/Stress",
   "flipX": true,
   "cameraOffsets": [-1, 1],
   "death": {
@@ -124,20 +124,20 @@
     {
       "name": "firstDeath",
       "prefix": "GooeyStressDies",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [-272, -86]
     },
     {
       "name": "deathLoop",
       "prefix": "GooeyDeadIdle",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [-272, -86],
       "looped": true
     },
     {
       "name": "deathConfirm",
       "prefix": "GooeyConfirm",
-      "assetPath": "shared:characters/gooey/GooeyGameOver",
+      "assetPath": "gameplay/characters/gooey/GooeyGameOver",
       "offsets": [-272, -86]
     }
   ]

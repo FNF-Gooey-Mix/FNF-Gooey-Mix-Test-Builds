@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "name": "Pikafriend (Gooey)",
+  "name": "Chi",
   "renderType": "multisparrow",
-  "assetPath": "characters/extra/eevee/Pikafriend",
+  "assetPath": "gameplay/characters/pikafriend-gooey/Pikafriend",
   "cameraOffsets": [-1, 94],
   "flipX": false,
   "animations": [

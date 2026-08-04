@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Gooey (Updog)",
   "renderType": "multisparrow",
-  "assetPath": "characters/gooey/GooeyUpdog",
+  "assetPath": "gameplay/characters/gooey-updog/GooeyUpdog",
   "flipX": true,
   "cameraOffsets": [-1, 93],
   "healthIcon": {

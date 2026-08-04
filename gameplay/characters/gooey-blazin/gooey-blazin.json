@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Gooey (Blazin')",
-  "assetPath": "shared:characters/gooey/GooeyBlazin",
+  "assetPath": "gameplay/characters/gooey-blazin/GooeyBlazin",
   "healthIcon": {
     "id": "gooey"
   },

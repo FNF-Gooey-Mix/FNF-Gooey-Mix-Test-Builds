@@ -27,7 +27,7 @@ class FloraDarkCharacter extends FloraBaseCharacter
       normalChar.alpha = 1;
       PlayState.instance.currentStage.add(normalChar);
 
-      fakeSpeaker = FunkinSprite.createTextureAtlas(0, 0, "characters/flora/FloraSpeakerDark", "shared");
+      fakeSpeaker = FunkinSprite.createTextureAtlas(0, 0, "gameplay/characters/flora-dark/FloraSpeakerDark");
       fakeSpeaker.anim.addByFrameLabel('idle', 'FloraSpeakerBop', 24, false);
       normalChar.zIndex = this.zIndex - 1;
       PlayState.instance.currentStage.add(fakeSpeaker);

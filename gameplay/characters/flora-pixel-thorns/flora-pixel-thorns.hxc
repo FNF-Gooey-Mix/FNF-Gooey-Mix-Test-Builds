@@ -38,7 +38,7 @@ class FloraPixelThornsCharacter extends SparrowCharacter
   {
     super.onCreate(event);
 
-    floraSpeaker = new FunkinSprite(0, 0).loadSparrow('characters/flora/FloraSpeakerPixel');
+    floraSpeaker = new FunkinSprite(0, 0).loadSparrow('gameplay/characters/flora-pixel/FloraSpeakerPixel');
     floraSpeaker.animation.addByPrefix('blue', 'speaker', 12, false);
     floraSpeaker.animation.addByPrefix('red', 'spirit', 12, false);
     floraSpeaker.animation.play('blue');

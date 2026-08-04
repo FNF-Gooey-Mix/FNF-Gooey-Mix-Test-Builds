@@ -21,11 +21,11 @@ class FloraTankmenCharacter extends FloraBaseCharacter
 
     if (PlayState.instance?.currentStage != null)
     {
-      tankBopLeft = new FunkinSprite(0, 0).loadSparrow('characters/flora/LeftTanker');
+      tankBopLeft = new FunkinSprite(0, 0).loadSparrow('gameplay/characters/flora-tankmen/tankBopLeft');
       tankBopLeft.animation.addByPrefix('idle', 'idle', 24, false);
       tankBopLeft.animation.play('idle');
 
-      tankBopRight = new FunkinSprite(0, 0).loadSparrow('characters/flora/RightTanker');
+      tankBopRight = new FunkinSprite(0, 0).loadSparrow('gameplay/characters/flora-tankmen/tankBopRight');
       tankBopRight.animation.addByPrefix('idle', 'idle', 24, false);
       tankBopRight.animation.play('idle');
     }

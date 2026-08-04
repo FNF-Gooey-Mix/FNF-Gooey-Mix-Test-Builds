@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Not Matt",
   "renderType": "multisparrow",
-  "assetPath": "characters/matt/Not Matt",
+  "assetPath": "gameplay/characters/not-matt/Not Matt",
   "cameraOffsets": [0, 144],
   "animations": [
     {

@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Morpho",
   "renderType": "multisparrow",
-  "assetPath": "characters/morpho/Morpho",
+  "assetPath": "gameplay/characters/morpho/Morpho",
   "cameraOffsets": [0, 144],
   "animations": [
     {

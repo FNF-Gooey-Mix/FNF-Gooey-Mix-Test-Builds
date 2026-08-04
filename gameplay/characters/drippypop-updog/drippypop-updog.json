@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Drippypop (Updog)",
   "renderType": "multisparrow",
-  "assetPath": "characters/extra/DrippypopUpdog",
+  "assetPath": "gameplay/characters/driippypop-updog/DrippypopUpdog",
   "cameraOffsets": [-1, 93],
   "flipX": false,
   "healthIcon": {

@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Radiation",
   "renderType": "multisparrow",
-  "assetPath": "characters/rad/Radiation",
+  "assetPath": "gameplay/characters/rad/Radiation",
   "cameraOffsets": [0, 244],
   "animations": [
     {
@@ -68,7 +68,7 @@
     {
       "name": "radGooglyEyes",
       "prefix": "radGooglyEyes",
-      "assetPath": "characters/rad/radGooglyEyes",
+      "assetPath": "gameplay/characters/rad/radGooglyEyes",
       "offsets": [-10, -140]
     }
   ]
