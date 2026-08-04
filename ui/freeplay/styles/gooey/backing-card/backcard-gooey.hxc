@@ -35,64 +35,64 @@ class GooeyCard extends BackingCard
 
   public override function onCreate(event:ScriptEvent):Void
   {
-    add(backgrad = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/backGradient')));
+    add(backgrad = new FlxSprite(0, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/backGradient')));
 
-    add(backcrystals = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/ourpleBack')));
+    add(backcrystals = new FlxSprite(0, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/ourpleBack')));
     backcrystals.alpha = 0.3;
 
-    add(natCrystal = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystal')));
+    add(natCrystal = new FlxSprite(X_POSITION, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/natCrystal')));
     natCrystal.alpha = 0;
 
-    add(natCrystalGlow = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystalGlow')));
+    add(natCrystalGlow = new FlxSprite(X_POSITION, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/natCrystalGlow')));
     natCrystalGlow.blend = 0;
     natCrystalGlow.alpha = 0;
 
-    add(natCrystalGlow2 = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/natCrystalGlow')));
+    add(natCrystalGlow2 = new FlxSprite(X_POSITION, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/natCrystalGlow')));
     natCrystalGlow2.blend = 0;
     natCrystalGlow2.alpha = 0;
 
-    add(selectShade = new FlxSprite(X_POSITION, 0, Paths.image('freeplay/backingCards/gooey/selectShade')));
+    add(selectShade = new FlxSprite(X_POSITION, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/selectShade')));
     selectShade.blend = 9;
     selectShade.alpha = 0;
 
-    add(crystal1 = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/crystalBackBigBlur')));
+    add(crystal1 = new FlxSprite(0, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/crystalBackBigBlur')));
     crystal1.blend = 16;
     crystal1.alpha = 0.1;
     crystal1.flipY = true;
     crystal1.scale.set(1.3, 1.3);
 
-    add(crystal2 = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/crystalBackSmallBlur')));
+    add(crystal2 = new FlxSprite(0, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/crystalBackSmallBlur')));
     crystal2.blend = 0;
     crystal2.alpha = 0.2;
     crystal2.flipX = true;
     crystal2.scale.set(1.15, 1.15);
 
-    add(crystal3 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/crystalBack'), 0x01, 0));
+    add(crystal3 = new FlxBackdrop(Paths.image('ui/freeplay/styles/gooey/backing-card/crystalBack'), 0x01, 0));
     crystal3.velocity.x = -10;
     crystal3.blend = 0;
     crystal3.alpha = 0.2;
 
-    add(crystal4 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/crystalBack'), 0x01, 0));
+    add(crystal4 = new FlxBackdrop(Paths.image('ui/freeplay/styles/gooey/backing-card/crystalBack'), 0x01, 0));
     crystal4.velocity.x = 10;
     crystal4.blend = 0;
     crystal4.alpha = 0.25;
     crystal4.flipY = true;
     // crystal4.flipX = true;
 
-    add(gooLines = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+    add(gooLines = new FlxBackdrop(Paths.image('ui/freeplay/styles/gooey/backing-card/gooWave'), 0x01));
     gooLines.setPosition(0, 90);
     gooLines.velocity.x = 100;
     gooLines.alpha = 0.9;
     gooLines.blend = 8;
 
-    add(gooLines2 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+    add(gooLines2 = new FlxBackdrop(Paths.image('ui/freeplay/styles/gooey/backing-card/gooWave'), 0x01));
     gooLines2.setPosition(0, 370);
     gooLines2.flipY = true;
     gooLines2.velocity.x = -100;
     gooLines2.alpha = 0.9;
     gooLines2.blend = 8;
 
-    add(gooLines3 = new FlxBackdrop(Paths.image('freeplay/backingCards/gooey/gooWave'), 0x01));
+    add(gooLines3 = new FlxBackdrop(Paths.image('ui/freeplay/styles/gooey/backing-card/gooWave'), 0x01));
     gooLines3.setPosition(0, 650);
     gooLines3.velocity.x = 100;
     gooLines3.alpha = 0.9;
@@ -146,11 +146,11 @@ class GooeyCard extends BackingCard
     funnyScroll6.bold = true;
     add(funnyScroll6);
 
-    add(glow = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/gooGrad')));
+    add(glow = new FlxSprite(0, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/gooGrad')));
     glow.blend = 0;
     glow.alpha = 0.3;
 
-    add(natFlash = new FlxSprite(0, 0, Paths.image('freeplay/backingCards/gooey/natFlash')));
+    add(natFlash = new FlxSprite(0, 0, Paths.image('ui/freeplay/styles/gooey/backing-card/natFlash')));
     natFlash.blend = 0;
     natFlash.alpha = 0;
 

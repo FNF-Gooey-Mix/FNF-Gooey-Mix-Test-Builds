@@ -24,7 +24,7 @@
   "freeplayStyle": "gooey",
   "stickerPack": "standard-gooey",
   "freeplayDJ": {
-    "assetPath": "freeplay/freeplay-gooey",
+    "assetPath": "ui/freeplay/dj/gooey/freeplay-gooey",
     "text1": "GOOBER ALERT!",
     "text2": "GOOBER ALERT!",
     "text3": "GOOBER ALERT!",
@@ -85,9 +85,9 @@
   },
   "charSelect": {
     "position": 1,
+    "assetPath": "ui/character-select/characters/gooey",
     "gf": {
-      "assetPath": "charSelect/floraChill",
-      "animInfoPath": "charSelect/floraAnimInfo",
+      "assetPath": "ui/character-select/characters/flora",
       "visualizer": false
     }
   },
