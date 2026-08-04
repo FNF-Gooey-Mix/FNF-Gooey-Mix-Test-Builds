@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
   "name": "GOOBER ALERT",
-  "titleAsset": "storymenu/titles/week60037",
+  "titleAsset": "ui/story-mode/levels/week60037",
   "visible": true,
   "props": [
     {
-      "assetPath": "storymenu/props/gooey",
+      "assetPath": "ui/story-mode/props/gooey",
       "scale": 1,
       "offsets": [112, 150],
       "animations": [
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "assetPath": "storymenu/props/bf",
+      "assetPath": "ui/story-mode/props/bf",
       "scale": 1.0,
       "offsets": [150, 80],
       "animations": [
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "assetPath": "storymenu/props/gf",
+      "assetPath": "ui/story-mode/props/gf",
       "scale": 1.0,
       "offsets": [200, 80],
       "animations": [

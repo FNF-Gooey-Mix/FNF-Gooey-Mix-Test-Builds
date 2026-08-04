@@ -5,6 +5,7 @@ import funkin.play.cutscene.VideoCutscene;
 import funkin.play.cutscene.CutsceneType;
 import funkin.play.PlayStatePlaylist;
 import funkin.graphics.FunkinSprite;
+import funkin.assets.Paths as NewPaths;
 
 class StarcraftSong extends Song
 {
@@ -48,7 +49,7 @@ class StarcraftSong extends Song
 
   function startVideo()
   {
-    VideoCutscene.play(Paths.videos('week60037ending'), CutsceneType.ENDING);
+    VideoCutscene.play(NewPaths.video('gameplay/songs/starcraft/cutscene'), CutsceneType.ENDING);
     hasPlayedCutscene = true;
   }
 }
