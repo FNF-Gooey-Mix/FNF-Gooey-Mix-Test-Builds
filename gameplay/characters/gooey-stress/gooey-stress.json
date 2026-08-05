@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Gooey (Stress)",
   "renderType": "multianimateatlas",
-  "assetPath": "gameplay/characters/gooey-stress/Stress",
+  "assetPath": "gameplay/characters/gooey-stress/GooeyStress",
   "flipX": true,
   "cameraOffsets": [-1, 1],
   "death": {

@@ -60,7 +60,7 @@ class KamSpeakerStressCharacter extends MultiSparrowCharacter
     // My Flora is not kinda speakerless, so we shall make the speaker.
     if (!isMyFloraKindaSpeakerless)
     {
-      floraSpeaker = FunkinSprite.createTextureAtlas(0, 0, 'characters/flora/FloraSpeaker', 'shared');
+      floraSpeaker = FunkinSprite.createTextureAtlas(0, 0, 'gameplay/characters/flora/FloraSpeaker');
       floraSpeaker.anim.addByFrameLabel('idle', 'FloraSpeakerBop', 24, false);
 
       floraSpeakerScreen = new FloraSpeakerScreen(GooeyMixOptions.floraVisualizer);
@@ -77,7 +77,7 @@ class KamSpeakerStressCharacter extends MultiSparrowCharacter
       initTimemap();
 
       muzzleFlash = new FlxSprite(0, 0);
-      muzzleFlash.frames = Paths.getSparrowAtlas("characters/kam/kam_flashes");
+      muzzleFlash.frames = Paths.getSparrowAtlas("gameplay/characters/kam-speaker-stress/kam_flashes");
       muzzleFlash.animation.addByPrefix('shoot1', 'shoot back0', 24, false);
       muzzleFlash.animation.addByPrefix('shoot2', 'shoot back low0', 24, false);
       muzzleFlash.animation.addByPrefix('shoot3', 'shoot forward0', 24, false);

@@ -141,7 +141,7 @@ class GooeyBlazinCharacter extends MultiAnimateAtlasCharacter
     }
     else if (name == "deathConfirm")
     {
-      gooeyRetry = FunkinSound.load(Paths.music('gameplay/gameover/gameOverEnd-gooeyReal'), true);
+      gooeyRetry = FunkinSound.load(Paths.music('gameplay/playable-characters/gooey/game-over/game-over-gooey/game-over-gooey-end-real'), true);
       gooeyRetry.volume = 1;
       gooeyRetry.play(false);
     }

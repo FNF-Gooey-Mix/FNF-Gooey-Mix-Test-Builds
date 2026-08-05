@@ -217,7 +217,7 @@ class HotelCastleErectStage extends Stage
     rightStartCamera = FlxG.random.bool(50);
     gorseCutscene = FlxG.random.bool(6.0037);
 
-    fakeOpponent = FunkinSprite.createTextureAtlas(0, 0, 'characters/gooey/GooeyGooeyCutscene', "shared");
+    fakeOpponent = FunkinSprite.createTextureAtlas(0, 0, 'gameplay/stages/hotelCastleErect/GooeyGooeyCutscene');
     fakeOpponent.anim.addByFrameLabel('opponentSit', 'opponentSit', 24, false);
     fakeOpponent.anim.addByFrameLabel('opponentLook', 'opponentLook', 24, false);
     fakeOpponent.anim.addByFrameLabel('opponentCutscene', 'opponentCutscene', 24, false);
@@ -245,7 +245,7 @@ class HotelCastleErectStage extends Stage
 
     if (!gorseCutscene)
     {
-      fakePlayer = FunkinSprite.createTextureAtlas(0, 0, 'characters/gooey/GooeyGooeyCutscene', "shared");
+      fakePlayer = FunkinSprite.createTextureAtlas(0, 0, 'gameplay/stages/hotelCastleErect/GooeyGooeyCutscene');
       fakePlayer.anim.addByFrameLabel('playerSit', 'playerSit', 24, false);
       fakePlayer.anim.addByFrameLabel('playerLook', 'playerLook', 24, false);
       fakePlayer.anim.addByFrameLabel('playerCutscene', 'playerCutscene', 24, false);
@@ -272,7 +272,7 @@ class HotelCastleErectStage extends Stage
 
     if (gorseCutscene)
     {
-      gorse = new FunkinSprite(0, 0).loadTexture('characters/gooey/gorse', 'shared');
+      gorse = new FunkinSprite(0, 0).loadTexture('gameplay/stages/hotelCastleErect/gorse');
       gorse.setPosition(1210, 15);
       gorse.zIndex = 63;
       PlayState.instance.currentStage.add(gorse);
@@ -315,7 +315,7 @@ class HotelCastleErectStage extends Stage
             PlayState.instance.tweenCameraToPosition(rightPos[0] + 150, rightPos[1] + 100, 3, FlxEase.expoOut);
             PlayState.instance.tweenCameraZoom(1.3, 0, true);
             FlxG.camera.fade(0xFF000000, 1, true);
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/caveShimmer'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/caveShimmer'), 1.0);
           }
         },
         {
@@ -323,9 +323,9 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             cutsceneConductor = new Conductor();
-            songIntro = FunkinSound.load(Paths.music("cutscene/gooeyGooeyMix", "shared"), true);
+            songIntro = FunkinSound.load(Paths.music("gameplay/stages/hotelCastleErect/cutscene/gooeyGooeyMix"), true);
             songIntro.play();
-            var songMusicData = SongRegistry.instance.parseMusicData("cutscene/gooeyGooeyMix", "shared");
+            var songMusicData = SongRegistry.instance.parseMusicData("gameplay/stages/hotelCastleErect/cutscene/gooeyGooeyMix");
             if (songMusicData != null) cutsceneConductor.mapTimeChanges(songMusicData.timeChanges);
             cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
           }
@@ -335,7 +335,7 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             fakeOpponent.animation.play('opponentLook');
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/gooeyNotice1'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/gooeyGooey/gooeyNotice1'), 1.0);
           }
         },
         {
@@ -350,7 +350,7 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             fakeOpponent.animation.play('GorseLook');
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/gorseLook'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/gorseLook'), 1.0);
             FlxTween.tween(songIntro, {pitch: 0.2}, 4, null, FlxEase.smoothStepInOut);
             canSkipCutscene = false;
             skipText.visible = false;
@@ -368,7 +368,7 @@ class HotelCastleErectStage extends Stage
           time: 6.5,
           callback: () ->
           {
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/gorse'), 0.6);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/gorse'), 0.6);
           }
         },
         {
@@ -383,7 +383,7 @@ class HotelCastleErectStage extends Stage
           time: 12,
           callback: () ->
           {
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/gorseKills'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/gorseKills'), 1.0);
             songIntro.fadeOut(1, 0);
           }
         },
@@ -424,7 +424,7 @@ class HotelCastleErectStage extends Stage
             PlayState.instance.tweenCameraToPosition(rightPos[0] + 150, rightPos[1] + 100, 3, FlxEase.expoOut);
             PlayState.instance.tweenCameraZoom(1.3, 0, true);
             FlxG.camera.fade(0xFF000000, 1, true);
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/caveShimmer'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/caveShimmer'), 1.0);
           }
         },
         {
@@ -432,9 +432,9 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             cutsceneConductor = new Conductor();
-            songIntro = FunkinSound.load(Paths.music("cutscene/gooeyGooeyMix", "shared"), true);
+            songIntro = FunkinSound.load(Paths.music("gameplay/stages/hotelCastleErect/cutscene/gooeyGooeyMix"), true);
             songIntro.play();
-            var songMusicData = SongRegistry.instance.parseMusicData("cutscene/gooeyGooeyMix", "shared");
+            var songMusicData = SongRegistry.instance.parseMusicData("gameplay/stages/hotelCastleErect/cutscene/gooeyGooeyMix");
             if (songMusicData != null) cutsceneConductor.mapTimeChanges(songMusicData.timeChanges);
             cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
           }
@@ -444,7 +444,7 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             fakeOpponent.animation.play('opponentLook');
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/gooeyNotice1'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/gooeyNotice1'), 1.0);
           }
         },
         {
@@ -467,7 +467,7 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             fakePlayer.animation.play('playerLook');
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/gooeyNotice2'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/gooeyNotice2'), 1.0);
           }
         },
         {
@@ -478,7 +478,7 @@ class HotelCastleErectStage extends Stage
             PlayState.instance.tweenCameraToPosition(floraPos[0] + 50, floraPos[1] + 40, 3, FlxEase.expoOut);
             fakePlayer.animation.play('playerCutscene');
             fakeOpponent.animation.play('opponentCutscene');
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/walkAndWave'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/walkAndWave'), 1.0);
           }
         },
         {
@@ -533,7 +533,7 @@ class HotelCastleErectStage extends Stage
             PlayState.instance.tweenCameraToPosition(leftPos[0] - 150, leftPos[1] + 100, 3, FlxEase.expoOut);
             PlayState.instance.tweenCameraZoom(1.3, 0, true);
             FlxG.camera.fade(0xFF000000, 1, true);
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/caveShimmer'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/caveShimmer'), 1.0);
           }
         },
         {
@@ -541,9 +541,9 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             cutsceneConductor = new Conductor();
-            songIntro = FunkinSound.load(Paths.music("cutscene/gooeyGooeyMix", "shared"), true);
+            songIntro = FunkinSound.load(Paths.music("gameplay/stages/hotelCastleErect/cutscene/gooeyGooeyMix"), true);
             songIntro.play();
-            var songMusicData = SongRegistry.instance.parseMusicData("cutscene/gooeyGooeyMix", "shared");
+            var songMusicData = SongRegistry.instance.parseMusicData("cutscene/gooeyGooeyMix");
             if (songMusicData != null) cutsceneConductor.mapTimeChanges(songMusicData.timeChanges);
             cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
           }
@@ -553,7 +553,7 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             fakePlayer.animation.play('playerLook');
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/gooeyNotice1'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/gooeyNotice1'), 1.0);
           }
         },
         {
@@ -576,7 +576,7 @@ class HotelCastleErectStage extends Stage
           callback: () ->
           {
             fakeOpponent.animation.play('opponentLook');
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/gooeyNotice2'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/gooeyNotice2'), 1.0);
           }
         },
         {
@@ -587,7 +587,7 @@ class HotelCastleErectStage extends Stage
             PlayState.instance.tweenCameraToPosition(floraPos[0] + 50, floraPos[1] + 40, 3, FlxEase.expoOut);
             fakePlayer.animation.play('playerCutscene');
             fakeOpponent.animation.play('opponentCutscene');
-            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gooeyCutscene/gooeyGooey/walkAndWave'), 1.0);
+            gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/stages/hotelCastleErect/cutscene/walkAndWave'), 1.0);
           }
         },
         {

@@ -90,7 +90,7 @@ class PhillyBlazinGooeyStage extends Stage
     additionalLighten.blend = 0; // ADD
     additionalLighten.visible = false;
 
-    scrollingSky = new FlxTiledSprite(Paths.image('gooey/skyBlurErect'), 4000, 495, true, false);
+    scrollingSky = new FlxTiledSprite(Paths.image('gameplay/stages/phillyBlazinGooey/sky-blur-erect'), 4000, 495, true, false);
     scrollingSky.setPosition(-700, -120);
     scrollingSky.scrollFactor.set(0, 0);
     scrollingSky.zIndex = 10;

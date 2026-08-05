@@ -113,7 +113,7 @@ class StressGooeyMixSong extends Song
 
     skipText.cameras = [PlayState.instance.camCutscene];
 
-    fakeFlora = FunkinSprite.createTextureAtlas(0, 0, 'characters/flora/FloraStressCutscene', 'shared');
+    fakeFlora = FunkinSprite.createTextureAtlas(0, 0, 'gameplay/characters/kam-speaker-stress/FloraStressCutscene');
     fakeFlora.anim.addByFrameLabel('FloraIdle', 'FloraIdle', 24, true);
     fakeFlora.anim.addByFrameLabel('FloraRuhRoh', 'FloraRuhRoh', 24, false);
     fakeFlora.anim.addByFrameLabel('FloraHuh', 'FloraHuh', 24, false);
@@ -124,7 +124,7 @@ class StressGooeyMixSong extends Song
     fakeFlora.zIndex = 199;
 
     tankBopLeft = new FunkinSprite(PlayState.instance.currentStage.getGirlfriend().x - 26,
-      PlayState.instance.currentStage.getGirlfriend().y + 50).loadSparrow('characters/flora/LeftTanker');
+      PlayState.instance.currentStage.getGirlfriend().y + 50).loadSparrow('gameplay/characters/flora-tankmen/tankBopLeft');
     tankBopLeft.animation.addByPrefix('idle', 'idle', 24, true);
     tankBopLeft.animation.addByPrefix('aim', 'aim', 24, false);
     tankBopLeft.animation.addByPrefix('fuck', 'fuck', 12, false);
@@ -134,7 +134,7 @@ class StressGooeyMixSong extends Song
     tankBopLeft.zIndex = PlayState.instance.currentStage.getGirlfriend().zIndex - 3;
 
     tankBopRight = new FunkinSprite(PlayState.instance.currentStage.getGirlfriend().x,
-      PlayState.instance.currentStage.getGirlfriend().y + 50).loadSparrow('characters/flora/RightTanker');
+      PlayState.instance.currentStage.getGirlfriend().y + 50).loadSparrow('gameplay/characters/flora-tankmen/tankBopRight');
     tankBopRight.animation.addByPrefix('idle', 'idle', 24, true);
     tankBopRight.animation.play('idle');
     tankBopRight.animation.addByPrefix('aim', 'aim', 24, false);
@@ -185,7 +185,7 @@ class StressGooeyMixSong extends Song
         time: 0,
         callback: () ->
         {
-          cutsceneMusic = FunkinSound.load(Paths.music("cutscene/cutscene", "week7"), true);
+          cutsceneMusic = FunkinSound.load(Paths.music("gameplay/songs/stress/gooey/cutscene"), true);
           cutsceneMusic.play(false);
 
           if (GooeyMixOptions.gooeyShaders)
@@ -200,18 +200,18 @@ class StressGooeyMixSong extends Song
         time: 6.5 / 24,
         callback: () ->
         {
-          gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/lines/1'), 1.0);
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/songs/stress/gooey/lines/1'), 1.0);
           if (Preferences.subtitles)
           {
-            subtitlesSound = FunkinSound.load(Paths.sound('stressGooeyCutscene/blank'), 1);
+            subtitlesSound = FunkinSound.load(Paths.sound('gameplay/songs/stress/gooey/sounds/blank'), 1);
             subtitlesSound.play(false);
             PlayState.instance.subtitles.offsets = [0, 42];
             PlayState.instance.subtitles.alignment = 'bottom';
-            if (Preferences.subtitles) PlayState.instance.subtitles.assignSubtitles('songs/stress/subtitles/start-cutscene-gooey', subtitlesSound);
+            if (Preferences.subtitles) PlayState.instance.subtitles.assignSubtitles('gameplay/songs/stress/subtitles/start-cutscene-gooey', subtitlesSound);
           }
         }
       },
-      {time: 61 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/lines/2'), 1.0)},
+      {time: 61 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/songs/stress/gooey/lines/2'), 1.0)},
       {time: 93 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.71, 1, true, FlxEase.expoOut)},
       {time: 135 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.7, 5, true, FlxEase.expoOut)},
       {time: 269 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.71, 1, true, FlxEase.expoOut)},
@@ -233,7 +233,7 @@ class StressGooeyMixSong extends Song
           tankBopRight.animation.play('aim');
           fakeFlora.animation.play('FloraRuhRoh');
           PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyCutUhOh', true, false);
-          gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/gockCockStress'), 1.0);
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/songs/stress/gooey/sounds/gockCockStress'), 1.0);
         }
       },
       {time: 350 / 24, callback: () -> PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyCutCrystalGlow', true, false)},
@@ -264,7 +264,7 @@ class StressGooeyMixSong extends Song
           PlayState.instance.currentStage.getBoyfriend().playAnimation('GooeyCutsceneHappy', true, false);
         }
       },
-      {time: 372 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/kamMurder'), 1.0)},
+      {time: 372 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/songs/stress/gooey/sounds/kamMurder'), 1.0)},
       {
         time: 391 / 24,
         callback: () ->
@@ -318,7 +318,7 @@ class StressGooeyMixSong extends Song
         {
           PlayState.instance.tweenCameraToPosition(tankmanPos[0], tankmanPos[1], 3, FlxEase.smoothStepInOut);
           PlayState.instance.tweenCameraZoom(0.8, 3, true, FlxEase.expoOut);
-          gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/lines/3'), 1.0);
+          gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/songs/stress/gooey/lines/3'), 1.0);
           tankBopRight.animation.play('goodbye');
         }
       },
@@ -330,7 +330,7 @@ class StressGooeyMixSong extends Song
           PlayState.instance.currentStage.getGirlfriend().playAnimation('fakeIdle', true, false);
         }
       },
-      {time: 545 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('stressGooeyCutscene/lines/4'), 1.0)},
+      {time: 545 / 24, callback: () -> gooeyCutSound = FunkinSound.playOnce(Paths.sound('gameplay/songs/stress/gooey/lines/4'), 1.0)},
       {time: 580 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.81, 1, true, FlxEase.expoOut)},
       {time: 607 / 24, callback: () -> PlayState.instance.tweenCameraZoom(0.83, 1, true, FlxEase.expoOut)}, // he said 67!
       {
