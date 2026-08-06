@@ -1,0 +1,9437 @@
+{
+"AN":{
+"N":"Gooey Electric Chair",
+"SN":"- EXPORT/GOOEY ALL ANIMS",
+"TL":{
+"L":[
+{
+"LN":"Layer_3",
+"FR":[
+{
+"I":0,
+"DU":329,
+"E":[]
+},{
+"N":"crispy loop",
+"I":329,
+"DU":36,
+"E":[]
+}
+]},{
+"LN":"Layer_1",
+"FR":[
+{
+"N":"idle",
+"I":0,
+"DU":240,
+"E":[]
+},{
+"N":"electrocuted",
+"I":240,
+"DU":60,
+"E":[]
+},{
+"N":"crispy",
+"I":300,
+"DU":65,
+"E":[]
+}
+]},{
+"LN":"Layer_4",
+"FR":[
+{
+"I":0,
+"DU":240,
+"E":[
+{"SI":{
+"SN":"- EXPORT/chair gooey",
+"FF":0,
+"ST":"G",
+"TRP":{"x":224.25,"y":296.15},
+"LP":"LP",
+"MX":[1,0,0,1,-134.45,-284.7]
+}}]},{
+"I":240,
+"DU":60,
+"E":[
+{"SI":{
+"SN":"- EXPORT/chair shock gooey",
+"FF":0,
+"ST":"G",
+"TRP":{"x":224.25,"y":296.15},
+"LP":"LP",
+"MX":[1,0,0,1,-418.15,-83.6]
+}}]},{
+"I":300,
+"DU":65,
+"E":[
+{"SI":{
+"SN":"- EXPORT/crispy gooey anim",
+"FF":0,
+"ST":"G",
+"TRP":{"x":508.75,"y":94.15},
+"LP":"LP",
+"MX":[1,0,0,1,-418.55,-81.6]
+}}]}
+]}
+]}},
+"SD":{
+"S":[
+{
+"SN":"- EXPORT/chair gooey",
+"TL":{
+"L":[
+{
+"LN":"Layer 1",
+"FR":[
+{
+"I":0,
+"DU":33,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,167.9,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":33,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,168.5,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":34,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,173.65,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":36,
+"DU":13,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,172.7,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":49,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1.017,0,0,0.927,170.9,286.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":51,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBlink",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,162.85,288.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":53,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBlink",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40.05,"y":18.5},
+"LP":"LP",
+"MX":[0.974,0,0,1.027,162.55,287.65]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":55,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,163.5,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":57,
+"DU":9,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,164.35,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":66,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,164.65,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":68,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBlink",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40.1,"y":18.55},
+"LP":"LP",
+"MX":[1.024,0,0,0.966,162.95,289.65]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":70,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBlink",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,163.9,288.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":72,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.6},
+"LP":"LP",
+"MX":[1,0,0,1.026,167.9,282.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":74,
+"DU":45,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,167.9,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":119,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.55},
+"LP":"LP",
+"MX":[1.012,0,0,0.985,167.45,284.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":121,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBlink",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40.1,"y":18.55},
+"LP":"LP",
+"MX":[1.024,0,0,0.966,162.95,289.65]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":123,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBlink",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,163.9,288.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":125,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.6},
+"LP":"LP",
+"MX":[1,0,0,1.026,167.9,282.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":127,
+"DU":74,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,167.9,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":201,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.55},
+"LP":"LP",
+"MX":[1.012,0,0,0.985,167.45,284.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":203,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBlink",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40.1,"y":18.55},
+"LP":"LP",
+"MX":[1.024,0,0,0.966,162.95,289.65]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":205,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBlink",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,163.9,288.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":207,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.6},
+"LP":"LP",
+"MX":[1,0,0,1.026,167.9,282.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]},{
+"I":209,
+"DU":31,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.65,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,70,564.1]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,184.05,555.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,97.65,0]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,122.6,320.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.65},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,80.85,342.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.15,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,84,357.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.5,"y":13.25},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,69.45,563.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,9.9,385.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":102.5,"y":122.5},
+"LP":"LP",
+"MX":[1,0,0,1,243.55,346.6]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,141.65,313.05]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,129.5,392.35]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,212.95,322.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,157.05,336.1]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/gooeyHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,106.15,171.9]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.1,"y":13.65},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,184.85,550.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.998,0.057,-0.057,0.998,-13.9,269.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,185.2,338.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,181.2,352.4]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,231.35,396.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,161.55,387.55]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairEyes",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":18.5},
+"LP":"LP",
+"MX":[1,0,0,1,167.9,283.5]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairMouth",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":7},
+"LP":"LP",
+"MX":[1,0,0,1,192.95,322.7]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,84.95,370.85]
+}},
+{"SI":{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,187.45,365.15]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/chair shock gooey",
+"TL":{
+"L":[
+{
+"LN":"Layer_3",
+"FR":[
+{
+"I":0,
+"DU":31,
+"E":[
+{"SI":{
+"SN":"- EXPORT/gooeyPawShocks",
+"FF":0,
+"ST":"G",
+"TRP":{"x":69.5,"y":21},
+"LP":"LP",
+"MX":[1,0,0,1,360.35,157.15]
+}}]}
+]},{
+"LN":"Girlfriend copy 2",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":1,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":3,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":4,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 5 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":166.7,"y":298.75},
+"LP":"LP",
+"MX":[1,0,0,1,298.8,-215.4]
+}}]},{
+"I":5,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 6 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":182.1,"y":291.65},
+"LP":"LP",
+"MX":[1,0,0,1,283,-197.9]
+}}]},{
+"I":6,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":7,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":8,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":9,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":10,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":11,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":12,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":13,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":14,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 6 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":182.1,"y":291.65},
+"LP":"LP",
+"MX":[1,0,0,1,283,-197.9]
+}}]},{
+"I":15,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":16,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":17,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":18,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":19,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 5 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":166.7,"y":298.75},
+"LP":"LP",
+"MX":[1,0,0,1,298.8,-215.4]
+}}]},{
+"I":20,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":21,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 6 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":182.1,"y":291.65},
+"LP":"LP",
+"MX":[1,0,0,1,283,-197.9]
+}}]},{
+"I":22,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":23,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":24,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":25,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":26,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":27,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":28,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":29,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":30,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 6 front",
+"FF":0,
+"ST":"G",
+"TRP":{"x":182.1,"y":291.65},
+"LP":"LP",
+"MX":[1,0,0,1,283,-197.9]
+}}]}
+]},{
+"LN":"Layer_2",
+"FR":[
+{
+"I":0,
+"DU":31,
+"E":[
+{"SI":{
+"SN":"- EXPORT/gooeyShock",
+"FF":0,
+"ST":"G",
+"TRP":{"x":185,"y":227.5},
+"LP":"LP",
+"MX":[1,0,0,1,371.35,-50.3]
+}}]}
+]},{
+"LN":"Girlfriend copy",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":1,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":3,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":4,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 5",
+"FF":0,
+"ST":"G",
+"TRP":{"x":166.7,"y":298.75},
+"LP":"LP",
+"MX":[1,0,0,1,298.8,-215.4]
+}}]},{
+"I":5,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 6",
+"FF":0,
+"ST":"G",
+"TRP":{"x":182.1,"y":291.65},
+"LP":"LP",
+"MX":[1,0,0,1,283,-197.9]
+}}]},{
+"I":6,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":7,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":8,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":9,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":10,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":11,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":12,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":13,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":14,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 6",
+"FF":0,
+"ST":"G",
+"TRP":{"x":182.1,"y":291.65},
+"LP":"LP",
+"MX":[1,0,0,1,283,-197.9]
+}}]},{
+"I":15,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":16,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":17,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":18,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":19,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 5",
+"FF":0,
+"ST":"G",
+"TRP":{"x":166.7,"y":298.75},
+"LP":"LP",
+"MX":[1,0,0,1,298.8,-215.4]
+}}]},{
+"I":20,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":21,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 6",
+"FF":0,
+"ST":"G",
+"TRP":{"x":182.1,"y":291.65},
+"LP":"LP",
+"MX":[1,0,0,1,283,-197.9]
+}}]},{
+"I":22,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":23,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":24,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":25,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":26,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175,"y":297.05},
+"LP":"LP",
+"MX":[1,0,0,1,293,-207.05]
+}}]},{
+"I":27,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 4",
+"FF":0,
+"ST":"G",
+"TRP":{"x":172.5,"y":293.75},
+"LP":"LP",
+"MX":[1,0,0,1,297.1,-202.9]
+}}]},{
+"I":28,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 1",
+"FF":0,
+"ST":"G",
+"TRP":{"x":176.3,"y":295.8},
+"LP":"LP",
+"MX":[1,0,0,1,292.1,-206.2]
+}}]},{
+"I":29,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":169.6,"y":295.85},
+"LP":"LP",
+"MX":[1,0,0,1,292.95,-203.75]
+}}]},{
+"I":30,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"chair/chair shock 6",
+"FF":0,
+"ST":"G",
+"TRP":{"x":182.1,"y":291.65},
+"LP":"LP",
+"MX":[1,0,0,1,283,-197.9]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispy gooey anim",
+"TL":{
+"L":[
+{
+"LN":"Layer_3",
+"FR":[
+{
+"I":0,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/impactBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,393.3,129]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/impactTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":64.5},
+"LP":"LP",
+"MX":[1,0,0,1,412.6,113.95]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/impactLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":21,"y":29},
+"LP":"LP",
+"MX":[1,0,0,1,414.6,189.55]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/impactTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":101.5,"y":118},
+"LP":"LP",
+"MX":[1,0,0,1,529.4,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/impactRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":27.5},
+"LP":"LP",
+"MX":[1,0,0,1,504.35,194.05]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/impactFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,495.25,128.55]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/impactHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.05,"y":89},
+"LP":"LP",
+"MX":[0.994,-0.112,0.112,0.994,350.9,-10.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76,"y":26.95},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,436.2,136.7]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.35},
+"LP":"LP",
+"MX":[0.998,-0.055,0.055,0.998,250.4,104.4]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/impactFace",
+"FF":0,
+"ST":"G",
+"TRP":{"x":50.55,"y":31.5},
+"LP":"LP",
+"MX":[0.988,-0.156,0.156,0.988,413.6,97.3]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/frontLeftImpact",
+"FF":0,
+"ST":"G",
+"TRP":{"x":19.5,"y":16},
+"LP":"LP",
+"MX":[1,0,0,1,366.2,169.4]
+}},
+{"SI":{
+"SN":"- EXPORT/impact/frontRightImpact",
+"FF":0,
+"ST":"G",
+"TRP":{"x":19.4,"y":18},
+"LP":"LP",
+"MX":[1,0,0,1,470.45,165.4]
+}}]},{
+"I":3,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":4,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/upCookedTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.05,"y":67.5},
+"LP":"LP",
+"MX":[1,0,-0.033,1,420.95,108.7]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":4,
+"ST":"G",
+"TRP":{"x":101.6,"y":118},
+"LP":"LP",
+"MX":[1,0,-0.011,1.013,532.15,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":4,
+"ST":"G",
+"TRP":{"x":22.55,"y":29.5},
+"LP":"LP",
+"MX":[0.995,0.099,-0.099,0.995,412.35,188.75]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":4,
+"ST":"G",
+"TRP":{"x":40.1,"y":36.55},
+"LP":"LP",
+"MX":[1,0,-0.086,1.047,495.25,120.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76,"y":26.95},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,436.2,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/upCookedHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":99.5,"y":92.5},
+"LP":"LP",
+"MX":[1,0,0,1,400,-42.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":4,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.55},
+"LP":"LP",
+"MX":[0.995,-0.1,0.1,0.995,512.85,197.85]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/leftUpCookedPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,368.1,160.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/rightUpCookedPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,474.15,156.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.7,"y":27.25},
+"LP":"LP",
+"MX":[0.968,0.25,-0.25,0.968,284.3,16.15]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/painFace",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.5,"y":34.5},
+"LP":"LP",
+"MX":[1,0,0,1,430.4,62.7]
+}}]},{
+"I":6,
+"DU":4,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":7,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/upCookedTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.1,"y":67.6},
+"LP":"LP",
+"MX":[1,0,-0.043,1.016,422.25,106.55]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":7,
+"ST":"G",
+"TRP":{"x":101.7,"y":118.05},
+"LP":"LP",
+"MX":[1,0,-0.015,1.019,533.25,147.95]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":7,
+"ST":"G",
+"TRP":{"x":22.6,"y":29.55},
+"LP":"LP",
+"MX":[0.993,0.121,-0.121,0.993,413.7,187.25]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":7,
+"ST":"G",
+"TRP":{"x":40.15,"y":36.65},
+"LP":"LP",
+"MX":[1,0,-0.097,1.063,496.45,118.45]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.95,"y":27.05},
+"LP":"SF",
+"MX":[0.826,0.082,-0.082,0.826,437.15,129.6]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/upCookedHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":99.6,"y":92.5},
+"LP":"LP",
+"MX":[1,0.017,-0.017,1,403.1,-49.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":7,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.6},
+"LP":"LP",
+"MX":[0.991,-0.135,0.135,0.991,511.25,197.3]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/leftUpCookedPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.6},
+"LP":"LP",
+"MX":[0.999,0.043,-0.043,0.999,368.6,158.8]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/rightUpCookedPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":20.1,"y":17.55},
+"LP":"LP",
+"MX":[1,0.026,-0.026,1,474.25,155.25]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.7,"y":27.3},
+"LP":"LP",
+"MX":[0.963,0.266,-0.266,0.963,286.4,7.25]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/painFace",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.55,"y":34.55},
+"LP":"LP",
+"MX":[1,0.017,-0.017,1,431.75,56.2]
+}}]},{
+"I":10,
+"DU":7,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":11,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/upCookedTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75.1,"y":67.65},
+"LP":"LP",
+"MX":[1,0,-0.045,1.019,422.5,106]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":11,
+"ST":"G",
+"TRP":{"x":101.6,"y":118.05},
+"LP":"LP",
+"MX":[1,0,-0.02,1.023,534.4,146.95]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":11,
+"ST":"G",
+"TRP":{"x":22.55,"y":29.55},
+"LP":"LP",
+"MX":[0.989,0.146,-0.146,0.989,414.65,185.95]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":11,
+"ST":"G",
+"TRP":{"x":40.1,"y":36.65},
+"LP":"LP",
+"MX":[1,0,-0.099,1.067,496.7,117.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76.15,"y":26.95},
+"LP":"SF",
+"MX":[0.825,0.087,-0.087,0.825,437.25,129.35]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/upCookedHead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":99.6,"y":92.5},
+"LP":"LP",
+"MX":[1,0.024,-0.024,1,404.6,-51.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":11,
+"ST":"G",
+"TRP":{"x":20.55,"y":28.6},
+"LP":"LP",
+"MX":[0.99,-0.139,0.139,0.99,511.1,196.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/leftUpCookedPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.55},
+"LP":"LP",
+"MX":[0.998,0.069,-0.069,0.998,369,157.2]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/rightUpCookedPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":20.05,"y":17.6},
+"LP":"LP",
+"MX":[0.998,0.065,-0.065,0.998,475.4,153.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.8,"y":27.35},
+"LP":"LP",
+"MX":[0.961,0.274,-0.274,0.961,287.45,4.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/painFace",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.6,"y":34.5},
+"LP":"LP",
+"MX":[1,0.024,-0.024,1,432.4,54.75]
+}}]},{
+"I":17,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":6,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/upCookedTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":75,"y":67.5},
+"LP":"LP",
+"MX":[1,0,0,1,416.55,108.7]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":6,
+"ST":"G",
+"TRP":{"x":101.6,"y":118},
+"LP":"LP",
+"MX":[1,0,-0.011,1.013,532.15,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":6,
+"ST":"G",
+"TRP":{"x":22.55,"y":29.5},
+"LP":"LP",
+"MX":[0.995,0.099,-0.099,0.995,412.35,188.75]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":6,
+"ST":"G",
+"TRP":{"x":40.05,"y":36.55},
+"LP":"LP",
+"MX":[1,0,-0.052,1.047,491.25,120.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76,"y":27.05},
+"LP":"SF",
+"MX":[0.827,0.075,-0.075,0.827,436.45,133.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/earDrop1",
+"FF":0,
+"ST":"G",
+"TRP":{"x":104.6,"y":78.4},
+"LP":"LP",
+"MX":[0.99,0.138,-0.138,0.99,397.55,-26]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":6,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.55},
+"LP":"LP",
+"MX":[0.995,-0.1,0.1,0.995,512.85,197.85]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/leftUpCookedPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,368.1,160.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/rightUpCookedPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,474.15,156.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.8,"y":27.35},
+"LP":"LP",
+"MX":[0.961,0.274,-0.274,0.961,277.45,12.6]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFace",
+"FF":0,
+"ST":"G",
+"TRP":{"x":52.55,"y":20.45},
+"LP":"LP",
+"MX":[0.982,0.187,-0.187,0.982,432,60.5]
+}}]},{
+"I":19,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":7,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":7,
+"ST":"G",
+"TRP":{"x":101.6,"y":118.05},
+"LP":"LP",
+"MX":[1,0,0.006,0.996,528.3,153.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTorso",
+"FF":7,
+"ST":"G",
+"TRP":{"x":77.1,"y":67.1},
+"LP":"LP",
+"MX":[1,0,0.009,0.984,419.9,134.95]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":7,
+"ST":"G",
+"TRP":{"x":22.6,"y":29.65},
+"LP":"LP",
+"MX":[1,0,0.009,0.984,413.05,193.55]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":7,
+"ST":"G",
+"TRP":{"x":40.05,"y":36.65},
+"LP":"LP",
+"MX":[1,0,0.009,0.984,483.8,128]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76,"y":27.1},
+"LP":"SF",
+"MX":[0.829,0.029,-0.029,0.829,435.4,140.95]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/earDrop2",
+"FF":7,
+"ST":"G",
+"TRP":{"x":100.55,"y":88.95},
+"LP":"LP",
+"MX":[0.998,-0.056,0.056,0.998,348.75,10.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.3},
+"LP":"LP",
+"MX":[0.996,0.087,-0.087,0.996,252.2,73.85]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":7,
+"ST":"G",
+"TRP":{"x":20.6,"y":28.65},
+"LP":"LP",
+"MX":[1,0,0.009,0.984,514.15,200.8]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontLeft",
+"FF":7,
+"ST":"G",
+"TRP":{"x":17.55,"y":15.6},
+"LP":"LP",
+"MX":[0.994,-0.109,0.109,0.994,371.6,173.7]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontRight",
+"FF":7,
+"ST":"G",
+"TRP":{"x":20.05,"y":17.5},
+"LP":"LP",
+"MX":[0.997,-0.073,0.073,0.997,473.2,166.55]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFace",
+"FF":7,
+"ST":"G",
+"TRP":{"x":52.5,"y":20.5},
+"LP":"LP",
+"MX":[0.998,-0.056,0.056,0.998,407.65,94.4]
+}}]},{
+"I":21,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":9,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":9,
+"ST":"G",
+"TRP":{"x":101.5,"y":118},
+"LP":"LP",
+"MX":[1,0,0,1,529.65,152.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTorso",
+"FF":9,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,421.05,133.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":9,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,413.6,192.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":9,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,485,126.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76.05,"y":27.05},
+"LP":"SF",
+"MX":[0.829,0.049,-0.049,0.829,436.05,137.3]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/earDrop3",
+"FF":9,
+"ST":"G",
+"TRP":{"x":100.55,"y":89.05},
+"LP":"LP",
+"MX":[0.999,-0.039,0.039,0.999,349.2,7.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.45},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,254.25,66.15]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":9,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,514.65,200]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontLeft",
+"FF":9,
+"ST":"G",
+"TRP":{"x":17.6,"y":15.55},
+"LP":"LP",
+"MX":[1,-0.025,0.025,1,371.8,171.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontRight",
+"FF":9,
+"ST":"G",
+"TRP":{"x":19.95,"y":17.5},
+"LP":"LP",
+"MX":[1,-0.03,0.03,1,474,164.4]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFace",
+"FF":9,
+"ST":"G",
+"TRP":{"x":52.55,"y":20.6},
+"LP":"LP",
+"MX":[0.999,-0.039,0.039,0.999,409.3,89.45]
+}}]},{
+"I":24,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":0,
+"ST":"G",
+"TRP":{"x":101.5,"y":118},
+"LP":"LP",
+"MX":[1,0,0,1,529.65,152.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTorso",
+"FF":0,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,421.05,133.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,413.6,192.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,485,126.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76,"y":26.95},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,436.2,136.7]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/earDrop3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":100.5,"y":89.05},
+"LP":"LP",
+"MX":[1,-0.012,0.012,1,354.1,-0.3]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.75,"y":27.35},
+"LP":"LP",
+"MX":[0.99,0.139,-0.139,0.99,256.3,55.6]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,514.65,200]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontLeft",
+"FF":0,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,371.95,170.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontRight",
+"FF":0,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,474.5,163.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFace",
+"FF":0,
+"ST":"G",
+"TRP":{"x":52.55,"y":20.55},
+"LP":"LP",
+"MX":[1,-0.012,0.012,1,410.8,84.45]
+}}]},{
+"I":27,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":3,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":3,
+"ST":"G",
+"TRP":{"x":101.5,"y":118},
+"LP":"LP",
+"MX":[1,0,0,1,529.65,152.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTorso",
+"FF":3,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,421.05,133.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,413.6,192.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":3,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,485,126.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76,"y":26.95},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,436.2,136.7]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedGooeyHead",
+"FF":3,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,370.1,-27.6]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.989,0.143,-0.143,0.989,257.2,53.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":3,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,514.65,200]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontLeft",
+"FF":3,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,371.95,170.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontRight",
+"FF":3,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,474.5,163.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFace",
+"FF":3,
+"ST":"G",
+"TRP":{"x":52.5,"y":20.5},
+"LP":"LP",
+"MX":[1,0,0,1,411.25,82.8]
+}}]},{
+"I":29,
+"DU":36,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1.6,"y":20.9},
+"LP":"LP",
+"MX":[0.994,-0.1,0.1,0.994,354.1,361.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":113.85,"y":17.75},
+"LP":"LP",
+"MX":[0.998,0.056,-0.056,0.998,468.15,352.65]
+}},
+{"SI":{
+"SN":"bitmaps/parts/chair gf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":120.8,"y":292.75},
+"LP":"LP",
+"MX":[1,0,0,1,381.75,-203.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"FF":5,
+"ST":"G",
+"TRP":{"x":38,"y":38},
+"LP":"LP",
+"MX":[1,0,0,1,392.7,141.95]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":36.2,"y":31.7},
+"LP":"LP",
+"MX":[0.996,-0.088,0.088,0.996,364.95,139.4]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":3.2,"y":33.3},
+"LP":"LP",
+"MX":[0.835,-0.024,0.029,0.999,368.1,154.75]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap right",
+"FF":0,
+"ST":"G",
+"TRP":{"x":115.6,"y":13.2},
+"LP":"LP",
+"MX":[0.988,-0.152,0.152,0.988,353.55,360.5]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 2",
+"FF":0,
+"ST":"G",
+"TRP":{"x":59.3,"y":25.75},
+"LP":"LP",
+"MX":[1.615,0.041,-0.193,0.704,294,182.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"FF":5,
+"ST":"G",
+"TRP":{"x":101.5,"y":118},
+"LP":"LP",
+"MX":[1,0,0,1,529.65,152.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedTorso",
+"FF":5,
+"ST":"G",
+"TRP":{"x":77,"y":67},
+"LP":"LP",
+"MX":[1,0,0,1,421.05,133.05]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"FF":5,
+"ST":"G",
+"TRP":{"x":22.5,"y":29.5},
+"LP":"LP",
+"MX":[1,0,0,1,413.6,192.65]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"FF":5,
+"ST":"G",
+"TRP":{"x":40,"y":36.5},
+"LP":"LP",
+"MX":[1,0,0,1,485,126.05]
+}},
+{"SI":{
+"SN":"bitmaps/parts/strap bf",
+"FF":0,
+"ST":"G",
+"TRP":{"x":76,"y":26.95},
+"LP":"SF",
+"MX":[0.828,0.054,-0.054,0.828,436.2,136.7]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedGooeyHead",
+"FF":5,
+"ST":"G",
+"TRP":{"x":100.5,"y":89},
+"LP":"LP",
+"MX":[1,0,0,1,370.1,-27.6]
+}},
+{"SI":{
+"SN":"bitmaps/parts/leg strap left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":58.05,"y":13.6},
+"LP":"LP",
+"MX":[0.994,0.105,-0.105,0.994,468.95,347.15]
+}},
+{"SI":{
+"SN":"bitmaps/parts/headband empty",
+"FF":0,
+"ST":"G",
+"TRP":{"x":308.65,"y":27.25},
+"LP":"LP",
+"MX":[0.989,0.143,-0.143,0.989,257.2,53.55]
+}},
+{"SI":{
+"SN":"bitmaps/parts/bracelet gf left",
+"FF":0,
+"ST":"G",
+"TRP":{"x":1,"y":40.7},
+"LP":"LP",
+"MX":[1.034,0,0,1,469.3,135.2]
+}},
+{"SI":{
+"SN":"bitmaps/parts/cuff hole",
+"FF":0,
+"ST":"G",
+"TRP":{"x":2.75,"y":33.05},
+"LP":"LP",
+"MX":[1.103,0,0,1,465.3,149.35]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"FF":5,
+"ST":"G",
+"TRP":{"x":20.5,"y":28.5},
+"LP":"LP",
+"MX":[1,0,0,1,514.65,200]
+}},
+{"SI":{
+"SN":"bitmaps/parts/arm panel 3",
+"FF":0,
+"ST":"G",
+"TRP":{"x":79.45,"y":15.8},
+"LP":"LP",
+"MX":[1,0,0,1,445.65,184.5]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontLeft",
+"FF":5,
+"ST":"G",
+"TRP":{"x":17.5,"y":15.5},
+"LP":"LP",
+"MX":[1,0,0,1,371.95,170.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFrontRight",
+"FF":5,
+"ST":"G",
+"TRP":{"x":20,"y":17.5},
+"LP":"LP",
+"MX":[1,0,0,1,474.5,163.45]
+}},
+{"SI":{
+"SN":"- EXPORT/crispGooey/cookedFace",
+"FF":5,
+"ST":"G",
+"TRP":{"x":52.5,"y":20.5},
+"LP":"LP",
+"MX":[1,0,0,1,411.25,82.8]
+}}]}
+]},{
+"LN":"Layer 15",
+"FR":[
+{
+"N":"anim",
+"I":0,
+"DU":29,
+"E":[]
+},{
+"N":"loop",
+"I":29,
+"DU":36,
+"E":[]
+}
+]}
+]}},{
+"SN":"bitmaps/parts/leg strap right",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1.001,0,0,1.001,0,0],
+"N":"0"
+}}]}]}]}},{
+"SN":"bitmaps/parts/leg strap left",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"1"
+}}]}]}]}},{
+"SN":"bitmaps/parts/chair gf",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"2"
+}}]}]}]}},{
+"SN":"- EXPORT/gooey/chairBackArm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairBackArm.png",
+"ST":"MC",
+"TRP":{"x":38,"y":38},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"bitmaps/parts/bracelet gf right",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,1.1,0],
+"N":"3"
+}}]}]}]}},{
+"SN":"bitmaps/parts/cuff hole",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.907,0,0,1,0,0],
+"N":"4"
+}}]}]}]}},{
+"SN":"bitmaps/parts/arm panel 2",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.619,0,0,1.369,0,0],
+"N":"5"
+}}]}]}]}},{
+"SN":"- EXPORT/gooey/chairTail",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairTail.png",
+"ST":"MC",
+"TRP":{"x":102.5,"y":122.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooey/chairTorso",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairTorso.png",
+"ST":"MC",
+"TRP":{"x":77,"y":67},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooey/chairLeftPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairLeftPaw.png",
+"ST":"MC",
+"TRP":{"x":22.5,"y":29.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooey/chairFrontArm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairFrontArm.png",
+"ST":"MC",
+"TRP":{"x":25,"y":36.5},
+"MX":[1,0,0,1,15,0]
+}}]}
+]}
+]}},{
+"SN":"bitmaps/parts/strap bf",
+"TL":{
+"L":[
+{
+"LN":"Layer 1",
+"FR":[
+{
+"I":0,
+"DU":59,
+"E":[
+{"ASI":{
+"MX":[1.205,0,0,1.205,0,0],
+"N":"26"
+}}]},{
+"I":59,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1.205,0,0,1.205,1.1,0],
+"N":"27"
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooey/gooeyHead",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairHead.png",
+"ST":"MC",
+"TRP":{"x":100.5,"y":89},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"bitmaps/parts/headband empty",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,118.6,-10.05],
+"N":"6"
+}}]}]}]}},{
+"SN":"bitmaps/parts/bracelet gf left",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.967,0,0,1,0,0],
+"N":"7"
+}}]}]}]}},{
+"SN":"- EXPORT/gooey/chairRightPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairRightPaw.png",
+"ST":"MC",
+"TRP":{"x":20.5,"y":28.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"bitmaps/parts/arm panel 3",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"8"
+}}]}]}]}},{
+"SN":"- EXPORT/gooey/chairEyes",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairEyes.png",
+"ST":"MC",
+"TRP":{"x":29,"y":18.5},
+"MX":[1,0,0,1,11,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooey/chairMouth",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairMouth.png",
+"ST":"MC",
+"TRP":{"x":17.5,"y":7},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooey/chairLeftFrontPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairLeftFrontPaw.png",
+"ST":"MC",
+"TRP":{"x":17.5,"y":15.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooey/chairRightFrontPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairRightFrontPaw.png",
+"ST":"MC",
+"TRP":{"x":20,"y":17.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooey/chairBlink",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/chairBlink.png",
+"ST":"MC",
+"TRP":{"x":43,"y":16},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/gooeyPawShocks",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/pawZap1.png",
+"ST":"MC",
+"TRP":{"x":71.5,"y":20},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":1,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/pawZap2.png",
+"ST":"MC",
+"TRP":{"x":78,"y":25},
+"MX":[1,0,0,1,-6,-4]
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/pawZap3.png",
+"ST":"MC",
+"TRP":{"x":79,"y":23},
+"MX":[1,0,0,1,-10,-2]
+}}]},{
+"I":3,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/pawZap4.png",
+"ST":"MC",
+"TRP":{"x":83.5,"y":18},
+"MX":[1,0,0,1,-14,4]
+}}]},{
+"I":4,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/pawZap5.png",
+"ST":"MC",
+"TRP":{"x":74.5,"y":23},
+"MX":[1,0,0,1,-5,-2]
+}}]},{
+"I":5,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/pawZap6.png",
+"ST":"MC",
+"TRP":{"x":74.5,"y":19.5},
+"MX":[1,0,0,1,-2,0]
+}}]},{
+"I":6,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/pawZap7.png",
+"ST":"MC",
+"TRP":{"x":75,"y":21},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":7,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/pawZap8.png",
+"ST":"MC",
+"TRP":{"x":75.5,"y":21},
+"MX":[1,0,0,1,-2,0]
+}}]}
+]}
+]}},{
+"SN":"chair/chair shock 1 front",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,55.85,342.5],
+"N":"9"
+}}]}]}]}},{
+"SN":"chair/chair shock 2 front",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,53.25,345.85],
+"N":"10"
+}}]}]}]}},{
+"SN":"chair/chair shock 3 front",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,57.5,353],
+"N":"11"
+}}]}]}]}},{
+"SN":"chair/chair shock 4 front",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,49.95,337.5],
+"N":"12"
+}}]}]}]}},{
+"SN":"chair/chair shock 5 front",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,54.95,347.5],
+"N":"13"
+}}]}]}]}},{
+"SN":"chair/chair shock 6 front",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,57.2,336.7],
+"N":"14"
+}}]}]}]}},{
+"SN":"- EXPORT/gooeyShock",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/zap1.png",
+"ST":"MC",
+"TRP":{"x":177,"y":225.5},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":1,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/zap2.png",
+"ST":"MC",
+"TRP":{"x":176.5,"y":223},
+"MX":[1,0,0,1,-3,5]
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/zap3.png",
+"ST":"MC",
+"TRP":{"x":177.5,"y":227.5},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":3,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/zap4.png",
+"ST":"MC",
+"TRP":{"x":177,"y":224.5},
+"MX":[1,0,0,1,-8,12]
+}}]},{
+"I":4,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/zap5.png",
+"ST":"MC",
+"TRP":{"x":180.5,"y":224},
+"MX":[1,0,0,1,-8,7]
+}}]},{
+"I":5,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/zap6.png",
+"ST":"MC",
+"TRP":{"x":185,"y":226.5},
+"MX":[1,0,0,1,-11,12]
+}}]},{
+"I":6,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/zap7.png",
+"ST":"MC",
+"TRP":{"x":181.5,"y":223},
+"MX":[1,0,0,1,-7,13]
+}}]},{
+"I":7,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/zap8.png",
+"ST":"MC",
+"TRP":{"x":178,"y":225.5},
+"MX":[1,0,0,1,-8,7]
+}}]}
+]}
+]}},{
+"SN":"chair/chair shock 1",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"15"
+}}]}]}]}},{
+"SN":"chair/chair shock 2",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"16"
+}}]}]}]}},{
+"SN":"chair/chair shock 3",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"17"
+}}]}]}]}},{
+"SN":"chair/chair shock 4",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"18"
+}}]}]}]}},{
+"SN":"chair/chair shock 5",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"19"
+}}]}]}]}},{
+"SN":"chair/chair shock 6",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"20"
+}}]}]}]}},{
+"SN":"- EXPORT/impact/impactBackArm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/impactBackArm.png",
+"ST":"MC",
+"TRP":{"x":38,"y":35.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impactTorso",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/impactTorso.png",
+"ST":"MC",
+"TRP":{"x":77,"y":64.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impact/impactLeftPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/impactLeftPaw.png",
+"ST":"MC",
+"TRP":{"x":21,"y":29},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impact/impactTail",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/impactTail.png",
+"ST":"MC",
+"TRP":{"x":102,"y":121},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impact/impactRightPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/impactRightPaw.png",
+"ST":"MC",
+"TRP":{"x":20.5,"y":27.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impact/impactFrontArm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/impactFrontArm.png",
+"ST":"MC",
+"TRP":{"x":24.5,"y":37},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impact/impactHead",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/impactHead.png",
+"ST":"MC",
+"TRP":{"x":100,"y":89},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impact/impactFace",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/impactFace.png",
+"ST":"MC",
+"TRP":{"x":50.5,"y":31.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impact/frontLeftImpact",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/frontLeftImpact.png",
+"ST":"MC",
+"TRP":{"x":19.5,"y":16},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/impact/frontRightImpact",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/frontRightImpact.png",
+"ST":"MC",
+"TRP":{"x":20.5,"y":18},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedBackArm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedBackArm1.png",
+"ST":"MC",
+"TRP":{"x":37.5,"y":25},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedBackArm2.png",
+"ST":"MC",
+"TRP":{"x":37,"y":26},
+"MX":[1,0,0,1,0,-1]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/upCookedTorso",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/upCookedTorso.png",
+"ST":"MC",
+"TRP":{"x":75,"y":67.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedTail",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedTail1.png",
+"ST":"MC",
+"TRP":{"x":101.5,"y":118},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedTail2.png",
+"ST":"MC",
+"TRP":{"x":101,"y":118},
+"MX":[1,0,0,1,1,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedLeftPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedLeftPaw1.png",
+"ST":"MC",
+"TRP":{"x":21.5,"y":28},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedLeftPaw2.png",
+"ST":"MC",
+"TRP":{"x":21.5,"y":27},
+"MX":[1,0,0,1,0,1]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedFrontArm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedFrontArm1.png",
+"ST":"MC",
+"TRP":{"x":28.5,"y":35},
+"MX":[1,0,0,1,12,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedFrontArm2.png",
+"ST":"MC",
+"TRP":{"x":27.5,"y":36},
+"MX":[1,0,0,1,13,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/upCookedHead",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/upCookedHead.png",
+"ST":"MC",
+"TRP":{"x":99.5,"y":92.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedRightPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedRightPaw1.png",
+"ST":"MC",
+"TRP":{"x":22,"y":26},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedRightPaw2.png",
+"ST":"MC",
+"TRP":{"x":22.5,"y":26},
+"MX":[1,0,0,1,-1,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/leftUpCookedPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/leftUpCookedPaw.png",
+"ST":"MC",
+"TRP":{"x":18.5,"y":16.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/rightUpCookedPaw",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/rightUpCookedPaw.png",
+"ST":"MC",
+"TRP":{"x":21.5,"y":16.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/painFace",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/painFace.png",
+"ST":"MC",
+"TRP":{"x":62.5,"y":34.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/earDrop1",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/earDrop1.png",
+"ST":"MC",
+"TRP":{"x":104.5,"y":78.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedFace",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedFace1.png",
+"ST":"MC",
+"TRP":{"x":52.5,"y":20.5},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedFace2.png",
+"ST":"MC",
+"TRP":{"x":51.5,"y":19.5},
+"MX":[1,0,0,1,1,2]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedTorso",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedTorso1.png",
+"ST":"MC",
+"TRP":{"x":74,"y":56.5},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedTorso2.png",
+"ST":"MC",
+"TRP":{"x":74.5,"y":57.5},
+"MX":[1,0,0,1,0,-2]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/earDrop2",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/earDrop2.png",
+"ST":"MC",
+"TRP":{"x":118,"y":78.5},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedFrontLeft",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedFrontLeft1.png",
+"ST":"MC",
+"TRP":{"x":15,"y":15.5},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedFrontLeft2.png",
+"ST":"MC",
+"TRP":{"x":15,"y":15.5},
+"MX":[1,0,0,1,-1,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedFrontRight",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedFrontRight1.png",
+"ST":"MC",
+"TRP":{"x":19.5,"y":19},
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/cookedFrontRight2.png",
+"ST":"MC",
+"TRP":{"x":19.5,"y":19},
+"MX":[1,0,0,1,0,-1]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/earDrop3",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/earDrop3.png",
+"ST":"MC",
+"TRP":{"x":120.5,"y":78},
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"- EXPORT/crispGooey/cookedGooeyHead",
+"TL":{
+"L":[
+{
+"LN":"Layer_2",
+"FR":[
+{
+"I":0,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/cookedHead1.png",
+"ST":"MC",
+"TRP":{"x":120.5,"y":78},
+"MX":[1,0,0,1,-16,25]
+}}]},{
+"I":6,
+"DU":6,
+"E":[
+{"SI":{
+"SN":"bitmaps/parts/cookedHead2.png",
+"ST":"MC",
+"TRP":{"x":120,"y":78.5},
+"MX":[1,0,0,1,-15,23]
+}}]}
+]}
+]}},{
+"SN":"bitmaps/chairBackArm.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"21"
+}}]}]}]}},{
+"SN":"bitmaps/chairTail.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"22"
+}}]}]}]}},{
+"SN":"bitmaps/chairTorso.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"23"
+}}]}]}]}},{
+"SN":"bitmaps/chairLeftPaw.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"24"
+}}]}]}]}},{
+"SN":"bitmaps/chairFrontArm.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"25"
+}}]}]}]}},{
+"SN":"bitmaps/chairHead.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"28"
+}}]}]}]}},{
+"SN":"bitmaps/chairRightPaw.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"29"
+}}]}]}]}},{
+"SN":"bitmaps/chairEyes.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.983,0,0,0.975,0,0],
+"N":"30"
+}}]}]}]}},{
+"SN":"bitmaps/chairMouth.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"31"
+}}]}]}]}},{
+"SN":"bitmaps/chairLeftFrontPaw.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"32"
+}}]}]}]}},{
+"SN":"bitmaps/chairRightFrontPaw.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"33"
+}}]}]}]}},{
+"SN":"bitmaps/chairBlink.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.977,0,0,0.974,0,0],
+"N":"34"
+}}]}]}]}},{
+"SN":"bitmaps/pawZap1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"35"
+}}]}]}]}},{
+"SN":"bitmaps/pawZap2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"36"
+}}]}]}]}},{
+"SN":"bitmaps/pawZap3.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"37"
+}}]}]}]}},{
+"SN":"bitmaps/pawZap4.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"38"
+}}]}]}]}},{
+"SN":"bitmaps/pawZap5.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"39"
+}}]}]}]}},{
+"SN":"bitmaps/pawZap6.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"40"
+}}]}]}]}},{
+"SN":"bitmaps/pawZap7.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"41"
+}}]}]}]}},{
+"SN":"bitmaps/pawZap8.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"42"
+}}]}]}]}},{
+"SN":"bitmaps/zap1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"43"
+}}]}]}]}},{
+"SN":"bitmaps/zap2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"44"
+}}]}]}]}},{
+"SN":"bitmaps/zap3.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"45"
+}}]}]}]}},{
+"SN":"bitmaps/zap4.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"46"
+}}]}]}]}},{
+"SN":"bitmaps/zap5.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"47"
+}}]}]}]}},{
+"SN":"bitmaps/zap6.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"48"
+}}]}]}]}},{
+"SN":"bitmaps/zap7.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"49"
+}}]}]}]}},{
+"SN":"bitmaps/zap8.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"50"
+}}]}]}]}},{
+"SN":"bitmaps/impactBackArm.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"51"
+}}]}]}]}},{
+"SN":"bitmaps/impactTorso.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"52"
+}}]}]}]}},{
+"SN":"bitmaps/impactLeftPaw.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"53"
+}}]}]}]}},{
+"SN":"bitmaps/impactTail.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"54"
+}}]}]}]}},{
+"SN":"bitmaps/impactRightPaw.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"55"
+}}]}]}]}},{
+"SN":"bitmaps/impactFrontArm.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"56"
+}}]}]}]}},{
+"SN":"bitmaps/impactHead.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"57"
+}}]}]}]}},{
+"SN":"bitmaps/impactFace.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"58"
+}}]}]}]}},{
+"SN":"bitmaps/frontLeftImpact.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"59"
+}}]}]}]}},{
+"SN":"bitmaps/frontRightImpact.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"60"
+}}]}]}]}},{
+"SN":"bitmaps/cookedBackArm1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"61"
+}}]}]}]}},{
+"SN":"bitmaps/cookedBackArm2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"62"
+}}]}]}]}},{
+"SN":"bitmaps/parts/upCookedTorso.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,0.98,0,0],
+"N":"63"
+}}]}]}]}},{
+"SN":"bitmaps/cookedTail1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,0.977,0,0],
+"N":"64"
+}}]}]}]}},{
+"SN":"bitmaps/cookedTail2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,0.977,0,0],
+"N":"65"
+}}]}]}]}},{
+"SN":"bitmaps/cookedLeftPaw1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"66"
+}}]}]}]}},{
+"SN":"bitmaps/cookedLeftPaw2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"67"
+}}]}]}]}},{
+"SN":"bitmaps/cookedFrontArm1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,0.933,0,0],
+"N":"68"
+}}]}]}]}},{
+"SN":"bitmaps/cookedFrontArm2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,0.933,0,0],
+"N":"69"
+}}]}]}]}},{
+"SN":"bitmaps/upCookedHead.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"70"
+}}]}]}]}},{
+"SN":"bitmaps/cookedRightPaw1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"71"
+}}]}]}]}},{
+"SN":"bitmaps/cookedRightPaw2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"72"
+}}]}]}]}},{
+"SN":"bitmaps/leftUpCookedPaw.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"73"
+}}]}]}]}},{
+"SN":"bitmaps/rightUpCookedPaw.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"74"
+}}]}]}]}},{
+"SN":"bitmaps/painFace.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"75"
+}}]}]}]}},{
+"SN":"bitmaps/earDrop1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"76"
+}}]}]}]}},{
+"SN":"bitmaps/cookedFace1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"77"
+}}]}]}]}},{
+"SN":"bitmaps/cookedFace2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"78"
+}}]}]}]}},{
+"SN":"bitmaps/cookedTorso1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"79"
+}}]}]}]}},{
+"SN":"bitmaps/cookedTorso2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"80"
+}}]}]}]}},{
+"SN":"bitmaps/parts/earDrop2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"81"
+}}]}]}]}},{
+"SN":"bitmaps/cookedFrontLeft1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"82"
+}}]}]}]}},{
+"SN":"bitmaps/cookedFrontLeft2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"83"
+}}]}]}]}},{
+"SN":"bitmaps/cookedFrontRight1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"84"
+}}]}]}]}},{
+"SN":"bitmaps/cookedFrontRight2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"85"
+}}]}]}]}},{
+"SN":"bitmaps/parts/earDrop3.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"86"
+}}]}]}]}},{
+"SN":"bitmaps/parts/cookedHead1.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"87"
+}}]}]}]}},{
+"SN":"bitmaps/parts/cookedHead2.png",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"88"
+}}]}]}]}}
+]},
+"MD":{
+"V":"BTA 1.3.0",
+"FLV":"Adobe Animate 23 (WIN 23.0.0.407)",
+"N":"Gooey Electric Chair",
+"BGC":"#FFFFFF",
+"W":1280,
+"H":720,
+"ASV":3,
+"FRT":24
+}}
