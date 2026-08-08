@@ -96,21 +96,21 @@ class MorphoModeOption extends Module
         && PlayState.instance.currentStageId != "hotelCastle"
         && PlayState.instance.currentStageId != "phillyCity")
       {
-        morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoMode');
+        morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('gameplay/characters/morpho/morphoMode/morphoMode');
       }
 
       switch (PlayState.instance.currentStageId)
       {
         case 'phillyBlazin', 'phillyBlazinErect', 'phillyStreetsErect', 'phillyStreetsSpooky', 'phillyStreetsGooey', 'phillyBlazinGooey':
-          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoModeBlur');
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('gameplay/characters/morpho/morphoMode/morphoModeBlur');
         case 'hotelCastle':
-          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoModeHotel');
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('gameplay/characters/morpho/morphoMode/morphoModeHotel');
         case 'phillyCity':
-          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoModeMix');
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('gameplay/characters/morpho/morphoMode/morphoModeMix');
         case 'schoolSpooky':
-          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoModePurple');
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('gameplay/characters/morpho/morphoMode/morphoModePurple');
         default:
-          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('characters/morpho/morphoMode');
+          morphoModeDancer = new FunkinSprite(900, 130).loadSparrow('gameplay/characters/morpho/morphoMode/morphoMode');
       }
 
       morphoModeDancer.animation.addByPrefix('morphoHittingIt', 'morphoHittingIt', 12, true);
@@ -357,7 +357,7 @@ class MorphoModeOption extends Module
         morphoModeDancer.kill();
       }
 
-      morphoModeDancer = new FunkinSprite(-1000, 50).loadSparrow('characters/morpho/morphoMode');
+      morphoModeDancer = new FunkinSprite(-1000, 50).loadSparrow('gameplay/characters/morpho/morphoMode/morphoMode');
       morphoModeDancer.animation.addByPrefix('morphoHittingIt', 'morphoHittingIt', 12, true);
       morphoModeDancer.animation.addByPrefix('hitIt1', 'hitIt1', 12, false);
       morphoModeDancer.animation.addByPrefix('hitIt2', 'hitIt2', 12, false);
