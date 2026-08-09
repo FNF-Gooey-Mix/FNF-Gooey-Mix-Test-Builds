@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="KamUpdog.png">
+<TextureAtlas imagePath="KamDrippy.png">
 <SubTexture name="KamUpdogIdle0000" x="0" y="0" width="362" height="428" frameX="-115" frameY="-97" frameWidth="600" frameHeight="600" />
 <SubTexture name="KamUpdogIdle0001" x="0" y="0" width="362" height="428" frameX="-115" frameY="-97" frameWidth="600" frameHeight="600" />
 <SubTexture name="KamUpdogIdle0002" x="362" y="0" width="357" height="428" frameX="-119" frameY="-97" frameWidth="600" frameHeight="600" />

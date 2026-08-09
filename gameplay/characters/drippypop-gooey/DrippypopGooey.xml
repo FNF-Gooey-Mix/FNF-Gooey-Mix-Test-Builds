@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="DrippypopUpdog.png">
+<TextureAtlas imagePath="DrippypopGooey.png">
 <SubTexture name="DrippyIdle0000" x="0" y="0" width="627" height="647" frameX="-160" frameY="-158" frameWidth="900" frameHeight="900" />
 <SubTexture name="DrippyIdle0001" x="0" y="0" width="627" height="647" frameX="-160" frameY="-158" frameWidth="900" frameHeight="900" />
 <SubTexture name="DrippyIdle0002" x="627" y="0" width="621" height="647" frameX="-160" frameY="-158" frameWidth="900" frameHeight="900" />

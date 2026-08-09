@@ -5,11 +5,11 @@ import funkin.play.PauseSubState;
 import funkin.play.PlayState;
 import funkin.audio.FunkinSound;
 
-class GooeyUpdogCharacter extends MultiSparrowCharacter
+class GooeyDrippyCharacter extends MultiSparrowCharacter
 {
   function new()
   {
-    super('gooey-updog');
+    super('gooey-drippy');
   }
 
   function onCreate(event:ScriptEvent)
@@ -53,7 +53,7 @@ class GooeyUpdogCharacter extends MultiSparrowCharacter
     {
       if (name == "deathConfirm")
       {
-        gooeyRetry = FunkinSound.load(Paths.music('gameplay/gameover/gameOverEnd-gooeyReal'), true);
+        gooeyRetry = FunkinSound.load(Paths.music('gameplay/playable-characters/gooey/game-over/game-over-gooey/game-over-gooey-end-real'), true);
         gooeyRetry.volume = 1;
         gooeyRetry.play(false);
       }

@@ -91,7 +91,7 @@ class MixdUpSong extends Song
       time: 0.365,
       callback: () ->
       {
-        cutsceneMusic = FunkinSound.load(Paths.music("cutscene/mixed-up-melody"), true);
+        cutsceneMusic = FunkinSound.load(Paths.music("gameplay/stages/phillyCity/cutscene/mixed-up-melody"), true);
         cutsceneMusic.volume = 1;
         cutsceneMusic.play(false);
       }
@@ -111,7 +111,7 @@ class MixdUpSong extends Song
       callback: () ->
       {
         PlayState.instance.currentStage.getDad().playAnimation('showOffassBITCH', true);
-        mixCutAudio = FunkinSound.load(Paths.sound('extra/mixCutAudio'), 1, false, true, true);
+        mixCutAudio = FunkinSound.load(Paths.sound('gameplay/stages/phillyCity/sounds/mixCutAudio'), 1, false, true, true);
         PlayState.instance.tweenCameraZoom(0.9, 3, true, FlxEase.expoOut);
       }
     });

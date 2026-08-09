@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "name": "Drippypop (Updog)",
+  "name": "Drippypop (Gooey)",
   "renderType": "multisparrow",
-  "assetPath": "gameplay/characters/driippypop-updog/DrippypopUpdog",
+  "assetPath": "gameplay/characters/drippypop-gooey/DrippypopGooey",
   "cameraOffsets": [-1, 93],
   "flipX": false,
   "healthIcon": {

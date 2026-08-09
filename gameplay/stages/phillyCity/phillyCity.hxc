@@ -68,7 +68,7 @@ class PhillyCityStage extends Stage
   function backCarDrive():Void
   {
     var backCarChance:Int = FlxG.random.int(1, 2);
-    carSound = FunkinSound.load(Paths.sound('extra/carPassMix'), 0.4, false, true, true);
+    carSound = FunkinSound.load(Paths.sound('gameplay/stages/phillyCity/sounds/carPassMix'), 0.4, false, true, true);
     if (backCarChance == 1)
     {
       var backCar = getNamedProp('backCar');
@@ -91,7 +91,7 @@ class PhillyCityStage extends Stage
   function frontCarDrive():Void
   {
     var frontCarChance:Int = FlxG.random.int(1, 2);
-    carSound = FunkinSound.load(Paths.sound('extra/carPassMix'), 0.5, false, true, true);
+    carSound = FunkinSound.load(Paths.sound('gameplay/stages/phillyCity/sounds/carPassMix'), 0.5, false, true, true);
     if (frontCarChance == 1)
     {
       var frontCar = getNamedProp('frontCar');

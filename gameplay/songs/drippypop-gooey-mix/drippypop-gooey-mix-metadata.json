@@ -12,9 +12,9 @@
     "songVariations": [],
     "difficulties": ["extra"],
     "characters": {
-      "player": "gooey-updog",
-      "girlfriend": "kam-updog",
-      "opponent": "drippypop-updog",
+      "player": "gooey-drippy",
+      "girlfriend": "kam-drippy",
+      "opponent": "drippypop-gooey",
       "instrumental": "",
       "playerVocals": ["gooey"],
       "opponentVocals": ["drippypop"]

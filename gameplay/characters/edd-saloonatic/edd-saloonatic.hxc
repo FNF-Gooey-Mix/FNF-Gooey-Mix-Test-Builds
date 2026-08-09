@@ -42,7 +42,7 @@ class EddSaloonaticCharacter extends SparrowCharacter
           vid.screenCenter();
         });
 
-        var filePath:String = Paths.videos("bitch");
+        var filePath:String = Paths.videos("gameplay/characters/edd-saloonatic/gameOver");
         vid.load(filePath);
 
         vid.cameras = [PlayState.instance.camCutscene];
@@ -84,7 +84,7 @@ class EddSaloonaticCharacter extends SparrowCharacter
     super.onGameOver(e);
     GameOverSubState.blueballed;
     vid = new FunkinVideoSprite(0, 0);
-    vid.load(Paths.videos('bitch'));
+    vid.load(Paths.videos('gameplay/characters/edd-saloonatic/gameOver'));
     vid.scrollFactor.set(0, 0);
     vid.cameras = [PlayState.instance.camCutscene];
     vid.play();

@@ -4,9 +4,6 @@
   "renderType": "sparrow",
   "assetPath": "gameplay/characters/edd-saloonatic/Edd",
   "flipX": true,
-  "healthIcon": {
-    "id": "edd-gooey"
-  },
   "animations": [
     {
       "name": "idle",

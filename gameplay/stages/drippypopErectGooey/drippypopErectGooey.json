@@ -7,7 +7,7 @@
       "scale": [1, 1],
       "animType": "sparrow",
       "name": "space",
-      "assetPath": "gooeyMix/extra/drippypopErect/space",
+      "assetPath": "gameplay/stages/drippypopErectGooey/space",
       "scroll": [0.1, 0.1]
     },
     {
@@ -17,7 +17,7 @@
       "scale": [1, 1],
       "animType": "sparrow",
       "name": "starShines1",
-      "assetPath": "gooeyMix/extra/drippypopErect/starShines",
+      "assetPath": "gameplay/stages/drippypopErectGooey/starShines",
       "scroll": [0.1, 0.1]
     },
     {
@@ -27,7 +27,7 @@
       "scale": [1, 1],
       "animType": "sparrow",
       "name": "starShines2",
-      "assetPath": "gooeyMix/extra/drippypopErect/starShines",
+      "assetPath": "gameplay/stages/drippypopErectGooey/starShines",
       "scroll": [0.1, 0.1]
     },
     {
@@ -37,7 +37,7 @@
       "scale": [1, 1],
       "animType": "sparrow",
       "name": "glowFloor",
-      "assetPath": "gooeyMix/extra/drippypopErect/glowFloor",
+      "assetPath": "gameplay/stages/drippypopErectGooey/glowFloor",
       "scroll": [1, 1]
     },
     {
@@ -47,7 +47,7 @@
       "scale": [1, 1],
       "animType": "sparrow",
       "name": "floorGlow",
-      "assetPath": "gooeyMix/extra/drippypopErect/floorGlow",
+      "assetPath": "gameplay/stages/drippypopErectGooey/floorGlow",
       "scroll": [1, 1]
     },
     {
@@ -57,7 +57,7 @@
       "scale": [1, 1],
       "animType": "sparrow",
       "name": "purpleOverlay",
-      "assetPath": "gooeyMix/extra/drippypopErect/purpleOverlay",
+      "assetPath": "gameplay/stages/drippypopErectGooey/purpleOverlay",
       "scroll": [1, 1]
     }
   ],

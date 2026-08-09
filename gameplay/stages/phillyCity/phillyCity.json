@@ -7,7 +7,7 @@
       "animType": "sparrow",
       "name": "Sky",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/Sky",
+      "assetPath": "gameplay/stages/phillyCity/Sky",
       "scroll": [0.2, 0.2],
       "animations": []
     },
@@ -18,7 +18,7 @@
       "animType": "FarCity",
       "name": "City",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/farCity",
+      "assetPath": "gameplay/stages/phillyCity/farCity",
       "scroll": [0.4, 0.6],
       "animations": []
     },
@@ -29,7 +29,7 @@
       "animType": "sparrow",
       "name": "City",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/City",
+      "assetPath": "gameplay/stages/phillyCity/City",
       "scroll": [0.6, 0.9],
       "animations": []
     },
@@ -40,7 +40,7 @@
       "animType": "sparrow",
       "name": "911",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/911",
+      "assetPath": "gameplay/stages/phillyCity/911",
       "scroll": [0.85, 1],
       "animations": []
     },
@@ -53,7 +53,7 @@
       "isPixel": false,
       "startingAnimation": "walk",
       "scroll": [0.85, 1],
-      "assetPath": "gooeyMix/extra/phillyCity/picowalk",
+      "assetPath": "gameplay/stages/phillyCity/picowalk",
       "animations": [
         {
           "offsets": [0, 0],
@@ -73,7 +73,7 @@
       "scale": [0.45, 0.45],
       "name": "backCar",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/MixCar",
+      "assetPath": "gameplay/stages/phillyCity/MixCar",
       "scroll": [0.85, 1],
       "animations": []
     },
@@ -83,7 +83,7 @@
       "position": [-500, 0],
       "name": "MainCity",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/MainBG",
+      "assetPath": "gameplay/stages/phillyCity/MainBG",
       "scroll": [1, 1],
       "animations": []
     },
@@ -94,7 +94,7 @@
       "scale": [1.5, 1.5],
       "name": "frontCar",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/MixCar",
+      "assetPath": "gameplay/stages/phillyCity/MixCar",
       "scroll": [1, 1],
       "animations": []
     },
@@ -104,7 +104,7 @@
       "position": [500, 300],
       "name": "plant",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/plant",
+      "assetPath": "gameplay/stages/phillyCity/plant",
       "scroll": [1.5, 1.5],
       "animations": []
     },
@@ -115,7 +115,7 @@
       "scale": [0.5, 0.5],
       "name": "sotp",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/sotp sign",
+      "assetPath": "gameplay/stages/phillyCity/sotp sign",
       "scroll": [1.5, 1.5],
       "animations": []
     },
@@ -125,7 +125,7 @@
       "position": [0, 0],
       "name": "lighting",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/MixLighting",
+      "assetPath": "gameplay/stages/phillyCity/MixLighting",
       "scroll": [1, 1],
       "animations": []
     },
@@ -136,7 +136,7 @@
       "scale": [1, 1],
       "name": "MainCity",
       "isPixel": false,
-      "assetPath": "gooeyMix/extra/phillyCity/lazyFix",
+      "assetPath": "gameplay/stages/phillyCity/lazyFix",
       "scroll": [1, 1],
       "animations": []
     }

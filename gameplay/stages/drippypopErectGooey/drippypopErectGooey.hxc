@@ -20,7 +20,7 @@ class DrippyPopErectGooeyStage extends Stage
 
     if (GooeyMixOptions.gooeyShaders)
     {
-      tvShader = new FlxRuntimeShader(Assets.getText(Paths.frag("ferzyShader")));
+      tvShader = new FlxRuntimeShader(Assets.getText(Paths.frag("ui/shaders/ferzyShader")));
       PlayState.instance.camGame.filters = [new ShaderFilter(tvShader)];
       PlayState.instance.camHUD.filters = [new ShaderFilter(tvShader)];
       tvShader.setFloat("force", 0.1);
@@ -40,7 +40,7 @@ class DrippyPopErectGooeyStage extends Stage
     var purpleOverlay = getNamedProp('purpleOverlay');
     purpleOverlay.blend = 0;
 
-    tvTime = new FunkinSprite(0, 0).loadTexture('gooeyMix/extra/drippypopErect/tvbars');
+    tvTime = new FunkinSprite(0, 0).loadTexture('gameplay/stages/drippypopErectGooey/tvbars');
     PlayState.instance.add(tvTime);
     tvTime.cameras = [PlayState.instance.camHUD];
     tvTime.alpha = 0.5;

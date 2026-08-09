@@ -4,9 +4,6 @@
   "renderType": "sparrow",
   "assetPath": "gameplay/characters//eduardo-saloonatic/Eduardo",
   "flipX": false,
-  "healthIcon": {
-    "id": "eduardo-gooey"
-  },
   "animations": [
     {
       "name": "idle",

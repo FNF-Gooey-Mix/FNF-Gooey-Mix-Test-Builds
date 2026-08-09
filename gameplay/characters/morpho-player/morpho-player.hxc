@@ -42,7 +42,7 @@ class MorphoPlayerCharacter extends MultiSparrowCharacter
           vid.screenCenter();
         });
 
-        var filePath:String = Paths.videos("MorphoComedianGameOver");
+        var filePath:String = Paths.videos("gameplay/characters/morpho-player/gameOver");
         vid.load(filePath);
 
         vid.cameras = [PlayState.instance.camCutscene];
@@ -84,7 +84,7 @@ class MorphoPlayerCharacter extends MultiSparrowCharacter
     super.onGameOver(e);
     GameOverSubState.blueballed;
     vid = new FunkinVideoSprite(0, 0);
-    vid.load(Paths.videos('MorphoComedianGameOver'));
+    vid.load(Paths.videos('gameplay/characters/morpho-player/gameOver'));
     vid.scrollFactor.set(0, 0);
     vid.cameras = [PlayState.instance.camCutscene];
     vid.play();
@@ -121,7 +121,7 @@ class MorphoPlayerCharacter extends MultiSparrowCharacter
     {
       new FlxTimer().start(2 / 24, function(tmr:FlxTimer)
       {
-        FunkinSound.playOnce(Paths.sound('extra/morphoHit'), 1.0);
+        FunkinSound.playOnce(Paths.sound('gameplay/characters/morpho-player/morphoHit'), 1.0);
       });
     }
   }
