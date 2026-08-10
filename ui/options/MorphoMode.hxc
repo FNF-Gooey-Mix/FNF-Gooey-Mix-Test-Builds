@@ -12,6 +12,11 @@ import funkin.util.FlxTweenUtil;
 import flixel.util.FlxTimer;
 import funkin.graphics.shaders.DropShadowShader;
 import flixel.util.FlxSave;
+import funkin.ui.transition.preload.hotreload.HotReloadState;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.title.TitleState;
+import funkin.ui.freeplay.FreeplayState;
+
 
 class MorphoModeOption extends Module
 {
@@ -348,16 +353,19 @@ class MorphoModeOption extends Module
   function onStateChangeEnd(e)
   {
     super.onStateChangeEnd(e);
+    if (GooeyMixOptions.morphoMode == 'On' || GooeyMixOptions.morphoMode == 'No Stickers'){
+      if (e.targetState == 'PolymodScriptClass<pointlesspins.Shop>') makeMenuMorpho(-1000, 50, 399, 1, 1, 1.1);
+      else if (e.targetState is HotReloadState) makeMenuMorpho(-200, 180, 1, 1, 1, 0.4);
+      else if (e.targetState is MainMenuState) makeMenuMorpho(-200, 450, 100, 1, 0.5, 0.3);
+    }
+  }
 
-    if (e.targetState == 'PolymodScriptClass<pointlesspins.Shop>'
-      && (GooeyMixOptions.morphoMode == 'On' || GooeyMixOptions.morphoMode == 'No Stickers'))
-    {
+  function makeMenuMorpho(morphoX, morphoY, morphoZ, morphoScrollX, morphoScrollY, morphoScale){
       if (morphoModeDancer != null)
       {
         morphoModeDancer.kill();
       }
-
-      morphoModeDancer = new FunkinSprite(-1000, 50).loadSparrow('gameplay/characters/morpho/morphoMode/morphoMode');
+      morphoModeDancer = new FunkinSprite(morphoX, morphoY).loadSparrow('gameplay/characters/morpho/morphoMode/morphoMode');
       morphoModeDancer.animation.addByPrefix('morphoHittingIt', 'morphoHittingIt', 12, true);
       morphoModeDancer.animation.addByPrefix('hitIt1', 'hitIt1', 12, false);
       morphoModeDancer.animation.addByPrefix('hitIt2', 'hitIt2', 12, false);
@@ -365,11 +373,11 @@ class MorphoModeOption extends Module
       morphoModeDancer.animation.addByPrefix('hitIt4', 'hitIt4', 12, false);
       morphoModeDancer.animation.play('morphoHittingIt', true);
       e.targetState.add(morphoModeDancer);
-      morphoModeDancer.zIndex = 399;
-      morphoModeDancer.scale.set(1.1, 1.1);
+      morphoModeDancer.zIndex = morphoZ;
+      morphoModeDancer.scale.set(morphoScale, morphoScale);
+      morphoModeDancer.scrollFactor.set(morphoScrollX, morphoScrollY);
       e.targetState.refresh();
       morphoDanceNumber = 1;
-    }
   }
 
   function onBeatHit(event:SongTimeScriptEvent)

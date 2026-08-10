@@ -224,13 +224,23 @@ class GooeyMenuOption extends Module
 
   function addTitleScreenObjects():Void
   {
-    FlxG.state.gfDance.frames = Paths.getSparrowAtlas('ui/title/flora-dance-title');
-    FlxG.state.gfDance.animation.addByPrefix('danceLeft', 'leftFloraDance', 24, true);
-    FlxG.state.gfDance.animation.addByPrefix('danceRight', 'rightFloraDance', 24, true);
-    FlxG.state.gfDance.animation.play('dance');
-    FlxG.state.gfDance.shader = FlxG.state.swagShader.shader;
-    FlxG.state.gfDance.x = 560 + (FullScreenScaleMode.gameCutoutSize.x / 2.5);
-    FlxG.state.gfDance.y = 45;
+
+    if (GooeyMixOptions.morphoMode == 'On' || GooeyMixOptions.morphoMode == 'No Stickers'){
+      FlxG.state.gfDance.frames = Paths.getSparrowAtlas('gameplay/characters/morpho/morphoMode/morphoMode');
+      FlxG.state.gfDance.animation.addByPrefix('morphoHittingIt', 'morphoHittingIt', 12, true, true);
+      FlxG.state.gfDance.animation.play('morphoHittingIt');
+      FlxG.state.gfDance.shader = FlxG.state.swagShader.shader;
+      FlxG.state.gfDance.x = 580 + (FullScreenScaleMode.gameCutoutSize.x / 2.5);
+      FlxG.state.gfDance.y = 30;
+    } else {
+      FlxG.state.gfDance.frames = Paths.getSparrowAtlas('ui/title/flora-dance-title');
+      FlxG.state.gfDance.animation.addByPrefix('danceLeft', 'leftFloraDance', 24, true);
+      FlxG.state.gfDance.animation.addByPrefix('danceRight', 'rightFloraDance', 24, true);
+      FlxG.state.gfDance.animation.play('dance');
+      FlxG.state.gfDance.shader = FlxG.state.swagShader.shader;
+      FlxG.state.gfDance.x = 560 + (FullScreenScaleMode.gameCutoutSize.x / 2.5);
+      FlxG.state.gfDance.y = 45;
+    }
 
     FlxG.state.logoBl.frames = Paths.getSparrowAtlas('ui/title/logo-bumpin-gooey');
     FlxG.state.logoBl.scale.x = 0.85;
