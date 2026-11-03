@@ -271,6 +271,7 @@ class FloraSpeakerScreen extends FunkinSprite
   private static var FLORA_VIS_BAR_COUNT:Int = 7;
   private static var FLORA_VIS_FLAT_LEVEL:Float = 0.5;
 
+  var shouldUpdateViz:Bool;
   var vizSquare:FlxGraphic;
   var vizIndices:IntVector;
   var vizVertices:FloatVector;
@@ -303,7 +304,7 @@ class FloraSpeakerScreen extends FunkinSprite
 
   public function initAnalyzer(snd:FlxSound):Void
   {
-    analyzer = new SpectralAnalyzer(snd._channel.__audioSource, FLORA_VIS_BAR_COUNT, 0.1, 40);
+    analyzer = new SpectralAnalyzer(snd._source, FLORA_VIS_BAR_COUNT, 0.1, 40);
     analyzer.fftN = 256;
 
     // A-Bot tuning...
