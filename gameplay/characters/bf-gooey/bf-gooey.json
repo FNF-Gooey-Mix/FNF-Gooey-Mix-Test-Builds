@@ -1,16 +1,16 @@
 {
   "version": "1.0.0",
-  "name": "Boyfriend (For Extra Difficulty Songs)",
+  "name": "Boyfriend (Gooey)",
   "renderType": "multianimateatlas",
+  "healthIcon": {
+    "id": "bf"
+  },
   "assetPath": "gameplay/characters/bf/boyfriend",
   "flipX": true,
   "offsets": [17, 14],
   "cameraOffsets": [-18, 36],
   "death": {
     "cameraOffsets": [-73, 42]
-  },
-  "healthIcon": {
-    "id": "bf"
   },
   "animations": [
     {
@@ -61,10 +61,7 @@
       "assetPath": "gameplay/characters/bf/bf-dead",
       "name": "firstDeath",
       "prefix": "Death Intro",
-      "offsets": [22, 15],
-      "atlasSettings": {
-        "uniqueInCache": true
-      }
+      "offsets": [22, 15]
     },
     {
       "assetPath": "gameplay/characters/bf/bf-dead",

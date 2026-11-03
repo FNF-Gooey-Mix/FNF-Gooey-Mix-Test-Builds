@@ -156,6 +156,10 @@ class HotelCastleErectStage extends Stage
   var fakeOpponent:FunkinSprite;
   var fakePlayer:FunkinSprite;
   var gorse:FunkinSprite;
+  var skipText:FlxText;
+  var rightStartCamera:Bool;
+  var gorseCutscene:Bool;
+  var gooeyCutSequence:Sequence;
 
   /**
    * Replay the cutscene after leaving the song.

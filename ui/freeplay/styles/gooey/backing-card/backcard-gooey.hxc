@@ -23,8 +23,27 @@ class GooeyCard extends BackingCard
   }
 
   var backgrad:FlxSprite;
+  var backcrystals:FlxSprite;
+  var natCrystal:FlxSprite;
+  var natCrystalGlow:FlxSprite;
+  var natCrystalGlow2:FlxSprite;
+  var selectShade:FlxSprite;
+  var crystal1:FlxSprite;
+  var crystal2:FlxSprite;
   var crystal3:FlxSprite;
   var crystal4:FlxSprite;
+  var gooLines:FlxSprite;
+  var gooLines2:FlxSprite;
+  var gooLines3:FlxSprite;
+  var glow:FlxSprite;
+  var natFlash:FlxSprite;
+
+  var funnyScroll1:BGScrollingText;
+  var funnyScroll2:BGScrollingText;
+  var funnyScroll3:BGScrollingText;
+  var funnyScroll4:BGScrollingText;
+  var funnyScroll5:BGScrollingText;
+  var funnyScroll6:BGScrollingText;
 
   public override function enterCharSel():Void
   {

@@ -8,7 +8,6 @@ import flixel.util.FlxColor;
 import openfl.filters.ShaderFilter;
 import flixel.addons.display.FlxRuntimeShader;
 import funkin.play.ResultState;
-import funkin.ui.transition.stickers.StickerSubState;
 
 class NightcoreModeOption extends Module
 {
@@ -20,10 +19,12 @@ class NightcoreModeOption extends Module
   var nightcoreOverlay:FunkinSprite;
   var nightcoreOverlay2:FunkinSprite;
 
+  var bloomShader:FlxRuntimeShader;
+
   function onSubStateOpenBegin(event)
   {
     super.onSubStateOpenBegin();
-    if (event.targetState is ResultState || event.targetState is StickerSubState) if (GooeyMixOptions.gooeyShaders && GooeyMixOptions.nightcoreMode)
+    if (event.targetState is ResultState) if (GooeyMixOptions.gooeyShaders && GooeyMixOptions.nightcoreMode)
     {
       FlxG.game.setFilters([]);
     }
@@ -67,7 +68,7 @@ class NightcoreModeOption extends Module
 
       if (GooeyMixOptions.gooeyShaders)
       {
-        bloomShader = new FlxRuntimeShader(Assets.getText(Paths.frag("BloomShader")));
+        bloomShader = new FlxRuntimeShader(Assets.getText(Paths.frag("ui/shaders/BloomShader")));
         FlxG.game.setFilters([new ShaderFilter(bloomShader)]);
         bloomShader.setFloat('funrange', 0.1);
         bloomShader.setFloat('funsteps', 0.01);

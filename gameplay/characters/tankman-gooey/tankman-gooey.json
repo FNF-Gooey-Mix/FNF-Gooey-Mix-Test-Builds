@@ -43,7 +43,7 @@
     },
     {
       "frameRate": 24,
-      "loop": true,
+      "looped": true,
       "assetPath": "gameplay/characters/tankman-gooey/tankmanGooey",
       "prefix": "tankDance",
       "offsets": [-4, -1],

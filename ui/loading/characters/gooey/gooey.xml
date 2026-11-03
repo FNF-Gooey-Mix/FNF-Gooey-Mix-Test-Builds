@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="gooey.png">
+<SubTexture name="run0000" x="0" y="0" width="589" height="462" frameX="-72" frameY="-59" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0001" x="0" y="0" width="589" height="462" frameX="-72" frameY="-59" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0002" x="0" y="0" width="589" height="462" frameX="-72" frameY="-59" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0003" x="589" y="0" width="594" height="488" frameX="-54" frameY="-56" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0004" x="589" y="0" width="594" height="488" frameX="-54" frameY="-56" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0005" x="589" y="0" width="594" height="488" frameX="-54" frameY="-56" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0006" x="0" y="488" width="538" height="530" frameX="-107" frameY="-12" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0007" x="0" y="488" width="538" height="530" frameX="-107" frameY="-12" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0008" x="0" y="488" width="538" height="530" frameX="-107" frameY="-12" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0009" x="538" y="488" width="545" height="518" frameX="-115" frameY="-12" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0010" x="538" y="488" width="545" height="518" frameX="-115" frameY="-12" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0011" x="538" y="488" width="545" height="518" frameX="-115" frameY="-12" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0012" x="0" y="1018" width="583" height="487" frameX="-99" frameY="-31" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0013" x="0" y="1018" width="583" height="487" frameX="-99" frameY="-31" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0014" x="0" y="1018" width="583" height="487" frameX="-99" frameY="-31" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0015" x="583" y="1018" width="588" height="461" frameX="-79" frameY="-55" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0016" x="583" y="1018" width="588" height="461" frameX="-79" frameY="-55" frameWidth="700" frameHeight="600" />
+<SubTexture name="run0017" x="583" y="1018" width="588" height="461" frameX="-79" frameY="-55" frameWidth="700" frameHeight="600" />
+</TextureAtlas>
