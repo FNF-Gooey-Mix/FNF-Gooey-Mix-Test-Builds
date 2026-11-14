@@ -15,7 +15,6 @@ import funkin.ui.title.TitleState;
 import funkin.ui.charSelect.CharSelectSubState;
 import flixel.util.FlxSave;
 import funkin.ui.title.TitleState;
-#if FEATURE_DEBUG_MENU import funkin.ui.debug.DebugMenuSubState; #end
 #if FEATURE_CHART_EDITOR import funkin.ui.debug.charting.ChartEditorState; #end
 
 class GooeyMenuOption extends Module
@@ -164,28 +163,6 @@ class GooeyMenuOption extends Module
 
     if (!FlxG.onMobile)
     {
-      if (!FlxG.state.subState is DebugMenuSubState)
-      {
-        if (FlxG.state.subState.members[3] != null)
-        {
-          if (GooeyMixOptions.gooeyMixMenu == 'Always On'
-            || (GooeyMixOptions.gooeyMixMenu == 'Gooey Selected' && GooeyMixOptions.rememberedStartupCharacter == "gooey"))
-          {
-            if (FlxG.state.subState.members[3].graphic.assetPath == 'assets/ui/main-menu/menu-desat.png')
-            {
-              FlxG.state.subState.members[3].loadGraphic(Paths.image('ui/main-menu/menu-desat-gooey'));
-            }
-          }
-          else
-          {
-            if (FlxG.state.subState.members[3].graphic.assetPath == 'assets/ui/main-menu/menu-desat-gooey.png')
-            {
-              FlxG.state.subState.members[3].loadGraphic(Paths.image('ui/main-menu/menu-desat'));
-            }
-          }
-        }
-      }
-
       if (FlxG.state is ChartEditorState)
       {
         if (FlxG.state.menuBG != null)
