@@ -93,12 +93,12 @@
   },
   "results": {
     "music": {
-      "PERFECT_GOLD": "gameplay/playable-characters/gooey/results/music/results-perfect/results-perfect",
-      "PERFECT": "gameplay/playable-characters/gooey/results/music/results-perfect/results-perfect",
-      "EXCELLENT": "gameplay/playable-characters/gooey/results/music/results-excellent/results-excellent",
-      "GREAT": "gameplay/playable-characters/gooey/results/music/results-normal/results-normal",
-      "GOOD": "gameplay/playable-characters/gooey/results/music/results-normal/results-normal",
-      "SHIT": "gameplay/playable-characters/gooey/results/music/results-shit/results-shit"
+      "PERFECT_GOLD": "gameplay/playable-characters/gooey/results/music/results-perfect",
+      "PERFECT": "gameplay/playable-characters/gooey/results/music/results-perfect",
+      "EXCELLENT": "gameplay/playable-characters/gooey/results/music/results-excellent",
+      "GREAT": "gameplay/playable-characters/gooey/results/music/results-normal",
+      "GOOD": "gameplay/playable-characters/gooey/results/music/results-normal",
+      "SHIT": "gameplay/playable-characters/gooey/results/music/results-shit"
     },
     "perfectGold": [
       {
