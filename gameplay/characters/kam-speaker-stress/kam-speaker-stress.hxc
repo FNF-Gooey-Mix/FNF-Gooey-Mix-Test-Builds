@@ -18,7 +18,6 @@ import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
 import funkin.graphics.shaders.DropShadowShader;
 import funkin.play.Countdown;
-import gooeymix.characters.FloraSpeakerScreen;
 
 class KamSpeakerStressCharacter extends MultiSparrowCharacter
 {
@@ -44,8 +43,6 @@ class KamSpeakerStressCharacter extends MultiSparrowCharacter
 
   // Flora's speaker: the place where music comes from.
   public var floraSpeaker:FunkinSprite;
-  // Flora's speaker's screen: the thing you can play Bad Apple on.
-  public var floraSpeakerScreen:FloraSpeakerScreen;
 
   // A flag for detecting if Flora's props were set up yet.
   private var setupFloraProps:Bool = false;
@@ -63,7 +60,6 @@ class KamSpeakerStressCharacter extends MultiSparrowCharacter
       floraSpeaker = FunkinSprite.createTextureAtlas(0, 0, 'gameplay/characters/flora/FloraSpeaker');
       floraSpeaker.anim.addByFrameLabel('idle', 'FloraSpeakerBop', 24, false);
 
-      floraSpeakerScreen = new FloraSpeakerScreen(GooeyMixOptions.floraVisualizer);
 
       floraSpeakerScreen.animation.onFinish.add(function(animName:String)
       {
