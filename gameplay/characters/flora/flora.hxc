@@ -373,7 +373,8 @@ class FloraSpeakerScreen extends FunkinSprite
 
   function updateViz():Void
   {
-    vizLevels = analyzer?.getLevels(vizLevels) ?? getDefaultLevels();
+    // bandaid fix, removed cached array to work on preview #4
+    vizLevels = analyzer?.getLevels() ?? getDefaultLevels();
 
     vizVertices.length = 0;
     vizIndices.length = 0;
