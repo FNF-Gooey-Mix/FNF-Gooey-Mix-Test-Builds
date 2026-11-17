@@ -1,11 +1,7 @@
+import gooeymix.audio.visualize.FloraSpeakerScreenPixel;
 import funkin.play.character.SparrowCharacter;
 import funkin.play.PlayState;
 import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFlxRuntimeShader;
-import funkin.vis.dsp.SpectralAnalyzer;
-import flixel.FlxStrip;
-import funkin.Highscore;
-import flixel.util.FlxSave;
 import funkin.graphics.shaders.AdjustColorShader;
 import funkin.graphics.shaders.DropShadowShader;
 
@@ -14,10 +10,7 @@ using StringTools;
 class FloraPixelThornsCharacter extends SparrowCharacter
 {
   private static var FLORA_VIS_COLOR:Int = 0xFF82FFFF;
-  private static var FLORA_VIS_WIDTH:Int = 102;
-  private static var FLORA_VIS_HEIGHT:Int = 72;
-  private static var FLORA_VIS_BAR_COUNT:Int = 7;
-  private static var FLORA_VIS_FLAT_LEVEL:Float = 0.5;
+  private static var RED_FLORA_VIS_COLOR:Int = 0xFFFF4973;
 
   function new()
   {
@@ -25,11 +18,8 @@ class FloraPixelThornsCharacter extends SparrowCharacter
   }
 
   var floraSpeaker;
-  var visualizerFlora:FlxStrip;
+  var visualizerFlora:FloraSpeakerScreenPixel;
   var refershedLol:Bool = false;
-  // viz stuff
-  var analyzer:SpectralAnalyzer;
-  var vizLevels:Array<Bar> = [];
   // Shader stuff.
   private var currentShader = null;
   private var adjustColor:AdjustColorShader;
@@ -46,9 +36,7 @@ class FloraPixelThornsCharacter extends SparrowCharacter
     PlayState.instance.currentStage.add(floraSpeaker);
     if (GooeyMixOptions.floraVisualizer)
     {
-      visualizerFlora = new FlxStrip();
-      visualizerFlora.makeGraphic(1, 1, 0xFFFFFFFF);
-
+      visualizerFlora = new FloraSpeakerScreenPixel(0xFFFFFFFF, GooeyMixOptions.floraVisualizer);
       PlayState.instance.currentStage.add(visualizerFlora);
     }
   }
@@ -56,18 +44,7 @@ class FloraPixelThornsCharacter extends SparrowCharacter
   function onSongStart(scriptEvent)
   {
     super.onSongStart(scriptEvent);
-    if (GooeyMixOptions.floraVisualizer)
-    {
-      analyzer = new SpectralAnalyzer(FlxG.sound.music._channel.__audioSource, FLORA_VIS_BAR_COUNT, 0.1, 40);
-      analyzer.fftN = 256;
-
-      // A-Bot tuning...
-      analyzer.minDb = -65;
-      analyzer.maxDb = -25;
-      analyzer.maxFreq = 22000;
-      // we use a very low minFreq since some songs use low low subbass like a boss
-      analyzer.minFreq = 10;
-    }
+    if (GooeyMixOptions.floraVisualizer) visualizerFlora?.initAnalyzer(FlxG.sound.music);
   }
 
   function onSongRetry(scriptEvent)
@@ -75,8 +52,6 @@ class FloraPixelThornsCharacter extends SparrowCharacter
     super.onSongRetry(scriptEvent);
     if (GooeyMixOptions.floraVisualizer) analyzer = null;
   }
-
-  var vizTimeoutTime:Float = 0;
 
   function onUpdate(event:UpdateScriptEvent)
   {
@@ -100,16 +75,6 @@ class FloraPixelThornsCharacter extends SparrowCharacter
       PlayState.instance.currentStage.refresh();
       refershedLol = true;
       synchronizeShader();
-    }
-
-
-    if (GooeyMixOptions.floraVisualizer){
-      vizTimeoutTime -= event.elapsed;
-      while (vizTimeoutTime < 0)
-      {
-       updateViz();
-        vizTimeoutTime += 1 / 24;
-      }
     }
   }
 
@@ -141,62 +106,6 @@ class FloraPixelThornsCharacter extends SparrowCharacter
     }
   }
 
-  function updateViz():Void
-  {
-    vizLevels = analyzer?.getLevels(vizLevels) ?? getDefaultLevels();
-
-    final scale:Float = 6.0;
-    final lowResWidth:Float = Math.floor(FLORA_VIS_WIDTH / scale);
-    final lowResHeight:Float = Math.floor(FLORA_VIS_HEIGHT / scale);
-    final barWidth:Float = Math.floor(lowResWidth / FLORA_VIS_BAR_COUNT);
-
-    visualizerFlora.vertices.length = 0;
-    visualizerFlora.indices.length = 0;
-    visualizerFlora.uvtData.length = 0;
-
-    for (i in 0...FLORA_VIS_BAR_COUNT)
-    {
-      var level:Float = FLORA_VIS_FLAT_LEVEL + (vizLevels[i].value * (1 - FLORA_VIS_FLAT_LEVEL));
-
-      var x1:Float = Math.floor((i / FLORA_VIS_BAR_COUNT) * lowResWidth);
-      var x2:Float = Math.floor(((i + 1) / FLORA_VIS_BAR_COUNT) * lowResWidth);
-      var y:Float = Math.floor(lowResHeight - (level * lowResHeight));
-
-      var v:Array<Float> = [
-        x1 * scale,            y * scale,
-        x2 * scale,            y * scale,
-        x1 * scale, lowResHeight * scale,
-        x2 * scale, lowResHeight * scale
-      ];
-      for (val in v) visualizerFlora.vertices.push(val);
-
-      var offset:Int = i * 4;
-      visualizerFlora.indices.push(offset + 0);
-      visualizerFlora.indices.push(offset + 1);
-      visualizerFlora.indices.push(offset + 2);
-
-      visualizerFlora.indices.push(offset + 1);
-      visualizerFlora.indices.push(offset + 3);
-      visualizerFlora.indices.push(offset + 2);
-
-      visualizerFlora.uvtData.push(0);
-      visualizerFlora.uvtData.push(0);
-      visualizerFlora.uvtData.push(1);
-      visualizerFlora.uvtData.push(0);
-      visualizerFlora.uvtData.push(0);
-      visualizerFlora.uvtData.push(1);
-      visualizerFlora.uvtData.push(1);
-      visualizerFlora.uvtData.push(1);
-    }
-  }
-
-  function getDefaultLevels():Array<Bar>
-  {
-    vizLevels.resize(0);
-    for (i in 0...FLORA_VIS_BAR_COUNT) vizLevels.push({value: 0, peak: 0.0});
-    return vizLevels;
-  }
-
   function retroFloor(value:Float):Float
   {
     return Math.floor(value / 6) * 6;
@@ -208,14 +117,12 @@ class FloraPixelThornsCharacter extends SparrowCharacter
     if (floraSpeaker == null) return;
     if (name == "danceLeft")
     {
-      FLORA_VIS_COLOR = 0xFF82FFFF;
       if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = FLORA_VIS_COLOR;
       floraSpeaker?.animation.play('blue', true);
     }
     else if (name == "danceRight")
     {
-      FLORA_VIS_COLOR = 0xFFFF4973;
-      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = FLORA_VIS_COLOR;
+      if (GooeyMixOptions.floraVisualizer) visualizerFlora.color = RED_FLORA_VIS_COLOR;
       floraSpeaker?.animation.play('red', true);
     }
   }
