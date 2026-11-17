@@ -321,6 +321,8 @@ class GooeyBaseCharacter extends MultiAnimateAtlasCharacter
     GameOverSubState.animationSuffix = '';
   }
 
+  var gooeyRetry:FunkinSound;
+
   override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
   {
     super.playAnimation(name, restart, ignoreOther, reversed);
