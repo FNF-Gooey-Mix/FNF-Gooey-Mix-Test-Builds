@@ -1,0 +1,1277 @@
+CPPIA
+359
+0 
+3 new
+9 enableViz
+46 gooeymix/audio/visualize/FloraSpeakerScreen.hx
+14 vizTimeoutTime
+1 0
+9 vizLevels
+10 vizEnabled
+11 loadSparrow
+37 gameplay/characters/flora/FloraLights
+11 addByPrefix
+9 animation
+8 lightBop
+9 lightLoop
+7 50combo
+8 200combo
+9 lossCombo
+4 play
+9 vizSquare
+3 add
+6 bitmap
+17 toFlxGraphicAsset
+5 image
+34 gameplay/characters/flora/floraVis
+6 length
+5 fixed
+5 array
+11 vizVertices
+7 length1
+6 fixed1
+6 array1
+10 vizIndices
+7 length2
+6 fixed2
+6 array2
+10 vizUvtData
+5 trace
+8 hello???
+43 gooeymix.audio.visualize.FloraSpeakerScreen
+15 shouldUpdateViz
+8 analyzer
+12 initAnalyzer
+3 snd
+7 _source
+19 FLORA_VIS_BAR_COUNT
+3 0.1
+8 set_fftN
+5 minDb
+5 maxDb
+7 maxFreq
+7 minFreq
+9 dumpSound
+6 update
+7 elapsed
+9 updateViz
+20 0.041666666666666664
+16 drawFrameComplex
+5 frame
+6 camera
+6 _gthis
+8 contains
+19 getCurrentAnimation
+6 matrix
+7 _matrix
+5 point
+6 _point
+7 doFlipX
+5 flipX
+6 _frame
+7 doFlipY
+5 flipY
+13 prepareMatrix
+8 _curAnim
+17 prepareDrawMatrix
+8 bounds_0
+4 ceil
+5 width
+8 bounds_1
+6 height
+14 _renderTexture
+19 _renderTextureDirty
+3 tmp
+3 get
+17 FLORA_VIS_OFFSETS
+4 name
+9 visOffset
+4 tmp1
+4 tmp2
+3 set
+4 init
+12 drawToCamera
+3 mat
+10 drawPixels
+11 framePixels
+13 drawTriangles
+6 render
+9 get_frame
+14 get_imageFrame
+7 graphic
+14 colorTransform
+5 blend
+12 antialiasing
+6 shader
+9 getLevels
+16 getDefaultLevels
+10 set_length
+12 pointsLength
+9 oldPointX
+9 oldPointY
+16 FLORA_VIS_HEIGHT
+3 0.6
+2 _g
+1 i
+10 levelValue
+3 0.5
+5 value
+1 x
+15 FLORA_VIS_WIDTH
+1 y
+4 midX
+4 midY
+8 progress
+4 push
+3 0.0
+3 1.0
+7 prevTop
+10 prevBottom
+6 curTop
+9 curBottom
+8 prevTop1
+11 prevBottom1
+7 curTop1
+10 curBottom1
+6 resize
+3 _g1
+15 FLORA_VIS_COLOR
+12 lightBop0000
+12 lightBop0001
+12 lightBop0002
+12 lightBop0003
+12 lightBop0004
+12 lightBop0005
+13 lightLoop0000
+13 lightLoop0001
+13 lightLoop0002
+20 FLORA_VIS_FLAT_LEVEL
+11 gameVersion
+39 funkin/util/macro/CppiaManifestMacro.hx
+5 0.8.7
+7 classes
+9 classRefs
+99 --macro funkin.util.macro.CppiaManifestMacro.build(['gooeymix.audio.visualize.FloraSpeakerScreen'])
+54 C:\HaxeToolkit\haxe\std/haxe/macro/MacroStringTools.hx
+5 Light
+4 Dark
+4 None
+10 NumberKeys
+8 WASDKeys
+42 C:\HaxeToolkit\haxe\std/haxe/EntryPoint.hx
+7 release
+4 wait
+1 t
+7 acquire
+6 create
+1 f
+7 hasNext
+4 next
+8 __meta__
+22 openfl/utils/Object.hx
+3 obj
+16 SuppressWarnings
+26 checkstyle:FieldDocComment
+8 iterator
+37 haxeui-core/styles/default/frames.css
+40 __ASSET__:bitmap_flixel_tile_GraphicAuto
+48 haxeui-core/styles/shared/close-button-light.png
+42 haxeui-core/styles/shared/error-medium.png
+41 haxeui-core/styles/shared/error-small.png
+48 haxeui-core/styles/default/propertygrids_old.css
+43 haxeui-core/styles/default/haxeui_small.png
+64 __ASSET__:bitmap_flixel_addons_transition_GraphicTransTileCircle
+43 haxeui-core/styles/shared/warning-small.png
+34 haxeui-core/styles/native/main.css
+42 haxeui-core/styles/default/collapsible.css
+56 haxeui-core/locale/de/expression-replacements.properties
+50 __ASSET__:bitmap_flixel_system_GraphicVirtualInput
+46 haxeui-core/styles/shared/right-arrow-blue.png
+39 haxeui-core/styles/default/switches.css
+50 haxeui-core/styles/shared/window-collapse-blue.png
+42 haxeui-core/styles/shared/option-light.png
+44 haxeui-core/locale/en/std-strings.properties
+41 haxeui-core/styles/shared/help-medium.png
+52 haxeui-core/styles/shared/down-arrow-square-blue.png
+40 haxeui-core/styles/shared/tick-small.png
+41 haxeui-core/styles/shared/option-dark.png
+40 haxeui-core/locale/de/formats.properties
+50 haxeui-core/styles/shared/up-square-arrow-blue.png
+41 haxeui-core/styles/shared/tick-medium.png
+43 haxeui-core/styles/default/progressbars.css
+36 haxeui-core/styles/default/cards.css
+45 haxeui-core/styles/shared/up-arrow-bright.png
+43 haxeui-core/styles/shared/up-arrow-blue.png
+54 haxeui-core/styles/shared/right-arrow-square-light.png
+46 haxeui-core/styles/shared/right-arrow-dark.png
+45 haxeui-core/styles/shared/left-arrow-dark.png
+46 haxeui-core/styles/shared/down-arrow-light.png
+35 haxeui-core/styles/default/last.css
+43 haxeui-core/styles/default/colorpickers.css
+39 haxeui-core/styles/default/listview.css
+43 haxeui-core/styles/shared/up-arrow-dark.png
+32 PolymodScriptClassMacro_METADATA
+40 haxeui-core/locale/es/formats.properties
+43 haxeui-core/locale/en_US/formats.properties
+40 haxeui-core/styles/default/splitters.css
+11 haxeui_rtti
+40 haxeui-core/styles/default/calendars.css
+41 haxeui-core/styles/shared/option-blue.png
+46 haxeui-core/styles/shared/gripper-vertical.png
+42 haxeui-core/styles/default/optionboxes.css
+38 haxeui-core/styles/dark/scrollbars.css
+50 haxeui-core/styles/shared/up-down-arrows-light.png
+40 haxeui-core/locale/pt/formats.properties
+45 haxeui-core/locale/pt/form-strings.properties
+43 haxeui-core/styles/shared/expanded-blue.png
+36 haxeui-core/styles/default/menus.css
+46 haxeui-core/styles/atlases/default-spinner.png
+44 __ASSET__:sound_flixel_addons_text_TypeSound
+17 style/dialogs.css
+40 haxeui-core/locale/ru/formats.properties
+48 haxeui-core/styles/shared/gripper-horizontal.png
+41 haxeui-core/styles/shared/error-large.png
+39 haxeui-core/styles/default/sidebars.css
+51 haxeui-core/locale/pt/messagebox-strings.properties
+41 haxeui-core/styles/shared/check-light.png
+40 haxeui-core/locale/it/formats.properties
+40 haxeui-core/locale/fr/formats.properties
+40 haxeui-core/styles/default/treeviews.css
+48 haxeui-core/styles/shared/sortable-desc-dark.png
+53 haxeui-core/styles/shared/right-arrow-square-blue.png
+35 haxeui-core/styles/shared/blank.png
+47 haxeui-core/styles/shared/sortable-asc-blue.png
+56 haxeui-core/locale/en/expression-replacements.properties
+45 haxeui-core/locale/fr/form-strings.properties
+37 haxeui-core/styles/default/haxeui.png
+17 style/compact.css
+41 haxeui-core/styles/shared/info-medium.png
+44 haxeui-core/styles/shared/collapsed-blue.png
+39 haxeui-core/styles/default/tooltips.css
+17 style/toolbox.css
+51 haxeui-core/locale/en/messagebox-strings.properties
+53 haxeui-core/styles/shared/right-arrow-square-dark.png
+50 haxeui-core/styles/shared/minimize-button-dark.png
+40 haxeui-core/styles/shared/check-dark.png
+40 haxeui-core/styles/shared/check-blue.png
+64 __ASSET__:bitmap_flixel_addons_transition_GraphicTransTileSquare
+56 haxeui-core/locale/it/expression-replacements.properties
+48 haxeui-core/styles/shared/window-expand-blue.png
+56 haxeui-core/locale/es/expression-replacements.properties
+40 haxeui-core/styles/default/dropdowns.css
+44 haxeui-core/locale/fr/std-strings.properties
+51 haxeui-core/locale/fr/messagebox-strings.properties
+47 haxeui-core/styles/shared/close-button-dark.png
+26 PolymodFinalMacro_METADATA
+44 haxeui-core/locale/es/std-strings.properties
+51 haxeui-core/styles/shared/maximize-button-light.png
+49 haxeui-core/styles/shared/restore-button-blue.png
+49 haxeui-core/styles/shared/window-expand-white.png
+40 haxeui-core/styles/shared/info-large.png
+16 style/notifs.css
+44 haxeui-core/locale/pt/std-strings.properties
+44 haxeui-core/locale/it/std-strings.properties
+47 haxeui-core/styles/shared/right-arrow-light.png
+37 haxeui-core/styles/default/ranges.css
+40 haxeui-core/styles/shared/help-small.png
+45 haxeui-core/styles/shared/down-arrow-dark.png
+43 __ASSET__:bitmap_flixel_tile_GraphicAutoAlt
+47 haxeui-core/styles/shared/down-arrow-bright.png
+43 haxeui-core/styles/shared/expanded-dark.png
+41 haxeui-core/styles/default/scrollbars.css
+41 haxeui-core/styles/default/checkboxes.css
+45 haxeui-core/styles/shared/left-arrow-blue.png
+44 haxeui-core/styles/default/propertygrids.css
+37 haxeui-core/styles/default/panels.css
+24 Funkin_CompiledClassList
+47 haxeui-core/styles/shared/left-arrow-bright.png
+44 haxeui-core/styles/shared/up-arrow-light.png
+52 haxeui-core/styles/shared/down-square-arrow-blue.png
+47 haxeui-core/styles/atlases/default-spinner.json
+63 __ASSET__:bitmap_flixel_system__FlxPreloader_GraphicLogoCorners
+38 haxeui-core/styles/default/pickers.css
+36 haxeui-core/styles/default/rules.css
+51 haxeui-core/styles/shared/window-collapse-white.png
+52 haxeui-core/styles/shared/down-arrow-square-dark.png
+40 haxeui-core/styles/shared/help-large.png
+42 haxeui-core/styles/shared/folder-light.png
+14 app.properties
+50 haxeui-core/styles/shared/maximize-button-blue.png
+44 haxeui-core/styles/shared/collapsed-dark.png
+52 haxeui-core/styles/shared/left-square-arrow-blue.png
+39 haxeui-core/styles/default/steppers.css
+41 haxeui-core/styles/default/textinputs.css
+40 haxeui-core/styles/default/tableview.css
+59 __ASSET__:bitmap_flixel_input_mouse__FlxMouse_GraphicCursor
+56 haxeui-core/locale/fr/expression-replacements.properties
+40 haxeui-core/styles/default/accordion.css
+40 haxeui-core/locale/en/formats.properties
+43 haxeui-core/styles/shared/warning-large.png
+38 haxeui-core/styles/default/windows.css
+38 haxeui-core/styles/default/sliders.css
+17 style/buttons.css
+56 haxeui-core/locale/ru/expression-replacements.properties
+51 haxeui-core/styles/shared/minimize-button-white.png
+44 haxeui-core/locale/ru/std-strings.properties
+48 haxeui-core/styles/shared/sortable-desc-blue.png
+45 __ASSET__:file_flixel_system_VirtualInputData
+44 haxeui-core/styles/shared/warning-medium.png
+41 haxeui-core/styles/default/scrollview.css
+38 haxeui-core/styles/default/dialogs.css
+50 haxeui-core/styles/shared/sortable-arrows-blue.png
+42 __ASSET__:bitmap_flixel_system_GraphicLogo
+44 haxeui-core/styles/shared/transparent_px.png
+42 haxeui-core/styles/default/haxeui_tiny.png
+51 haxeui-core/styles/shared/minimize-button-light.png
+40 haxeui-core/styles/shared/info-small.png
+44 __ASSET__:bitmap_flixel_tile_GraphicAutoFull
+50 haxeui-core/styles/shared/restore-button-white.png
+81 __ASSET__:bitmap_flixel_addons_transition__TransitionFade_GraphicDiagonalGradient
+14 style/text.css
+48 haxeui-core/styles/shared/right-arrow-bright.png
+47 haxeui-core/styles/shared/close-button-blue.png
+45 haxeui-core/locale/en/form-strings.properties
+40 haxeui-core/styles/shared/tick-large.png
+53 haxeui-core/styles/shared/right-square-arrow-blue.png
+47 haxeui-core/styles/shared/sortable-asc-dark.png
+36 haxeui-core/styles/shared/search.png
+48 haxeui-core/styles/shared/close-button-white.png
+48 haxeui-flixel/styles/default/cursors/pointer.png
+35 haxeui-core/styles/default/main.css
+44 haxeui-core/locale/de/std-strings.properties
+42 haxeui-core/styles/shared/check-bright.png
+50 haxeui-core/styles/shared/minimize-button-blue.png
+44 haxeui-core/styles/default/notifications.css
+61 __ASSET__:bitmap_flixel_system__FlxPreloader_GraphicLogoLight
+51 haxeui-core/styles/shared/maximize-button-white.png
+53 haxeui-core/styles/shared/down-arrow-square-light.png
+15 haxeui_classmap
+17 style/playbar.css
+35 haxeui-core/styles/default/tabs.css
+37 haxeui-flixel/styles/default/main.css
+38 haxeui-core/styles/default/buttons.css
+17 style/general.css
+51 __ASSET__:bitmap_funkin_ui_debug_GraphicCursorCross
+50 haxeui-core/styles/shared/sortable-arrows-dark.png
+50 haxeui-core/styles/shared/maximize-button-dark.png
+29 haxeui-core/styles/global.css
+65 __ASSET__:bitmap_flixel_addons_transition_GraphicTransTileDiamond
+56 haxeui-core/locale/pt/expression-replacements.properties
+46 haxeui-core/styles/shared/left-arrow-light.png
+45 haxeui-core/styles/shared/down-arrow-blue.png
+47
+0 
+43 gooeymix.audio.visualize.FloraSpeakerScreen
+28 funkin.graphics.FunkinSprite
+4 bool
+4 void
+12 Array.Object
+39 flixel.animation.FlxAnimationController
+38 flixel.system.frontEnds.BitmapFrontEnd
+11 flixel.FlxG
+23 funkin.assets.AssetPath
+19 funkin.assets.Paths
+3 int
+4 null
+11 Array.Float
+26 openfl._Vector.FloatVector
+9 Array.int
+24 openfl._Vector.IntVector
+8 haxe.Log
+26 flixel.graphics.FlxGraphic
+31 funkin.vis.dsp.SpectralAnalyzer
+5 Float
+21 flixel.sound.FlxSound
+31 flixel.graphics.frames.FlxFrame
+16 flixel.FlxCamera
+12 Array.String
+21 flixel.math.FlxMatrix
+24 flixel.math.FlxBasePoint
+29 flixel.animation.FlxAnimation
+4 Math
+19 flixel.math.FlxRect
+30 animate.internal.RenderTexture
+17 haxe.ds.StringMap
+7 Dynamic
+36 flixel.graphics.frames.FlxImageFrame
+18 funkin.vis.dsp.Bar
+20 PolymodCppiaManifest
+6 String
+21 cpp.cppia.HostClasses
+44 funkin.ui.debug.stageeditor.StageEditorTheme
+41 funkin.ui.debug.charting.ChartEditorTheme
+50 funkin.ui.debug.charting.ChartEditorLiveInputStyle
+21 haxe._EntryPoint.Lock
+22 haxe._EntryPoint.Mutex
+23 haxe._EntryPoint.Thread
+18 haxe.lang.Iterator
+9 Array.Any
+18 haxe.lang.Iterable
+11
+CLASS 1 2 0 
+22
+FUNCTION 1 0 1  1 1 2 0 3  
+3	15	FUN 4 1
+		2 365940 0 3 0
+3	15		BLOCK  13
+3	42			SET 
+3	42				FTHISINST 1  4 
+3	42				f 5 
+3	41			SET 
+3	41				FTHISINST 1  6 
+3	41				ADEF 5  0
+
+3	46			CALLSUPERNEW 2  4 
+3	46				NULL 
+3	46				NULL 
+3	46				NULL 
+3	46				NULL 
+3	47			SET 
+3	47				FTHISINST 1  7 
+3	47				VAR 365940
+3	49			CALLTHIS 1  8 2 
+3	49				s 9 
+3	49				NULL 
+3	50			CALLMEMBER 6  10 6 
+3	50				FTHISINST 1  11 
+3	50				s 12 
+3	50				s 12 
+3	50				i 24 
+3	50				false 
+3	50				NULL 
+3	50				NULL 
+3	51			CALLMEMBER 6  10 6 
+3	51				FTHISINST 1  11 
+3	51				s 13 
+3	51				s 13 
+3	51				i 24 
+3	51				true 
+3	51				NULL 
+3	51				NULL 
+3	52			CALLMEMBER 6  10 6 
+3	52				FTHISINST 1  11 
+3	52				s 14 
+3	52				s 14 
+3	52				i 24 
+3	52				false 
+3	52				NULL 
+3	52				NULL 
+3	53			CALLMEMBER 6  10 6 
+3	53				FTHISINST 1  11 
+3	53				s 15 
+3	53				s 15 
+3	53				i 24 
+3	53				false 
+3	53				NULL 
+3	53				NULL 
+3	54			CALLMEMBER 6  10 6 
+3	54				FTHISINST 1  11 
+3	54				s 16 
+3	54				s 16 
+3	54				i 24 
+3	54				false 
+3	54				NULL 
+3	54				NULL 
+3	55			CALLMEMBER 6  17 4 
+3	55				FTHISINST 1  11 
+3	55				s 12 
+3	55				NULL 
+3	55				NULL 
+3	55				NULL 
+3	57			IF 
+3	57				FTHISINST 1  7 
+3	58				BLOCK  14
+3	59					SET 
+3	59						FTHISINST 1  18 
+3	59						CALLMEMBER 7  19 3 
+3	59							FSTATIC 8  20 
+3	59							CALLMEMBER 9  21 0 
+3	59								CALLSTATIC 10  22 2 
+3	59									s 23 
+3	59									NULL 
+3	59							NULL 
+3	59							NULL 
+3	61					TVARS 1
+							VARDECLI 24 401242 0 11  12 
+3	61						NULL 
+3	61					TVARS 1
+							VARDECLI 25 401243 0 3  12 
+3	61						NULL 
+3	61					TVARS 1
+							VARDECLI 26 401244 0 13  12 
+3	61						NULL 
+3	61					SET 
+3	61						FTHISINST 1  27 
+3	61						NEW 14 4 
+3	61							VAR 401242
+3	61							VAR 401243
+3	61							TODYNARRAY 
+3	61								VAR 401244
+3	61							true 
+3	62					TVARS 1
+							VARDECLI 28 401248 0 11  12 
+3	62						NULL 
+3	62					TVARS 1
+							VARDECLI 29 401249 0 3  12 
+3	62						NULL 
+3	62					TVARS 1
+							VARDECLI 30 401250 0 15  12 
+3	62						NULL 
+3	62					SET 
+3	62						FTHISINST 1  31 
+3	62						NEW 16 3 
+3	62							VAR 401248
+3	62							VAR 401249
+3	62							VAR 401250
+3	63					TVARS 1
+							VARDECLI 32 401254 0 11  12 
+3	63						NULL 
+3	63					TVARS 1
+							VARDECLI 33 401255 0 3  12 
+3	63						NULL 
+3	63					TVARS 1
+							VARDECLI 34 401256 0 13  12 
+3	63						NULL 
+3	63					SET 
+3	63						FTHISINST 1  35 
+3	63						NEW 14 4 
+3	63							VAR 401254
+3	63							VAR 401255
+3	63							TODYNARRAY 
+3	63								VAR 401256
+3	63							true 
+3	64					CALL 2 
+3	64						FSTATIC 17  36 
+3	64						s 37 
+3	64						POSINFO 3 64 38  1 
+3	66			CALL 2 
+3	66				FSTATIC 17  36 
+3	66				VAR 365940
+3	66				POSINFO 3 66 38  1 
+VAR 0 N N 0 7 3 0
+VAR 0 N N 0 39 3 0
+VAR 0 N N 0 18 18 0
+VAR 0 N N 0 31 16 0
+VAR 0 N N 0 27 14 0
+VAR 0 N N 0 35 14 0
+VAR 0 N N 0 40 19 0
+VAR 0 N N 0 6 5 0
+VAR 0 N N 0 4 20 0
+FUNCTION 0 0 41  4 1 42 0 21  
+3	70	FUN 4 1
+		42 365941 0 21 0
+3	70		BLOCK  7
+3	72			SET 
+3	72				FTHISINST 1  40 
+3	72				NEW 19 4 
+3	72					FLINK 21  43 
+3	72						VAR 365941
+3	72					FSTATIC 1  44 
+3	72					f 45 
+3	72					i 40 
+3	73			CALLMEMBER 19  46 1 
+3	73				FTHISINST 1  40 
+3	73				i 256 
+3	76			SET 
+3	76				FLINK 19  47 
+3	76					FTHISINST 1  40 
+3	76				TCAST 20 
+3	76					i -65 
+3	77			SET 
+3	77				FLINK 19  48 
+3	77					FTHISINST 1  40 
+3	77				TCAST 20 
+3	77					i -25 
+3	78			SET 
+3	78				FLINK 19  49 
+3	78					FTHISINST 1  40 
+3	78				TCAST 20 
+3	78					i 22000 
+3	80			SET 
+3	80				FLINK 19  50 
+3	80					FTHISINST 1  40 
+3	80				TCAST 20 
+3	80					i 10 
+3	82			SET 
+3	82				FTHISINST 1  39 
+3	82				false 
+FUNCTION 0 0 51  4 0 
+3	87	FUN 4 0
+3	87		BLOCK  1
+3	87			SET 
+3	87				FTHISINST 1  40 
+3	87				NULL 
+FUNCTION 0 0 52  4 1 53 0 20  
+3	91	FUN 4 1
+		53 365942 0 20 0
+3	91		BLOCK  2
+3	92			CALLSUPER 2  52 1 
+3	92				VAR 365942
+3	94			IF 
+3	94				FTHISINST 1  7 
+3	94				BLOCK  2
+3	95					-= 
+3	95						FTHISINST 1  4 
+3	95						VAR 365942
+3	96					WHILE 1
+3	96						< 
+3	96							FTHISINST 1  4 
+3	96							i 0 
+3	96						BLOCK  2
+3	98							CALLTHIS 1  54 0 
+
+3	99							+= 
+3	99								FTHISINST 1  4 
+3	99								f 55 
+FUNCTION 0 0 56  4 2 57 0 22  58 0 23  
+3	105	FUN 4 2
+		57 366205 1 22 0
+		58 366206 0 23 0
+3	105		BLOCK  13
+3	105			TVARS 1
+					VARDECLI 59 366231 1 1  1 
+3	105				THIS 
+3	106			IF 
+3	106				|| 
+3	106					! 
+3	106						CALLMEMBER 24  60 1 
+3	106							ADEF 24  2
+3	106								s 12 
+3	106								s 13 
+3	106							CALLTHIS 1  61 0 
+
+3	106					ISNULL 
+3	106						FTHISINST 1  18 
+3	107				BLOCK  2
+3	108					CALLSUPER 2  56 2 
+3	108						VAR 366205
+3	108						VAR 366206
+3	109					RETURN 
+
+3	112			TVARS 1
+					VARDECLI 62 366207 0 25  25 
+3	112				FTHISINST 1  63 
+3	113			TVARS 1
+					VARDECLI 64 366208 1 26  26 
+3	113				FTHISINST 1  65 
+3	115			TVARS 1
+					VARDECLI 66 366211 0 3  3 
+3	115				!= 
+3	115					FTHISINST 1  67 
+3	115					FLINK 22  67 
+3	115						FTHISINST 1  68 
+3	115			TVARS 1
+					VARDECLI 69 366214 0 3  3 
+3	115				!= 
+3	115					FTHISINST 1  70 
+3	115					FLINK 22  70 
+3	115						FTHISINST 1  68 
+3	115			CALLMEMBER 22  71 4 
+3	115				VAR 366205
+3	115				VAR 366207
+3	115				i 0 
+3	115				IFELSE 
+3	115					NOTNULL 
+3	115						FLINK 6  72 
+3	115							FTHISINST 1  11 
+3	115					!= 
+3	115						VAR 366211
+3	115						FLINK 27  67 
+3	115							FLINK 6  72 
+3	115								FTHISINST 1  11 
+3	115					VAR 366211
+3	115				IFELSE 
+3	115					NOTNULL 
+3	115						FLINK 6  72 
+3	115							FTHISINST 1  11 
+3	115					!= 
+3	115						VAR 366214
+3	115						FLINK 27  70 
+3	115							FLINK 6  72 
+3	115								FTHISINST 1  11 
+3	115					VAR 366214
+3	116			CALLTHIS 1  73 2 
+3	116				VAR 366207
+3	116				VAR 366206
+3	118			TVARS 1
+					VARDECLI 74 411618 0 11  11 
+3	118				CALLSTATIC 28  75 1 
+3	118					FLINK 29  76 
+3	118						FLINK 22  57 
+3	118							VAR 366205
+3	118			TVARS 1
+					VARDECLI 77 411619 0 11  11 
+3	118				CALLSTATIC 28  75 1 
+3	118					FLINK 29  78 
+3	118						FLINK 22  57 
+3	118							VAR 366205
+3	119			IF 
+3	119				ISNULL 
+3	119					FTHISINST 1  79 
+3	119				BLOCK  1
+3	119					SET 
+3	119						FTHISINST 1  79 
+3	119						NEW 30 3 
+3	119							VAR 411618
+3	119							VAR 411619
+3	119							NULL 
+3	121			IF 
+3	121				FTHISINST 1  80 
+3	122				BLOCK  8
+3	123					TVARS 1
+							VARDECLI 81 366220 0 13  13 
+3	123						TODATAARRAY 13 
+3	123							CALLMEMBER 31  82 1 
+3	123								FSTATIC 1  83 
+3	123								FLINK 22  84 
+3	123									FTHISINST 1  68 
+3	123					TVARS 1
+							VARDECLI 85 366221 0 13  13 
+3	123						IFELSE 
+3	123							NOTNULL 
+3	123								VAR 366220
+3	123							VAR 366220
+3	123							ADEF 13  0
+
+3	124					TVARS 1
+							VARDECLI 86 366222 0 32  20 
+3	124						ARRAYI 13 
+3	124							VAR 366221
+3	124							i 0 
+3	124					TVARS 1
+							VARDECLI 87 366223 0 32  20 
+3	124						ARRAYI 13 
+3	124							VAR 366221
+3	124							i 1 
+3	124					CALLMEMBER 26  88 2 
+3	124						VAR 366208
+3	124						IFELSE 
+3	124							NOTNULL 
+3	124								VAR 366222
+3	124							VAR 366222
+3	124							i 0 
+3	124						IFELSE 
+3	124							NOTNULL 
+3	124								VAR 366223
+3	124							VAR 366223
+3	124							i 0 
+3	126					CALLMEMBER 30  89 2 
+3	126						FTHISINST 1  79 
+3	126						VAR 411618
+3	126						VAR 411619
+3	127					CALLMEMBER 30  90 1 
+3	127						FTHISINST 1  79 
+3	127						FUN 4 2
+							58 366229 0 23 0
+							91 366230 0 25 0
+3	128							BLOCK  2
+3	129								CALLMEMBER 23  92 8 
+3	129									VAR 366229
+3	129									VAR 366205
+3	129									FLINK 1  93 
+3	129										VAR 366231
+3	129									VAR 366230
+3	129									NULL 
+3	129									NULL 
+3	129									false 
+3	129									NULL 
+3	129									NULL 
+3	130								CALLMEMBER 23  94 12 
+3	130									VAR 366229
+3	130									FLINK 1  18 
+3	130										VAR 366231
+3	130									FLINK 1  27 
+3	130										VAR 366231
+3	130									FLINK 1  31 
+3	130										VAR 366231
+3	130									FLINK 1  35 
+3	130										VAR 366231
+3	130									NULL 
+3	130									VAR 366208
+3	130									NULL 
+3	130									false 
+3	130									true 
+3	130									NULL 
+3	130									NULL 
+3	130									NULL 
+3	133					CALLMEMBER 30  95 0 
+3	133						FTHISINST 1  79 
+3	136			CALLMEMBER 23  92 8 
+3	136				VAR 366206
+3	136				CALLMEMBER 33  96 0 
+3	136					CALLMEMBER 18  97 0 
+3	136						FLINK 30  98 
+3	136							FTHISINST 1  79 
+3	136				FTHISINST 1  93 
+3	136				VAR 366207
+3	136				FTHISINST 1  99 
+3	136				FTHISINST 1  100 
+3	136				FTHISINST 1  101 
+3	136				FTHISINST 1  102 
+3	136				NULL 
+FUNCTION 0 0 54  4 0 
+3	140	FUN 4 0
+3	140		BLOCK  10
+3	141			TVARS 1
+					VARDECLI 81 365943 0 19  19 
+3	141				FTHISINST 1  40 
+3	141			TVARS 1
+					VARDECLI 86 365947 0 5  5 
+3	141				IFELSE 
+3	141					NOTNULL 
+3	141						VAR 365943
+3	141					CALLMEMBER 19  103 1 
+3	141						VAR 365943
+3	141						FTHISINST 1  6 
+3	141					NULL 
+3	141			SET 
+3	141				FTHISINST 1  6 
+3	141				IFELSE 
+3	141					NOTNULL 
+3	141						VAR 365947
+3	141					VAR 365947
+3	141					CALLTHIS 1  104 0 
+
+3	143			CALLMEMBER 14  105 1 
+3	143				FTHISINST 1  27 
+3	143				i 0 
+3	144			CALLMEMBER 16  105 1 
+3	144				FTHISINST 1  31 
+3	144				i 0 
+3	145			CALLMEMBER 14  105 1 
+3	145				FTHISINST 1  35 
+3	145				i 0 
+3	147			TVARS 1
+					VARDECLI 106 365960 0 11  11 
+3	147				+ 
+3	147					FSTATIC 1  44 
+3	147					i 1 
+3	150			TVARS 1
+					VARDECLI 107 365962 0 20  20 
+3	150				TCAST 20 
+3	150					i 0 
+3	151			TVARS 1
+					VARDECLI 108 365963 0 20  20 
+3	151				* 
+3	151					TCAST 20 
+3	151						FSTATIC 1  109 
+3	151					f 110 
+3	153			BLOCK  2
+3	153				TVARS 1
+						VARDECLI 111 366203 0 11  11 
+3	153					i 0 
+3	153				WHILE 1
+3	153					< 
+3	153						VAR 366203
+3	153						VAR 365960
+3	153					BLOCK  20
+3	153						TVARS 1
+								VARDECLI 112 365964 0 11  11 
+3	153							+++ 
+3	153								VAR 366203
+3	155						TVARS 1
+								VARDECLI 113 365965 0 20  20 
+3	155							f 114 
+3	156						IF 
+3	156							< 
+3	156								VAR 365964
+3	156								FSTATIC 1  44 
+3	158							BLOCK  1
+3	158								SET 
+3	158									VAR 365965
+3	158									+ 
+3	158										* 
+3	158											FLINK 34  115 
+3	158												ARRAYI 5 
+3	158													FTHISINST 1  6 
+3	158													VAR 365964
+3	158											f 114 
+3	158										f 114 
+3	161						TVARS 1
+								VARDECLI 116 365966 0 20  20 
+3	161							* 
+3	161								/ 
+3	161									TCAST 20 
+3	161										VAR 365964
+3	161									TCAST 20 
+3	161										- 
+3	161											VAR 365960
+3	161											i 1 
+3	161								TCAST 20 
+3	161									FSTATIC 1  117 
+3	162						TVARS 1
+								VARDECLI 118 365967 0 20  20 
+3	162							* 
+3	162								TCAST 20 
+3	162									FSTATIC 1  109 
+3	162								+ 
+3	162									- 
+3	162										TCAST 20 
+3	162											i 1 
+3	162										VAR 365965
+3	162									f 45 
+3	165						TVARS 1
+								VARDECLI 119 365968 0 20  20 
+3	165							* 
+3	165								+ 
+3	165									VAR 365962
+3	165									VAR 365966
+3	165								f 114 
+3	166						TVARS 1
+								VARDECLI 120 365969 0 20  20 
+3	166							* 
+3	166								+ 
+3	166									VAR 365963
+3	166									VAR 365967
+3	166								f 114 
+3	168						TVARS 1
+								VARDECLI 121 365970 0 20  20 
+3	168							/ 
+3	168								TCAST 20 
+3	168									VAR 365964
+3	168								TCAST 20 
+3	168									VAR 365960
+3	171						CALLMEMBER 14  122 1 
+3	171							FTHISINST 1  27 
+3	171							VAR 365968
+3	172						CALLMEMBER 14  122 1 
+3	172							FTHISINST 1  27 
+3	172							VAR 365969
+3	175						CALLMEMBER 14  122 1 
+3	175							FTHISINST 1  27 
+3	175							VAR 365968
+3	176						CALLMEMBER 14  122 1 
+3	176							FTHISINST 1  27 
+3	176							TCAST 20 
+3	176								FSTATIC 1  109 
+3	179						CALLMEMBER 14  122 1 
+3	179							FTHISINST 1  35 
+3	179							VAR 365970
+3	180						CALLMEMBER 14  122 1 
+3	180							FTHISINST 1  35 
+3	180							f 123 
+3	181						CALLMEMBER 14  122 1 
+3	181							FTHISINST 1  35 
+3	181							VAR 365970
+3	182						CALLMEMBER 14  122 1 
+3	182							FTHISINST 1  35 
+3	182							f 124 
+3	185						IF 
+3	185							> 
+3	185								VAR 365964
+3	185								i 0 
+3	186							BLOCK  10
+3	187								TVARS 1
+										VARDECLI 125 366035 0 11  11 
+3	187									* 
+3	187										- 
+3	187											VAR 365964
+3	187											i 1 
+3	187										i 2 
+3	188								TVARS 1
+										VARDECLI 126 366036 0 11  11 
+3	188									+ 
+3	188										VAR 366035
+3	188										i 1 
+3	189								TVARS 1
+										VARDECLI 127 366037 0 11  11 
+3	189									* 
+3	189										VAR 365964
+3	189										i 2 
+3	190								TVARS 1
+										VARDECLI 128 366038 0 11  11 
+3	190									+ 
+3	190										VAR 366037
+3	190										i 1 
+3	192								CALLMEMBER 16  122 1 
+3	192									FTHISINST 1  31 
+3	192									VAR 366035
+3	193								CALLMEMBER 16  122 1 
+3	193									FTHISINST 1  31 
+3	193									VAR 366037
+3	194								CALLMEMBER 16  122 1 
+3	194									FTHISINST 1  31 
+3	194									VAR 366036
+3	196								CALLMEMBER 16  122 1 
+3	196									FTHISINST 1  31 
+3	196									VAR 366037
+3	197								CALLMEMBER 16  122 1 
+3	197									FTHISINST 1  31 
+3	197									VAR 366038
+3	198								CALLMEMBER 16  122 1 
+3	198									FTHISINST 1  31 
+3	198									VAR 366036
+3	201						IF 
+3	201							== 
+3	201								VAR 365964
+3	201								- 
+3	201									VAR 365960
+3	201									i 1 
+3	202							BLOCK  18
+3	203								CALLMEMBER 14  122 1 
+3	203									FTHISINST 1  27 
+3	203									TCAST 20 
+3	203										FSTATIC 1  117 
+3	204								CALLMEMBER 14  122 1 
+3	204									FTHISINST 1  27 
+3	204									VAR 365967
+3	206								CALLMEMBER 14  122 1 
+3	206									FTHISINST 1  27 
+3	206									TCAST 20 
+3	206										FSTATIC 1  117 
+3	207								CALLMEMBER 14  122 1 
+3	207									FTHISINST 1  27 
+3	207									TCAST 20 
+3	207										FSTATIC 1  109 
+3	209								CALLMEMBER 14  122 1 
+3	209									FTHISINST 1  35 
+3	209									f 124 
+3	210								CALLMEMBER 14  122 1 
+3	210									FTHISINST 1  35 
+3	210									f 123 
+3	212								CALLMEMBER 14  122 1 
+3	212									FTHISINST 1  35 
+3	212									f 124 
+3	213								CALLMEMBER 14  122 1 
+3	213									FTHISINST 1  35 
+3	213									f 124 
+3	215								TVARS 1
+										VARDECLI 129 366151 0 11  11 
+3	215									* 
+3	215										VAR 365964
+3	215										i 2 
+3	216								TVARS 1
+										VARDECLI 130 366152 0 11  11 
+3	216									+ 
+3	216										VAR 366151
+3	216										i 1 
+3	217								TVARS 1
+										VARDECLI 131 366153 0 11  11 
+3	217									* 
+3	217										+ 
+3	217											VAR 365964
+3	217											i 1 
+3	217										i 2 
+3	218								TVARS 1
+										VARDECLI 132 366154 0 11  11 
+3	218									+ 
+3	218										VAR 366153
+3	218										i 1 
+3	220								CALLMEMBER 16  122 1 
+3	220									FTHISINST 1  31 
+3	220									VAR 366151
+3	221								CALLMEMBER 16  122 1 
+3	221									FTHISINST 1  31 
+3	221									VAR 366153
+3	222								CALLMEMBER 16  122 1 
+3	222									FTHISINST 1  31 
+3	222									VAR 366152
+3	224								CALLMEMBER 16  122 1 
+3	224									FTHISINST 1  31 
+3	224									VAR 366153
+3	225								CALLMEMBER 16  122 1 
+3	225									FTHISINST 1  31 
+3	225									VAR 366154
+3	226								CALLMEMBER 16  122 1 
+3	226									FTHISINST 1  31 
+3	226									VAR 366152
+3	229						SET 
+3	229							VAR 365962
+3	229							VAR 365966
+3	230						SET 
+3	230							VAR 365963
+3	230							VAR 365967
+FUNCTION 0 0 104  5 0 
+3	235	FUN 5 0
+3	235		BLOCK  3
+3	236			CALLMEMBER 5  133 1 
+3	236				FTHISINST 1  6 
+3	236				i 0 
+3	237			BLOCK  3
+3	237				TVARS 1
+						VARDECLI 111 365945 0 11  11 
+3	237					i 0 
+3	237				TVARS 1
+						VARDECLI 134 365946 0 11  11 
+3	237					FSTATIC 1  44 
+3	237				WHILE 1
+3	237					< 
+3	237						VAR 365945
+3	237						VAR 365946
+3	237					BLOCK  2
+3	237						++ 
+3	237							VAR 365945
+3	237						CALLMEMBER 5  122 1 
+3	237							FTHISINST 1  6 
+3	237							NEW 34 2 
+3	237								TCAST 20 
+3	237									i 0 
+3	237								f 123 
+3	238			RETVAL 5 
+3	238				FTHISINST 1  6 
+VAR 1 N N 0 135 11 1
+3	17	i -9633798 
+VAR 1 N N 0 117 11 1
+3	18	i 115 
+VAR 1 N N 0 109 11 1
+3	19	i 74 
+VAR 1 N N 0 83 31 1
+3	20	CALL 0 
+3	20		FUN 31 0
+3	20			BLOCK  11
+3	20				TVARS 1
+						VARDECLI 111 365894 0 31  31 
+3	20					NEW 31 0 
+
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	21					s 136 
+3	21					ADEF 13  2
+3	21						i 132 
+3	21						i 18 
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	22					s 137 
+3	22					ADEF 13  2
+3	22						i 132 
+3	22						i 18 
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	23					s 138 
+3	23					ADEF 13  2
+3	23						i 129 
+3	23						i 13 
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	24					s 139 
+3	24					ADEF 13  2
+3	24						i 129 
+3	24						i 13 
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	25					s 140 
+3	25					ADEF 13  2
+3	25						i 127 
+3	25						i 11 
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	26					s 141 
+3	26					ADEF 13  2
+3	26						i 127 
+3	26						i 11 
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	27					s 142 
+3	27					ADEF 13  2
+3	27						i 127 
+3	27						i 11 
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	28					s 143 
+3	28					ADEF 13  2
+3	28						i 127 
+3	28						i 11 
+3	20				CALLMEMBER 31  88 2 
+3	20					VAR 365894
+3	29					s 144 
+3	29					ADEF 13  2
+3	29						i 127 
+3	29						i 11 
+3	20				RETVAL 31 
+3	20					VAR 365894
+VAR 1 N N 0 44 11 1
+3	31	i 7 
+VAR 1 N N 0 145 20 1
+3	32	f 114 
+
+CLASS 35 0 0 
+3
+VAR 1 N N 0 146 36 1
+147	52	s 148 
+VAR 1 N N 0 149 24 1
+147	58	ADEF 24  1
+147	58		s 38 
+VAR 1 N N 0 150 5 1
+151	1	ADEF 5  1
+152	70		CLASSOF 1 
+
+CLASS 37 0 0 
+0
+
+ENUM 38  2
+153  0
+154  0
+0
+
+ENUM 39  2
+153  0
+154  0
+0
+
+ENUM 40  3
+155  0
+156  0
+157  0
+0
+
+CLASS 41 0 0 
+3
+FUNCTION 1 0 1  41 0 
+158	9	FUN 4 0
+158	9		BLOCK  0
+
+FUNCTION 0 0 159  4 0 
+158	11	FUN 4 0
+158	11		BLOCK  0
+
+FUNCTION 0 0 160  4 1 161 1 32  
+158	13	FUN 4 1
+		161 155281 0 32 0
+158	13		BLOCK  0
+
+
+CLASS 42 0 0 
+3
+FUNCTION 1 0 1  42 0 
+158	17	FUN 4 0
+158	17		BLOCK  0
+
+FUNCTION 0 0 162  4 0 
+158	19	FUN 4 0
+158	19		BLOCK  0
+
+FUNCTION 0 0 159  4 0 
+158	21	FUN 4 0
+158	21		BLOCK  0
+
+
+CLASS 43 0 0 
+1
+FUNCTION 1 0 163  4 1 164 0 32  
+158	26	FUN 4 1
+		164 155282 0 32 0
+158	26		BLOCK  1
+158	26			CALL 0 
+158	26				VAR 155282
+
+INTERFACE 44 0 0 
+3
+FUNCTION 0 0 165  3 0 
+FUNCTION 0 0 166  32 0 
+VAR 1 N N 0 167 32 1
+168	623	OBJDEF 1 169 
+168	623		OBJDEF 1 170 
+168	622			ADEF 45  1
+168	622				s 171 
+
+INTERFACE 46 0 0 
+2
+FUNCTION 0 0 172  44 0 
+VAR 1 N N 0 167 32 1
+168	630	OBJDEF 1 169 
+168	630		OBJDEF 1 170 
+168	629			ADEF 45  1
+168	629				s 171 
+
+NOMAIN 
+RESOURCES 0
