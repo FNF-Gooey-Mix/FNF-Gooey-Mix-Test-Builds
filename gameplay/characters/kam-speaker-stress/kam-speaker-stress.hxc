@@ -18,7 +18,7 @@ import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
 import funkin.graphics.shaders.DropShadowShader;
 import funkin.play.Countdown;
-import gooeymix.characters.FloraSpeakerScreen;
+import gooeymix.audio.visualize.FloraSpeakerScreen;
 
 class KamSpeakerStressCharacter extends MultiSparrowCharacter
 {
